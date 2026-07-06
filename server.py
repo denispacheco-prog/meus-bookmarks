@@ -6,7 +6,12 @@ que lê e grava em data/bookmarks.json. Uso local apenas: no GitHub
 Pages o mesmo frontend fala direto com a API do GitHub em vez desta API.
 """
 
+import html
 import json
+import re
+import urllib.error
+import urllib.parse
+import urllib.request
 import uuid
 from datetime import datetime, timezone
 from functools import partial
@@ -19,6 +24,27 @@ PUBLIC_DIR = ROOT / "docs"
 DATA_FILE = ROOT / "data" / "bookmarks.json"
 PORT = 8000
 IMPORT_TAG = "import"
+TITLE_RE = re.compile(rb"<title[^>]*>(.*?)</title>", re.IGNORECASE | re.DOTALL)
+
+
+def fetch_page_title(url):
+    req = urllib.request.Request(
+        url, headers={"User-Agent": "Mozilla/5.0 (compatible; MeusBookmarksBot/1.0)"}
+    )
+    with urllib.request.urlopen(req, timeout=6) as resp:
+        raw = resp.read(200_000)
+        charset = resp.headers.get_content_charset() or "utf-8"
+
+    match = TITLE_RE.search(raw)
+    if not match:
+        return None
+    try:
+        title = match.group(1).decode(charset, errors="replace")
+    except LookupError:
+        title = match.group(1).decode("utf-8", errors="replace")
+    title = html.unescape(title)
+    title = re.sub(r"\s+", " ", title).strip()
+    return title or None
 
 
 def read_bookmarks():
@@ -96,7 +122,23 @@ class Handler(SimpleHTTPRequestHandler):
                 return
             self._send_json(HTTPStatus.OK, data)
             return
+        if self.path.startswith("/api/fetch-title"):
+            self._handle_fetch_title()
+            return
         super().do_GET()
+
+    def _handle_fetch_title(self):
+        query = urllib.parse.urlsplit(self.path).query
+        url = (urllib.parse.parse_qs(query).get("url") or [""])[0]
+        if not url:
+            self._send_json(HTTPStatus.BAD_REQUEST, {"error": "parâmetro url é obrigatório"})
+            return
+        try:
+            title = fetch_page_title(url)
+        except (urllib.error.URLError, ValueError, OSError) as exc:
+            self._send_json(HTTPStatus.OK, {"title": None, "error": str(exc)})
+            return
+        self._send_json(HTTPStatus.OK, {"title": title})
 
     def do_POST(self):
         if self.path == "/api/bookmarks":

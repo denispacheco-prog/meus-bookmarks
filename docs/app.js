@@ -17,6 +17,8 @@ const els = {
   resultsCount: document.getElementById("results-count"),
   emptyState: document.getElementById("empty-state"),
   form: document.getElementById("add-form"),
+  urlInput: document.getElementById("url"),
+  titleInput: document.getElementById("title"),
   categoriesSelect: document.getElementById("categories"),
   newCategoriesInput: document.getElementById("new-categories"),
   formStatus: document.getElementById("form-status"),
@@ -277,6 +279,20 @@ els.list.addEventListener("submit", async (e) => {
 els.clearTagFilterBtn.addEventListener("click", () => {
   state.activeTag = null;
   render();
+});
+
+els.urlInput.addEventListener("blur", async () => {
+  const url = els.urlInput.value.trim();
+  if (!url || els.titleInput.value.trim() || !/^https?:\/\//i.test(url)) return;
+
+  els.formStatus.textContent = "Buscando título...";
+  const result = await Api.fetchTitle(url);
+  if (result.title) {
+    els.titleInput.value = result.title;
+    els.formStatus.textContent = "";
+  } else {
+    els.formStatus.textContent = "Não foi possível obter o título automaticamente — preencha manualmente.";
+  }
 });
 
 els.form.addEventListener("submit", async (e) => {

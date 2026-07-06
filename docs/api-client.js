@@ -113,6 +113,16 @@ async function ghPutFile(data, sha, message) {
   }
 }
 
+async function fetchWithTimeout(url, ms) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), ms);
+  try {
+    return await fetch(url, { signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 const GitHubApi = {
   mode: "github",
   isConfigured: () => !!getToken(),
@@ -121,6 +131,18 @@ const GitHubApi = {
   async load() {
     const { data } = await ghGetFile();
     return data;
+  },
+
+  async fetchTitle(url) {
+    try {
+      const res = await fetchWithTimeout(`https://r.jina.ai/${url}`, 8000);
+      if (!res.ok) return { title: null };
+      const text = await res.text();
+      const match = text.match(/^Title:\s*(.+)$/m);
+      return { title: match ? match[1].trim() : null };
+    } catch {
+      return { title: null };
+    }
   },
 
   async create(payload) {
@@ -207,6 +229,16 @@ const LocalApi = {
     const res = await fetch("/api/bookmarks");
     if (!res.ok) throw new Error("Falha ao carregar bookmarks");
     return res.json();
+  },
+
+  async fetchTitle(url) {
+    try {
+      const res = await fetch(`/api/fetch-title?url=${encodeURIComponent(url)}`);
+      if (!res.ok) return { title: null };
+      return res.json();
+    } catch {
+      return { title: null };
+    }
   },
 
   async create(payload) {
