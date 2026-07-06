@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookmarks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>📌 Bookmarks</h1>
+  </header>
+
+  <main>
+    <section class="toolbar">
+      <input
+        id="search-input"
+        type="search"
+        placeholder="Buscar por título, descrição, tag ou categoria..."
+        autocomplete="off"
+      />
+      <div class="toolbar-secondary">
+        <div class="filter-row">
+          <label for="category-filter-select" class="filter-label">Categoria:</label>
+          <select id="category-filter-select">
+            <option value="">Todas</option>
+          </select>
+        </div>
+        <div class="import-export-row">
+          <button id="export-btn" type="button">Exportar</button>
+          <button id="import-btn" type="button">Importar</button>
+          <input id="import-file-input" type="file" accept="application/json" class="hidden" />
+          <button id="github-config-btn" type="button" class="hidden">⚙ GitHub</button>
+        </div>
+      </div>
+      <div id="active-tag-filter" class="active-filter hidden">
+        Filtrando por tag: <strong id="active-filter-tag"></strong>
+        <button id="clear-tag-filter-btn" type="button">✕ limpar</button>
+      </div>
+      <span id="import-status" class="form-status"></span>
+    </section>
+
+    <section class="add-bookmark">
+      <details>
+        <summary>+ Adicionar novo</summary>
+        <form id="add-form">
+          <div class="form-row">
+            <label for="url">URL *</label>
+            <input id="url" name="url" type="url" placeholder="https://exemplo.com" required />
+          </div>
+          <div class="form-row">
+            <label for="title">Título *</label>
+            <input id="title" name="title" type="text" placeholder="Título do link" required />
+          </div>
+          <div class="form-row">
+            <label for="description">Descrição</label>
+            <textarea id="description" name="description" rows="2" placeholder="Opcional"></textarea>
+          </div>
+          <div class="form-row">
+            <label for="tags">Tags</label>
+            <input id="tags" name="tags" type="text" placeholder="separadas por vírgula" />
+          </div>
+          <div class="form-row">
+            <label for="categories">Categorias existentes</label>
+            <select id="categories" name="categories" multiple size="4"></select>
+          </div>
+          <div class="form-row">
+            <label for="new-categories">Nova(s) categoria(s)</label>
+            <input id="new-categories" name="new-categories" type="text" placeholder="separadas por vírgula, ex: Para assistir" />
+          </div>
+          <div class="form-actions">
+            <button type="submit">Salvar bookmark</button>
+            <span id="form-status" class="form-status"></span>
+          </div>
+        </form>
+      </details>
+    </section>
+
+    <section>
+      <p id="results-count" class="results-count"></p>
+      <ul id="bookmark-list" class="bookmark-list"></ul>
+      <p id="empty-state" class="empty-state hidden">Nenhum bookmark encontrado.</p>
+    </section>
+  </main>
+
+  <script src="api-client.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
