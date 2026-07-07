@@ -131,6 +131,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T11:26:38.087Z"
+    },
+    {
+      "id": "4878c5b1-3400-4d8c-9e59-657418c4b57f",
+      "url": "https://futurism.com/future-society/cyborg-remote-controlled-cockroaches-new-power",
+      "title": "Swarm of Cyborg Remote Controlled Cockroaches Gains New Power",
+      "description": "\"Scientists turned a bunch of cockroaches into remote-controllable cyborgs — and then built them little scuba suits so they can swim underwater, transforming them into powerful amphibian troopers. (...) they propose that one day a swarm of these biological drones could be used to poke around dangerous environments, such as disaster areas — or, even more ambitiously, other planets\".",
+      "tags": [
+        "Robótica",
+        "Exploração",
+        "Astrobiologia"
+      ],
+      "action": "",
+      "categories": [
+        "Ciência",
+        "Notícias"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T11:35:58.831Z"
     }
   ]
 }
