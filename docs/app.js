@@ -112,13 +112,17 @@ function matchesFilters(bookmark) {
   return true;
 }
 
+function sortedCategories(categories) {
+  return [...categories].sort((a, b) => a.localeCompare(b, "pt-BR"));
+}
+
 function categoryMenuMarkup() {
   return state.categoryGroups
     .map(
       (group) => `
         <div class="category-menu-group" data-group="${escapeHtml(group.id)}">
           <span class="category-menu-label">${escapeHtml(group.label)}</span>
-          ${group.categories
+          ${sortedCategories(group.categories)
             .map(
               (cat) =>
                 `<button type="button" class="category-pill${cat === state.activeCategory ? " active" : ""}" data-category="${escapeHtml(cat)}" data-group="${escapeHtml(group.id)}">${escapeHtml(cat)}</button>`
@@ -136,7 +140,7 @@ function categoryGroupsFormMarkup(selectedCategories) {
       (group) => `
         <fieldset class="category-group" data-group="${escapeHtml(group.id)}">
           <legend>${escapeHtml(group.label)}</legend>
-          ${group.categories
+          ${sortedCategories(group.categories)
             .map(
               (cat) => `
                 <label class="category-checkbox">
@@ -261,7 +265,7 @@ function editFormMarkup(bookmark) {
           <input name="title" type="text" value="${escapeHtml(bookmark.title)}" required />
         </div>
         <div class="form-row">
-          <label>Descrição</label>
+          <label>Notas</label>
           <textarea name="description" rows="2">${escapeHtml(bookmark.description)}</textarea>
         </div>
         <div class="form-row">
