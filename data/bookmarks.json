@@ -82,12 +82,12 @@
       "title": "Neal.fun",
       "description": "Jogos, simulações e visualizações online",
       "tags": [
-        "Jogos",
         "Simulação"
       ],
       "action": "Jogar",
       "categories": [
-        "Jogos"
+        "Jogos",
+        "Internet"
       ],
       "favorite": false,
       "createdAt": "2026-07-06T17:30:43.287Z"
