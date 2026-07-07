@@ -346,6 +346,26 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T21:47:10.263Z"
+    },
+    {
+      "id": "828f1ad9-4be8-4d5b-aaed-a74380152a53",
+      "url": "https://muted.io/",
+      "title": "Muted.io - Magical Music Theory Tools to Learn Music Online",
+      "description": "",
+      "tags": [
+        "Teoria Musical",
+        "Ensino de música",
+        "Cursos online",
+        "Ferramentas"
+      ],
+      "action": "",
+      "categories": [
+        "Música",
+        "Acervo",
+        "Curso"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T21:49:08.632Z"
     }
   ]
 }
