@@ -509,6 +509,28 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T22:01:44.716Z"
+    },
+    {
+      "id": "08d725d6-489b-4f85-b449-1ae589c78004",
+      "url": "https://www.obakezuki.com/",
+      "title": "Banco de Dados do Cinema de Ficção Sobrenatural Japonês",
+      "description": "",
+      "tags": [
+        "Cinema japonês",
+        "Sobrenatural",
+        "Ficção Fantástica",
+        "Filmes",
+        "Terror",
+        "Japão"
+      ],
+      "action": "",
+      "categories": [
+        "Cinema",
+        "Lista",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T22:02:31.529Z"
     }
   ]
 }
