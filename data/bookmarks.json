@@ -51,6 +51,17 @@
         "Revista",
         "Blog"
       ]
+    },
+    {
+      "id": "inspiracao",
+      "label": "Inspiração",
+      "categories": [
+        "Poesia",
+        "Conto",
+        "Roteiro",
+        "Pauta",
+        "Crítica"
+      ]
     }
   ],
   "actions": [
