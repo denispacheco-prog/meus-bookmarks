@@ -260,6 +260,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T21:41:13.820Z"
+    },
+    {
+      "id": "c985a245-fec0-414a-a946-f08af264ac12",
+      "url": "https://anewsession.com/",
+      "title": "New Session – TTY Real",
+      "description": "",
+      "tags": [
+        "Cultura online",
+        "Tecnologia",
+        "Sites Legais"
+      ],
+      "action": "",
+      "categories": [
+        "Internet",
+        "Revista"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T21:42:30.582Z"
     }
   ]
 }
