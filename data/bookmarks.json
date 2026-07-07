@@ -490,6 +490,25 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T22:00:15.639Z"
+    },
+    {
+      "id": "f45b7c8b-ec29-4eac-b275-21b2901b31d1",
+      "url": "https://buenosaires.gob.ar/gcaba_historico/desarrolloeconomico/la-ruta-de-las-librerias",
+      "title": "La Ruta de las Librerías | Buenos Aires Ciudad",
+      "description": "Livrarias para visitar quando for para Buenos Aires",
+      "tags": [
+        "Livrarias",
+        "Buenos Aires",
+        "Argentina",
+        "Passeios",
+        "Livros"
+      ],
+      "action": "",
+      "categories": [
+        "Viagem"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T22:01:44.716Z"
     }
   ]
 }
