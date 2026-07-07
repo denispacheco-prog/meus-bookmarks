@@ -17,29 +17,6 @@
       ]
     },
     {
-      "id": "recurso",
-      "label": "Recurso",
-      "categories": [
-        "Ferramenta",
-        "Software",
-        "Acervo",
-        "Wiki",
-        "Curso",
-        "IA",
-        "Fórum"
-      ]
-    },
-    {
-      "id": "midia",
-      "label": "Mídia",
-      "categories": [
-        "Fotografia",
-        "Video",
-        "Streaming",
-        "Podcast"
-      ]
-    },
-    {
       "id": "editorial",
       "label": "Editorial",
       "categories": [
@@ -61,6 +38,29 @@
         "Roteiro",
         "Pauta",
         "Crítica"
+      ]
+    },
+    {
+      "id": "midia",
+      "label": "Mídia",
+      "categories": [
+        "Fotografia",
+        "Video",
+        "Streaming",
+        "Podcast"
+      ]
+    },
+    {
+      "id": "recurso",
+      "label": "Recurso",
+      "categories": [
+        "Ferramenta",
+        "Software",
+        "Acervo",
+        "Wiki",
+        "Curso",
+        "IA",
+        "Fórum"
       ]
     }
   ],
