@@ -366,6 +366,25 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T21:49:08.632Z"
+    },
+    {
+      "id": "1a9ada97-9604-4df7-aadd-5e3b3c75d3be",
+      "url": "https://en.wikiarquitectura.com/",
+      "title": "WikiArquitectura",
+      "description": "",
+      "tags": [
+        "Arquitetura",
+        "Prédios",
+        "Cidades",
+        "Arquitetos"
+      ],
+      "action": "",
+      "categories": [
+        "Design",
+        "Wiki"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T21:50:15.803Z"
     }
   ]
 }
