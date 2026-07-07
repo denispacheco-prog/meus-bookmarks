@@ -240,6 +240,26 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T21:39:49.746Z"
+    },
+    {
+      "id": "6e3b1bcd-ccfe-4c8a-b7b8-99a73e574dc3",
+      "url": "http://www.theguardian.com/stage/2020/apr/22/play-on-12-of-the-best-shakespeare-productions-to-stream",
+      "title": "Play on! 12 of the best Shakespeare productions to stream",
+      "description": "",
+      "tags": [
+        "Teatro",
+        "Shakespeare",
+        "Peças",
+        "Inglaterra"
+      ],
+      "action": "",
+      "categories": [
+        "Literatura",
+        "Lista",
+        "Video"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T21:41:13.820Z"
     }
   ]
 }
