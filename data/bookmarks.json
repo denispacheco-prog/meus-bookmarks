@@ -405,6 +405,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T21:51:28.716Z"
+    },
+    {
+      "id": "a8aceeaf-196f-441a-aca0-b2d67dd1a557",
+      "url": "https://moreblueberries.shop/products/alom",
+      "title": "A Land Once Magic",
+      "description": "\"A Land Once Magic is a conversational post-fantasy worldbuilding TTRPG\"",
+      "tags": [
+        "Tabletop",
+        "Ebook",
+        "Aventura",
+        "Ficção"
+      ],
+      "action": "Comprar",
+      "categories": [
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T21:52:44.691Z"
     }
   ]
 }
