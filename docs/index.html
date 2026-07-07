@@ -12,6 +12,8 @@
     <h1>📌 Bookmarks</h1>
   </header>
 
+  <nav id="category-menu" class="category-menu"></nav>
+
   <main>
     <section class="toolbar">
       <input
@@ -22,8 +24,8 @@
       />
       <div class="toolbar-secondary">
         <div class="filter-row">
-          <label for="category-filter-select" class="filter-label">Categoria:</label>
-          <select id="category-filter-select">
+          <label for="action-filter-select" class="filter-label">Ação:</label>
+          <select id="action-filter-select">
             <option value="">Todas</option>
           </select>
         </div>
@@ -62,12 +64,21 @@
             <input id="tags" name="tags" type="text" placeholder="separadas por vírgula" />
           </div>
           <div class="form-row">
-            <label for="categories">Categorias existentes</label>
-            <select id="categories" name="categories" multiple size="4"></select>
+            <label for="action-select">Ação</label>
+            <select id="action-select" name="action"></select>
           </div>
           <div class="form-row">
+            <label for="new-action">Nova ação (opcional)</label>
+            <input id="new-action" name="new-action" type="text" placeholder="ex: Estudar" />
+          </div>
+          <div class="form-row">
+            <label>Categorias gerais</label>
+            <div id="categories-groups" class="categories-groups"></div>
+          </div>
+          <div class="form-row new-category-row">
             <label for="new-categories">Nova(s) categoria(s)</label>
-            <input id="new-categories" name="new-categories" type="text" placeholder="separadas por vírgula, ex: Para assistir" />
+            <input id="new-categories" name="new-categories" type="text" placeholder="separadas por vírgula" />
+            <select id="new-category-group" name="new-category-group"></select>
           </div>
           <div class="form-actions">
             <button type="submit">Salvar bookmark</button>

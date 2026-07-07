@@ -69,11 +69,26 @@ def clean_list_field(raw_values):
     return seen
 
 
-def merge_known_categories(data, new_categories):
-    known = data.setdefault("categories", [])
-    for category in new_categories:
-        if category not in known:
-            known.append(category)
+def merge_known_categories(data, new_category_names, group_id):
+    if not new_category_names or not group_id:
+        return
+    groups = data.setdefault("categoryGroups", [])
+    known = {c for g in groups for c in g.get("categories", [])}
+    target = next((g for g in groups if g.get("id") == group_id), None)
+    if target is None:
+        return
+    for name in new_category_names:
+        if name not in known:
+            target["categories"].append(name)
+            known.add(name)
+
+
+def merge_known_actions(data, action):
+    if not action:
+        return
+    known = data.setdefault("actions", [])
+    if action not in known:
+        known.append(action)
 
 
 def build_bookmark(raw_item, extra_tags=None):
@@ -93,6 +108,7 @@ def build_bookmark(raw_item, extra_tags=None):
         "title": title,
         "description": (raw_item.get("description") or "").strip(),
         "tags": tags,
+        "action": (raw_item.get("action") or "").strip(),
         "categories": clean_list_field(raw_item.get("categories")),
         "createdAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z",
     }
@@ -193,7 +209,8 @@ class Handler(SimpleHTTPRequestHandler):
             return
 
         data.setdefault("bookmarks", []).append(new_bookmark)
-        merge_known_categories(data, new_bookmark["categories"])
+        merge_known_categories(data, clean_list_field(payload.get("newCategories")), payload.get("newCategoryGroup"))
+        merge_known_actions(data, new_bookmark["action"])
         write_bookmarks(data)
 
         self._send_json(HTTPStatus.CREATED, new_bookmark)
@@ -234,7 +251,7 @@ class Handler(SimpleHTTPRequestHandler):
                 continue
             existing_urls.add(bookmark["url"])
             imported.append(bookmark)
-            merge_known_categories(data, bookmark["categories"])
+            merge_known_actions(data, bookmark["action"])
 
         data["bookmarks"].extend(imported)
         write_bookmarks(data)
@@ -272,12 +289,15 @@ class Handler(SimpleHTTPRequestHandler):
             return
 
         categories = clean_list_field(payload.get("categories"))
+        action = (payload.get("action") or "").strip()
         target["url"] = url
         target["title"] = title
         target["description"] = (payload.get("description") or "").strip()
         target["tags"] = clean_list_field(payload.get("tags"))
+        target["action"] = action
         target["categories"] = categories
-        merge_known_categories(data, categories)
+        merge_known_categories(data, clean_list_field(payload.get("newCategories")), payload.get("newCategoryGroup"))
+        merge_known_actions(data, action)
         write_bookmarks(data)
 
         self._send_json(HTTPStatus.OK, target)

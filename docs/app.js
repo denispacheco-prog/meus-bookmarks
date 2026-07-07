@@ -1,15 +1,27 @@
+const ACTION_ICONS = {
+  Ler: "📖",
+  Ouvir: "🎧",
+  Assistir: "🎬",
+  Comprar: "🛒",
+  Baixar: "⬇️",
+  Jogar: "🎮",
+};
+
 const state = {
   bookmarks: [],
-  categories: [],
+  categoryGroups: [],
+  actions: [],
   searchText: "",
   activeTag: null,
   activeCategory: "",
+  activeAction: "",
   editingId: null,
 };
 
 const els = {
   searchInput: document.getElementById("search-input"),
-  categoryFilterSelect: document.getElementById("category-filter-select"),
+  categoryMenu: document.getElementById("category-menu"),
+  actionFilterSelect: document.getElementById("action-filter-select"),
   activeTagFilter: document.getElementById("active-tag-filter"),
   activeFilterTag: document.getElementById("active-filter-tag"),
   clearTagFilterBtn: document.getElementById("clear-tag-filter-btn"),
@@ -19,8 +31,9 @@ const els = {
   form: document.getElementById("add-form"),
   urlInput: document.getElementById("url"),
   titleInput: document.getElementById("title"),
-  categoriesSelect: document.getElementById("categories"),
-  newCategoriesInput: document.getElementById("new-categories"),
+  actionSelect: document.getElementById("action-select"),
+  categoriesGroupsContainer: document.getElementById("categories-groups"),
+  newCategoryGroupSelect: document.getElementById("new-category-group"),
   formStatus: document.getElementById("form-status"),
   exportBtn: document.getElementById("export-btn"),
   importBtn: document.getElementById("import-btn"),
@@ -49,6 +62,11 @@ function formatDate(isoString) {
   });
 }
 
+function groupForCategory(name) {
+  const group = state.categoryGroups.find((g) => (g.categories || []).includes(name));
+  return group ? group.id : "";
+}
+
 function matchesFilters(bookmark) {
   if (state.activeTag && !bookmark.tags.includes(state.activeTag)) {
     return false;
@@ -56,8 +74,11 @@ function matchesFilters(bookmark) {
   if (state.activeCategory && !bookmark.categories.includes(state.activeCategory)) {
     return false;
   }
+  if (state.activeAction && bookmark.action !== state.activeAction) {
+    return false;
+  }
   if (state.searchText) {
-    const haystack = [bookmark.title, bookmark.description, ...bookmark.tags, ...bookmark.categories]
+    const haystack = [bookmark.title, bookmark.description, bookmark.action, ...bookmark.tags, ...bookmark.categories]
       .join(" ")
       .toLowerCase();
     if (!haystack.includes(state.searchText)) {
@@ -67,32 +88,81 @@ function matchesFilters(bookmark) {
   return true;
 }
 
-function categoryOptionsMarkup(selectedCategories) {
-  const selected = new Set(selectedCategories);
-  return state.categories
+function categoryMenuMarkup() {
+  return state.categoryGroups
     .map(
-      (cat) =>
-        `<option value="${escapeHtml(cat)}"${selected.has(cat) ? " selected" : ""}>${escapeHtml(cat)}</option>`
+      (group) => `
+        <div class="category-menu-group" data-group="${escapeHtml(group.id)}">
+          <span class="category-menu-label">${escapeHtml(group.label)}</span>
+          ${group.categories
+            .map(
+              (cat) =>
+                `<button type="button" class="category-pill${cat === state.activeCategory ? " active" : ""}" data-category="${escapeHtml(cat)}" data-group="${escapeHtml(group.id)}">${escapeHtml(cat)}</button>`
+            )
+            .join("")}
+        </div>`
     )
     .join("");
 }
 
-function renderCategoryOptions() {
-  const previousFilterValue = els.categoryFilterSelect.value;
-  els.categoryFilterSelect.innerHTML =
-    `<option value="">Todas</option>` + categoryOptionsMarkup([]);
-  els.categoryFilterSelect.value = state.categories.includes(previousFilterValue)
-    ? previousFilterValue
-    : "";
+function categoryGroupsFormMarkup(selectedCategories) {
+  const selected = new Set(selectedCategories);
+  return state.categoryGroups
+    .map(
+      (group) => `
+        <fieldset class="category-group" data-group="${escapeHtml(group.id)}">
+          <legend>${escapeHtml(group.label)}</legend>
+          ${group.categories
+            .map(
+              (cat) => `
+                <label class="category-checkbox">
+                  <input type="checkbox" name="categories" value="${escapeHtml(cat)}"${selected.has(cat) ? " checked" : ""} />
+                  ${escapeHtml(cat)}
+                </label>`
+            )
+            .join("")}
+        </fieldset>`
+    )
+    .join("");
+}
 
-  const previouslySelected = Array.from(els.categoriesSelect.selectedOptions).map((opt) => opt.value);
-  els.categoriesSelect.innerHTML = categoryOptionsMarkup(previouslySelected);
+function categoryGroupOptionsMarkup() {
+  return state.categoryGroups
+    .map((g) => `<option value="${escapeHtml(g.id)}">${escapeHtml(g.label)}</option>`)
+    .join("");
+}
+
+function actionOptionsMarkup(selected) {
+  return (
+    `<option value="">Selecione...</option>` +
+    state.actions
+      .map(
+        (a) => `<option value="${escapeHtml(a)}"${a === selected ? " selected" : ""}>${escapeHtml(a)}</option>`
+      )
+      .join("")
+  );
+}
+
+function renderFilterAndFormOptions() {
+  els.categoryMenu.innerHTML = categoryMenuMarkup();
+
+  const previousActionFilter = els.actionFilterSelect.value;
+  els.actionFilterSelect.innerHTML =
+    `<option value="">Todas</option>` +
+    state.actions.map((a) => `<option value="${escapeHtml(a)}">${escapeHtml(a)}</option>`).join("");
+  els.actionFilterSelect.value = state.actions.includes(previousActionFilter) ? previousActionFilter : "";
+
+  els.actionSelect.innerHTML = actionOptionsMarkup("");
+  els.newCategoryGroupSelect.innerHTML = categoryGroupOptionsMarkup();
+  els.categoriesGroupsContainer.innerHTML = categoryGroupsFormMarkup([]);
 }
 
 function render() {
   const filtered = state.bookmarks
     .filter(matchesFilters)
     .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+  els.categoryMenu.innerHTML = categoryMenuMarkup();
 
   els.activeTagFilter.classList.toggle("hidden", !state.activeTag);
   if (state.activeTag) {
@@ -119,9 +189,14 @@ function bookmarkItemMarkup(bookmark) {
 
   const categoriesHtml = bookmark.categories
     .map(
-      (cat) => `<button type="button" class="category-pill${cat === state.activeCategory ? " active" : ""}" data-category="${escapeHtml(cat)}">${escapeHtml(cat)}</button>`
+      (cat) =>
+        `<button type="button" class="category-pill${cat === state.activeCategory ? " active" : ""}" data-category="${escapeHtml(cat)}" data-group="${escapeHtml(groupForCategory(cat))}">${escapeHtml(cat)}</button>`
     )
     .join("");
+
+  const actionHtml = bookmark.action
+    ? `<button type="button" class="action-pill${bookmark.action === state.activeAction ? " active" : ""}" data-action="${escapeHtml(bookmark.action)}">${ACTION_ICONS[bookmark.action] ? ACTION_ICONS[bookmark.action] + " " : ""}${escapeHtml(bookmark.action)}</button>`
+    : "";
 
   return `
     <li class="bookmark-item" data-id="${escapeHtml(bookmark.id)}">
@@ -130,6 +205,7 @@ function bookmarkItemMarkup(bookmark) {
       ${bookmark.description ? `<p class="bookmark-description">${escapeHtml(bookmark.description)}</p>` : ""}
       <div class="bookmark-meta">
         <span class="bookmark-date">${formatDate(bookmark.createdAt)}</span>
+        ${actionHtml}
         ${categoriesHtml}
         ${tagsHtml}
       </div>
@@ -162,12 +238,21 @@ function editFormMarkup(bookmark) {
           <input name="tags" type="text" value="${escapeHtml(bookmark.tags.join(", "))}" />
         </div>
         <div class="form-row">
-          <label>Categorias existentes</label>
-          <select name="categories" multiple size="4">${categoryOptionsMarkup(bookmark.categories)}</select>
+          <label>Ação</label>
+          <select name="action">${actionOptionsMarkup(bookmark.action)}</select>
         </div>
         <div class="form-row">
+          <label>Nova ação (opcional)</label>
+          <input name="new-action" type="text" placeholder="ex: Estudar" />
+        </div>
+        <div class="form-row">
+          <label>Categorias gerais</label>
+          <div class="categories-groups">${categoryGroupsFormMarkup(bookmark.categories)}</div>
+        </div>
+        <div class="form-row new-category-row">
           <label>Nova(s) categoria(s)</label>
           <input name="new-categories" type="text" placeholder="separadas por vírgula" />
+          <select name="new-category-group">${categoryGroupOptionsMarkup()}</select>
         </div>
         <div class="form-actions">
           <button type="submit">Salvar</button>
@@ -180,9 +265,10 @@ function editFormMarkup(bookmark) {
 
 async function loadBookmarks() {
   const data = await Api.load();
-  state.bookmarks = (data.bookmarks || []).map((b) => ({ categories: [], ...b }));
-  state.categories = data.categories || [];
-  renderCategoryOptions();
+  state.bookmarks = (data.bookmarks || []).map((b) => ({ categories: [], action: "", ...b }));
+  state.categoryGroups = data.categoryGroups || [];
+  state.actions = data.actions || [];
+  renderFilterAndFormOptions();
   render();
 }
 
@@ -191,8 +277,16 @@ els.searchInput.addEventListener("input", (e) => {
   render();
 });
 
-els.categoryFilterSelect.addEventListener("change", (e) => {
-  state.activeCategory = e.target.value;
+els.actionFilterSelect.addEventListener("change", (e) => {
+  state.activeAction = e.target.value;
+  render();
+});
+
+els.categoryMenu.addEventListener("click", (e) => {
+  const categoryBtn = e.target.closest(".category-pill");
+  if (!categoryBtn) return;
+  const category = categoryBtn.dataset.category;
+  state.activeCategory = state.activeCategory === category ? "" : category;
   render();
 });
 
@@ -208,7 +302,14 @@ els.list.addEventListener("click", async (e) => {
   if (categoryBtn) {
     const category = categoryBtn.dataset.category;
     state.activeCategory = state.activeCategory === category ? "" : category;
-    els.categoryFilterSelect.value = state.activeCategory;
+    render();
+    return;
+  }
+  const actionBtn = e.target.closest(".action-pill");
+  if (actionBtn) {
+    const action = actionBtn.dataset.action;
+    state.activeAction = state.activeAction === action ? "" : action;
+    els.actionFilterSelect.value = state.activeAction;
     render();
     return;
   }
@@ -246,14 +347,15 @@ els.list.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const formData = new FormData(form);
-  const categoriesSelect = form.querySelector('select[name="categories"]');
-  const selectedCategories = Array.from(categoriesSelect.selectedOptions).map((opt) => opt.value);
+  const selectedCategories = formData.getAll("categories");
   const newCategories = formData
     .get("new-categories")
     .split(",")
     .map((c) => c.trim())
     .filter(Boolean);
+  const newCategoryGroup = formData.get("new-category-group");
   const categories = Array.from(new Set([...selectedCategories, ...newCategories]));
+  const action = formData.get("new-action").trim() || formData.get("action");
 
   const payload = {
     url: formData.get("url").trim(),
@@ -264,7 +366,10 @@ els.list.addEventListener("submit", async (e) => {
       .split(",")
       .map((t) => t.trim())
       .filter(Boolean),
+    action,
     categories,
+    newCategories,
+    newCategoryGroup,
   };
 
   try {
@@ -298,13 +403,15 @@ els.urlInput.addEventListener("blur", async () => {
 els.form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const formData = new FormData(els.form);
-  const selectedCategories = Array.from(els.categoriesSelect.selectedOptions).map((opt) => opt.value);
+  const selectedCategories = formData.getAll("categories");
   const newCategories = formData
     .get("new-categories")
     .split(",")
     .map((c) => c.trim())
     .filter(Boolean);
+  const newCategoryGroup = formData.get("new-category-group");
   const categories = Array.from(new Set([...selectedCategories, ...newCategories]));
+  const action = formData.get("new-action").trim() || formData.get("action");
 
   const payload = {
     url: formData.get("url").trim(),
@@ -315,7 +422,10 @@ els.form.addEventListener("submit", async (e) => {
       .split(",")
       .map((t) => t.trim())
       .filter(Boolean),
+    action,
     categories,
+    newCategories,
+    newCategoryGroup,
   };
 
   els.formStatus.textContent = "Salvando...";

@@ -1,9 +1,27 @@
 {
-  "categories": [
-    "Para ler",
-    "Para comprar",
-    "Para jogar"
+  "categoryGroups": [
+    {
+      "id": "conteudo",
+      "label": "Conteúdo",
+      "categories": ["Literatura", "Cinema", "Música", "Jogos", "HQs", "Internet", "Ciência", "Viagem", "Compras"]
+    },
+    {
+      "id": "recurso",
+      "label": "Recurso",
+      "categories": ["Ferramenta", "Software", "Acervo", "Wiki", "Curso", "IA", "Fórum"]
+    },
+    {
+      "id": "midia",
+      "label": "Mídia",
+      "categories": ["Fotografia", "Video", "Streaming"]
+    },
+    {
+      "id": "editorial",
+      "label": "Editorial",
+      "categories": ["Ensaios", "Notícias", "Reportagens", "Entrevistas", "Lista"]
+    }
   ],
+  "actions": ["Ler", "Ouvir", "Assistir", "Comprar", "Baixar", "Jogar"],
   "bookmarks": [
     {
       "id": "cb1fdbc6-c2b9-47b6-86e9-78be96038608",
@@ -16,8 +34,9 @@
         "Taoismo",
         "Daoismo"
       ],
+      "action": "Ler",
       "categories": [
-        "Para ler"
+        "Literatura"
       ],
       "createdAt": "2026-07-06T16:40:05.806Z"
     },
@@ -30,8 +49,9 @@
         "Jogos",
         "Simulação"
       ],
+      "action": "Jogar",
       "categories": [
-        "Para jogar"
+        "Jogos"
       ],
       "createdAt": "2026-07-06T17:30:43.287Z"
     },
@@ -45,8 +65,9 @@
         "Jogos",
         "Simulação"
       ],
+      "action": "Jogar",
       "categories": [
-        "Para jogar"
+        "Jogos"
       ],
       "createdAt": "2026-07-06T17:44:25.082Z"
     }

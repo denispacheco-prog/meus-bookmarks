@@ -38,11 +38,24 @@ function cleanListField(raw) {
   return seen;
 }
 
-function mergeKnownCategories(data, newCategories) {
-  if (!data.categories) data.categories = [];
-  for (const cat of newCategories) {
-    if (!data.categories.includes(cat)) data.categories.push(cat);
+function mergeKnownCategories(data, newCategoryNames, groupId) {
+  if (!newCategoryNames || !newCategoryNames.length || !groupId) return;
+  const groups = data.categoryGroups || (data.categoryGroups = []);
+  const known = new Set(groups.flatMap((g) => g.categories || []));
+  const target = groups.find((g) => g.id === groupId);
+  if (!target) return;
+  for (const name of newCategoryNames) {
+    if (!known.has(name)) {
+      target.categories.push(name);
+      known.add(name);
+    }
   }
+}
+
+function mergeKnownActions(data, action) {
+  if (!action) return;
+  if (!data.actions) data.actions = [];
+  if (!data.actions.includes(action)) data.actions.push(action);
 }
 
 function buildBookmark(raw, extraTags = []) {
@@ -61,6 +74,7 @@ function buildBookmark(raw, extraTags = []) {
     title,
     description: (raw.description || "").trim(),
     tags,
+    action: (raw.action || "").trim(),
     categories: cleanListField(raw.categories),
     createdAt: new Date().toISOString(),
   };
@@ -81,7 +95,8 @@ async function ghGetFile() {
   const json = await res.json();
   const data = JSON.parse(base64ToUtf8(json.content));
   data.bookmarks = data.bookmarks || [];
-  data.categories = data.categories || [];
+  data.categoryGroups = data.categoryGroups || [];
+  data.actions = data.actions || [];
   return { data, sha: json.sha };
 }
 
@@ -150,7 +165,8 @@ const GitHubApi = {
     const bookmark = buildBookmark(payload);
     if (!bookmark) throw new Error("url e title são obrigatórios");
     data.bookmarks.push(bookmark);
-    mergeKnownCategories(data, bookmark.categories);
+    mergeKnownCategories(data, cleanListField(payload.newCategories), payload.newCategoryGroup);
+    mergeKnownActions(data, bookmark.action);
     await ghPutFile(data, sha, `Adiciona bookmark: ${bookmark.title}`);
     return bookmark;
   },
@@ -166,8 +182,10 @@ const GitHubApi = {
     target.title = title;
     target.description = (payload.description || "").trim();
     target.tags = cleanListField(payload.tags);
+    target.action = (payload.action || "").trim();
     target.categories = cleanListField(payload.categories);
-    mergeKnownCategories(data, target.categories);
+    mergeKnownCategories(data, cleanListField(payload.newCategories), payload.newCategoryGroup);
+    mergeKnownActions(data, target.action);
     await ghPutFile(data, sha, `Edita bookmark: ${title}`);
     return target;
   },
@@ -208,7 +226,7 @@ const GitHubApi = {
       }
       existingUrls.add(bookmark.url);
       imported.push(bookmark);
-      mergeKnownCategories(data, bookmark.categories);
+      mergeKnownActions(data, bookmark.action);
     }
 
     data.bookmarks.push(...imported);
