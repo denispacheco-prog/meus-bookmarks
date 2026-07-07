@@ -113,6 +113,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T11:24:49.411Z"
+    },
+    {
+      "id": "657c8435-32b2-4aea-9f31-c488510a1bb5",
+      "url": "https://pedalscape.com/",
+      "title": "PedalScape",
+      "description": "Rotas cênicas de bicicleta ao redor do mundo",
+      "tags": [
+        "Bicicleta",
+        "Esporte",
+        "Vídeo"
+      ],
+      "action": "",
+      "categories": [
+        "Ferramenta",
+        "Video"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T11:26:38.087Z"
     }
   ]
 }
