@@ -94,6 +94,25 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T00:28:41.537Z"
+    },
+    {
+      "id": "ac3bd55b-713f-4c6f-9915-b58c2f37fd25",
+      "url": "https://solodesign.cc/skills/",
+      "title": "Design Skills for Claude Code",
+      "description": "",
+      "tags": [
+        "Claude",
+        "Inteligência Artificial",
+        "Design",
+        "Metodologia"
+      ],
+      "action": "",
+      "categories": [
+        "Ferramenta",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T11:24:49.411Z"
     }
   ]
 }
