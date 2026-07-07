@@ -531,6 +531,27 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T22:02:31.529Z"
+    },
+    {
+      "id": "91718c1e-ba4e-49b8-a6d0-407ca75dc895",
+      "url": "https://www.biblioteca-de-zines.com.br/",
+      "title": "Biblioteca de Zines - Arquivo Digital de Zines Brasileiros e Latino-Americanos",
+      "description": "",
+      "tags": [
+        "Zines",
+        "Brasil",
+        "Quadrinhos",
+        "Histórias em Quadrinhos",
+        "Autores Independentes"
+      ],
+      "action": "",
+      "categories": [
+        "Design",
+        "HQs",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T22:03:27.020Z"
     }
   ]
 }
