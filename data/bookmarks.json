@@ -303,6 +303,29 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T21:44:13.176Z"
+    },
+    {
+      "id": "6707a423-d2e9-41cd-8da3-b42b172103b9",
+      "url": "https://www.blacklibrary.com/",
+      "title": "Black Library",
+      "description": "Repositório com livros do universo Warhammer 40,000",
+      "tags": [
+        "Warhammer",
+        "Warhammer 40",
+        "000",
+        "Ebooks",
+        "Sci-Fi",
+        "Ficção Científica",
+        "Fanfiction"
+      ],
+      "action": "",
+      "categories": [
+        "Jogos",
+        "Literatura",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T21:45:54.027Z"
     }
   ]
 }
