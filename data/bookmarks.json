@@ -385,6 +385,26 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T21:50:15.803Z"
+    },
+    {
+      "id": "c867a50a-5f27-4cba-8fab-24881257d369",
+      "url": "https://archive.org/details/vanishing-culture-2026",
+      "title": "Vanishing Culture: A Report on Our Fragile Cultural Record (2026)",
+      "description": "",
+      "tags": [
+        "Cultura digital",
+        "Ebook",
+        "Internet Archive",
+        "Arquivos",
+        "Documentação",
+        "Livro"
+      ],
+      "action": "Ler",
+      "categories": [
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T21:51:28.716Z"
     }
   ]
 }
