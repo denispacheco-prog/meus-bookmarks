@@ -15,11 +15,19 @@
 
   <main>
     <div class="layout">
-      <aside class="category-sidebar">
-        <details open>
-          <summary>Categorias</summary>
-          <nav id="category-menu" class="category-menu"></nav>
-        </details>
+      <aside class="left-sidebar">
+        <div class="category-sidebar">
+          <details open>
+            <summary>Categorias</summary>
+            <nav id="category-menu" class="category-menu"></nav>
+          </details>
+        </div>
+        <div class="action-sidebar">
+          <details open>
+            <summary>Ações</summary>
+            <nav id="action-menu" class="action-menu"></nav>
+          </details>
+        </div>
       </aside>
 
       <div class="main-content">
@@ -31,12 +39,6 @@
             autocomplete="off"
           />
           <div class="toolbar-secondary">
-            <div class="filter-row">
-              <label for="action-filter-select" class="filter-label">Ação:</label>
-              <select id="action-filter-select">
-                <option value="">Todas</option>
-              </select>
-            </div>
             <div class="import-export-row">
               <button id="export-btn" type="button">Exportar</button>
               <button id="import-btn" type="button">Importar</button>

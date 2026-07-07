@@ -38,7 +38,7 @@ const state = {
 const els = {
   searchInput: document.getElementById("search-input"),
   categoryMenu: document.getElementById("category-menu"),
-  actionFilterSelect: document.getElementById("action-filter-select"),
+  actionMenu: document.getElementById("action-menu"),
   activeTagFilter: document.getElementById("active-tag-filter"),
   activeFilterTag: document.getElementById("active-filter-tag"),
   clearTagFilterBtn: document.getElementById("clear-tag-filter-btn"),
@@ -154,6 +154,15 @@ function categoryGroupsFormMarkup(selectedCategories) {
     .join("");
 }
 
+function actionMenuMarkup() {
+  return sortedCategories(state.actions)
+    .map(
+      (action) =>
+        `<button type="button" class="action-pill${action === state.activeAction ? " active" : ""}" data-action="${escapeHtml(action)}">${ACTION_ICONS[action] ? ACTION_ICONS[action] + " " : ""}${escapeHtml(action)}</button>`
+    )
+    .join("");
+}
+
 function categoryGroupOptionsMarkup() {
   return state.categoryGroups
     .map((g) => `<option value="${escapeHtml(g.id)}">${escapeHtml(g.label)}</option>`)
@@ -173,12 +182,7 @@ function actionOptionsMarkup(selected) {
 
 function renderFilterAndFormOptions() {
   els.categoryMenu.innerHTML = categoryMenuMarkup();
-
-  const previousActionFilter = els.actionFilterSelect.value;
-  els.actionFilterSelect.innerHTML =
-    `<option value="">Todas</option>` +
-    state.actions.map((a) => `<option value="${escapeHtml(a)}">${escapeHtml(a)}</option>`).join("");
-  els.actionFilterSelect.value = state.actions.includes(previousActionFilter) ? previousActionFilter : "";
+  els.actionMenu.innerHTML = actionMenuMarkup();
 
   els.actionSelect.innerHTML = actionOptionsMarkup("");
   els.newCategoryGroupSelect.innerHTML = categoryGroupOptionsMarkup();
@@ -191,6 +195,7 @@ function render() {
     .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
   els.categoryMenu.innerHTML = categoryMenuMarkup();
+  els.actionMenu.innerHTML = actionMenuMarkup();
 
   els.activeTagFilter.classList.toggle("hidden", !state.activeTag);
   if (state.activeTag) {
@@ -366,16 +371,19 @@ els.searchInput.addEventListener("input", (e) => {
   render();
 });
 
-els.actionFilterSelect.addEventListener("change", (e) => {
-  state.activeAction = e.target.value;
-  render();
-});
-
 els.categoryMenu.addEventListener("click", (e) => {
   const categoryBtn = e.target.closest(".category-pill");
   if (!categoryBtn) return;
   const category = categoryBtn.dataset.category;
   state.activeCategory = state.activeCategory === category ? "" : category;
+  render();
+});
+
+els.actionMenu.addEventListener("click", (e) => {
+  const actionBtn = e.target.closest(".action-pill");
+  if (!actionBtn) return;
+  const action = actionBtn.dataset.action;
+  state.activeAction = state.activeAction === action ? "" : action;
   render();
 });
 
@@ -410,7 +418,6 @@ els.list.addEventListener("click", async (e) => {
   if (actionBtn) {
     const action = actionBtn.dataset.action;
     state.activeAction = state.activeAction === action ? "" : action;
-    els.actionFilterSelect.value = state.activeAction;
     render();
     return;
   }
