@@ -98,6 +98,14 @@ function escapeHtml(str) {
   }[c]));
 }
 
+function getDomain(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return "";
+  }
+}
+
 function formatDate(isoString) {
   const date = new Date(isoString);
   if (Number.isNaN(date.getTime())) return isoString;
@@ -359,7 +367,10 @@ function favoriteItemMarkup(bookmark) {
   return `
     <li class="favorite-item" data-id="${escapeHtml(bookmark.id)}">
       <button type="button" class="favorite-star-btn active" data-id="${escapeHtml(bookmark.id)}" title="Remover dos favoritos">★</button>
-      <a href="${escapeHtml(bookmark.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(bookmark.title)}</a>
+      <div class="favorite-item-info">
+        <a href="${escapeHtml(bookmark.url)}" target="_blank" rel="noopener noreferrer" class="favorite-item-title">${escapeHtml(bookmark.title)}</a>
+        <span class="favorite-item-domain">${escapeHtml(getDomain(bookmark.url))}</span>
+      </div>
     </li>
   `;
 }
