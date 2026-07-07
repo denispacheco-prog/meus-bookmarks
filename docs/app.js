@@ -7,6 +7,23 @@ const ACTION_ICONS = {
   Jogar: "🎮",
 };
 
+const THEME_STORAGE_KEY = "meusBookmarks.theme";
+
+function effectiveTheme() {
+  const stored = localStorage.getItem(THEME_STORAGE_KEY);
+  if (stored === "light" || stored === "dark") return stored;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  const themeToggleBtn = document.getElementById("theme-toggle-btn");
+  themeToggleBtn.textContent = theme === "dark" ? "☀️" : "🌙";
+  themeToggleBtn.title = theme === "dark" ? "Mudar para tema claro" : "Mudar para tema escuro";
+}
+
+applyTheme(effectiveTheme());
+
 const state = {
   bookmarks: [],
   categoryGroups: [],
@@ -46,6 +63,7 @@ const els = {
   categoryManagerCloseBtn: document.getElementById("category-manager-close-btn"),
   favoritesSection: document.getElementById("favorites-section"),
   favoritesList: document.getElementById("favorites-list"),
+  themeToggleBtn: document.getElementById("theme-toggle-btn"),
 };
 
 function escapeHtml(str) {
@@ -565,6 +583,12 @@ els.importFileInput.addEventListener("change", async () => {
   } finally {
     els.importFileInput.value = "";
   }
+});
+
+els.themeToggleBtn.addEventListener("click", () => {
+  const next = effectiveTheme() === "dark" ? "light" : "dark";
+  localStorage.setItem(THEME_STORAGE_KEY, next);
+  applyTheme(next);
 });
 
 els.categoryManagerBtn.addEventListener("click", () => {

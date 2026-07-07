@@ -65,6 +65,70 @@
   }
 }
 
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #666666;
+  --border: #dddddd;
+  --accent: #0060df;
+  --tag-bg: #eef2ff;
+  --tag-fg: #33418f;
+  --tag-bg-active: #33418f;
+  --tag-fg-active: #ffffff;
+  --action-bg: #fff1e6;
+  --action-fg: #9a4a15;
+  --action-bg-active: #9a4a15;
+  --action-fg-active: #ffffff;
+  --cat-conteudo-bg: #e8f5e9;
+  --cat-conteudo-fg: #256029;
+  --cat-conteudo-bg-active: #256029;
+  --cat-conteudo-fg-active: #ffffff;
+  --cat-recurso-bg: #f3e8ff;
+  --cat-recurso-fg: #6b21a8;
+  --cat-recurso-bg-active: #6b21a8;
+  --cat-recurso-fg-active: #ffffff;
+  --cat-midia-bg: #ffe8f0;
+  --cat-midia-fg: #a3134a;
+  --cat-midia-bg-active: #a3134a;
+  --cat-midia-fg-active: #ffffff;
+  --cat-editorial-bg: #e0f7fa;
+  --cat-editorial-fg: #0a6b78;
+  --cat-editorial-bg-active: #0a6b78;
+  --cat-editorial-fg-active: #ffffff;
+}
+
+:root[data-theme="dark"] {
+  --bg: #16181d;
+  --fg: #e8e8e8;
+  --muted: #9a9a9a;
+  --border: #333844;
+  --accent: #6ea8fe;
+  --tag-bg: #232a3d;
+  --tag-fg: #a9c0ff;
+  --tag-bg-active: #6ea8fe;
+  --tag-fg-active: #16181d;
+  --action-bg: #3a2a1c;
+  --action-fg: #f3b78a;
+  --action-bg-active: #f3b78a;
+  --action-fg-active: #16181d;
+  --cat-conteudo-bg: #1c2e20;
+  --cat-conteudo-fg: #8fd19e;
+  --cat-conteudo-bg-active: #8fd19e;
+  --cat-conteudo-fg-active: #16181d;
+  --cat-recurso-bg: #2a1f38;
+  --cat-recurso-fg: #c9a3f0;
+  --cat-recurso-bg-active: #c9a3f0;
+  --cat-recurso-fg-active: #16181d;
+  --cat-midia-bg: #3a1f2a;
+  --cat-midia-fg: #f2a3c0;
+  --cat-midia-bg-active: #f2a3c0;
+  --cat-midia-fg-active: #16181d;
+  --cat-editorial-bg: #132e30;
+  --cat-editorial-fg: #7fd8e0;
+  --cat-editorial-bg-active: #7fd8e0;
+  --cat-editorial-fg-active: #16181d;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -81,6 +145,10 @@ body {
   padding: 1.25rem 1.5rem 0.5rem;
   max-width: 720px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
 .app-header h1 {
@@ -88,6 +156,22 @@ body {
   font-size: 1.15rem;
   font-weight: 600;
   color: var(--muted);
+}
+
+.theme-toggle-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.25rem;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.theme-toggle-btn:hover {
+  opacity: 1;
+  color: var(--accent);
 }
 
 main {
