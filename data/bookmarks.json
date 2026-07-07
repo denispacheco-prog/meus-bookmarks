@@ -93,22 +93,6 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-06T17:30:43.287Z"
-    },
-    {
-      "id": "8952c76b-2494-4f4b-b343-a02b041e587d",
-      "url": "https://iso-city.com/",
-      "title": "ISOCITY — Metropolis Builder",
-      "description": "",
-      "tags": [
-        "Cidades",
-        "Simulação"
-      ],
-      "action": "Jogar",
-      "categories": [
-        "Jogos"
-      ],
-      "favorite": false,
-      "createdAt": "2026-07-06T17:44:25.082Z"
     }
   ]
 }
