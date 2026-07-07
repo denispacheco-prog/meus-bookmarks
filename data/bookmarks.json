@@ -70,7 +70,8 @@
     "Assistir",
     "Comprar",
     "Baixar",
-    "Jogar"
+    "Jogar",
+    "✍🏻 Escrever"
   ],
   "bookmarks": [
     {
@@ -155,7 +156,7 @@
         "Exploração",
         "Astrobiologia"
       ],
-      "action": "",
+      "action": "✍🏻 Escrever",
       "categories": [
         "Ciência",
         "Notícias",
