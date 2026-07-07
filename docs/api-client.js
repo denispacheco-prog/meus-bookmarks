@@ -58,6 +58,53 @@ function mergeKnownActions(data, action) {
   if (!data.actions.includes(action)) data.actions.push(action);
 }
 
+function allCategoryNames(groups) {
+  return new Set(groups.flatMap((g) => g.categories || []));
+}
+
+function addCategoryLocal(data, groupId, name) {
+  name = (name || "").trim();
+  if (!name) throw new Error("nome da categoria é obrigatório");
+  const groups = data.categoryGroups || (data.categoryGroups = []);
+  const target = groups.find((g) => g.id === groupId);
+  if (!target) throw new Error("grupo não encontrado");
+  if (allCategoryNames(groups).has(name)) throw new Error("já existe uma categoria com esse nome");
+  target.categories.push(name);
+}
+
+function renameCategoryEverywhere(data, groupId, oldName, newName) {
+  newName = (newName || "").trim();
+  if (!newName) throw new Error("nome da categoria é obrigatório");
+  const groups = data.categoryGroups || (data.categoryGroups = []);
+  const target = groups.find((g) => g.id === groupId);
+  if (!target || !(target.categories || []).includes(oldName)) throw new Error("categoria não encontrada");
+  if (newName !== oldName && allCategoryNames(groups).has(newName)) {
+    throw new Error("já existe uma categoria com esse nome");
+  }
+
+  target.categories = target.categories.map((c) => (c === oldName ? newName : c));
+  for (const bookmark of data.bookmarks || []) {
+    if ((bookmark.categories || []).includes(oldName)) {
+      bookmark.categories = cleanListField(
+        bookmark.categories.map((c) => (c === oldName ? newName : c))
+      );
+    }
+  }
+}
+
+function deleteCategoryEverywhere(data, groupId, name) {
+  const groups = data.categoryGroups || (data.categoryGroups = []);
+  const target = groups.find((g) => g.id === groupId);
+  if (!target || !(target.categories || []).includes(name)) throw new Error("categoria não encontrada");
+
+  target.categories = target.categories.filter((c) => c !== name);
+  for (const bookmark of data.bookmarks || []) {
+    if ((bookmark.categories || []).includes(name)) {
+      bookmark.categories = bookmark.categories.filter((c) => c !== name);
+    }
+  }
+}
+
 function buildBookmark(raw, extraTags = []) {
   const url = (raw.url || "").trim();
   const title = (raw.title || "").trim();
@@ -76,6 +123,7 @@ function buildBookmark(raw, extraTags = []) {
     tags,
     action: (raw.action || "").trim(),
     categories: cleanListField(raw.categories),
+    favorite: false,
     createdAt: new Date().toISOString(),
   };
 }
@@ -184,6 +232,7 @@ const GitHubApi = {
     target.tags = cleanListField(payload.tags);
     target.action = (payload.action || "").trim();
     target.categories = cleanListField(payload.categories);
+    target.favorite = !!payload.favorite;
     mergeKnownCategories(data, cleanListField(payload.newCategories), payload.newCategoryGroup);
     mergeKnownActions(data, target.action);
     await ghPutFile(data, sha, `Edita bookmark: ${title}`);
@@ -235,6 +284,27 @@ const GitHubApi = {
     }
 
     return { importedCount: imported.length, skippedCount: skipped, invalidCount: invalid, imported };
+  },
+
+  async addCategory(groupId, name) {
+    const { data, sha } = await ghGetFile();
+    addCategoryLocal(data, groupId, name);
+    await ghPutFile(data, sha, `Adiciona categoria: ${name}`);
+    return data;
+  },
+
+  async renameCategory(groupId, oldName, newName) {
+    const { data, sha } = await ghGetFile();
+    renameCategoryEverywhere(data, groupId, oldName, newName);
+    await ghPutFile(data, sha, `Renomeia categoria: ${oldName} → ${newName}`);
+    return data;
+  },
+
+  async deleteCategory(groupId, name) {
+    const { data, sha } = await ghGetFile();
+    deleteCategoryEverywhere(data, groupId, name);
+    await ghPutFile(data, sha, `Remove categoria: ${name}`);
+    return data;
   },
 };
 
@@ -303,6 +373,47 @@ const LocalApi = {
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
       throw new Error(err.error || "Erro ao importar");
+    }
+    return res.json();
+  },
+
+  async addCategory(groupId, name) {
+    const res = await fetch(`/api/category-groups/${encodeURIComponent(groupId)}/categories`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name }),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || "Erro ao adicionar categoria");
+    }
+    return res.json();
+  },
+
+  async renameCategory(groupId, oldName, newName) {
+    const res = await fetch(
+      `/api/category-groups/${encodeURIComponent(groupId)}/categories/${encodeURIComponent(oldName)}`,
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: newName }),
+      }
+    );
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || "Erro ao renomear categoria");
+    }
+    return res.json();
+  },
+
+  async deleteCategory(groupId, name) {
+    const res = await fetch(
+      `/api/category-groups/${encodeURIComponent(groupId)}/categories/${encodeURIComponent(name)}`,
+      { method: "DELETE" }
+    );
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || "Erro ao excluir categoria");
     }
     return res.json();
   },

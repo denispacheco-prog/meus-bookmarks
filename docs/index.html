@@ -12,8 +12,6 @@
     <h1>📌 Bookmarks</h1>
   </header>
 
-  <nav id="category-menu" class="category-menu"></nav>
-
   <main>
     <section class="toolbar">
       <input
@@ -34,6 +32,7 @@
           <button id="import-btn" type="button">Importar</button>
           <input id="import-file-input" type="file" accept="application/json" class="hidden" />
           <button id="github-config-btn" type="button" class="hidden">⚙ GitHub</button>
+          <button id="category-manager-btn" type="button">⚙ Categorias</button>
         </div>
       </div>
       <div id="active-tag-filter" class="active-filter hidden">
@@ -41,6 +40,13 @@
         <button id="clear-tag-filter-btn" type="button">✕ limpar</button>
       </div>
       <span id="import-status" class="form-status"></span>
+    </section>
+
+    <section class="category-menu-section">
+      <details>
+        <summary>Categorias</summary>
+        <nav id="category-menu" class="category-menu"></nav>
+      </details>
     </section>
 
     <section class="add-bookmark">
@@ -88,12 +94,27 @@
       </details>
     </section>
 
+    <section id="favorites-section" class="favorites-section hidden">
+      <h2 class="favorites-heading">⭐ Favoritos</h2>
+      <ul id="favorites-list" class="favorites-list"></ul>
+    </section>
+
     <section>
       <p id="results-count" class="results-count"></p>
       <ul id="bookmark-list" class="bookmark-list"></ul>
       <p id="empty-state" class="empty-state hidden">Nenhum bookmark encontrado.</p>
     </section>
   </main>
+
+  <div id="category-manager-overlay" class="modal-overlay hidden">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Gerenciar categorias">
+      <div class="modal-header">
+        <h2>Gerenciar categorias</h2>
+        <button id="category-manager-close-btn" type="button" class="modal-close-btn">✕</button>
+      </div>
+      <div id="category-manager-body" class="modal-body"></div>
+    </div>
+  </div>
 
   <script src="api-client.js"></script>
   <script src="app.js"></script>

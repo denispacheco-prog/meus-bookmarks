@@ -91,6 +91,55 @@ def merge_known_actions(data, action):
         known.append(action)
 
 
+def _all_category_names(groups):
+    return {c for g in groups for c in g.get("categories", [])}
+
+
+def add_category(data, group_id, name):
+    name = (name or "").strip()
+    if not name:
+        raise ValueError("nome da categoria é obrigatório")
+    groups = data.setdefault("categoryGroups", [])
+    target = next((g for g in groups if g.get("id") == group_id), None)
+    if target is None:
+        raise ValueError("grupo não encontrado")
+    if name in _all_category_names(groups):
+        raise ValueError("já existe uma categoria com esse nome")
+    target["categories"].append(name)
+
+
+def rename_category(data, group_id, old_name, new_name):
+    new_name = (new_name or "").strip()
+    if not new_name:
+        raise ValueError("nome da categoria é obrigatório")
+    groups = data.setdefault("categoryGroups", [])
+    target = next((g for g in groups if g.get("id") == group_id), None)
+    if target is None or old_name not in target.get("categories", []):
+        raise ValueError("categoria não encontrada")
+    if new_name != old_name and new_name in _all_category_names(groups):
+        raise ValueError("já existe uma categoria com esse nome")
+
+    target["categories"] = [new_name if c == old_name else c for c in target["categories"]]
+    for bookmark in data.get("bookmarks", []):
+        categories = bookmark.get("categories", [])
+        if old_name in categories:
+            bookmark["categories"] = clean_list_field(
+                [new_name if c == old_name else c for c in categories]
+            )
+
+
+def delete_category(data, group_id, name):
+    groups = data.setdefault("categoryGroups", [])
+    target = next((g for g in groups if g.get("id") == group_id), None)
+    if target is None or name not in target.get("categories", []):
+        raise ValueError("categoria não encontrada")
+
+    target["categories"] = [c for c in target["categories"] if c != name]
+    for bookmark in data.get("bookmarks", []):
+        if name in bookmark.get("categories", []):
+            bookmark["categories"] = [c for c in bookmark["categories"] if c != name]
+
+
 def build_bookmark(raw_item, extra_tags=None):
     url = (raw_item.get("url") or "").strip()
     title = (raw_item.get("title") or "").strip()
@@ -110,6 +159,7 @@ def build_bookmark(raw_item, extra_tags=None):
         "tags": tags,
         "action": (raw_item.get("action") or "").strip(),
         "categories": clean_list_field(raw_item.get("categories")),
+        "favorite": False,
         "createdAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z",
     }
 
@@ -161,10 +211,20 @@ class Handler(SimpleHTTPRequestHandler):
             self._handle_create()
         elif self.path == "/api/import":
             self._handle_import()
+        elif self.path.startswith("/api/category-groups/") and self.path.endswith("/categories"):
+            group_id, _ = self._extract_category_path()
+            self._handle_add_category(group_id)
         else:
             self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
 
     def do_PUT(self):
+        if self.path.startswith("/api/category-groups/"):
+            group_id, name = self._extract_category_path()
+            if name is None:
+                self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
+                return
+            self._handle_rename_category(group_id, name)
+            return
         bookmark_id = self._extract_bookmark_id()
         if bookmark_id is None:
             self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
@@ -172,6 +232,13 @@ class Handler(SimpleHTTPRequestHandler):
         self._handle_update(bookmark_id)
 
     def do_DELETE(self):
+        if self.path.startswith("/api/category-groups/"):
+            group_id, name = self._extract_category_path()
+            if name is None:
+                self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
+                return
+            self._handle_delete_category(group_id, name)
+            return
         bookmark_id = self._extract_bookmark_id()
         if bookmark_id is None:
             self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
@@ -184,6 +251,18 @@ class Handler(SimpleHTTPRequestHandler):
             return None
         bookmark_id = self.path[len(prefix):]
         return bookmark_id or None
+
+    def _extract_category_path(self):
+        prefix = "/api/category-groups/"
+        remainder = self.path[len(prefix):]
+        marker = "/categories"
+        idx = remainder.find(marker)
+        if idx == -1:
+            return None, None
+        group_id = urllib.parse.unquote(remainder[:idx]) or None
+        rest = remainder[idx + len(marker):]
+        name = urllib.parse.unquote(rest[1:]) if rest.startswith("/") and len(rest) > 1 else None
+        return group_id, name
 
     def _read_json_body(self):
         length = int(self.headers.get("Content-Length", 0))
@@ -296,6 +375,7 @@ class Handler(SimpleHTTPRequestHandler):
         target["tags"] = clean_list_field(payload.get("tags"))
         target["action"] = action
         target["categories"] = categories
+        target["favorite"] = bool(payload.get("favorite"))
         merge_known_categories(data, clean_list_field(payload.get("newCategories")), payload.get("newCategoryGroup"))
         merge_known_actions(data, action)
         write_bookmarks(data)
@@ -318,6 +398,66 @@ class Handler(SimpleHTTPRequestHandler):
         data["bookmarks"] = remaining
         write_bookmarks(data)
         self._send_json(HTTPStatus.OK, {"deleted": bookmark_id})
+
+    def _handle_add_category(self, group_id):
+        try:
+            payload = self._read_json_body()
+        except json.JSONDecodeError:
+            self._send_json(HTTPStatus.BAD_REQUEST, {"error": "JSON inválido"})
+            return
+
+        try:
+            data = read_bookmarks()
+        except (OSError, json.JSONDecodeError) as exc:
+            self._send_json(HTTPStatus.INTERNAL_SERVER_ERROR, {"error": str(exc)})
+            return
+
+        try:
+            add_category(data, group_id, payload.get("name"))
+        except ValueError as exc:
+            self._send_json(HTTPStatus.CONFLICT, {"error": str(exc)})
+            return
+
+        write_bookmarks(data)
+        self._send_json(HTTPStatus.OK, data)
+
+    def _handle_rename_category(self, group_id, old_name):
+        try:
+            payload = self._read_json_body()
+        except json.JSONDecodeError:
+            self._send_json(HTTPStatus.BAD_REQUEST, {"error": "JSON inválido"})
+            return
+
+        try:
+            data = read_bookmarks()
+        except (OSError, json.JSONDecodeError) as exc:
+            self._send_json(HTTPStatus.INTERNAL_SERVER_ERROR, {"error": str(exc)})
+            return
+
+        try:
+            rename_category(data, group_id, old_name, payload.get("name"))
+        except ValueError as exc:
+            self._send_json(HTTPStatus.CONFLICT, {"error": str(exc)})
+            return
+
+        write_bookmarks(data)
+        self._send_json(HTTPStatus.OK, data)
+
+    def _handle_delete_category(self, group_id, name):
+        try:
+            data = read_bookmarks()
+        except (OSError, json.JSONDecodeError) as exc:
+            self._send_json(HTTPStatus.INTERNAL_SERVER_ERROR, {"error": str(exc)})
+            return
+
+        try:
+            delete_category(data, group_id, name)
+        except ValueError as exc:
+            self._send_json(HTTPStatus.CONFLICT, {"error": str(exc)})
+            return
+
+        write_bookmarks(data)
+        self._send_json(HTTPStatus.OK, data)
 
 
 def main():

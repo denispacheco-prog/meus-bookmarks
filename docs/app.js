@@ -40,6 +40,12 @@ const els = {
   importFileInput: document.getElementById("import-file-input"),
   importStatus: document.getElementById("import-status"),
   githubConfigBtn: document.getElementById("github-config-btn"),
+  categoryManagerBtn: document.getElementById("category-manager-btn"),
+  categoryManagerOverlay: document.getElementById("category-manager-overlay"),
+  categoryManagerBody: document.getElementById("category-manager-body"),
+  categoryManagerCloseBtn: document.getElementById("category-manager-close-btn"),
+  favoritesSection: document.getElementById("favorites-section"),
+  favoritesList: document.getElementById("favorites-list"),
 };
 
 function escapeHtml(str) {
@@ -178,6 +184,10 @@ function render() {
       bookmark.id === state.editingId ? editFormMarkup(bookmark) : bookmarkItemMarkup(bookmark)
     )
     .join("");
+
+  const favorites = state.bookmarks.filter((b) => b.favorite);
+  els.favoritesSection.classList.toggle("hidden", favorites.length === 0);
+  els.favoritesList.innerHTML = favoritesListMarkup(favorites);
 }
 
 function bookmarkItemMarkup(bookmark) {
@@ -198,12 +208,15 @@ function bookmarkItemMarkup(bookmark) {
     ? `<button type="button" class="action-pill${bookmark.action === state.activeAction ? " active" : ""}" data-action="${escapeHtml(bookmark.action)}">${ACTION_ICONS[bookmark.action] ? ACTION_ICONS[bookmark.action] + " " : ""}${escapeHtml(bookmark.action)}</button>`
     : "";
 
+  const favoriteHtml = `<button type="button" class="favorite-star-btn${bookmark.favorite ? " active" : ""}" data-id="${escapeHtml(bookmark.id)}" title="${bookmark.favorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}">${bookmark.favorite ? "★" : "☆"}</button>`;
+
   return `
     <li class="bookmark-item" data-id="${escapeHtml(bookmark.id)}">
       <h3><a href="${escapeHtml(bookmark.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(bookmark.title)}</a></h3>
       <div class="bookmark-url">${escapeHtml(bookmark.url)}</div>
       ${bookmark.description ? `<p class="bookmark-description">${escapeHtml(bookmark.description)}</p>` : ""}
       <div class="bookmark-meta">
+        ${favoriteHtml}
         <span class="bookmark-date">${formatDate(bookmark.createdAt)}</span>
         ${actionHtml}
         ${categoriesHtml}
@@ -263,13 +276,67 @@ function editFormMarkup(bookmark) {
   `;
 }
 
+function favoriteItemMarkup(bookmark) {
+  return `
+    <li class="favorite-item" data-id="${escapeHtml(bookmark.id)}">
+      <button type="button" class="favorite-star-btn active" data-id="${escapeHtml(bookmark.id)}" title="Remover dos favoritos">★</button>
+      <a href="${escapeHtml(bookmark.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(bookmark.title)}</a>
+    </li>
+  `;
+}
+
+function favoritesListMarkup(favorites) {
+  return favorites.map(favoriteItemMarkup).join("");
+}
+
+function categoryManagerMarkup() {
+  return state.categoryGroups
+    .map(
+      (group) => `
+        <div class="manager-group" data-group="${escapeHtml(group.id)}">
+          <h3>${escapeHtml(group.label)}</h3>
+          <ul class="manager-category-list">
+            ${group.categories
+              .map(
+                (cat) => `
+                  <li data-category="${escapeHtml(cat)}">
+                    <input type="text" class="rename-input" value="${escapeHtml(cat)}" />
+                    <button type="button" class="rename-category-btn" data-group="${escapeHtml(group.id)}" data-category="${escapeHtml(cat)}">Renomear</button>
+                    <button type="button" class="delete-category-btn" data-group="${escapeHtml(group.id)}" data-category="${escapeHtml(cat)}">Excluir</button>
+                  </li>`
+              )
+              .join("")}
+          </ul>
+          <div class="manager-add-row">
+            <input type="text" class="new-category-input" placeholder="Nova categoria" />
+            <button type="button" class="add-category-btn" data-group="${escapeHtml(group.id)}">Adicionar</button>
+          </div>
+        </div>`
+    )
+    .join("");
+}
+
+async function toggleFavorite(id) {
+  const bookmark = state.bookmarks.find((b) => b.id === id);
+  if (!bookmark) return;
+  try {
+    await Api.update(id, { ...bookmark, favorite: !bookmark.favorite });
+    await loadBookmarks();
+  } catch (err) {
+    alert(err.message);
+  }
+}
+
 async function loadBookmarks() {
   const data = await Api.load();
-  state.bookmarks = (data.bookmarks || []).map((b) => ({ categories: [], action: "", ...b }));
+  state.bookmarks = (data.bookmarks || []).map((b) => ({ categories: [], action: "", favorite: false, ...b }));
   state.categoryGroups = data.categoryGroups || [];
   state.actions = data.actions || [];
   renderFilterAndFormOptions();
   render();
+  if (!els.categoryManagerOverlay.classList.contains("hidden")) {
+    els.categoryManagerBody.innerHTML = categoryManagerMarkup();
+  }
 }
 
 els.searchInput.addEventListener("input", (e) => {
@@ -290,7 +357,19 @@ els.categoryMenu.addEventListener("click", (e) => {
   render();
 });
 
+els.favoritesList.addEventListener("click", (e) => {
+  const favoriteBtn = e.target.closest(".favorite-star-btn");
+  if (favoriteBtn) {
+    toggleFavorite(favoriteBtn.dataset.id);
+  }
+});
+
 els.list.addEventListener("click", async (e) => {
+  const favoriteBtn = e.target.closest(".favorite-star-btn");
+  if (favoriteBtn) {
+    toggleFavorite(favoriteBtn.dataset.id);
+    return;
+  }
   const tagBtn = e.target.closest(".tag-pill");
   if (tagBtn) {
     const tag = tagBtn.dataset.tag;
@@ -485,6 +564,64 @@ els.importFileInput.addEventListener("change", async () => {
     els.importStatus.textContent = err.message;
   } finally {
     els.importFileInput.value = "";
+  }
+});
+
+els.categoryManagerBtn.addEventListener("click", () => {
+  els.categoryManagerBody.innerHTML = categoryManagerMarkup();
+  els.categoryManagerOverlay.classList.remove("hidden");
+});
+
+els.categoryManagerCloseBtn.addEventListener("click", () => {
+  els.categoryManagerOverlay.classList.add("hidden");
+});
+
+els.categoryManagerOverlay.addEventListener("click", (e) => {
+  if (e.target === els.categoryManagerOverlay) {
+    els.categoryManagerOverlay.classList.add("hidden");
+  }
+});
+
+els.categoryManagerBody.addEventListener("click", async (e) => {
+  const addBtn = e.target.closest(".add-category-btn");
+  if (addBtn) {
+    const input = addBtn.parentElement.querySelector(".new-category-input");
+    const name = input.value.trim();
+    if (!name) return;
+    try {
+      await Api.addCategory(addBtn.dataset.group, name);
+      await loadBookmarks();
+    } catch (err) {
+      alert(err.message);
+    }
+    return;
+  }
+
+  const renameBtn = e.target.closest(".rename-category-btn");
+  if (renameBtn) {
+    const row = renameBtn.closest("li");
+    const newName = row.querySelector(".rename-input").value.trim();
+    if (!newName) return;
+    try {
+      await Api.renameCategory(renameBtn.dataset.group, renameBtn.dataset.category, newName);
+      await loadBookmarks();
+    } catch (err) {
+      alert(err.message);
+    }
+    return;
+  }
+
+  const deleteBtn = e.target.closest(".delete-category-btn");
+  if (deleteBtn) {
+    if (!window.confirm(`Excluir a categoria "${deleteBtn.dataset.category}"? Ela será removida de todos os bookmarks que a usam.`)) {
+      return;
+    }
+    try {
+      await Api.deleteCategory(deleteBtn.dataset.group, deleteBtn.dataset.category);
+      await loadBookmarks();
+    } catch (err) {
+      alert(err.message);
+    }
   }
 });
 
