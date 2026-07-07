@@ -326,6 +326,26 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T21:45:54.027Z"
+    },
+    {
+      "id": "14ea9e78-7d89-472a-a5bc-05734cac25bc",
+      "url": "https://bossfightbooks.com/",
+      "title": "Boss Fight Books",
+      "description": "Selo de livros e publicações sobre jogos clássicos",
+      "tags": [
+        "Videogame",
+        "Jogos",
+        "Editora",
+        "Retrogaming"
+      ],
+      "action": "Comprar",
+      "categories": [
+        "Design",
+        "Jogos",
+        "Literatura"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T21:47:10.263Z"
     }
   ]
 }
