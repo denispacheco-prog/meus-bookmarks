@@ -467,6 +467,29 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T21:55:48.893Z"
+    },
+    {
+      "id": "158bcb6f-7e4d-4540-8da5-32b7b1f4a906",
+      "url": "https://www.yearendlists.com/",
+      "title": "Year-End Lists",
+      "description": "(Repositório de listas de final de ano de vários veículos)",
+      "tags": [
+        "Listas de final do ano",
+        "Cultura Pop",
+        "Rankings"
+      ],
+      "action": "",
+      "categories": [
+        "Cinema",
+        "Internet",
+        "Literatura",
+        "Música",
+        "Televisão",
+        "Lista",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-07T22:00:15.639Z"
     }
   ]
 }
