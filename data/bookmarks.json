@@ -593,6 +593,30 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-08T00:40:49.039Z"
+    },
+    {
+      "id": "fc29ec0b-62db-4a45-a70a-27aeb33870c7",
+      "url": "https://archive.org/details/aadamjacobs",
+      "title": "Aadam Jacobs Live Music Archive",
+      "description": "Gravações de shows de rock ao vivo em Chicago entre os anos 1980 - 2010",
+      "tags": [
+        "Rock",
+        "Música ao vivo",
+        "Nirvana",
+        "R.E.M.",
+        "Fugazzi",
+        "Depeche Mode",
+        "Liz Phair",
+        "Sonic Youth",
+        "Gravações"
+      ],
+      "action": "Ouvir",
+      "categories": [
+        "Música",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-08T10:47:21.690Z"
     }
   ]
 }
