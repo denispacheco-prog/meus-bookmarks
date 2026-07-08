@@ -138,6 +138,34 @@ function deleteActionEverywhere(data, name) {
   }
 }
 
+function allTagNames(bookmarks) {
+  return new Set(bookmarks.flatMap((b) => b.tags || []));
+}
+
+function renameTagEverywhere(data, oldName, newName) {
+  newName = (newName || "").trim();
+  if (!newName) throw new Error("nome da tag é obrigatório");
+  const bookmarks = data.bookmarks || [];
+  if (!allTagNames(bookmarks).has(oldName)) throw new Error("tag não encontrada");
+
+  for (const bookmark of bookmarks) {
+    if ((bookmark.tags || []).includes(oldName)) {
+      bookmark.tags = cleanListField(bookmark.tags.map((t) => (t === oldName ? newName : t)));
+    }
+  }
+}
+
+function deleteTagEverywhere(data, name) {
+  const bookmarks = data.bookmarks || [];
+  if (!allTagNames(bookmarks).has(name)) throw new Error("tag não encontrada");
+
+  for (const bookmark of bookmarks) {
+    if ((bookmark.tags || []).includes(name)) {
+      bookmark.tags = bookmark.tags.filter((t) => t !== name);
+    }
+  }
+}
+
 function buildBookmark(raw, extraTags = []) {
   const url = (raw.url || "").trim();
   const title = (raw.title || "").trim();
@@ -360,6 +388,20 @@ const GitHubApi = {
     await ghPutFile(data, sha, `Remove ação: ${name}`);
     return data;
   },
+
+  async renameTag(oldName, newName) {
+    const { data, sha } = await ghGetFile();
+    renameTagEverywhere(data, oldName, newName);
+    await ghPutFile(data, sha, `Renomeia tag: ${oldName} → ${newName}`);
+    return data;
+  },
+
+  async deleteTag(name) {
+    const { data, sha } = await ghGetFile();
+    deleteTagEverywhere(data, name);
+    await ghPutFile(data, sha, `Remove tag: ${name}`);
+    return data;
+  },
 };
 
 const LocalApi = {
@@ -503,6 +545,28 @@ const LocalApi = {
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
       throw new Error(err.error || "Erro ao excluir ação");
+    }
+    return res.json();
+  },
+
+  async renameTag(oldName, newName) {
+    const res = await fetch(`/api/tags/${encodeURIComponent(oldName)}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: newName }),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || "Erro ao renomear tag");
+    }
+    return res.json();
+  },
+
+  async deleteTag(name) {
+    const res = await fetch(`/api/tags/${encodeURIComponent(name)}`, { method: "DELETE" });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || "Erro ao excluir tag");
     }
     return res.json();
   },

@@ -349,6 +349,41 @@ main {
   resize: vertical;
 }
 
+.tag-input-wrapper {
+  position: relative;
+}
+
+.tag-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  margin-top: 0.2rem;
+  max-height: 180px;
+  overflow-y: auto;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.tag-suggestion-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.35rem 0.6rem;
+  border: none;
+  background: none;
+  color: var(--fg);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.tag-suggestion-item:hover {
+  background: color-mix(in srgb, var(--accent) 12%, var(--bg));
+}
+
 .form-actions {
   display: flex;
   align-items: center;
@@ -648,6 +683,40 @@ main {
   color: var(--muted);
 }
 
+.tag-cloud-section {
+  margin-bottom: 1.5rem;
+}
+
+.tag-cloud-heading {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.5rem;
+}
+
+.tag-cloud-item {
+  border: none;
+  background: none;
+  padding: 0.1rem 0.15rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.tag-cloud-item:hover {
+  color: var(--accent);
+}
+
+.tag-cloud-item.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -707,20 +776,23 @@ main {
   color: color-mix(in srgb, var(--cat-hue, var(--muted)) 75%, var(--fg));
 }
 
-.manager-category-list {
+.manager-category-list,
+.manager-tag-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.manager-category-list li {
+.manager-category-list li,
+.manager-tag-list li {
   display: flex;
   gap: 0.4rem;
   align-items: center;
   margin-bottom: 0.35rem;
 }
 
-.manager-category-list input.rename-input {
+.manager-category-list input.rename-input,
+.manager-tag-list input.rename-input {
   flex: 1 1 auto;
   padding: 0.3rem 0.5rem;
   border: 1px solid var(--border);
@@ -730,7 +802,8 @@ main {
 }
 
 .manager-category-list button,
-.manager-add-row button {
+.manager-add-row button,
+.manager-tag-list button {
   padding: 0.25rem 0.6rem;
   font-size: 0.78rem;
   border: 1px solid var(--border);
@@ -742,13 +815,15 @@ main {
 }
 
 .manager-category-list button:hover,
-.manager-add-row button:hover {
+.manager-add-row button:hover,
+.manager-tag-list button:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
 
 .manager-category-list .delete-category-btn:hover,
-.manager-category-list .delete-action-btn:hover {
+.manager-category-list .delete-action-btn:hover,
+.manager-tag-list .delete-tag-btn:hover {
   border-color: #c0392b;
   color: #c0392b;
 }
@@ -766,4 +841,32 @@ main {
   border-radius: 4px;
   background: var(--bg);
   color: var(--fg);
+}
+
+.tag-manager-search {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.manager-tag-list {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.manager-tag-list .tag-manager-count {
+  font-size: 0.72rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.tag-manager-empty {
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 0.5rem 0;
 }

@@ -177,6 +177,36 @@ def delete_action(data, name):
             bookmark["action"] = ""
 
 
+def _all_tag_names(bookmarks):
+    return {t for b in bookmarks for t in b.get("tags", [])}
+
+
+def rename_tag(data, old_name, new_name):
+    new_name = (new_name or "").strip()
+    if not new_name:
+        raise ValueError("nome da tag é obrigatório")
+    bookmarks = data.get("bookmarks", [])
+    if old_name not in _all_tag_names(bookmarks):
+        raise ValueError("tag não encontrada")
+
+    for bookmark in bookmarks:
+        tags = bookmark.get("tags", [])
+        if old_name in tags:
+            bookmark["tags"] = clean_list_field(
+                [new_name if t == old_name else t for t in tags]
+            )
+
+
+def delete_tag(data, name):
+    bookmarks = data.get("bookmarks", [])
+    if name not in _all_tag_names(bookmarks):
+        raise ValueError("tag não encontrada")
+
+    for bookmark in bookmarks:
+        if name in bookmark.get("tags", []):
+            bookmark["tags"] = [t for t in bookmark["tags"] if t != name]
+
+
 def build_bookmark(raw_item, extra_tags=None):
     url = (raw_item.get("url") or "").strip()
     title = (raw_item.get("title") or "").strip()
@@ -271,6 +301,13 @@ class Handler(SimpleHTTPRequestHandler):
                 return
             self._handle_rename_action(name)
             return
+        if self.path.startswith("/api/tags/"):
+            name = self._extract_tag_path()
+            if name is None:
+                self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
+                return
+            self._handle_rename_tag(name)
+            return
         bookmark_id = self._extract_bookmark_id()
         if bookmark_id is None:
             self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
@@ -291,6 +328,13 @@ class Handler(SimpleHTTPRequestHandler):
                 self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
                 return
             self._handle_delete_action(name)
+            return
+        if self.path.startswith("/api/tags/"):
+            name = self._extract_tag_path()
+            if name is None:
+                self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
+                return
+            self._handle_delete_tag(name)
             return
         bookmark_id = self._extract_bookmark_id()
         if bookmark_id is None:
@@ -323,6 +367,13 @@ class Handler(SimpleHTTPRequestHandler):
             return None
         name = self.path[len(prefix):]
         return urllib.parse.unquote(name) if name else None
+
+    def _extract_tag_path(self):
+        prefix = "/api/tags/"
+        if not self.path.startswith(prefix):
+            return None
+        name = self.path[len(prefix):]
+        return urllib.parse.unquote(name) or None
 
     def _read_json_body(self):
         length = int(self.headers.get("Content-Length", 0))
@@ -572,6 +623,44 @@ class Handler(SimpleHTTPRequestHandler):
 
         try:
             delete_action(data, name)
+        except ValueError as exc:
+            self._send_json(HTTPStatus.CONFLICT, {"error": str(exc)})
+            return
+
+        write_bookmarks(data)
+        self._send_json(HTTPStatus.OK, data)
+
+    def _handle_rename_tag(self, old_name):
+        try:
+            payload = self._read_json_body()
+        except json.JSONDecodeError:
+            self._send_json(HTTPStatus.BAD_REQUEST, {"error": "JSON inválido"})
+            return
+
+        try:
+            data = read_bookmarks()
+        except (OSError, json.JSONDecodeError) as exc:
+            self._send_json(HTTPStatus.INTERNAL_SERVER_ERROR, {"error": str(exc)})
+            return
+
+        try:
+            rename_tag(data, old_name, payload.get("name"))
+        except ValueError as exc:
+            self._send_json(HTTPStatus.CONFLICT, {"error": str(exc)})
+            return
+
+        write_bookmarks(data)
+        self._send_json(HTTPStatus.OK, data)
+
+    def _handle_delete_tag(self, name):
+        try:
+            data = read_bookmarks()
+        except (OSError, json.JSONDecodeError) as exc:
+            self._send_json(HTTPStatus.INTERNAL_SERVER_ERROR, {"error": str(exc)})
+            return
+
+        try:
+            delete_tag(data, name)
         except ValueError as exc:
             self._send_json(HTTPStatus.CONFLICT, {"error": str(exc)})
             return

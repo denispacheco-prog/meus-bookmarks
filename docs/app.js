@@ -89,6 +89,13 @@ const els = {
   actionManagerCloseBtn: document.getElementById("action-manager-close-btn"),
   favoritesSection: document.getElementById("favorites-section"),
   favoritesList: document.getElementById("favorites-list"),
+  tagCloudSection: document.getElementById("tag-cloud-section"),
+  tagCloud: document.getElementById("tag-cloud"),
+  tagManagerBtn: document.getElementById("tag-manager-btn"),
+  tagManagerOverlay: document.getElementById("tag-manager-overlay"),
+  tagManagerSearch: document.getElementById("tag-manager-search"),
+  tagManagerList: document.getElementById("tag-manager-list"),
+  tagManagerCloseBtn: document.getElementById("tag-manager-close-btn"),
   themeToggleBtn: document.getElementById("theme-toggle-btn"),
 };
 
@@ -148,6 +155,86 @@ function matchesFilters(bookmark) {
 
 function sortedAlpha(items) {
   return [...items].sort((a, b) => a.localeCompare(b, "pt-BR"));
+}
+
+function tagCounts() {
+  const counts = new Map();
+  for (const bookmark of state.bookmarks) {
+    for (const tag of bookmark.tags || []) {
+      counts.set(tag, (counts.get(tag) || 0) + 1);
+    }
+  }
+  return [...counts.entries()]
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag, "pt-BR"));
+}
+
+const DIACRITICS_RE = new RegExp(
+  "[" + String.fromCharCode(0x0300) + "-" + String.fromCharCode(0x036f) + "]",
+  "g"
+);
+
+function normalizeForMatch(str) {
+  return str.normalize("NFD").replace(DIACRITICS_RE, "").toLowerCase();
+}
+
+function toggleTagFilter(tag) {
+  state.activeTag = state.activeTag === tag ? null : tag;
+  render();
+}
+
+function tagFragment(value) {
+  const lastComma = value.lastIndexOf(",");
+  return value.slice(lastComma + 1).trim();
+}
+
+function matchingTagSuggestions(fragment, limit = 8) {
+  const norm = normalizeForMatch(fragment);
+  if (!norm) return [];
+  return tagCounts()
+    .filter(({ tag }) => normalizeForMatch(tag).includes(norm))
+    .slice(0, limit)
+    .map(({ tag }) => tag);
+}
+
+function applyTagSuggestion(input, tag) {
+  const lastComma = input.value.lastIndexOf(",");
+  const prefix = lastComma === -1 ? "" : input.value.slice(0, lastComma + 1) + " ";
+  input.value = `${prefix}${tag}, `;
+  input.focus();
+}
+
+function tagSuggestionsMarkup(tags) {
+  return tags
+    .map((tag) => `<button type="button" class="tag-suggestion-item" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`)
+    .join("");
+}
+
+function hideAllTagSuggestions() {
+  document.querySelectorAll(".tag-suggestions").forEach((box) => box.classList.add("hidden"));
+}
+
+function handleTagInput(e) {
+  const input = e.target.closest('input[name="tags"]');
+  if (!input) return;
+  const box = input.closest(".tag-input-wrapper").querySelector(".tag-suggestions");
+  const suggestions = matchingTagSuggestions(tagFragment(input.value));
+  if (!suggestions.length) {
+    box.classList.add("hidden");
+    box.innerHTML = "";
+    return;
+  }
+  box.innerHTML = tagSuggestionsMarkup(suggestions);
+  box.classList.remove("hidden");
+}
+
+function handleTagSuggestionClick(e) {
+  const item = e.target.closest(".tag-suggestion-item");
+  if (!item) return false;
+  const wrapper = item.closest(".tag-input-wrapper");
+  applyTagSuggestion(wrapper.querySelector('input[name="tags"]'), item.dataset.tag);
+  wrapper.querySelector(".tag-suggestions").classList.add("hidden");
+  return true;
 }
 
 function categoryMenuMarkup() {
@@ -228,6 +315,18 @@ function activeFiltersMarkup() {
   return `<span class="active-filters-label">Filtros ativos:</span>${chipsHtml}${clearAllHtml}`;
 }
 
+const TAG_CLOUD_LIMIT = 20;
+
+function tagCloudMarkup() {
+  return tagCounts()
+    .slice(0, TAG_CLOUD_LIMIT)
+    .map(
+      ({ tag }) =>
+        `<button type="button" class="tag-cloud-item${tag === state.activeTag ? " active" : ""}" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`
+    )
+    .join("");
+}
+
 function categoryGroupOptionsMarkup() {
   return state.categoryGroups
     .map((g) => `<option value="${escapeHtml(g.id)}">${escapeHtml(g.label)}</option>`)
@@ -279,6 +378,10 @@ function render() {
   const favorites = state.bookmarks.filter((b) => b.favorite);
   els.favoritesSection.classList.toggle("hidden", favorites.length === 0);
   els.favoritesList.innerHTML = favoritesListMarkup(favorites);
+
+  const tags = tagCounts();
+  els.tagCloudSection.classList.toggle("hidden", tags.length === 0);
+  els.tagCloud.innerHTML = tagCloudMarkup();
 }
 
 function bookmarkItemMarkup(bookmark) {
@@ -339,7 +442,10 @@ function editFormMarkup(bookmark) {
         </div>
         <div class="form-row">
           <label>Tags</label>
-          <input name="tags" type="text" value="${escapeHtml(bookmark.tags.join(", "))}" />
+          <div class="tag-input-wrapper">
+            <input name="tags" type="text" value="${escapeHtml(bookmark.tags.join(", "))}" autocomplete="off" />
+            <div class="tag-suggestions hidden"></div>
+          </div>
         </div>
         <div class="form-row">
           <label>Ação</label>
@@ -431,6 +537,29 @@ function actionManagerMarkup() {
   `;
 }
 
+function tagManagerMarkup(filterText) {
+  const filter = normalizeForMatch(filterText || "");
+  const rows = tagCounts().filter(({ tag }) => !filter || normalizeForMatch(tag).includes(filter));
+  if (!rows.length) {
+    return `<li class="tag-manager-empty">Nenhuma tag encontrada.</li>`;
+  }
+  return rows
+    .map(
+      ({ tag, count }) => `
+        <li data-tag="${escapeHtml(tag)}">
+          <input type="text" class="rename-input" value="${escapeHtml(tag)}" />
+          <span class="tag-manager-count">${count} bookmark${count === 1 ? "" : "s"}</span>
+          <button type="button" class="rename-tag-btn" data-tag="${escapeHtml(tag)}">Renomear</button>
+          <button type="button" class="delete-tag-btn" data-tag="${escapeHtml(tag)}">Excluir</button>
+        </li>`
+    )
+    .join("");
+}
+
+function refreshTagManagerList() {
+  els.tagManagerList.innerHTML = tagManagerMarkup(els.tagManagerSearch.value);
+}
+
 async function toggleFavorite(id) {
   const bookmark = state.bookmarks.find((b) => b.id === id);
   if (!bookmark) return;
@@ -454,6 +583,9 @@ async function loadBookmarks() {
   }
   if (!els.actionManagerOverlay.classList.contains("hidden")) {
     els.actionManagerBody.innerHTML = actionManagerMarkup();
+  }
+  if (!els.tagManagerOverlay.classList.contains("hidden")) {
+    refreshTagManagerList();
   }
 }
 
@@ -485,6 +617,12 @@ els.favoritesList.addEventListener("click", (e) => {
   }
 });
 
+els.tagCloud.addEventListener("click", (e) => {
+  const tagBtn = e.target.closest(".tag-cloud-item");
+  if (!tagBtn) return;
+  toggleTagFilter(tagBtn.dataset.tag);
+});
+
 els.list.addEventListener("click", async (e) => {
   const favoriteBtn = e.target.closest(".favorite-star-btn");
   if (favoriteBtn) {
@@ -493,9 +631,7 @@ els.list.addEventListener("click", async (e) => {
   }
   const tagBtn = e.target.closest(".tag-pill");
   if (tagBtn) {
-    const tag = tagBtn.dataset.tag;
-    state.activeTag = state.activeTag === tag ? null : tag;
-    render();
+    toggleTagFilter(tagBtn.dataset.tag);
     return;
   }
   const categoryBtn = e.target.closest(".category-pill");
@@ -699,6 +835,19 @@ els.importFileInput.addEventListener("change", async () => {
   }
 });
 
+document.addEventListener("input", handleTagInput);
+
+document.addEventListener("click", (e) => {
+  if (handleTagSuggestionClick(e)) return;
+  if (!e.target.closest(".tag-input-wrapper")) {
+    hideAllTagSuggestions();
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") hideAllTagSuggestions();
+});
+
 els.themeToggleBtn.addEventListener("click", () => {
   const next = effectiveTheme() === "dark" ? "light" : "dark";
   localStorage.setItem(THEME_STORAGE_KEY, next);
@@ -814,6 +963,53 @@ els.actionManagerBody.addEventListener("click", async (e) => {
     }
     try {
       await Api.deleteAction(deleteBtn.dataset.action);
+      await loadBookmarks();
+    } catch (err) {
+      alert(err.message);
+    }
+  }
+});
+
+els.tagManagerBtn.addEventListener("click", () => {
+  els.tagManagerSearch.value = "";
+  refreshTagManagerList();
+  els.tagManagerOverlay.classList.remove("hidden");
+});
+
+els.tagManagerCloseBtn.addEventListener("click", () => {
+  els.tagManagerOverlay.classList.add("hidden");
+});
+
+els.tagManagerOverlay.addEventListener("click", (e) => {
+  if (e.target === els.tagManagerOverlay) {
+    els.tagManagerOverlay.classList.add("hidden");
+  }
+});
+
+els.tagManagerSearch.addEventListener("input", refreshTagManagerList);
+
+els.tagManagerList.addEventListener("click", async (e) => {
+  const renameBtn = e.target.closest(".rename-tag-btn");
+  if (renameBtn) {
+    const row = renameBtn.closest("li");
+    const newName = row.querySelector(".rename-input").value.trim();
+    if (!newName || newName === renameBtn.dataset.tag) return;
+    try {
+      await Api.renameTag(renameBtn.dataset.tag, newName);
+      await loadBookmarks();
+    } catch (err) {
+      alert(err.message);
+    }
+    return;
+  }
+
+  const deleteTagBtn = e.target.closest(".delete-tag-btn");
+  if (deleteTagBtn) {
+    if (!window.confirm(`Excluir a tag "${deleteTagBtn.dataset.tag}"? Ela será removida de todos os bookmarks que a usam.`)) {
+      return;
+    }
+    try {
+      await Api.deleteTag(deleteTagBtn.dataset.tag);
       await loadBookmarks();
     } catch (err) {
       alert(err.message);
