@@ -637,6 +637,27 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-08T11:23:05.554Z"
+    },
+    {
+      "id": "ee82f6b7-5a74-44db-878b-fb580c009e18",
+      "url": "https://www.gamepoems.com/",
+      "title": "Game Poems Magazine",
+      "description": "Revista com artigos interativos sobre jogos eletrônicos",
+      "tags": [
+        "Videogame",
+        "Jogos",
+        "Jogos Eletrônicos",
+        "Crítica literária",
+        "Crítica de jogos"
+      ],
+      "action": "Ler",
+      "categories": [
+        "Internet",
+        "Jogos",
+        "Revista"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-08T11:28:40.322Z"
     }
   ]
 }
