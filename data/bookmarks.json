@@ -658,6 +658,27 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-08T11:28:40.322Z"
+    },
+    {
+      "id": "d8a00e5f-a656-418a-b8ad-49a1d65750a4",
+      "url": "https://romchip.org/index.php/romchip-journal",
+      "title": "ROMchip",
+      "description": "ROMchip: A Journal of Game Histories i",
+      "tags": [
+        "Journal",
+        "Videogames",
+        "Jogos Eletrônicos",
+        "Pesquisa acadêmica",
+        "Artigos acadêmicos",
+        "Periódicos"
+      ],
+      "action": "",
+      "categories": [
+        "Jogos",
+        "Revista"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-08T11:43:41.425Z"
     }
   ]
 }
