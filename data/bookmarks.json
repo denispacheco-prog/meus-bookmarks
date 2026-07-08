@@ -729,10 +729,16 @@
       "tags": [
         "Ultraman",
         "Documentário",
-        "Cine"
+        "Cinema japonês",
+        "Ficção científica",
+        "Tokusatsu",
+        "Sci-fi",
+        "Japão"
       ],
       "action": "Baixar",
-      "categories": [],
+      "categories": [
+        "Cinema"
+      ],
       "favorite": false,
       "createdAt": "2026-07-08T17:35:30.862Z"
     }
