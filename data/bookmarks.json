@@ -574,6 +574,26 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-08T00:38:58.967Z"
+    },
+    {
+      "id": "44d28702-cc0d-44fd-9190-f89c80473294",
+      "url": "https://archive.org/details/VR.5TVSeries",
+      "title": "VR.5 (TV Series) : Fox",
+      "description": "",
+      "tags": [
+        "VR5",
+        "Série de TV",
+        "Cyberpunk",
+        "Sci-Fi",
+        "Ficção Científica"
+      ],
+      "action": "📺Assistir",
+      "categories": [
+        "Televisão",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-08T00:40:49.039Z"
     }
   ]
 }
