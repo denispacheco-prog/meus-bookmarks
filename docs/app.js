@@ -48,6 +48,8 @@ function applyTheme(theme) {
 
 applyTheme(effectiveTheme());
 
+const BOOKMARKS_PAGE_SIZE = 50;
+
 const state = {
   bookmarks: [],
   categoryGroups: [],
@@ -57,6 +59,7 @@ const state = {
   activeCategory: "",
   activeAction: "",
   editingId: null,
+  visibleCount: BOOKMARKS_PAGE_SIZE,
 };
 
 const els = {
@@ -87,6 +90,7 @@ const els = {
   actionManagerOverlay: document.getElementById("action-manager-overlay"),
   actionManagerBody: document.getElementById("action-manager-body"),
   actionManagerCloseBtn: document.getElementById("action-manager-close-btn"),
+  loadMoreBtn: document.getElementById("load-more-btn"),
   favoritesSection: document.getElementById("favorites-section"),
   favoritesList: document.getElementById("favorites-list"),
   tagCloudSection: document.getElementById("tag-cloud-section"),
@@ -178,8 +182,25 @@ function normalizeForMatch(str) {
   return str.normalize("NFD").replace(DIACRITICS_RE, "").toLowerCase();
 }
 
+function resetVisibleCount() {
+  state.visibleCount = BOOKMARKS_PAGE_SIZE;
+}
+
 function toggleTagFilter(tag) {
   state.activeTag = state.activeTag === tag ? null : tag;
+  resetVisibleCount();
+  render();
+}
+
+function toggleCategoryFilter(category) {
+  state.activeCategory = state.activeCategory === category ? "" : category;
+  resetVisibleCount();
+  render();
+}
+
+function toggleActionFilter(action) {
+  state.activeAction = state.activeAction === action ? "" : action;
+  resetVisibleCount();
   render();
 }
 
@@ -365,15 +386,25 @@ function render() {
   els.activeFilters.classList.toggle("hidden", !hasActiveFilters);
   els.activeFilters.innerHTML = activeFiltersMarkup();
 
+  const visible = filtered.slice(0, state.visibleCount);
+
   els.resultsCount.textContent =
-    `${filtered.length} bookmark${filtered.length === 1 ? "" : "s"}`;
+    visible.length < filtered.length
+      ? `${visible.length} de ${filtered.length} bookmarks`
+      : `${filtered.length} bookmark${filtered.length === 1 ? "" : "s"}`;
   els.emptyState.classList.toggle("hidden", filtered.length > 0);
 
-  els.list.innerHTML = filtered
+  els.list.innerHTML = visible
     .map((bookmark) =>
       bookmark.id === state.editingId ? editFormMarkup(bookmark) : bookmarkItemMarkup(bookmark)
     )
     .join("");
+
+  const remaining = filtered.length - visible.length;
+  els.loadMoreBtn.classList.toggle("hidden", remaining <= 0);
+  if (remaining > 0) {
+    els.loadMoreBtn.textContent = `Carregar mais (${remaining} restante${remaining === 1 ? "" : "s"})`;
+  }
 
   const favorites = state.bookmarks.filter((b) => b.favorite);
   els.favoritesSection.classList.toggle("hidden", favorites.length === 0);
@@ -591,22 +622,24 @@ async function loadBookmarks() {
 
 els.searchInput.addEventListener("input", (e) => {
   state.searchText = e.target.value.trim().toLowerCase();
+  resetVisibleCount();
   render();
 });
 
 els.categoryMenu.addEventListener("click", (e) => {
   const categoryBtn = e.target.closest(".category-pill");
   if (!categoryBtn) return;
-  const category = categoryBtn.dataset.category;
-  state.activeCategory = state.activeCategory === category ? "" : category;
-  render();
+  toggleCategoryFilter(categoryBtn.dataset.category);
 });
 
 els.actionMenu.addEventListener("click", (e) => {
   const actionBtn = e.target.closest(".action-pill");
   if (!actionBtn) return;
-  const action = actionBtn.dataset.action;
-  state.activeAction = state.activeAction === action ? "" : action;
+  toggleActionFilter(actionBtn.dataset.action);
+});
+
+els.loadMoreBtn.addEventListener("click", () => {
+  state.visibleCount += BOOKMARKS_PAGE_SIZE;
   render();
 });
 
@@ -636,16 +669,12 @@ els.list.addEventListener("click", async (e) => {
   }
   const categoryBtn = e.target.closest(".category-pill");
   if (categoryBtn) {
-    const category = categoryBtn.dataset.category;
-    state.activeCategory = state.activeCategory === category ? "" : category;
-    render();
+    toggleCategoryFilter(categoryBtn.dataset.category);
     return;
   }
   const actionBtn = e.target.closest(".action-pill");
   if (actionBtn) {
-    const action = actionBtn.dataset.action;
-    state.activeAction = state.activeAction === action ? "" : action;
-    render();
+    toggleActionFilter(actionBtn.dataset.action);
     return;
   }
   const editBtn = e.target.closest(".edit-btn");
@@ -721,6 +750,7 @@ els.activeFilters.addEventListener("click", (e) => {
     state.activeCategory = "";
     state.activeAction = "";
     state.activeTag = null;
+    resetVisibleCount();
     render();
     return;
   }
@@ -730,6 +760,7 @@ els.activeFilters.addEventListener("click", (e) => {
   if (type === "category") state.activeCategory = "";
   if (type === "action") state.activeAction = "";
   if (type === "tag") state.activeTag = null;
+  resetVisibleCount();
   render();
 });
 
