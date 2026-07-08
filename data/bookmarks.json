@@ -72,7 +72,8 @@
     "Comprar",
     "Baixar",
     "Jogar",
-    "✍🏻 Escrever"
+    "✍🏻 Escrever",
+    "📺Assistir"
   ],
   "bookmarks": [
     {
@@ -552,6 +553,27 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-07T22:03:27.020Z"
+    },
+    {
+      "id": "4593e1a6-38cb-47f5-95c8-4225f0ef6b71",
+      "url": "https://archive.org/details/max-headroom-complete/Max",
+      "title": "Max Headroom - Complete Series",
+      "description": "",
+      "tags": [
+        "Max Headroom",
+        "Série de TV",
+        "Inglaterra",
+        "Cyberpunk",
+        "Sci-fi",
+        "Ficção Científica"
+      ],
+      "action": "📺Assistir",
+      "categories": [
+        "Televisão",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-08T00:38:58.967Z"
     }
   ]
 }
