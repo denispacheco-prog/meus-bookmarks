@@ -617,6 +617,26 @@
       ],
       "favorite": true,
       "createdAt": "2026-07-08T10:47:21.690Z"
+    },
+    {
+      "id": "db90c2c7-dfe4-4c8e-b128-e4eccaf9496e",
+      "url": "https://aworkinglibrary.com/",
+      "title": "A Working Library",
+      "description": "Textos sobre cultura, literatura e sociedade",
+      "tags": [
+        "Longforms",
+        "Ensaios",
+        "Cultura online",
+        "Cultura"
+      ],
+      "action": "",
+      "categories": [
+        "Internet",
+        "Literatura",
+        "Revista"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-08T11:23:05.554Z"
     }
   ]
 }
