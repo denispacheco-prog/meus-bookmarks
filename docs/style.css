@@ -747,7 +747,8 @@ main {
   color: var(--accent);
 }
 
-.manager-category-list .delete-category-btn:hover {
+.manager-category-list .delete-category-btn:hover,
+.manager-category-list .delete-action-btn:hover {
   border-color: #c0392b;
   color: #c0392b;
 }

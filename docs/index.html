@@ -45,6 +45,7 @@
               <input id="import-file-input" type="file" accept="application/json" class="hidden" />
               <button id="github-config-btn" type="button" class="hidden">⚙ GitHub</button>
               <button id="category-manager-btn" type="button">⚙ Categorias</button>
+              <button id="action-manager-btn" type="button">⚙ Ações</button>
             </div>
           </div>
           <div id="active-filters" class="active-filters hidden"></div>
@@ -119,6 +120,16 @@
         <button id="category-manager-close-btn" type="button" class="modal-close-btn">✕</button>
       </div>
       <div id="category-manager-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="action-manager-overlay" class="modal-overlay hidden">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Gerenciar ações">
+      <div class="modal-header">
+        <h2>Gerenciar ações</h2>
+        <button id="action-manager-close-btn" type="button" class="modal-close-btn">✕</button>
+      </div>
+      <div id="action-manager-body" class="modal-body"></div>
     </div>
   </div>
 

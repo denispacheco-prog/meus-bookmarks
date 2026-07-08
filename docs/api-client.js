@@ -105,6 +105,39 @@ function deleteCategoryEverywhere(data, groupId, name) {
   }
 }
 
+function addActionLocal(data, name) {
+  name = (name || "").trim();
+  if (!name) throw new Error("nome da ação é obrigatório");
+  const actions = data.actions || (data.actions = []);
+  if (actions.includes(name)) throw new Error("já existe uma ação com esse nome");
+  actions.push(name);
+}
+
+function renameActionEverywhere(data, oldName, newName) {
+  newName = (newName || "").trim();
+  if (!newName) throw new Error("nome da ação é obrigatório");
+  const actions = data.actions || (data.actions = []);
+  if (!actions.includes(oldName)) throw new Error("ação não encontrada");
+  if (newName !== oldName && actions.includes(newName)) {
+    throw new Error("já existe uma ação com esse nome");
+  }
+
+  data.actions = actions.map((a) => (a === oldName ? newName : a));
+  for (const bookmark of data.bookmarks || []) {
+    if (bookmark.action === oldName) bookmark.action = newName;
+  }
+}
+
+function deleteActionEverywhere(data, name) {
+  const actions = data.actions || (data.actions = []);
+  if (!actions.includes(name)) throw new Error("ação não encontrada");
+
+  data.actions = actions.filter((a) => a !== name);
+  for (const bookmark of data.bookmarks || []) {
+    if (bookmark.action === name) bookmark.action = "";
+  }
+}
+
 function buildBookmark(raw, extraTags = []) {
   const url = (raw.url || "").trim();
   const title = (raw.title || "").trim();
@@ -306,6 +339,27 @@ const GitHubApi = {
     await ghPutFile(data, sha, `Remove categoria: ${name}`);
     return data;
   },
+
+  async addAction(name) {
+    const { data, sha } = await ghGetFile();
+    addActionLocal(data, name);
+    await ghPutFile(data, sha, `Adiciona ação: ${name}`);
+    return data;
+  },
+
+  async renameAction(oldName, newName) {
+    const { data, sha } = await ghGetFile();
+    renameActionEverywhere(data, oldName, newName);
+    await ghPutFile(data, sha, `Renomeia ação: ${oldName} → ${newName}`);
+    return data;
+  },
+
+  async deleteAction(name) {
+    const { data, sha } = await ghGetFile();
+    deleteActionEverywhere(data, name);
+    await ghPutFile(data, sha, `Remove ação: ${name}`);
+    return data;
+  },
 };
 
 const LocalApi = {
@@ -414,6 +468,41 @@ const LocalApi = {
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
       throw new Error(err.error || "Erro ao excluir categoria");
+    }
+    return res.json();
+  },
+
+  async addAction(name) {
+    const res = await fetch("/api/actions", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name }),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || "Erro ao adicionar ação");
+    }
+    return res.json();
+  },
+
+  async renameAction(oldName, newName) {
+    const res = await fetch(`/api/actions/${encodeURIComponent(oldName)}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: newName }),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || "Erro ao renomear ação");
+    }
+    return res.json();
+  },
+
+  async deleteAction(name) {
+    const res = await fetch(`/api/actions/${encodeURIComponent(name)}`, { method: "DELETE" });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || "Erro ao excluir ação");
     }
     return res.json();
   },

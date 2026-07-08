@@ -83,6 +83,10 @@ const els = {
   categoryManagerOverlay: document.getElementById("category-manager-overlay"),
   categoryManagerBody: document.getElementById("category-manager-body"),
   categoryManagerCloseBtn: document.getElementById("category-manager-close-btn"),
+  actionManagerBtn: document.getElementById("action-manager-btn"),
+  actionManagerOverlay: document.getElementById("action-manager-overlay"),
+  actionManagerBody: document.getElementById("action-manager-body"),
+  actionManagerCloseBtn: document.getElementById("action-manager-close-btn"),
   favoritesSection: document.getElementById("favorites-section"),
   favoritesList: document.getElementById("favorites-list"),
   themeToggleBtn: document.getElementById("theme-toggle-btn"),
@@ -406,6 +410,27 @@ function categoryManagerMarkup() {
     .join("");
 }
 
+function actionManagerMarkup() {
+  return `
+    <ul class="manager-category-list">
+      ${sortedAlpha(state.actions)
+        .map(
+          (action) => `
+            <li data-action="${escapeHtml(action)}">
+              <input type="text" class="rename-input" value="${escapeHtml(action)}" />
+              <button type="button" class="rename-action-btn" data-action="${escapeHtml(action)}">Renomear</button>
+              <button type="button" class="delete-action-btn" data-action="${escapeHtml(action)}">Excluir</button>
+            </li>`
+        )
+        .join("")}
+    </ul>
+    <div class="manager-add-row">
+      <input type="text" class="new-action-input" placeholder="Nova ação" />
+      <button type="button" class="add-action-btn">Adicionar</button>
+    </div>
+  `;
+}
+
 async function toggleFavorite(id) {
   const bookmark = state.bookmarks.find((b) => b.id === id);
   if (!bookmark) return;
@@ -426,6 +451,9 @@ async function loadBookmarks() {
   render();
   if (!els.categoryManagerOverlay.classList.contains("hidden")) {
     els.categoryManagerBody.innerHTML = categoryManagerMarkup();
+  }
+  if (!els.actionManagerOverlay.classList.contains("hidden")) {
+    els.actionManagerBody.innerHTML = actionManagerMarkup();
   }
 }
 
@@ -728,6 +756,64 @@ els.categoryManagerBody.addEventListener("click", async (e) => {
     }
     try {
       await Api.deleteCategory(deleteBtn.dataset.group, deleteBtn.dataset.category);
+      await loadBookmarks();
+    } catch (err) {
+      alert(err.message);
+    }
+  }
+});
+
+els.actionManagerBtn.addEventListener("click", () => {
+  els.actionManagerBody.innerHTML = actionManagerMarkup();
+  els.actionManagerOverlay.classList.remove("hidden");
+});
+
+els.actionManagerCloseBtn.addEventListener("click", () => {
+  els.actionManagerOverlay.classList.add("hidden");
+});
+
+els.actionManagerOverlay.addEventListener("click", (e) => {
+  if (e.target === els.actionManagerOverlay) {
+    els.actionManagerOverlay.classList.add("hidden");
+  }
+});
+
+els.actionManagerBody.addEventListener("click", async (e) => {
+  const addBtn = e.target.closest(".add-action-btn");
+  if (addBtn) {
+    const input = addBtn.parentElement.querySelector(".new-action-input");
+    const name = input.value.trim();
+    if (!name) return;
+    try {
+      await Api.addAction(name);
+      await loadBookmarks();
+    } catch (err) {
+      alert(err.message);
+    }
+    return;
+  }
+
+  const renameBtn = e.target.closest(".rename-action-btn");
+  if (renameBtn) {
+    const row = renameBtn.closest("li");
+    const newName = row.querySelector(".rename-input").value.trim();
+    if (!newName) return;
+    try {
+      await Api.renameAction(renameBtn.dataset.action, newName);
+      await loadBookmarks();
+    } catch (err) {
+      alert(err.message);
+    }
+    return;
+  }
+
+  const deleteBtn = e.target.closest(".delete-action-btn");
+  if (deleteBtn) {
+    if (!window.confirm(`Excluir a ação "${deleteBtn.dataset.action}"? Ela será removida de todos os bookmarks que a usam.`)) {
+      return;
+    }
+    try {
+      await Api.deleteAction(deleteBtn.dataset.action);
       await loadBookmarks();
     } catch (err) {
       alert(err.message);
