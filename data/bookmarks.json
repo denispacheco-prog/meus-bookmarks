@@ -823,6 +823,26 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-13T18:26:32.676Z"
+    },
+    {
+      "id": "1177dfad-7ccd-4c49-bfca-2450d7d22e4f",
+      "url": "https://www.ifixit.com/",
+      "title": "iFixit: The Free Repair Manual",
+      "description": "",
+      "tags": [
+        "Tecnologia",
+        "Conserto",
+        "Eletrônicos",
+        "Manuais",
+        "Guias",
+        "Reparos"
+      ],
+      "action": "",
+      "categories": [
+        "Wiki"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-13T18:28:43.641Z"
     }
   ]
 }
