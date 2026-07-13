@@ -164,11 +164,10 @@
         "Exploração",
         "Astrobiologia"
       ],
-      "action": "✍🏻 Escrever",
+      "action": "",
       "categories": [
         "Ciência",
-        "Notícias",
-        "Poesia"
+        "Notícias"
       ],
       "favorite": false,
       "createdAt": "2026-07-07T11:35:58.831Z"
