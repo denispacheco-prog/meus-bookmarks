@@ -54,7 +54,8 @@ const state = {
   bookmarks: [],
   categoryGroups: [],
   actions: [],
-  searchText: "",
+  searchTerms: [],
+  searchTermsRaw: [],
   activeTag: null,
   activeCategory: "",
   activeAction: "",
@@ -113,6 +114,18 @@ function escapeHtml(str) {
   }[c]));
 }
 
+function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function highlightMatches(text) {
+  const safe = escapeHtml(text || "");
+  const escapedTerms = state.searchTermsRaw.map((t) => escapeRegExp(escapeHtml(t))).filter(Boolean);
+  if (!escapedTerms.length) return safe;
+  const regex = new RegExp(`(${escapedTerms.join("|")})`, "gi");
+  return safe.replace(regex, "<mark>$1</mark>");
+}
+
 function getDomain(url) {
   try {
     return new URL(url).hostname.replace(/^www\./, "");
@@ -146,13 +159,8 @@ function matchesFilters(bookmark) {
   if (state.activeAction && bookmark.action !== state.activeAction) {
     return false;
   }
-  if (state.searchText) {
-    const haystack = [bookmark.title, bookmark.description, bookmark.action, ...bookmark.tags, ...bookmark.categories]
-      .join(" ")
-      .toLowerCase();
-    if (!haystack.includes(state.searchText)) {
-      return false;
-    }
+  if (state.searchTerms.length && !state.searchTerms.every((term) => bookmark._searchHaystack.includes(term))) {
+    return false;
   }
   return true;
 }
@@ -375,9 +383,16 @@ function renderFilterAndFormOptions() {
 }
 
 function render() {
+  const hasSearch = state.searchTerms.length > 0;
   const filtered = state.bookmarks
     .filter(matchesFilters)
-    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    .sort((a, b) => {
+      if (hasSearch) {
+        const scoreDiff = searchScore(b) - searchScore(a);
+        if (scoreDiff !== 0) return scoreDiff;
+      }
+      return new Date(b.createdAt) - new Date(a.createdAt);
+    });
 
   els.categoryMenu.innerHTML = categoryMenuMarkup();
   els.actionMenu.innerHTML = actionMenuMarkup();
@@ -437,9 +452,9 @@ function bookmarkItemMarkup(bookmark) {
 
   return `
     <li class="bookmark-item" data-id="${escapeHtml(bookmark.id)}">
-      <h3><a href="${escapeHtml(bookmark.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(bookmark.title)}</a></h3>
+      <h3><a href="${escapeHtml(bookmark.url)}" target="_blank" rel="noopener noreferrer">${highlightMatches(bookmark.title)}</a></h3>
       <div class="bookmark-url">${escapeHtml(bookmark.url)}</div>
-      ${bookmark.description ? `<p class="bookmark-description">${escapeHtml(bookmark.description)}</p>` : ""}
+      ${bookmark.description ? `<p class="bookmark-description">${highlightMatches(bookmark.description)}</p>` : ""}
       <div class="bookmark-meta">
         ${favoriteHtml}
         <span class="bookmark-date">${formatDate(bookmark.createdAt)}</span>
@@ -547,18 +562,31 @@ function categoryManagerMarkup() {
     .join("");
 }
 
+function splitActionIcon(action) {
+  if (ACTION_ICONS[action]) {
+    return { icon: ACTION_ICONS[action], label: action, embedded: false };
+  }
+  const match = action.match(/^(\S+)\s+(.*)$/);
+  if (match && /\p{Extended_Pictographic}/u.test(match[1])) {
+    return { icon: match[1], label: match[2], embedded: true };
+  }
+  return { icon: "", label: action, embedded: false };
+}
+
 function actionManagerMarkup() {
   return `
     <ul class="manager-category-list">
       ${sortedAlpha(state.actions)
-        .map(
-          (action) => `
-            <li data-action="${escapeHtml(action)}">
-              <input type="text" class="rename-input" value="${escapeHtml(action)}" />
+        .map((action) => {
+          const { icon, label, embedded } = splitActionIcon(action);
+          return `
+            <li data-action="${escapeHtml(action)}" data-icon="${escapeHtml(icon)}" data-icon-embedded="${embedded}">
+              <span class="action-manager-icon">${escapeHtml(icon)}</span>
+              <input type="text" class="rename-input" value="${escapeHtml(label)}" />
               <button type="button" class="rename-action-btn" data-action="${escapeHtml(action)}">Renomear</button>
               <button type="button" class="delete-action-btn" data-action="${escapeHtml(action)}">Excluir</button>
-            </li>`
-        )
+            </li>`;
+        })
         .join("")}
     </ul>
     <div class="manager-add-row">
@@ -602,9 +630,44 @@ async function toggleFavorite(id) {
   }
 }
 
+const SEARCH_FIELD_WEIGHTS = {
+  title: 5,
+  tags: 4,
+  categories: 3,
+  action: 2,
+  description: 1,
+};
+
+function buildSearchFields(bookmark) {
+  return {
+    title: normalizeForMatch(bookmark.title || ""),
+    description: normalizeForMatch(bookmark.description || ""),
+    action: normalizeForMatch(bookmark.action || ""),
+    tags: normalizeForMatch((bookmark.tags || []).join(" ")),
+    categories: normalizeForMatch((bookmark.categories || []).join(" ")),
+  };
+}
+
+function searchScore(bookmark) {
+  let score = 0;
+  for (const term of state.searchTerms) {
+    for (const field in SEARCH_FIELD_WEIGHTS) {
+      if (bookmark._searchFields[field].includes(term)) {
+        score += SEARCH_FIELD_WEIGHTS[field];
+      }
+    }
+  }
+  return score;
+}
+
 async function loadBookmarks() {
   const data = await Api.load();
-  state.bookmarks = (data.bookmarks || []).map((b) => ({ categories: [], action: "", favorite: false, ...b }));
+  state.bookmarks = (data.bookmarks || []).map((b) => {
+    const bookmark = { categories: [], action: "", favorite: false, ...b };
+    bookmark._searchFields = buildSearchFields(bookmark);
+    bookmark._searchHaystack = Object.values(bookmark._searchFields).join(" ");
+    return bookmark;
+  });
   state.categoryGroups = data.categoryGroups || [];
   state.actions = data.actions || [];
   renderFilterAndFormOptions();
@@ -621,7 +684,9 @@ async function loadBookmarks() {
 }
 
 els.searchInput.addEventListener("input", (e) => {
-  state.searchText = e.target.value.trim().toLowerCase();
+  const raw = e.target.value.trim();
+  state.searchTerms = normalizeForMatch(raw).split(/\s+/).filter(Boolean);
+  state.searchTermsRaw = raw.split(/\s+/).filter(Boolean);
   resetVisibleCount();
   render();
 });
@@ -976,8 +1041,11 @@ els.actionManagerBody.addEventListener("click", async (e) => {
   const renameBtn = e.target.closest(".rename-action-btn");
   if (renameBtn) {
     const row = renameBtn.closest("li");
-    const newName = row.querySelector(".rename-input").value.trim();
+    let newName = row.querySelector(".rename-input").value.trim();
     if (!newName) return;
+    if (row.dataset.iconEmbedded === "true" && row.dataset.icon) {
+      newName = `${row.dataset.icon} ${newName}`;
+    }
     try {
       await Api.renameAction(renameBtn.dataset.action, newName);
       await loadBookmarks();
