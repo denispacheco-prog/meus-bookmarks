@@ -15,6 +15,7 @@ const CATEGORY_PALETTE = [
   "#eda100", // amarelo
   "#1baf7a", // verde água
   "#4a3aa7", // violeta
+  "#74b9ff", // azul claro
   "#008300", // verde
   "#2a78d6", // azul
   "#eb6834", // laranja
@@ -22,7 +23,7 @@ const CATEGORY_PALETTE = [
 
 // Ordem de atribuição de cor (fixa, independente da ordem de exibição das coleções).
 // Coleções novas entram no fim automaticamente, na ordem em que aparecem nos dados.
-const GROUP_COLOR_ORDER = ["conteudo", "recurso", "midia", "editorial", "inspiracao"];
+const GROUP_COLOR_ORDER = ["conteudo", "recurso", "midia", "editorial", "inspiracao", "quotes"];
 
 function groupColor(groupId) {
   let index = GROUP_COLOR_ORDER.indexOf(groupId);

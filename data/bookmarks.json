@@ -63,6 +63,13 @@
         "IA",
         "Fórum"
       ]
+    },
+    {
+      "id": "quotes",
+      "label": "@ Quotes",
+      "categories": [
+        "Quote"
+      ]
     }
   ],
   "actions": [
@@ -843,6 +850,2380 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-13T18:28:43.641Z"
+    },
+    {
+      "id": "fce2de9b-df6f-4aa3-bc9a-6f794c6ebfa0",
+      "url": "https://www.forbes.com/sites/traversmark/2023/12/29/a-psychologist-explains-the-power-of-a-quiet-ego-for-a-happy-life/?utm_source=pocket_saves",
+      "title": "A Psychologist Explains The Power Of A ‘Quiet Ego’ For A Happy Life",
+      "description": "Nurturing the quiet ego amplifies one’s sense of compassion for oneself and others. To begin with, it’s vital to discern the sources of internal “noise,” question one’s dominant inner narratives, identify areas where self-centeredness overshadows empathy or immediate gratification impedes long-term well-being. Embracing the quiet is a journey of self-reflection, a commitment to personal growth, openness and empathy as well as a pathway to a kinder world.",
+      "tags": [
+        "Psicologia",
+        "Bem-estar",
+        "Autoconhecimento"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-02T07:29:00.000Z"
+    },
+    {
+      "id": "852c9018-49db-4835-8690-82ebde046da8",
+      "url": "https://www.nytimes.com/2023/12/21/opinion/internet-aging-gen-z.html?utm_source=pocket_saves",
+      "title": "The Year Millennials Aged Out of the Internet",
+      "description": "It’s indisputable that we are living through a transitional period in the short history of the internet. The end of the low interest-rate era has shaken up the economics of start-ups, ending rapid-growth practices like blitzscaling and reducing the number of new internet businesses vying for our attention; companies like Alphabet and Facebook are now mature and dominant businesses instead of disruptive upstarts. But I suspect there is another factor driving the alienation and discomfort felt by many of the people who feel as though the internet is dying before our eyes: We’re getting old.",
+      "tags": [
+        "Internet",
+        "Cultura Online",
+        "Millennials"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-02T07:33:00.000Z"
+    },
+    {
+      "id": "7615d258-fb86-4390-a105-13cf0034ba2e",
+      "url": "https://www.wired.com/story/how-to-start-a-healthy-habit/?bxid=5bd676cc24c17c1048014777&cndid=38887802&esrc=bounceX&source=Email_0_EDT_WIR_NEWSLETTER_0_DAILY_ZZ&utm_brand=wired&utm_mailing=WIR_Daily_010124&utm_source=pocket_saves",
+      "title": "How to Start (and Keep) a Healthy Habit",
+      "description": "The first and most important part of changing something in your life is to forget the resolutions and forget the goals. Think instead of creating a system that allows you to do what you want to do.",
+      "tags": [
+        "Hábitos",
+        "Produtividade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-02T07:36:00.000Z"
+    },
+    {
+      "id": "6f4cb330-ad51-4ec7-a4f9-b6b0d78f1c9d",
+      "url": "http://www.nerds-feather.com/2023/12/interview-with-malka-older.html?m=1&utm_source=pocket_saves",
+      "title": "Interview with Malka Older",
+      "description": "“Comemierda” is an epithet that I heard a lot growing up, usually when my mom was driving. Literally it means “shit-eater” (derogatory), but like most such words there’s a lot of connotation and shades of meaning (…) it’s a very useful word, but there’s another reason that I employ it so much: it’s pretty hard to find a personal epithet that doesn’t rely on insulting a particular gender, sexual orientation, someone’s parents or parentage, entirely blameless animal, or part of the body.",
+      "tags": [
+        "Linguagem",
+        "Entrevista"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Entrevistas"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-02T11:04:00.000Z"
+    },
+    {
+      "id": "ba59a30e-f3e6-4b62-ab59-c2a4d7a11231",
+      "url": "https://variety.com/2023/tv/news/a-murder-at-the-end-of-the-world-finale-killer-reveal-interview-1235833181/?utm_source=pocket_saves",
+      "title": "‘A Murder at the End of the World’s’ Surprising, Powerful Ending Explained by Creators Brit Marling and Zal Batmanglij",
+      "description": "If you think about AI in a vacuum — a science-fiction vacuum — there are so many dazzling ways in which it could come to life. But I don’t know that we’re yet seeing that, because so much of what we’re given permission to imagine or the financing to achieve is only in terms of what would be profitable.",
+      "tags": [
+        "Inteligência Artificial",
+        "Capitalismo",
+        "Ficção Científica"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "IA",
+        "Entrevistas"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-03T07:33:00.000Z"
+    },
+    {
+      "id": "b1047675-938c-48b8-bb03-8b4375de1fb5",
+      "url": "https://www.self.com/story/how-to-relax-with-anxiety?category=fascinating_stories&position=6&scheduled_corpus_item_id=6bbccdae-cacc-4c4c-b598-ef527dd2adfc&sponsored=0&url=https%3A%2F%2Fwww.self.com%2Fstory%2Fhow-to-relax-with-anxiety&utm_source=pocket_saves",
+      "title": "How to Rest, for Real, When You’re a Very Anxious Person",
+      "description": "“if you allow your sympathetic nervous system to run its course without fighting against it, your parasympathetic nervous system will kick into gear and usher in a relaxation response,” says Dr. Rosmarin. “The way to relax is by going through anxiety, not by going around it or resisting it.”",
+      "tags": [
+        "Ansiedade",
+        "Psicologia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-03T07:47:00.000Z"
+    },
+    {
+      "id": "4e9ef778-9a02-4f80-ad1b-fe03d00136cd",
+      "url": "https://www.nytimes.com/2023/12/31/world/americas/cat-prison-chile.html?smid=url-share&unlocked_article_code=1.LE0.UCBV.0Zk2uA9wBwwh&utm_source=pocket_saves",
+      "title": "Cats Filled the Prison. Then the Inmates Fell in Love.",
+      "description": "Sometimes you’ll be depressed and it’s like she senses that you’re a bit down,” said Reinaldo Rodriguez, 48, who is scheduled to be imprisoned until 2031 on a firearms conviction. “She comes and glues herself to you. She’ll touch her face to yours.",
+      "tags": [
+        "Gatos",
+        "Sociedade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-05T06:53:00.000Z"
+    },
+    {
+      "id": "a7969490-5acd-4a0e-b5f7-6ae7a33c378b",
+      "url": "https://www.newyorker.com/culture/the-weekend-essay/the-case-against-travel?utm_source=pocket_saves",
+      "title": "The Case Against Travel",
+      "description": "although people like to talk about their travels, few of us like to listen to them. Such talk resembles academic writing and reports of dreams: forms of communication driven more by the needs of the producer than the consumer. (…) The single most important fact about tourism is this: we already know what we will be like when we return. A vacation is not like immigrating to a foreign country, or matriculating at a university, or starting a new job, or falling in love. We embark on those pursuits with the trepidation of one who enters a tunnel not knowing who she will be when she walks out. The traveller departs confident that she will come back with the same basic interests, political beliefs, and living arrangements. Travel is a boomerang. It drops you right where you started.",
+      "tags": [
+        "Viagem",
+        "Filosofia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Viagem"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-05T07:48:00.000Z"
+    },
+    {
+      "id": "f509d8f3-2381-475b-89c8-a990fd80fca7",
+      "url": "https://www.popmatters.com/blade-runner-cyberpunk-stuck-future?utm_source=pocket_saves",
+      "title": "Trapped in the Long Tomorrow: ‘Blade Runner’, Cyberpunk, and Our Stuck Future",
+      "description": "This is the hidden-in-plain-sight critique that cyberpunk continues to convey, even as we can’t avoid its future crashing into our present: there was no sudden shock, no asteroid or solar flare, that caused social collapse, just the refusal to change course even after ‘we’ were warned that economic growth, extraction, and exploitation couldn’t go on forever. Blade Runner is then still our vision of the future because the future it was warning us about hasn’t changed – because the ideological political-economic project that came to the fore just before the time the film was released (what we used to call the ‘new right’, before today’s new new right) has determined our future, is still with us, and still dominates.",
+      "tags": [
+        "Cyberpunk",
+        "Cinema",
+        "Futuro"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Cinema"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-09T07:26:00.000Z"
+    },
+    {
+      "id": "b530403b-6861-43b6-88cd-5c851ff0d8fb",
+      "url": "https://www.theatlantic.com/culture/archive/2024/01/easy-mode-video-games-adult/677085/?mc_cid=20d431b6eb&mc_eid=2ba8676034&utm_source=pocket_saves",
+      "title": "The Secret to Gaming in Adulthood",
+      "description": "But personally, I’m not looking for a harder life. Much the reverse: As I’ve embraced easy mode in more games, I’ve also come to dream about an easy mode in other areas of my existence. (…) Real life, of course, doesn’t offer those options. But that’s part of the allure of turning down the difficulty in games as an adult. Those fictional worlds are more under your control than actual life will ever be. That’s a real fantasy come true.",
+      "tags": [
+        "Jogos",
+        "Vida Adulta"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-12T07:12:00.000Z"
+    },
+    {
+      "id": "bb816e32-843b-4ee6-9bd8-7189424132a4",
+      "url": "https://www1.folha.uol.com.br/equilibrio/2024/01/nove-formas-de-melhorar-seus-relacionamentos-em-2024.shtml?utm_source=pocket_saves",
+      "title": "Nove formas de melhorar seus relacionamentos em 2024",
+      "description": "Quando alguém que você ama estiver chateado, faça uma pergunta simples: “Você quer ser ajudado, ouvido ou abraçado?”. Essa questão também pode oferecer sensação de conforto e controle aos adultos, segundo especialistas.",
+      "tags": [
+        "Relacionamentos",
+        "Psicologia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-12T07:14:00.000Z"
+    },
+    {
+      "id": "e7337883-3f15-4cc7-a068-47fe57454969",
+      "url": "https://warrenellis.ltd/isles/10820/",
+      "title": "WARREN ELLIS LTD.",
+      "description": "There’s a notion abroad that perhaps it is time for the independent hand-rolled personal web again. I have this feeling that it may be a sign of a maturing media landscape – when you’ve only got four channels and a handful of magazines, none of which speak to you, then it’s time for zine fairs, mail art, public access cable shows and the like, right?",
+      "tags": [
+        "Internet",
+        "Cultura Independente"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-15T06:29:00.000Z"
+    },
+    {
+      "id": "1527a336-f2e0-48e2-8d8f-820648b6cf2d",
+      "url": "https://www.theatlantic.com/technology/archive/2024/01/long-youtube-videos-tiktok/677130/?utm_source=pocket_saves",
+      "title": "The Internet Is Being Ruined by Bloated Junk",
+      "description": "whether an algorithm is actually hard-coded to prefer longer-form videos matters less than whether creators think an algorithm prefers longer-form videos. Folk theories of algorithms end up influencing what kinds of content get made. If people start believing that longer videos or podcast episodes do “better,” they’ll make more of them. (…) People are afraid that generative AI will pollute the internet. But more basic forms of the technology—social-media and search algorithms—have been doing that for years",
+      "tags": [
+        "Internet",
+        "Algoritmos",
+        "Inteligência Artificial"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-16T06:40:00.000Z"
+    },
+    {
+      "id": "aebb70e3-e875-412c-bb0e-1669a942a85e",
+      "url": "https://www.latimes.com/travel/story/2024-01-18/how-to-rediscover-childlike-wonder?utm_source=pocket_reader",
+      "title": "Feeling drained? Here’s how to rediscover your childlike wonder",
+      "description": "eight wonders of life that often propel people into states of awe: moral beauty (witnessing the virtue of others); collective effervescence (often experienced in large groups like those at weddings, rallies or sporting events); nature; music; visual design (beautiful buildings, paintings and the like); spiritual and religious experiences; life and death; and epiphanies. (…) “I started to think about the problems associated with too much self-focus — depression, rumination, anxiety, shame, self-harm, suicide, body image issues,” Keltner said. “People are sick of the self-focus [that’s] imposed upon us by Instagram and the like. They want to be free of the self.”",
+      "tags": [
+        "Psicologia",
+        "Redes Sociais",
+        "Bem-estar"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-01-22T07:27:00.000Z"
+    },
+    {
+      "id": "0b6a97bf-b101-4fab-beec-d3f04e855cfa",
+      "url": "https://www.ecehh.org/research/attention-restoration-theory-a-systematic-review/",
+      "title": "Boring Architecture Is Starving Your Brain",
+      "description": "There’s a reason why, when you look out into a forest, nature’s complexity and rhythms restores our attention back,” he says. “We need that in buildings. Less is not more.” This is backed by the research of psychologists Rachel and Stephen Kaplan, who in the 1980s developed Attention Restoration Theory, which posited that people’s concentration improves when spending time in natural environments. (…) “We can’t have buildings that are only here for 40 years. We need thousand-year thinking,” he says. “The world of construction teaches you that form follows function, less is more, ornament is a crime. It’s powerful, and when you’re studying, that goes in your brain and brainwashes you.”",
+      "tags": [
+        "Arquitetura",
+        "Psicologia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-06-26T08:00:00.000Z"
+    },
+    {
+      "id": "7dcb95d2-c4cb-45ea-842d-0c9aae1d63c4",
+      "url": "https://pocket.co/share/379c00a4-d892-4a30-8d9a-07f0217abcd8",
+      "title": "The secret digital behaviors of Gen Z",
+      "description": "Casual consumption of silly TikToks is very unlikely to lead someone into a dark corner of hate or misinformation,“ says David Rothschild, an economist at Microsoft Research who studies online behavior. “It is highly likely that if they get there, they chose to get there.”",
+      "tags": [
+        "Redes Sociais",
+        "Geração Z"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2024-06-26T08:03:00.000Z"
+    },
+    {
+      "id": "e88cd831-01ee-4714-9211-7229198f414b",
+      "url": "https://pocket.co/share/3cb6105e-e6c8-444f-97cd-cd9e9f59cf12",
+      "title": "Feeling exhausted? Here’s how to fight the weariness",
+      "description": "In the Middle Ages, exhaustion was defined as “acedia” – a sinful spiritual malaise that manifested as apathy, torpor and ingratitude. Renaissance scholars associated exhaustion with scholarly activities and the alignment of the planets. In the 19th century, it was the central symptom of a condition called “neurasthenia”, defined as a weakness of the nerves and understood to be the consequence of a faster pace of life and overstimulation. I have found it consoling to learn that these fears have always been with us. Concerns about exhaustion are what make us human.",
+      "tags": [
+        "Exaustão",
+        "História",
+        "Bem-estar"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-06-26T08:52:00.000Z"
+    },
+    {
+      "id": "3e4beda7-8185-4cd6-aa91-bde19ebe4c93",
+      "url": "https://pocket.co/share/e07712ca-3ffb-43ce-b889-726e64cc1062",
+      "title": "We Should All Be Archivists",
+      "description": "When people ask me for advice about queer archiving, I usually say that the most important thing is to recognize your importance. You need to see yourself as a repository of history — as a repository of memories, both internal and external, and in the things you care about. Our archives are reflections of our interests, our obsessions, our private concerns. No two people collect alike, and the shape of your brain is memorialized in many ways by the things that you collect.",
+      "tags": [
+        "Arquivo",
+        "Memória"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2024-07-03T08:00:00.000Z"
+    },
+    {
+      "id": "404968e7-30fb-4f6c-812a-e35fa29af230",
+      "url": "https://pocket.co/share/408b4caa-d458-4ca5-b5ce-0622d58d757c",
+      "title": "The life sabbatical: is doing absolutely nothing the secret of happiness?",
+      "description": "If you are struggling to recharge, a good place to start is by thinking about how you normally use your mind and body. Ask yourself, what kind of environments are you in on a daily basis?” says Reading. She cites the example of a teacher who spends all day guiding and directing others. In that case, taking a break might involve allowing someone else to make decisions, even if it’s just where to go for dinner.",
+      "tags": [
+        "Descanso",
+        "Bem-estar"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-07-03T11:28:00.000Z"
+    },
+    {
+      "id": "0644b808-a980-49bc-934c-2eba9781c434",
+      "url": "https://orbitaloperations.beehiiv.com/p/just-spinning-around?utm_source=orbitaloperations.beehiiv.com&utm_medium=newsletter&utm_campaign=just-spinning-around&last_resource_guid=Post%3Ab9b61641-d7cb-450e-828f-194019e299b2&jwt_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWJzY3JpYmVyX2lkIjoiNGIyOWIxYzEtYTVmMy00OWMzLWIzNzUtYjNmYTM4M2ZhYTc3IiwiZXhwIjoxNzIxMTIwNDkwLCJpc3MiOiJodHRwczovL2FwcC5iZWVoaWl2LmNvbSIsImlhdCI6MTcyMDk0NzY5MH0.7UwwImIACQM5Fl7FZi77-H754gjegqvnOiKAW0bQyqY",
+      "title": "Orbital Operations for 14 July 2024",
+      "description": "The streamers have turned into basic cable, “the internet” for most people is half a dozen portals, you know the list of grievances about the algorithmic flattening of the culture, and who fucking cares. You’ve got a brain in your head. You can go looking for stuff you like better instead. You’ll see “AI” writing more and more, and you’ll know how to spot it. I mean, are you too dumb and stunned to invent your own creative environment? Course you’re bloody not. If any of the above feels like it affects you, all you need to do is do something about it. Get off the streams, and surround yourself with the stuff you love.",
+      "tags": [
+        "Internet",
+        "Cultura Independente"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2024-07-14T17:28:00.000Z"
+    },
+    {
+      "id": "9d76c609-e906-4543-b3f4-ec8e2007a936",
+      "url": "https://pocket.co/share/375aa75d-327d-4146-be9c-e1c6ff6406ad",
+      "title": "057: Cassandra Jenkins - Omakase",
+      "description": "the shapes we can make with a broken heart, the way we can carry on even when we can’t see the journey for the mess in front of our eyes, is a truly wondrous thing. And it rarely sounds quite as wondrous as when it’s channelled through the eloquent lungs and supple limbs of Cassandra Jenkins.",
+      "tags": [
+        "Música"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Música"
+      ],
+      "favorite": false,
+      "createdAt": "2024-07-18T07:46:00.000Z"
+    },
+    {
+      "id": "aa35bd45-6d84-4b78-97bb-b8b1524a68ca",
+      "url": "https://www.rogerebert.com/roger-ebert/critic-is-a-four-letter-word",
+      "title": "Roger Ebert’s video game take is still haunting the discourse",
+      "description": "It is not important to be ‘right’ or ‘wrong,’” Ebert once wrote in a post where he repeated the classic adage that an unexamined life is not worth living. “It is important to know why you hold an opinion, understand how it emerged from the universe of all your opinions, and help others to form their own opinions. There is no correct answer. There is simply the correct process.”",
+      "tags": [
+        "Crítica",
+        "Jogos"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Crítica",
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2024-07-22T07:32:00.000Z"
+    },
+    {
+      "id": "57c18116-8673-48d0-b0ff-0da407ef8295",
+      "url": "http://newyorker.com/culture/open-questions/are-we-living-in-the-age-of-info-determinism?bxid=5bd676cc24c17c1048014777&cndid=38887802&esrc=right_rail_culture&hasha=83d1c88437c5fcae922fc70a24f1890f&hashb=f6a38987d5b1ff7d2349f0d2ad3d3fd818626dd6&hashc=844ca39fbcb345c718014ecb8ef30756425cf8ff4436285d33e64b0ab1f67e3a&mbid=CRMNYR012019&utm_brand=tny&utm_mailing=TNY_Daily_Free_081324&utm_source=pocket_shared",
+      "title": "Are We Living in the Age of Info-Determinism?",
+      "description": "We live cocooned by culture, experiencing reality through a cultural prism. Our political views are shaped by the reports of journalists and the opinions of friends. Our sexual habits are influenced by what we hear in fairy tales and see in movies. Even the way we walk and breathe is nudged by cultural traditions, such as the military discipline of soldiers and the meditative exercises of monks. Until very recently, the cultural cocoon we lived in was woven by other humans. Going forward, it will be increasingly designed by computers.",
+      "tags": [
+        "Cultura",
+        "Inteligência Artificial"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2024-08-15T06:59:00.000Z"
+    },
+    {
+      "id": "4d96f28c-fbab-40e7-b227-606b7362eea8",
+      "url": "https://futurism.com/the-byte/sam-altman-chatgpt-her",
+      "title": "Where Are Today’s Futures?",
+      "description": "We create whole worlds and call them ‘entertainment’ or ‘art’ that leak into the structures that can materialize those worlds, yet it winds up being a side-note, or the ridiculous utterance by some plutocrat who really wants to have the AI from a Spike Jonze Hollywood movie wake him in the morning.",
+      "tags": [
+        "Futuro",
+        "Cultura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-09-02T08:13:00.000Z"
+    },
+    {
+      "id": "68859441-a6c7-48e7-b825-88a8f72e34ba",
+      "url": "https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art?utm_source=pocket_shared",
+      "title": "Why A.I. Isn’t Going to Make Art",
+      "description": "art requires making choices at every scale; the countless small-scale choices made during implementation are just as important to the final product as the few large-scale choices made during the conception. It is a mistake to equate “large-scale” with “important” when it comes to the choices made when creating art; the interrelationship between the large scale and the small scale is where the artistry lies.",
+      "tags": [
+        "Arte",
+        "Inteligência Artificial"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2024-09-03T09:16:00.000Z"
+    },
+    {
+      "id": "d13c0e8c-0609-4d69-98a5-dfce2f5c8b4b",
+      "url": "https://pocket.co/share/9ab37127-86b3-4d6f-bd70-b5102f59b218",
+      "title": "Informação não é conhecimento, e IA é a tecnologia mais poderosa da história",
+      "description": "Há cem anos, a comida era escassa. Então os humanos comiam qualquer coisa que encontrassem, gostavam especialmente de comida com muita gordura e açúcar. Hoje, a comida é abundante, e somos inundados por ‘comida lixo’, artificialmente rica em gordura e açúcar. Se as pessoas comem muito lixo, ficam doentes. O mesmo vale para a informação, que é o alimento da mente. Estamos inundados por muita informação lixo. A informação lixo é artificialmente cheia de ganância, ódio e medo —coisas que atraem nossa atenção. Toda essa informação lixo deixa nossas mentes e sociedades doentes. Precisamos de uma dieta de informação.",
+      "tags": [
+        "Inteligência Artificial",
+        "Informação"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2024-09-04T07:57:00.000Z"
+    },
+    {
+      "id": "4b4dab42-bc5e-43ca-a675-946443aee1ab",
+      "url": "https://www.vox.com/the-goods/23177505/minions-2-rise-of-gru-explained-capitalism",
+      "title": "Labor exploitation, explained by Minions",
+      "description": "‘They are standardized, highly interchangeable, and desperate for any job they can find,’ writes Szklarczyk. ’they neither bleed nor break, they do not require healthcare, they are tireless, unaffected by growth or aging, they remain unchanging and unchangingly ready to work.’(…) By being portrayed as the unruly proletariat, the film casts Minions as foolish and infantile creatures who are only able to actualize themselves under capitalism: Serving a master who belongs to the ‘transnational jet-set’ of billionaire-coded villains who own private jets and live in palaces is the only way they seem to achieve happiness.",
+      "tags": [
+        "Capitalismo",
+        "Cinema",
+        "Trabalho"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Cinema"
+      ],
+      "favorite": false,
+      "createdAt": "2024-09-06T08:34:00.000Z"
+    },
+    {
+      "id": "d8e6aadf-22d5-4436-a281-b3a1f3b0cfd0",
+      "url": "https://pocket.co/share/b804806b-fc08-4692-839f-43ef60e9ef00",
+      "title": "The Lost Sense",
+      "description": "Senses aren’t just tools for survival. They are gateways to a deeper understanding of the world around us, ourselves, and life itself. Touch is not just a sense — it’s what literally grounds us. It’s a reminder that we’re still here, in the real world",
+      "tags": [
+        "Corpo",
+        "Filosofia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-09-09T07:28:00.000Z"
+    },
+    {
+      "id": "c67ca38f-bca6-43ce-9e23-3800e538ec11",
+      "url": "https://www.honest-broker.com/p/how-did-pop-culture-get-so-gloomy",
+      "title": "How Did Pop Culture Get So Gloomy?",
+      "description": "Popular culture always reflects the larger social reality. I’ll even go further, and claim that pop culture is our single best source of information about the psychological state of society. In some odd way, the revolution is televised—it emerges in songs, films, and other forms of entertainment long before the political leaders even notice (…) So I can only conclude that the grimness and negativity in our popular culture is a mirror of the audience",
+      "tags": [
+        "Cultura Pop",
+        "Sociedade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-09-30T07:43:00.000Z"
+    },
+    {
+      "id": "90226ffc-9386-4dc5-828e-3318e1cc4108",
+      "url": "https://www.bbc.com/future/article/20240912-the-archivists-battling-to-save-the-internet",
+      "title": "We’re losing our digital history. Can the Internet Archive save it?",
+      "description": "The Enlightenment of the 18th century saw the birth of an international library movement as governments and philanthropists took on the need to preserve and distribute books for the public. But that sense of civic responsibility hasn’t extended to the internet. That may be due to the complicated business interests of the digital world, or just the immense technical challenge. Or, perhaps, it’s because it doesn’t feel like the web needs saving to casual observers. A book is a more obviously finite resource; it can be lost or damaged. But the internet feels so accessible. Anyone with an internet connection can pull up a web browser and dial in a URL. It’s all right there – until it isn’t",
+      "tags": [
+        "Internet",
+        "Arquivo",
+        "Preservação"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2024-09-30T08:07:00.000Z"
+    },
+    {
+      "id": "ed0f98b6-a68f-407c-818a-8e0201e4b885",
+      "url": "https://www.vox.com/future-perfect/371558/analog-tech-digital-saturation-social-media",
+      "title": "The perfect escape from our online world",
+      "description": "In its early days, being online often felt like stumbling onto someone’s kooky basement party. Today, online spaces are governed by corporate-owned algorithms that churn the lowest common denominator content to the top. Now, being online often feels like entering an air-conditioned mall in which the exit signs have been carefully concealed",
+      "tags": [
+        "Internet",
+        "Algoritmos"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2024-10-02T07:42:00.000Z"
+    },
+    {
+      "id": "fcf0a7d0-cc39-44d0-ae77-b5dce244a76a",
+      "url": "https://books.google.com/books/about/Physarum_Machines.html?id=Kbs_AIDbfU8C",
+      "title": "What’s a Brain?",
+      "description": "Physarum polycephalum can solve combinatorial mathematics problems and model resilient networks so effectively that there’s been quite a bit of wet lab-tinkering to bend them into primitive bio-computers. One study in 2016 even injected conductive nanoparticles into the slime molds’ plasmodial tubes to see if they could be made conductive, suggesting future Physarum chips. Initially I thought this was the most interesting thing about slime molds: that they do computer stuff.",
+      "tags": [
+        "Ciência",
+        "Biologia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2024-10-07T07:57:00.000Z"
+    },
+    {
+      "id": "c8323bd1-87db-4e3c-bef8-1406d6f4d0f5",
+      "url": "https://gamarevista.uol.com.br/semana/que-tipo-de-homem-e-voce/o-homem-nao-existe-masculinidade-ficcao/",
+      "title": "Ler ficção nos torna mais empáticos?",
+      "description": "Em seu novo livro, “O Homem não Existe” (Zahar, 2024), ela propõe uma visão da leitura como “uma experiência suavíssima de alucinação”. Por meio da imaginação, você empresta seu corpo para aqueles personagens e muitas vezes acaba se confundindo com eles, explica. O ficcional nos joga em um espaço de ler uma história de pessoas que não existem como se elas existissem.",
+      "tags": [
+        "Literatura",
+        "Ficção",
+        "Leitura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Literatura"
+      ],
+      "favorite": false,
+      "createdAt": "2024-10-08T08:28:00.000Z"
+    },
+    {
+      "id": "adcd5e89-c30b-4009-b514-e6be63a353ae",
+      "url": "https://www.estadao.com.br/cultura/literatura/como-a-segunda-guerra-mundial-transformou-modestos-bibliotecarios-em-espioes-improvaveis/",
+      "title": "Como a Segunda Guerra Mundial transformou modestos bibliotecários em espiões improváveis",
+      "description": "arquivistas, analistas de números e professores de ciências humanas, escondidos em gabinetes monótonos, fizeram algumas das contribuições mais inovadoras dos Estados Unidos para a guerra secreta contra Hitler. “As pessoas menos glamourosas do mundo”, como ela diz, ‘para a profissão mais glamourosa do mundo’.",
+      "tags": [
+        "História",
+        "Espionagem"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-10-09T07:58:00.000Z"
+    },
+    {
+      "id": "1644997a-3048-4e5a-91c3-0fb6ec05b659",
+      "url": "https://wisdomofcrowds.live/p/no-culture-is-not-stuck?ref=culture.ghost.io&utm_source=pocket_shared",
+      "title": "No, Culture is Not Stuck",
+      "description": "there’s a new culture all around us. We just don’t register it as ‘culture’. Theater is a good example of what I’m talking about. Once a dominant art form, theater ceded its cultural primacy a long ago. People still produce and even write excellent plays and musicals, even today, but it’s no longer the primary vehicle for cultural expression and innovation. It’s a niche. Similarly, film, fashion, literature, or even music as we once knew them are no longer the primary mediums through which new and exciting culture is experienced. They haven’t completely gone away, but the landscape has changed so radically that they shouldn’t be the metric we use to measure the progress of culture.",
+      "tags": [
+        "Cultura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-10-17T08:53:00.000Z"
+    },
+    {
+      "id": "5f51a634-fef5-4f61-8fc7-d2969c56fc5d",
+      "url": "https://www.thepublicdiscourse.com/2023/08/89929/",
+      "title": "from the outside, you look great",
+      "description": "Digital technology always promised the possibility of improving our reality and our ability to connect with each other by re-creating reality and consequentially adding more value to it. But has the opposite happened? Perhaps the dissociative and aspirational nature of technology is only adept at keeping us in a state of perpetual and spinning longing and desire, making it hard to care about anyone beyond ourselves because all we notice is the perceived lack within ourselves.",
+      "tags": [
+        "Tecnologia",
+        "Cultura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-10-20T17:13:00.000Z"
+    },
+    {
+      "id": "876919aa-5b11-4be1-afd3-695e7884b479",
+      "url": "https://www.theguardian.com/books/2024/oct/28/the-big-idea-how-games-can-change-your-life?utm_source=pocket_shared",
+      "title": "The big idea: how games can change your life",
+      "description": "Work is worthwhile because it prevents us from starving, or helps us discover treatments for diseases, or builds shelter from the elements. But this is only a moral good if there is some other, greater purpose to our lives, otherwise our efforts just prolong meaninglessness. Work is a form of preventive medicine, and thus not an end in itself. Its ultimate goal is its own extinction. Game playing, he asserts, is the fundamental concern of utopian existence. It is ‘precisely what economically and psychologically autonomous individuals would find themselves doing, and perhaps the only things they would find themselves doing.",
+      "tags": [
+        "Jogos",
+        "Trabalho",
+        "Filosofia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2024-10-29T07:54:00.000Z"
+    },
+    {
+      "id": "2430c87f-390e-48d8-a8ac-91a6a761343f",
+      "url": "https://nautil.us/curiosity-depends-on-what-you-already-know-235803/",
+      "title": "How the Occult Gave Birth to Science",
+      "description": "Throughout the Middle Ages, many scholars were fixated on the idea that knowledge could only be gleaned from ancient texts. Universities taught from incomplete, often poorly translated copies of Aristotle, Ptolemy, and Galen. To stray from the giants was a crime: In 14th-century Oxford, scholars could be charged 5 shillings for contradicting Aristotle. Curiosity was considered a sin on par with lust. A powerful motivator was needed to shuck off ancient thinking.",
+      "tags": [
+        "História",
+        "Ciência"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2024-10-31T07:52:00.000Z"
+    },
+    {
+      "id": "3e2c975d-2189-402c-bbf5-eed4a6b6914d",
+      "url": "https://www.scientificamerican.com/article/you-dont-need-words-to-think/?utm_source=pocket_shared",
+      "title": "You Don’t Need Words to Think",
+      "description": "Language works a little like telepathy in allowing us to communicate our thoughts to others and to pass to the next generation the knowledge and skills essential for our hypersocial species to flourish. But at the same time, a person with aphasia, who are sometimes unable to utter a single word, can still engage in an array of cognitive tasks fundamental to thought.",
+      "tags": [
+        "Linguagem",
+        "Ciência"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-11-05T07:39:00.000Z"
+    },
+    {
+      "id": "7dab96d0-1484-402a-a600-2798fc1cd8b6",
+      "url": "https://www.theguardian.com/books/2024/nov/04/the-big-idea-is-convenience-making-our-lives-more-difficult",
+      "title": "The big idea: is convenience making our lives more difficult?",
+      "description": "Evolutionary mismatch is the notion that we evolved for a hunter-gatherer lifestyle, and that while our circumstances have changed drastically, our brains and bodies haven’t. It says that our instincts are often horribly incompatible with our environment. (…) Modern hyper-convenience is a kind of deal with the devil. It is seductive because it appeals to our instincts, but it surreptitiously depletes us. It has made it easier to get by, but in many ways harder to truly succeed. Human flourishing and happiness is not just about subsistence, but also depends on growth, dynamic problem-solving, and solidarity through hardship.",
+      "tags": [
+        "Bem-estar",
+        "Sociedade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-11-11T06:57:00.000Z"
+    },
+    {
+      "id": "8c04dc4f-cde1-4848-ad04-6283207217c6",
+      "url": "https://www.theguardian.com/books/2024/nov/07/david-graeber-optimistic-anarchist-rebecca-solnit?ref=sentiers.media&utm_source=pocket_shared",
+      "title": "‘It does not have to be this way’: the radical optimism of David Graeber",
+      "description": "It does seem that Marxism has an affinity with the academy that anarchism never will. It was, after all, the only great social movement that was invented by a PhD, even if afterwards, it became a movement intending to rally the working class.” And then he argues that anarchism was not, by comparison, an idea created by a few intellectuals; instead, “the basic principles of anarchism – self-organisation, voluntary association, mutual aid” – have been around ‘as long as humanity’.",
+      "tags": [
+        "Anarquismo",
+        "Política"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2024-11-11T07:37:00.000Z"
+    },
+    {
+      "id": "983acbda-0c92-4b16-8270-e632337c8a63",
+      "url": "https://www.bbc.com/future/article/20240912-the-archivists-battling-to-save-the-internet?xtor=AL-73-%5Bpartner%5D-%5Bfolha%5D-%5Blink%5D-%5Bbrazil%5D-%5Bbizdev%5D-%5Bisapi%5D",
+      "title": "We’re losing our digital history. Can the Internet Archive save it?",
+      "description": "O Iluminismo do século 18 viu o nascimento de um movimento internacional de bibliotecas, com os governos e filantropos percebendo a necessidade de preservar e distribuir livros para o público. Mas este senso de responsabilidade cívica do passado não se estendeu para a internet. Isso pode se dever aos complexos interesses comerciais do mundo digital ou simplesmente às imensas dificuldades técnicas. Ou, talvez, porque os observadores casuais podem não achar necessário preservar a web.",
+      "tags": [
+        "Internet",
+        "Preservação"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2024-11-13T07:29:00.000Z"
+    },
+    {
+      "id": "7e7a2091-62de-4af6-adbb-0bd0586de517",
+      "url": "https://www.newyorker.com/culture/infinite-scroll/the-fantasy-of-cozy-tech",
+      "title": "The Fantasy of Cozy Tech",
+      "description": "The world-weary pursuit of comfort has filtered from video games to other forms of gadgetry and entertainment, with each new video and accessory designed to foster a sensory environment of unrelenting harmoniousness. As the physical world becomes more alienating, we build ourselves benign parallel universes to burrow into. The archetypal cozy bedroom becomes a form of virtual reality. (…) Social media in its original form reflected an urge to connect with other people living their lives somewhere else in the real world. The coziness trend suggests that the Internet and artificial intelligence can lead us ever inward. In the cozy era, our screens and the related accoutrements of digital life fulfill all of our emotional and sensory needs.",
+      "tags": [
+        "Jogos",
+        "Tecnologia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2024-11-21T07:30:00.000Z"
+    },
+    {
+      "id": "6daceeff-da59-4f2f-aa96-75ba22ec7166",
+      "url": "https://vgbees.com/dragon-age-the-veilguard-and-the-regression-of-biowares-values/?utm_source=pocket_shared",
+      "title": "Dragon Age: The Veilguard and the Regression of BioWare’s Values",
+      "description": "I love fantasy as a genre because it makes interior truth, interior logic, completely literal. To me, the ur-example of this is Howl’s Moving Castle, in which the main character’s perception of herself is reflected in her physical appearance. Fundamentally, it is a story about strength and confidence within becoming the apperance without. If fantasy makes literal the interior, there is something specific to dark fantasy that turns personal, interior struggle into global melodrama.",
+      "tags": [
+        "Fantasia",
+        "Jogos"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Jogos",
+        "Crítica"
+      ],
+      "favorite": false,
+      "createdAt": "2024-11-27T08:45:00.000Z"
+    },
+    {
+      "id": "0b212589-8b02-47aa-975b-35a1553a6805",
+      "url": "https://www.usermag.co/p/tiktok-is-done-for",
+      "title": "TikTok is done for",
+      "description": "The entire “controversy” reminds me of the famous quote from philosopher Marilyn Frye, who wrote in her book, The Politics of Reality: Essays in Feminist Theory, “To say that straight men are heterosexual is only to say that they engage in sex (fucking exclusively with the other sex, i.e., women). All or almost all of that which pertains to love, most straight men reserve exclusively for other men. The people whom they admire, respect, adore, revere, honor, whom they imitate, idolize, and form profound attachments to, whom they are willing to teach and from whom they are willing to learn, and whose respect, admiration, recognition, honor, reverence and love they desire… those are, overwhelmingly, other men. In their relations with women, what passes for respect is kindness, generosity or paternalism; what passes for honor is removal to the pedestal. From women they want devotion, service and sex. Heterosexual male culture is homoerotic; it is man-loving.",
+      "tags": [
+        "Gênero",
+        "Feminismo"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2024-12-16T17:47:00.000Z"
+    },
+    {
+      "id": "7af5378b-0e08-4305-bfbe-f7b671ea57f5",
+      "url": "https://www.niemanlab.org/2024/12/science-journalism-becomes-plain-old-journalism/",
+      "title": "Science journalism becomes plain old journalism",
+      "description": "science is relevant to every aspect of journalism. It underpins nearly every story we care about. Climate change is not only a science story — it’s a story about infrastructure, migration, equity, and policy. AI is not just a technology story — it’s about labor, environmental resources, and governance. Public health isn’t just about disease outbreaks — it’s about housing, ecosystem decline, education, and systemic inequities.",
+      "tags": [
+        "Jornalismo",
+        "Ciência"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Ciência",
+        "Reportagens"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-06T08:52:00.000Z"
+    },
+    {
+      "id": "9b1e3eaa-5141-4caa-994b-1130d0981ba5",
+      "url": "https://embedded.substack.com/p/you-might-just-have-to-be-bored",
+      "title": "You might just have to be bored",
+      "description": "boredom now feels like some kind of human rights violation. But if you’re looking to unlearn the need for constant stimulation, then that requires abstaining from constant stimulation—not all at once, which I think is the most common method that leads to this feeling impossible, but slowly and intentionally (…) Boredom is when you do the things that make you feel like you have life under control. Not being bored is why you always feel busy, why you keep “not having time” to take a package to the post office or work on your novel.",
+      "tags": [
+        "Tédio",
+        "Bem-estar"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-06T10:12:00.000Z"
+    },
+    {
+      "id": "35f24802-2e69-4a20-8f07-504e138d7d4c",
+      "url": "https://www.theatlantic.com/technology/archive/2020/02/how-generate-infinite-fake-humans/606943/?gift=xg-ooB7bz_Y1iPLiLEmPNvAf2Lm3Tin58tQ4PNCcpCA&utm_source=copy-link&utm_medium=social&utm_campaign=share",
+      "title": "It Doesn’t Matter If Anyone Exists or Not",
+      "description": "There is no escaping this city of the internet, no flying the coop for its proverbial countryside, no respite from the constancy of its jostling beings, its barrage of images, its discharge of new distresses. But here, today, a century and a half later, armed with all of humanity’s knowledge in your palm and the latent confrontation with its billions of members, maybe the least you can do is to stop believing that you like it.",
+      "tags": [
+        "Internet",
+        "Cultura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-07T06:54:00.000Z"
+    },
+    {
+      "id": "281e821d-4ef1-4629-8a49-7ceba39b2b88",
+      "url": "https://www.newyorker.com/culture/open-questions/why-are-we-tormented-by-the-future?bxid=5bd676cc24c17c1048014777&cndid=38887802&esrc=right_rail_culture&hasha=83d1c88437c5fcae922fc70a24f1890f&hashb=f6a38987d5b1ff7d2349f0d2ad3d3fd818626dd6&hashc=844ca39fbcb345c718014ecb8ef30756425cf8ff4436285d33e64b0ab1f67e3a&mbid=CRMNYR012019&utm_brand=tny&utm_mailing=TNY_Daily_Free_010725&utm_source=pocket_shared",
+      "title": "Why Are We Tormented by the Future?",
+      "description": "it’s important to think constantly about the future while nding space to live in the present. But this balancing act grows more dicult in a semi-dystopian, science-ction-tinged, media-saturated society, in which the future always seems to be becoming more salient, visible, lurid, exciting, and imminent. We’re used to thinking about how the weight of history shapes our culture, our politics, our psyches, but the future has weight, too—perhaps, these days, a growing weight.",
+      "tags": [
+        "Futuro",
+        "Sociedade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-08T06:25:00.000Z"
+    },
+    {
+      "id": "110e0133-ebb1-4521-a548-f61814a4b6f0",
+      "url": "https://www.newyorker.com/magazine/2024/12/30/as-if-times-werent-unsettling-enough-saturn-is-losing-its-rings?utm_source=pocket_shared",
+      "title": "As if Times Weren’t Unsettling Enough, Saturn Is Losing Its Rings",
+      "description": "What we see when we look up, like what we see when we look around, is not a well-ordered clockwork ticking its way toward eternity. It is a mix of short-lived illusions, long-lived evolutions, meaningless overlays—the constellations we love, after all, are just superimposed serendipities, stars at vastly different distances seen as one—lucky accidents and unforeseen developments. Some comfort can be found in the indifference of the cosmos to our stories; some other comfort lies in the thought that the cosmos tells stories much like our own.",
+      "tags": [
+        "Astronomia",
+        "Ciência"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-08T06:32:00.000Z"
+    },
+    {
+      "id": "df572cc0-7165-45f1-8f74-f63a5d0d3fb6",
+      "url": "https://en.wikipedia.org/wiki/The_Ones_Who_Walk_Away_from_Omelas",
+      "title": "Star Trek: Section 31 is Paramount Plus’ attempt to add spies to Trek",
+      "description": "If the existence of your utopia depends on a bunch of secret, no-consequences war crimes, then it’s simply not a utopia. It’s Omelas. The debate over whether or not Section 31 betrays the fundamental ideals of Trek has raged since 1998, when the Deep Space Nine episode “Inquisition” established the concept, and it should! Section 31 is not just philosophically bad for Star Trek, but emotionally destructive to the audience, implying that Pike, Kirk, Spock, Picard, Janeway, and the rest owe their triumphant moral and diplomatic victories in some part to an unaccountable group committing atrocities in their name.",
+      "tags": [
+        "Star Trek",
+        "Crítica",
+        "Ficção Científica"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Televisão",
+        "Crítica"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-13T06:07:00.000Z"
+    },
+    {
+      "id": "27d4b87b-3f9a-4ba7-a53f-a54047e1895b",
+      "url": "https://www.nexojornal.com.br/ensaio/2025/01/12/cidade-urbanismo-papel-das-pessoas?utm_source=pocket_saves",
+      "title": "Um caminho coletivo para reescrevermos as cidades",
+      "description": "Caminhar em uma cidade é um ato político. É resistir à lógica do asfalto e dos veículos que tomaram espaços onde antes havia a troca, a possibilidade do acaso. (…) Caminhar não é apenas se deslocar, é reescrever a cidade com os próprios passos, é criar significados para o mundo que se habita.",
+      "tags": [
+        "Cidades",
+        "Urbanismo"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-14T06:36:00.000Z"
+    },
+    {
+      "id": "7b301c6e-e2a7-4765-88f0-c121bc532587",
+      "url": "https://buttondown.com/charliejane/archive/erotica-made-me-the-writer-i-am-today/",
+      "title": "Erotica Made Me The Writer I Am Today",
+      "description": "there’s a nearly infinite number of stories you can tell about sex, because sex is intrinsically human and human beings are complex as heck. When people are being sexual, they are often accessing a really deep part of themselves and maybe working through some personal stuff that they couldn’t work through any other way. Two or more people having sex are in a conversation, in which there are power dynamics (both acknowledged and unacknowledged.) But they’re also bringing their history, their own self-image, and all of the messy stuff that comes with having a body in this ridiculous world.",
+      "tags": [
+        "Escrita",
+        "Sexualidade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Literatura"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-15T06:11:00.000Z"
+    },
+    {
+      "id": "6d63cc6b-6704-4639-ae4c-507987de9b5a",
+      "url": "https://www.theatlantic.com/technology/archive/2025/01/brain-rot-language/681297/",
+      "title": "The Case for Brain Rot",
+      "description": "We were living in a ‘revolutionary period in linguistic history’, she argued, in part because of how much writing we were producing and how much better we get at expressing ourselves the more we try. In other words, posting is a skill. However low your opinion of the social internet is, it would be hard to deny that what is considered funny on social media now is incredibly sophisticated compared with what was considered funny 15 years ago.",
+      "tags": [
+        "Internet",
+        "Linguagem"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-15T06:42:00.000Z"
+    },
+    {
+      "id": "7534d1ff-b43b-4f01-80b2-fdd863a4e9ff",
+      "url": "https://www.theatlantic.com/culture/archive/2025/01/werner-herzogs-brain-and-his-doc-theater-thought",
+      "title": "Inside the Human Brain—Or Werner Herzog’s, At Least",
+      "description": "One researcher from UC Berkeley, Jack Gallant, shows Herzog how specific voxels—tiny spots on our cortex—correspond to different concepts. It is possible to decode the brain this way, identifying where these notions live. But when Gallant shows Herzog an example of one voxel’s contents, the result seems more Dada than data: the concepts “sheriff,” “goose,” “brown,” “robin,” and “purse” all exist in the same place. The question of what it means that these ideas are grouped together in the folds of our brain seems better answered by a poet. And Herzog comes to his own dismissive conclusion, one that’s easy to endorse: ‘Where our numbers and names and concepts are located can be mapped, but there is no map of our thoughts’.",
+      "tags": [
+        "Neurociência",
+        "Cérebro"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Cinema",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-15T06:51:00.000Z"
+    },
+    {
+      "id": "983d0f51-eba1-4efb-b0a3-e4e18a9f8704",
+      "url": "https://www.latimes.com/lifestyle/story/2025-01-07/beyond-anxiety-creativity-martha-beck?utm_source=pocket_reader",
+      "title": "Constantly anxious? Ease your mind by asking yourself this one question",
+      "description": "A lot of people don’t feel creative because they’re physically and emotionally exhausted. The recipe for your life should be this: rest until you feel like playing, then play until you feel like resting, and then repeat.",
+      "tags": [
+        "Ansiedade",
+        "Criatividade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-22T07:03:00.000Z"
+    },
+    {
+      "id": "35f40214-6772-489c-b5b2-78f737d91d26",
+      "url": "https://www.nexojornal.com.br/entrevista/2025/01/24/entrevista-valeska-zanello-unb-casa-dos-homens-vanessa-barbara-radio-novelo?utm_source=pocket_saves",
+      "title": "O grande desafio dos homens é romper com a cumplicidade",
+      "description": "O homem que não objetifica vai sofrer violência. Isso é algo que aparece nas minhas pesquisas: mesmo homens gays objetificam sexualmente e desumanizam mulheres para se sentirem pertencentes, para deixar de ser alvo dessa violência e colocá-la sobre as mulheres. (…) Na nossa cultura, em termos de relação de gênero, há uma lógica marcada por uma hierarquia, uma relação de poder, onde homens se constituem como indivíduos e mulheres são objetificadas e vistas como idênticas.",
+      "tags": [
+        "Gênero",
+        "Masculinidade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Entrevistas"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-28T06:55:00.000Z"
+    },
+    {
+      "id": "a87cb66a-8990-424e-826b-386d03650f89",
+      "url": "https://buttondown.com/charliejane/archive/james-mangold-is-wrong-we-need-irony-now-more?utm_source=pocket_shared",
+      "title": "James Mangold is Wrong. We Need Irony Now More Than Ever",
+      "description": "We’re once again in a moment where we’re being encouraged (or bullied) to turn off our brains and to distrust intellectualism and elite sensibilities. Once again, fear-mongering is driving public policy. At the same time, Mangold is correct that “internet snark” has cornered the market on cheap irony, the kind that insists that nothing means anything and therefore you can say the most awful things with no consequences. At the same time, Beers was right: we need the real kind of irony — the kind that points out the disconnect between what people say and what they do. The kind that points out the unintended (or maybe secretly-intended) consequences of people’s actions. The kind that skewers hypocrisy but also reveals the things that really do matter.",
+      "tags": [
+        "Ironia",
+        "Cultura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-29T08:10:00.000Z"
+    },
+    {
+      "id": "47995d60-36f2-4b8d-aa40-7f687ffcf109",
+      "url": "https://embedded.substack.com/p/free-our-feeds-decentralized-social-media",
+      "title": "Seizing social media for the people",
+      "description": "There was a time in the early 2000s before any of this, what we call Web 2.0, where I was part of activist circles that were building websites for the first time and allowing people, just regular folks, to either write to an email address or they would have these pretty primitive ways that you could input information into a calendar or onto a website, and we were talking about this in terms of citizen journalism where the calendars would be used to organize protests and tell people what events were happening at their local food co-op or whatever it was that. It was an innovation that came from the democratization of information and the vision that the internet could be used to organize people. That was absolutely taken by these big corporate platforms and turned into what we think of as social media.",
+      "tags": [
+        "Redes Sociais",
+        "Internet",
+        "Ativismo"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-30T07:37:00.000Z"
+    },
+    {
+      "id": "d44fd563-1861-42f1-8c50-e46cc158d03d",
+      "url": "https://onethingnewsletter.substack.com/p/revenge-of-the-anthology",
+      "title": "Revenge of the anthology",
+      "description": "The multi-season multiverse environment means you are never left to wonder about anything. Sooner or later some prequel or sequel will tell you whatever you wanted to know. But the single-episode anthology format demands decisionmaking and economy. You must somehow introduce characters, make us care about them, and then resolve the story, often in under 26 minutes, sometimes with beats for two ad breaks.",
+      "tags": [
+        "Televisão",
+        "Narrativa"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Televisão"
+      ],
+      "favorite": false,
+      "createdAt": "2025-01-31T06:49:00.000Z"
+    },
+    {
+      "id": "b12f09fc-121a-469d-aa57-4e5a88d0ed93",
+      "url": "https://www.scientificamerican.com/article/wikipedia-searches-reveal-differing-styles-of-curiosity/?utm_source=pocket_shared",
+      "title": "Wikipedia Search Habits Reveal whether You’re a ‘Busybody,’ ‘Hunter’ or ‘Dancer’",
+      "description": "In countries with higher education levels and greater gender equality, people browsed more like busybodies. In countries with lower scores on these variables, people browsed like hunters. Bassett hypothesizes that ‘in countries that have more structures of oppression or patriarchal forces, there may be a constraining of knowledge production that pushes people more toward this hyperfocus.’ The researchers also analyzed topics of interest, ranging from physics to visual arts, for busybodies compared with hunters. Dancer patterns, more recently confirmed, were excluded.",
+      "tags": [
+        "Wikipedia",
+        "Ciência",
+        "Curiosidade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Wiki",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2025-02-05T06:44:00.000Z"
+    },
+    {
+      "id": "86ab6021-bfd1-4e32-8e91-be291990747a",
+      "url": "https://gizmodo.com/folio-society-superman-marjorie-liu-foreword-dc-comics-2000556327?utm_source=pocket_shared",
+      "title": "Marjorie Liu Reflects On the Immortality of Superman",
+      "description": "A thousand years from now, when archaeologists are picking over the fragmented, decayed remains of our cultural ephemera, no doubt there will be two immensely popular areas of study based on the sheer volume of material left behind by us, the future ancient dead. The first will be cats. And the second, I’d guess, will be Superman.",
+      "tags": [
+        "Quadrinhos",
+        "Cultura Pop"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "HQs"
+      ],
+      "favorite": false,
+      "createdAt": "2025-02-05T06:58:00.000Z"
+    },
+    {
+      "id": "4edc4967-625b-4c97-a0f2-d14dc4726db9",
+      "url": "https://thecreativelife.net/scenius/",
+      "title": "The Death of Scenius",
+      "description": "Brian Eno coined the term “scenius” to refer to the collective genius that can emerge when a population of diverse and fertile talents living in geographical proximity to other form a loose community or ‘scene’. (…) Scenius is primarily an urban phenomenon. (…) A city doesn’t have to be thriving economically for scenes to emerge (New York in the 1970s: highly creative but crime-ridden and shabby). It just has to be a place where creative people can afford to live and work, where they feel free, and where there are common spaces for them to gather (bars, restaurants, bookshops) and to see or hear each other’s work (galleries, venues, museums).",
+      "tags": [
+        "Cultura",
+        "Cidades",
+        "Criatividade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-02-06T06:38:00.000Z"
+    },
+    {
+      "id": "935314af-d392-41a1-b8d4-929bb63df00f",
+      "url": "https://www.chrbutler.com/the-internet-cant-discover?ref=sentiers.media&utm_source=pocket_shared",
+      "title": "The Internet Can’t Discover: A Case for New Technologies",
+      "description": "The internet has made us incredibly efficient at examining and reprocessing our own knowledge, but it may have dulled our appetite for looking outward. We’ve become so accustomed to the immediate gratification of accessing existing information that we’ve forgotten the importance of the long, patient work of discovery.",
+      "tags": [
+        "Internet",
+        "Tecnologia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2025-02-10T06:19:00.000Z"
+    },
+    {
+      "id": "a494b1c2-2533-4cc3-9b9b-ab4b7ff03017",
+      "url": "https://www.newyorker.com/culture/infinite-scroll/what-michael-crichton-reveals-about-big-tech-and-ai",
+      "title": "What Michael Crichton Reveals About Big Tech and A.I.",
+      "description": "If we are worried that ever larger and ever more powerful models will unleash dangerous capabilities that we cannot control, then regulations and incentives could push the field toward smaller, more bespoke models that are meant to handle specific tasks (…) I don’t need a chatbot that does everything to make my life easier; perhaps a mini-model on my phone, which can manage my calendar and my text messages, might solve the problems I actually have. Maybe the staff of Jurassic Park could have deployed their gene technologies on vaccines and cancer treatments, instead of cloning dinosaurs.",
+      "tags": [
+        "Inteligência Artificial",
+        "Tecnologia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2025-02-13T07:34:00.000Z"
+    },
+    {
+      "id": "58d28a5c-18e0-42c3-8ebe-af60b83f1252",
+      "url": "https://global.oup.com/academic/product/the-politics-of-maps-9780190076238?cc=us&lang=en&",
+      "title": "Map wars in the Middle East: How cartographers charted and helped shape a regional conflict",
+      "description": "all maps have something in common: They are political. Making maps is about making decisions about what to omit and what to include. They are subject to selection, classification, abstractions and simplifications. And studying the choices that go into maps, as I do, can reveal different stories about land and the people who claim it as theirs.",
+      "tags": [
+        "Mapas",
+        "Política"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-02-14T06:39:00.000Z"
+    },
+    {
+      "id": "fb6c8716-8eff-4191-ba0a-9f4711728ca5",
+      "url": "https://buttondown.com/thehypothesis/archive/the-man-who-discovered-media-codes-and-how-to?utm_source=pocket_shared",
+      "title": "The man who discovered media codes and how to resist them",
+      "description": "We don’t need to burn the entire system of media codes down to build our opposition, though. As Hall says, there is no meaning without codes. The goal is to build new meanings, flexible ones that can change the way we do, and to replace the old discourses that imprisoned us.",
+      "tags": [
+        "Mídia",
+        "Discurso"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-02-17T06:43:00.000Z"
+    },
+    {
+      "id": "12f09f7e-6534-4692-9e77-cf852bbd6a2c",
+      "url": "https://www.honest-broker.com/p/the-worlds-largest-search-doesnt?utm_source=post-email-title&publication_id=296132&post_id=157214086&utm_campaign=email-post-title&isFreemail=true&r=a8hk&triedRedirect=true&utm_medium=email",
+      "title": "The World’s Largest Search Doesn’t Want You to Search",
+      "description": "The tech overlords should constantly remind themselves that even huge companies can disappear. (…) The bosses at Google can’t believe this will ever happen to them. But they are wrong. But there is a solution, and a simple one, too. Let people use search engines to search. The technology exists. Google knows this more than anyone. It’s just need to remember how it’s done.",
+      "tags": [
+        "Google",
+        "Busca"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2025-02-20T07:21:00.000Z"
+    },
+    {
+      "id": "7332bb05-9d5d-4652-864e-b6113acc6453",
+      "url": "https://www.theguardian.com/games/2025/feb/14/the-making-of-mass-effect-2-music-soundtrack?CMP=pushingbuttons_email&utm_source=pocket_shared",
+      "title": "‘Less Star Wars – more Blade Runner’: the making of Mass Effect 2’s Bafta-nominated soundtrack",
+      "description": "Whether you prefer the hopeful, optimistic outlook of Asimov, the dark and reflective commentary of Shelley, the accessible thought experiments of Star Trek, or the arch melodrama of Battlestar Galactica, Mass Effect has it all. The trilogy is as happy grazing on the western-inspired tropes of Star Wars as the “hard” sci-fi of Iain M Banks, blending all its moods and micro-stories into a compelling, believable galaxy that somehow walks a line between breathless optimism and suffocating bleakness.",
+      "tags": [
+        "Jogos",
+        "Ficção Científica"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Jogos",
+        "Crítica"
+      ],
+      "favorite": false,
+      "createdAt": "2025-02-20T07:27:00.000Z"
+    },
+    {
+      "id": "98cdac75-e5f4-4ac1-8f64-42e0d3f38bbe",
+      "url": "https://zoescaman.substack.com/p/the-noetic-spiral?ref=sentiers.media&utm_source=pocket_shared",
+      "title": "The Noetic Spiral",
+      "description": "Yet we live in a world obsessed with linear progress. Our economies demand constant growth, our careers are expected to follow an ever-upward trajectory, and our minds are pushed to produce without pause. We’ve created a society that treats rest as resistance, stillness as stagnation, and cycles as setbacks. (…) Trees don’t apologise for shedding their leaves. Bears don’t feel guilty about hibernating. The moon doesn’t try to stay full all month. Yet we’ve convinced ourselves that constant output, constant consumption, constant \"productivity\" is the only way forward.",
+      "tags": [
+        "Produtividade",
+        "Bem-estar"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-02-24T07:52:00.000Z"
+    },
+    {
+      "id": "27eeff7e-0352-4ebf-8837-777564f219a1",
+      "url": "https://buttondown.com/thehypothesis/archive/how-much-are-you-willing-to-pay-for-a-fantasy?utm_source=pocket_shared",
+      "title": "How much are you willing to pay for a fantasy?",
+      "description": "genres offer a compensatory fantasy, or a fictional narrative that compensates for a perceived deficiency in reality. To truly understand what draws people to a genre, we need to understand what it’s compensating for in their real lives (…) The more we use stories to forget the hard parts of our lives, the more willing we are to subject ourselves to demeaning, horrific conditions.",
+      "tags": [
+        "Literatura",
+        "Ficção"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Literatura"
+      ],
+      "favorite": false,
+      "createdAt": "2025-02-25T06:52:00.000Z"
+    },
+    {
+      "id": "d1754404-c6d2-4b53-8405-6af4c734139f",
+      "url": "https://www.em.com.br/pensar/2025/02/7067595-editora-da-nos-editar-e-muito-mais-do-que-produzir-livros.html?utm_source=pocket_shared",
+      "title": "‘Editar é muito mais do que produzir livros’",
+      "description": "Ser editor é se ocupar da cultura, intervir na cultura, na produção literária do seu tempo, no pensamento contemporâneo, o que é, também, uma intervenção sempre política. É uma responsabilidade muito maior do que simplesmente produzir livros. (…) Para ser editor, é preciso, antes de tudo, ser leitor, amar e respeitar o livro e a cultura, sobretudo o livro e a cultura do seu próprio país. O resto é business. Ou mero oportunismo.",
+      "tags": [
+        "Literatura",
+        "Edição"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Entrevistas",
+        "Literatura"
+      ],
+      "favorite": false,
+      "createdAt": "2025-02-26T07:12:00.000Z"
+    },
+    {
+      "id": "298eeba6-0f57-429c-a361-26f8c8603a2c",
+      "url": "https://www.newyorker.com/magazine/2025/01/27/the-sirens-call-chris-hayes-book-review?mc_cid=7485890a12&mc_eid=2ba8676034&utm_source=pocket_shared",
+      "title": "What if the Attention Crisis Is All a Distraction?",
+      "description": "distraction is relative: to be distracted from one thing is to attend to another. And any argument that people are becoming distracted must deal with the plain fact that many spend hours staring intently at their screens. What is doomscrolling if not avid reading? If people are failing to focus in some places, they’re clearly succeeding in others.",
+      "tags": [
+        "Atenção",
+        "Internet"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2025-02-28T06:40:00.000Z"
+    },
+    {
+      "id": "60c92e24-d44c-4add-bb10-bba49cde7d8c",
+      "url": "https://www.honest-broker.com/p/we-really-are-entering-a-new-age",
+      "title": "We Really Are Entering a New Age of Romanticism",
+      "description": "the Rationalists of the 1700s made one more mistake—and it reminds us again of our current situation. They let a brutal technocracy destroy people’s lives—driven by dreams of profit maximization, and ignoring the human cost. It wasn’t called Silicon Valley back then. The name given to the technocracy in the 1700s was the Industrial Revolution. (…) We can have tech, and enjoy its benefits. But it can’t operate ruthlessly, without limits or constraints—much as today’s platforms do. If we do this wisely, all parties will benefit.",
+      "tags": [
+        "Tecnologia",
+        "Capitalismo"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-06T07:11:00.000Z"
+    },
+    {
+      "id": "60a323bc-c1d3-463d-9d47-ab8400ca0ed1",
+      "url": "https://www.nybooks.com/articles/2025/03/27/a-self-divided-the-sirens-call-chris-hayes/",
+      "title": "A Self Divided",
+      "description": "Social media can also capitalize on direct appeals to the audience by name. One of the more intriguing facts that Hayes cites comes from a 1959 study of people’s ability to tune out background noise and conversation when they wanted to focus: ‘The only stimulus so far found that will break through,’ the researchers wrote, ’is the subject’s own name.’ Platforms that notify users each time they are ‘mentioned’ work on this principle; the most reliable way to draw someone in, even if the content on offer doesn’t particularly appeal to them, is by creating the impression that other people are talking about them.",
+      "tags": [
+        "Atenção",
+        "Redes Sociais"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-10T08:03:00.000Z"
+    },
+    {
+      "id": "aafc3d0f-7e3a-448c-9bda-dd27e38d1443",
+      "url": "https://www.robinsloan.com/lab/is-it-okay/?ref=DenseDiscovery-329",
+      "title": "Is it okay?",
+      "description": "If an AI application delivers some profound public good, or even if it might, it’s probably okay that its value is rooted in this unprecedented operationalization of the commons. If an AI application simply replicates Everything, it’s probably not okay.",
+      "tags": [
+        "Inteligência Artificial",
+        "Ética"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-11T07:28:00.000Z"
+    },
+    {
+      "id": "277a66bd-cca6-4ae1-8abc-ef5155ff8d14",
+      "url": "https://www.sciencefocus.com/comment/celebrities-influencers-daily-routines?utm_source=pocket_shared",
+      "title": "The secret to a perfect morning routine probably isn’t what you think",
+      "description": "the one factor always omitted from coverage of the ‘secrets’ of successful people, is plain, simple luck. Whether it’s being in the right place at the right time or having access to influential family, social connections, or opportunities, the majority of highly successful people owe much of their success to good fortune. This, of course, likely conflicts with the mindset of those who amass vast personal fortunes, often at the expense or exploitation of others. It can create a powerful cognitive dissonance, which may be resolved by convincing oneself, ‘I’m not successful because of luck – I earned it! It’s because I’m disciplined and hard-working!’.",
+      "tags": [
+        "Sucesso",
+        "Sociedade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-12T08:53:00.000Z"
+    },
+    {
+      "id": "d793e21b-5fd9-4d8b-881f-34fdd69b33f6",
+      "url": "https://haleynahman.substack.com/p/208-what-is-rotting-if-not-rest?__readwiseLocation=&utm_source=pocket_shared",
+      "title": "What is rotting, if not rest?",
+      "description": "If we were more patient, more tolerant of quiet moments, or had the mental fortitude to reject cultural injunctions that we be hyper-productive uber-independent machines, maybe a TV show that held 90% of our attention would be enough. Maybe even something that held 50% would be—and I could learn to watch my child play for sustained periods without twitching for my phone. Amazing to think, I might even find this restful. The irony of the phone as the siren song for the restless is that it feeds and starves us both. Scrolling shortens our attention spans, which lowers our tolerance for stillness, which inspires us to scroll more. It also makes us feel guilty, which makes us more avoidant, and more likely to seek out rotting when we need a breather.",
+      "tags": [
+        "Redes Sociais",
+        "Descanso"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-18T08:48:00.000Z"
+    },
+    {
+      "id": "0ffa5cca-1c81-4d59-b617-5016b875c32b",
+      "url": "https://www.newscientist.com/article/2470607-how-moores-law-led-us-to-a-flawed-vision-of-the-future/",
+      "title": "How Moore’s law led us to a flawed vision of the future",
+      "description": "The myth of Moore’s law suggested that one nifty form of technology would set the pace for everything else in our civilisations. When you anticipate the future using that narrative, it leads to overinvestments in very niche tech. This isn’t to say there is no place for social media and AI in our future – of course there is. But we also need to invest in better sewage systems, malaria treatments, aeroplane safety and science education itself. AI won’t solve the looming climate crisis. We need to cultivate a diverse ecosystem of technologies and political institutions to do that.",
+      "tags": [
+        "Tecnologia",
+        "Futuro"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-20T08:12:00.000Z"
+    },
+    {
+      "id": "e9048a73-eb7a-45a5-82e8-dda85efba08d",
+      "url": "https://jacobin.com.br/2025/03/todos-os-jogos-sao-politicos/?utm_source=pocket_saves",
+      "title": "Todos os jogos são políticos",
+      "description": "A classe dominante sempre se ressentiu e temeu a diversão dos trabalhadores, mesmo que os esportes e outros tipos de jogos tenham sido usados há muito tempo para acalmar tensões sociais ou selar divisões entre pessoas oprimidas. Mas brincar é nosso direito de nascença. Todos os animais brincam — David Graeber até argumentou que partículas subatômicas brincam. Se o capitalismo nos força a trabalhar para o benefício dos chefes, brincar e jogar contém dentro de si um núcleo de resistência.",
+      "tags": [
+        "Jogos",
+        "Política"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-21T07:23:00.000Z"
+    },
+    {
+      "id": "d855eaad-e3d7-4189-8f54-4da37f424244",
+      "url": "https://onethingnewsletter.substack.com/p/conversations-are-the-new-unit-of?isFreemail=true&post_id=159331640&publication_id=1860865&r=a8hk&triedRedirect=true&utm_source=pocket_shared",
+      "title": "Conversations are the new unit of culture",
+      "description": "A conversation provides a way for you and your interlocutor to co-create meaning, to achieve understanding (of a kind, anyway) of complex issues, and to impose order on chaos, simply by talking things through. Set against this backdrop, it’s no surprise that conversations have become so important — and commodified — in recent years. We all have to contend with so much information, from so many sources, and it’s really comforting to sit with someone and work your way through various kinds of evidence and impressions (or vibes) toward some notion of the truth.",
+      "tags": [
+        "Conversa",
+        "Cultura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-24T09:07:00.000Z"
+    },
+    {
+      "id": "83180f84-a36d-4ea6-9175-f3d5c60d2cfe",
+      "url": "https://culture.ghost.io/the-age-of-the-double-sell-out/?ref=culture-an-owners-manual-newsletter",
+      "title": "The Age of the Double Sell-Out",
+      "description": "The 20th century taboo against selling out was, at its heart, a communal norm to reward young artists who focused on craft and punish those who appropriated art and subculture for empty profiteering. Now the culture is most exemplified by people whose entire end goal appears to be empty profiteering (…) The challenge for our times is to locate and elevate the artists using their platforms for art and other social goods rather than just securing further personal profit.",
+      "tags": [
+        "Arte",
+        "Cultura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Música"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-24T09:21:00.000Z"
+    },
+    {
+      "id": "9efaa420-ab15-43b6-a531-f14c5d86489c",
+      "url": "https://futurism.com/sound-audible-enclaves?utm_term=Futurism%20//%2003.24.25&utm_campaign=Futurism_Actives_Newsletter&utm_source=Sailthru&utm_medium=email",
+      "title": "Scientists Create Sound That Can Curve Through a Crowd and Reach Just One Person",
+      "description": "the researchers use two beams of ultrasound waves — the type used in medical imaging — which vibrate at a frequency way above human hearing as a ‘carrier for audible sound.’ That way as they travel, they’re silent to human ears and only become audible when they reach their target. ‘The person standing at that point can hear sound, while anyone standing nearby would not,’ Jing said in the statement. But what if there are obstacles in the way? That’s where another key innovation comes in: ultrasound beams that can bend. To achieve this, the researchers used ‘acoustic metasurfaces’ which can precisely manipulate the paths of sound waves as they travel — ‘similar to how an optical lens bends light’.",
+      "tags": [
+        "Ciência",
+        "Som"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-25T07:27:00.000Z"
+    },
+    {
+      "id": "cb45df71-9aaa-4740-8e20-41380c6f2753",
+      "url": "https://www.platformer.news/openai-chatgpt-mental-health-well-being/?ref=platformer-newsletter",
+      "title": "How chatbots could spark the next big mental health crisis",
+      "description": "sufficiently compelling chatbots will pull people away from human connections, possibly making them feel lonelier and more dependent on the synthetic companion they must pay to maintain a connection with. ‘Right now, ChatGPT is very much geared as a knowledge worker and a tool for work,’ Sandhini Agarwal, who works on AI policy at OpenAI and is one of the researchers on these studies, told me in an interview. ’But as … we design more of these chatbots that are intended to be more like personal companions … I do think taking into account impacts on well-being will be really important. So this is trying to nudge the industry towards that direction.",
+      "tags": [
+        "Inteligência Artificial",
+        "Solidão"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-25T07:31:00.000Z"
+    },
+    {
+      "id": "c5d185ff-2dc2-4edb-b0b1-5910482577eb",
+      "url": "https://jacobin.com.br/2023/03/a-arte-e-o-prazer-no-trabalho-segundo-william-morris/?utm_source=pocket_shared",
+      "title": "A arte e o prazer no trabalho segundo William Morris",
+      "description": "Segundo o designer, a divisão do trabalho se utiliza não do ‘todo de um homem’, mas de ’pequenas porções de vários’. Essa era, para ele, uma existência pouco honrosa do trabalhador. Já no sistema de guildas, além de todos fazerem tudo, todos aprendem com todos – outro fator favorável ao trabalho prazeroso. (…) Em primeiro lugar, por mais prazeroso que o trabalho fosse, Morris considerava que realizar sempre o mesmo trabalho influenciaria seus níveis de satisfação. Ou seja, todos cansam em algum momento. A variedade faria com que o trabalhador nunca se desgastasse com o trabalho. O segundo motivo é que a variação possibilita ao trabalhador que se engaje com a totalidade dos produtos que produz, não apenas uma pequena parte. O terceiro motivo é que, havendo inevitavelmente trabalhos menos prazerosos que outros, a variedade daria o vislumbre ao trabalhador de que, ao menos, em algum momento ele terá acesso ao trabalho mais prazeroso.",
+      "tags": [
+        "Trabalho",
+        "Design"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Design"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-26T08:00:00.000Z"
+    },
+    {
+      "id": "bb2b5cf6-8899-49ed-8162-9b8371d93ca1",
+      "url": "https://www.bbc.com/portuguese/articles/cy9dwzzjvrlo?utm_source=pocket_shared",
+      "title": "‘A monogamia tem um objetivo econômico. Sem ela, não dedicaríamos tempo suficiente ao trabalho’",
+      "description": "se vivêssemos em uma sociedade pós-monogâmica e tivéssemos vários relacionamentos amorosos, o tempo que dedicaríamos ao trabalho seria nulo, porque estaríamos sempre vivendo de paixão em paixão. Há algo sobre a administração temporal do erótico, confinado a estruturas que permitem que sejamos produtivos a maior parte do tempo. E o amor, ao que me parece, é um alerta contra a produtividade. Uma paixão não apenas te deixa apaixonado por alguém, como também te deixa idiota e, em algum momento, incapaz de ser produtivo da maneira que se espera de você.",
+      "tags": [
+        "Amor",
+        "Trabalho"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Entrevistas"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-31T09:06:00.000Z"
+    },
+    {
+      "id": "59716e65-ede3-4f8d-a099-159c434c0a00",
+      "url": "https://www.estadao.com.br/ciencia/o-que-neuronios-jennifer-aniston-explicam-sobre-como-o-cerebro-guarda-as-memorias/#:~:text=C%C3%A9lulas%20individuais%20do%20c%C3%A9rebro%20se,lembrar%20epis%C3%B3dios%20de%20nossas%20vidas&text=Imagine%20que%20voc%C3%AA%20est%C3%A1%20no,tomando%20um%20martini%20no%20bar.",
+      "title": "O que neurônios ‘Jennifer Aniston’ explicam sobre como o cérebro guarda as memórias",
+      "description": "Por décadas, pesquisadores estudaram células que armazenam informações de localização em nossos cérebros. O estudo descobriu que os padrões de disparo de células conceituais e células de localização se correlacionavam com a capacidade dos pacientes de lembrar a localização de determinado objeto. As células conceituais são o ‘o quê’ para nossas memórias, enquanto as células de localização são o ’onde’, escreveram os autores.",
+      "tags": [
+        "Neurociência",
+        "Memória"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2025-03-31T11:23:00.000Z"
+    },
+    {
+      "id": "f21ab2fd-0546-4593-a805-eda266956f74",
+      "url": "https://thejaymo.net/2025/03/30/2506-information-age-iconoclasm/",
+      "title": "Information Age Iconoclasm | 2506",
+      "description": "We must cultivate context literacy and we must maintain a distinction between the infrastructure and the experience, between machine and meaning. We are living through a moment that future historians may describe as a cultural rupture. A context war. How this plays out will shape new definitions of truth, authorship, creativity, and trust, perhaps for centuries to come.",
+      "tags": [
+        "Inteligência Artificial",
+        "Cultura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2025-04-01T12:15:00.000Z"
+    },
+    {
+      "id": "db1e00c8-5064-45fc-a537-36df8e9ba146",
+      "url": "https://thewalrus.ca/doing-nothing-has-never-been-more-important/?ref=sentiers.media&utm_source=pocket_shared",
+      "title": "Doing Nothing Has Never Been More Important",
+      "description": "idleness is not just a psychological necessity, requisite for the construction of a complete human being; it constitutes, as well, a kind of political space, a space as necessary for the workings of an actual democracy as, say, a free press. Being constantly occupied, whether in waged labour or in commercialized forms of leisure, leaves no space to form our own values and views and ethical judgments and so leaves us ill-equipped to contribute to a collective social and political life. (…) Idleness, then, might be a crucial emancipatory project.",
+      "tags": [
+        "Ócio",
+        "Política"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-04-01T14:20:00.000Z"
+    },
+    {
+      "id": "cd74a2f6-e1cd-4d74-9df9-29f06d11fe0f",
+      "url": "https://www.protein.xyz/dead-internet-theory/",
+      "title": "Flood The Zone",
+      "description": "As Protein previously covered with Dead Internet Theory, this is an existential threat to LLMs which are only as good as the data they are trained on. If AI-content includes the data, they develop a form of “mad” cow disease – a disease that originated in cows who were fed other cows. In just a few iterations, the bullshit machine breaks down.",
+      "tags": [
+        "Inteligência Artificial",
+        "Internet"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2025-04-03T09:08:00.000Z"
+    },
+    {
+      "id": "ab41eedb-5b1c-4fd4-a871-6f1fe2992912",
+      "url": "https://ankitashah.substack.com/p/in-defense-of-temporary-obsessions?triedRedirect=true&utm_source=pocket_shared",
+      "title": "In Defense of Temporary Obsessions",
+      "description": "every temporary obsession is not some certificate of disloyalty. Some are reminders of our troubled relationship with failure. But all are imprints of our curiosity, evidence that we once let ourselves fall in love deeply with something new and wildly outside of our comfort zone. (…) We scorn the dilettante and dismiss the amateur, but these are their origins: dilettante from the Italian ‘dilettare’ which means to take delight and amateur from the Latin ’amator’ which means lover.",
+      "tags": [
+        "Curiosidade",
+        "Psicologia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-04-07T07:56:00.000Z"
+    },
+    {
+      "id": "459c3d32-06d4-4b4f-9d0d-c1f3dd7f862f",
+      "url": "https://aeon.co/essays/how-books-can-sap-the-soul-and-poison-readers-with-ideas?utm_source=pocket_shared",
+      "title": "What’s more wholesome than reading? Yet books wield a dangerous power: the best erode self, infecting readers with ideas",
+      "description": "At its most fundamental level, to read is to put our selves at risk, to make ourselves vulnerable by welcoming the presence of an other into our psychic space. This can be a radically transformative experience, challenging us to reformulate our own self-understanding. But at worst, we become like the dinner-party guests in The Torture Garden or Don Juan – our ‘possession’ by a storyteller awakening our inner violence. (…) To acknowledge that textual narratives have as much capacity to be truly dangerous as they have to be truly illuminating is to acknowledge that books, like people, are not inherently moral or immoral.",
+      "tags": [
+        "Leitura",
+        "Literatura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Literatura"
+      ],
+      "favorite": false,
+      "createdAt": "2025-04-07T14:03:00.000Z"
+    },
+    {
+      "id": "0c423d79-9c70-4ac2-ab53-6c8c31ba2994",
+      "url": "https://www.protein.xyz/astrofuturism/",
+      "title": "Astrofuturism",
+      "description": "Silvia Federici notes in Caliban and the Witch that this revival is possible because belief in magic no longer threatens social order but instead coexists with modern structures. ‘Astrology too can be allowed to return, with the certainty that even the most devoted consumer of astral charts will automatically consult the watch before going to work.’",
+      "tags": [
+        "Magia",
+        "Sociedade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-04-09T08:39:00.000Z"
+    },
+    {
+      "id": "a99ea754-3a55-4b11-abc3-f6852a6af41a",
+      "url": "https://insensitivityreaders.com/2017/12/07/soft-coercion-the-city-and-the-recorded-female-voice/",
+      "title": "How Talking Machines Got Their Voices",
+      "description": "recordings of female voices providing information and instructions in urban environments—public transportation and security announcements, vending and automatic checkout and teller machines—became increasingly common and were chosen to forge what one scholar called a ’soft coercion’. These are voices that tell you where to go, what to do, and how to behave in order to move in an orderly way through the urban environment, and they are meant to maintain calm efficiency. Tech corporations prioritize using our biases for their benefit, while dismissing the reinforcement of stereotypes as a cultural problem rather than a technological one. (…) As synthesized voices become common, replacing with networked technologies what might have previously been interactions with other people, we lose exposure to the vocal diversity and expressiveness of other human beings and risk losing some of our capacity to truly understand one another.",
+      "tags": [
+        "Tecnologia",
+        "Gênero"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2025-04-10T08:54:00.000Z"
+    },
+    {
+      "id": "c43daa3a-9687-49ed-a0fb-b280db7a9473",
+      "url": "https://www.livescience.com/archaeology/inequality-isnt-new-but-its-far-from-inevitable-10-000-year-archeological-study-reveals",
+      "title": "Did every civilization have inequality? New 10,000-year study reveals a surprising answer",
+      "description": "Historical inequality doesn’t occur the same way everywhere, and doesn’t naturally increase as populations grow and governments become more complex. Instead, the choices human societies made about how to distribute wealth were key in keeping social disparities under control.",
+      "tags": [
+        "História",
+        "Desigualdade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2025-04-15T07:36:00.000Z"
+    },
+    {
+      "id": "dc12a987-dae7-418c-b9c1-30dd1d5c4832",
+      "url": "https://www.forkingpaths.co/p/knowingness-and-the-politics-of-ignorance",
+      "title": "“Knowingness” and the Politics of Ignorance",
+      "description": "Intellectual exploration is a uniquely human gift, producing the most extraordinary pleasure for those who engage in it. As modern humans, we have access to more knowledge than anyone, ever. Even the poorest, most uneducated person has more quality information available to them today—in public libraries and on the internet—than the richest scholar with packed mahogany bookshelves from bygone eras.(…) uncertainty is a crucial feature of our world. We do not and cannot know millions of things. That unavoidable feature of our intellectual landscape drives curiosity, a sense of exploring the unknown.",
+      "tags": [
+        "Conhecimento",
+        "Filosofia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-04-16T08:43:00.000Z"
+    },
+    {
+      "id": "b91f5932-1158-42e8-8b59-11a8dd572be5",
+      "url": "https://phys.org/tags/matter/",
+      "title": "Is our universe the ultimate computer?",
+      "description": "The possibility that the entire universe is informational in nature and resembles a computational process is a popular theory among a number of well-known figures, including Elon Musk. The thinking comes from within a branch of science known as information physics, which suggests physical reality is actually made up of structured information (…) gravity might actually be caused by how information about matter is organized in the universe.",
+      "tags": [
+        "Física",
+        "Ciência"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2025-04-28T07:27:00.000Z"
+    },
+    {
+      "id": "4cc1ca7d-83a4-466f-94d5-a1a5d17b6ed5",
+      "url": "https://www.sciencefocus.com/planet-earth",
+      "title": "Just one cable stands between us and space elevators",
+      "description": "A space elevator, as you might imagine, takes this idea a bit further. It relies on a cable that runs from space to Earth – thousands of metres of cable. Instead of needing a rocket to go into space, you run a cabin up the cable, which uses a fraction of the energy of a rocket launch and causes no pollution. (…) But there’s still the problem of the cable: it needs to be 50 times stronger than steel!",
+      "tags": [
+        "Espaço",
+        "Tecnologia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2025-04-28T07:40:00.000Z"
+    },
+    {
+      "id": "8d44203c-495c-4084-9000-e8f9401d87e6",
+      "url": "https://www.chrbutler.com/digital-echoes-and-unquiet-minds?ref=DenseDiscovery-337&utm_source=pocket_shared",
+      "title": "Digital Echoes and Unquiet Minds",
+      "description": "What is the psychological cost of knowing that your actions aren’t just your own, but create information that can be observed and analyzed by others? As more aspects of our lives generate digital echoes, they force an ambient awareness of being perpetually witnessed rather than simply existing. This transforms even solitary activities into implicit social interactions. It forces us to maintain awareness of our “observed self” alongside our “experiencing self,” creating a kind of persistent self-consciousness. We become performers in our own lives rather than merely participants.",
+      "tags": [
+        "Internet",
+        "Psicologia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2025-05-06T09:43:00.000Z"
+    },
+    {
+      "id": "ef20bcf5-6620-4d39-848d-867e32c75666",
+      "url": "http://dx.doi.org/10.1371/journal.pone.0321203",
+      "title": "This is what you’d eat after the apocalypse, according to science",
+      "description": "If a global catastrophe disrupted international trade and fuel supplies, our survival might hinge on a stark but practical diet of peas, potatoes, sugar beet and spinach. At least that’s according to a new study published in the journal PLOS One.",
+      "tags": [
+        "Ciência",
+        "Apocalipse"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2025-05-08T08:42:00.000Z"
+    },
+    {
+      "id": "3153d9fa-6d5c-4636-99fd-3ff0658b6eff",
+      "url": "https://time.com/7283470/majority-deep-sea-remains-a-mystery-study/?utm_source=beehiiv&utm_medium=email&utm_campaign=newsletter-the-brief&_bhlid=256b15d08681253a6ed17bcf37790d5b53c3f0cf",
+      "title": "More than 99% of the Deep Sea Still Remains a Mystery",
+      "description": "A new study published today in Science Advances shows just how little we know about the deep sea. According to the research, humans have observed less than 0.001% of the deep seafloor—an area roughly the size of Rhode Island. The deep sea refers to the part of the ocean below 200 meters (656 ft.), at which light begins to disappear. Despite making up more than 90% of the Earth’s marine environment, much of the deep-sea ecosystems is still a question mark for researchers.",
+      "tags": [
+        "Oceano",
+        "Ciência"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2025-05-12T07:43:00.000Z"
+    },
+    {
+      "id": "b17095eb-3bad-4eb7-b7f0-2e509c43e8a9",
+      "url": "https://www.scientificamerican.com/article/breeding-for-cuteness-is-making-dogs-and-cats-look-more-alike",
+      "title": "Breeding for ‘Cuteness’ Is Making Dogs and Cats Look More Alike",
+      "description": "‘If you isolate the gene pool with inbreeding and force massive selection pressures, you can produce a remarkable amount of diversity in a short period of time,’ says Abby Grace Drake, an evolutionary biologist at Cornell University. While this is fascinating from an evolutionary biology point of view, she and other experts do not think it is worth the health consequences for the animals. Their advice: adopt a mixed breed from a shelter.",
+      "tags": [
+        "Biologia",
+        "Animais"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2025-05-13T06:15:00.000Z"
+    },
+    {
+      "id": "8bbc78b6-efe6-41d6-85a6-6088a7134d04",
+      "url": "https://culture.ghost.io/culture-is-an-ecosystem-part-one/",
+      "title": "The Missing Piece in Conversations about “Cultural Decline”",
+      "description": "Culture is an ecosystem, and the overarching narrative of how we understand contemporary culture is stacked against the valuation of truly radical invention. Critics can list out all the high-quality art being made at the moment, but it can’t feel “progressive” without a total realignment of the critical discourse. We have to do more than hope and pray that there is better culture out there. We have to reroute the entire discussion of culture to only champion the most radical forms of creative invention, no matter how many billionaires and pop stans’ feelings that hurts.",
+      "tags": [
+        "Cultura",
+        "Crítica"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Crítica"
+      ],
+      "favorite": false,
+      "createdAt": "2025-05-13T07:30:00.000Z"
+    },
+    {
+      "id": "6981e6dc-acb2-4217-9e2c-13efcad37c38",
+      "url": "https://www.workingtheorys.com/p/the-media-machine-singularity",
+      "title": "Media and Machine",
+      "description": "We build AI to elevate humanity — to cure, decode, transcend. Yet like all mortal creations, it bends toward what’s rewarded: commerce, companionship, cachet. (…) This creature thrives on reciprocal nourishment: feed its media half and its machine capabilities grow; starve its machine needs and its cultural influence withers. We’re no longer designing just products or platforms or interfaces, but cognitive environments — architectures of attention that shape what people see, feel, and believe.",
+      "tags": [
+        "Mídia",
+        "Inteligência Artificial"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2025-05-13T08:38:00.000Z"
+    },
+    {
+      "id": "6cb0a067-b6c4-4086-a070-488eb36a83b3",
+      "url": "https://www1.folha.uol.com.br/ilustrada/2025/05/sou-mulher-e-negra-mas-meus-poemas-vem-de-lugar-mais-fundo-diz-tracy-smith.shtml",
+      "title": "Sou mulher e negra, mas meus poemas vêm de lugar mais fundo, diz Tracy Smith",
+      "description": "A questão é que um poema não busca expressar uma coisa só —nem precisa de uma chave mestra para ser entendido. É um erro comum, segundo Smith, que explica em parte por que a poesia ainda é vista como algo distante, inacessível, para boa parte do público. ‘A poesia sempre foi ensinada numa linha ‘aqui está um poema que esconde algo, você consegue analisar, decifrar e resumir o que ele diz?’ E não é isso que os poetas buscam fazer’.",
+      "tags": [
+        "Poesia",
+        "Literatura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Poesia",
+        "Entrevistas"
+      ],
+      "favorite": false,
+      "createdAt": "2025-05-19T07:58:00.000Z"
+    },
+    {
+      "id": "32a42cf2-94cf-41bd-af1c-3a2a9a4fc184",
+      "url": "https://www.fastcompany.com/91323292/ai-found-these-simple-features-make-a-city-more-walkable",
+      "title": "AI studied Hong Kong’s streets. Here’s what it learned about making cities more walkable",
+      "description": "people prefer to walk in places with a higher proportion of several basic streetscape elements, including benches, shade trees, sidewalks, and crosswalks. When those elements are provided in combination with one another—plentiful benches and crosswalks, for example—people are likely to walk even more.",
+      "tags": [
+        "Urbanismo",
+        "Cidades"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-05-19T08:12:00.000Z"
+    },
+    {
+      "id": "5364016b-395c-4fa9-98c4-b79e7661de6e",
+      "url": "https://buttondown.com/charliejane/archive/our-default-story-structure-is-literally-killing?utm_source=pocket_shared",
+      "title": "Our Default Story Structure Is Literally Killing Us",
+      "description": "In a way, it’s comforting to tell yourself ‘I’m stressed’ when you’re actually freaked out, anxious, drained by hypervigilance, upset by reading about genocide and the ransacking of our institutions. You tend to be stressed when you’re solving problems and making progress. Getting shit done. Stress feels like you’re getting somewhere. It’s somewhat less comforting to realize that we’re all trapped in a collective nightmare that none of us can choose, individually, to wake up from.",
+      "tags": [
+        "Stress",
+        "Sociedade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-05-21T13:18:00.000Z"
+    },
+    {
+      "id": "dfca4426-8312-4bd7-9bff-d64b6acd40fe",
+      "url": "https://buttondown.com/charliejane/archive/why-the-worst-people-are-so-keen-to-wreck-art-and/",
+      "title": "Why the Worst People Are So Keen to Wreck Art and Culture",
+      "description": "we should be expressing pride in our tendency to noodle and overthink the meaning of stories. To perform the dreamy kind of pattern recognition that only our human brains can achieve, to stumble across connections that no algorithm would ever make. I believe, more than ever, that the humanities are vital to, well, humanity. And that we have to protect them with everything we have, or everything else will slowly slide into the pit.",
+      "tags": [
+        "Humanidades",
+        "Cultura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Crítica"
+      ],
+      "favorite": false,
+      "createdAt": "2025-06-05T08:46:00.000Z"
+    },
+    {
+      "id": "e39f9e66-3946-4a72-b676-ac1de5cffea1",
+      "url": "https://www.theatlantic.com/technology/archive/2020/01/smartphone-has-ruined-space/605077/",
+      "title": "Every Place Is the Same Now",
+      "description": "Anywhere has become as good as anywhere else. The office is a suitable place for tapping out emails, but so is the bed, or the toilet. You can watch television in the den—but also in the car, or at the coffee shop, turning those spaces into impromptu theaters. Grocery shopping can be done via an app while waiting for the kids’ recital to start. Habits like these compress time, but they also transform space. Nowhere feels especially remarkable, and every place adopts the pleasures and burdens of every other. It’s possible to do so much from home, so why leave at all?",
+      "tags": [
+        "Espaço",
+        "Tecnologia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-06-09T07:55:00.000Z"
+    },
+    {
+      "id": "23ce1947-be3f-4507-b031-52af366fb99a",
+      "url": "https://www.theatlantic.com/family/archive/2025/06/know-thyself-limits/682967/",
+      "title": "You Don’t Know Yourself as Well as You Think You Do",
+      "description": "Introspection, as he described it in his book, should be understood less as an archaeological dig to uncover the capital-T Truth of ourselves and more as literary criticism “in which we are the text to be understood.” Just as a good novel doesn’t have one single truth in it, a person has many truths as well.",
+      "tags": [
+        "Autoconhecimento",
+        "Psicologia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-06-09T08:26:00.000Z"
+    },
+    {
+      "id": "0cfab144-197e-412d-95bc-2c43c2ba4e80",
+      "url": "https://culture.ghost.io/the-pro-pop-ideology-from-ashlee-to-addison/",
+      "title": "The Pro-Pop Ideology, from Ashlee to Addison",
+      "description": "In the last two decades, many in the professional and creative classes have wanted to use their pocketbooks to push back against the influence of multinational corporations — à la Naomi Klein’s No Logo. We should buy young designers’ clothes, avoid highly-processed food, support independent bookstores, drink local-roasted Fair Trade coffee, etc. But when it came to music, the most moral action was to embrace the most openly manufactured pop. (…) We live under an enduring critical contrarianism that is quick to find depth in shallowness, authenticity in artificiality, and true affirmations of life in cynical pursuit of profit.",
+      "tags": [
+        "Música",
+        "Crítica"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Música",
+        "Crítica"
+      ],
+      "favorite": false,
+      "createdAt": "2025-06-17T08:53:00.000Z"
+    },
+    {
+      "id": "c2359641-7005-4293-a259-c05d0f6decde",
+      "url": "https://www.solarshades.club/p/the-political-dimensions-of-solarpunk10",
+      "title": "Political Dimensions of Solarpunk…Ten Years Later",
+      "description": "The more cyberpunk the world gets, the more useful solarpunks become. The more material reality is buried under layers of digital abstraction, the better it feels to actually get your hands dirty. (…) The solarpunks already exist; their stories just aren’t evenly distributed yet. Cyberpunk didn’t invent the persona of the hacker, but it did make a whole lot of people want to be hackers. Solarpunk can and should do the same, pointing us toward lifestyles, careers, communities, and choices that are regenerative for both the planet and the soul.",
+      "tags": [
+        "Solarpunk",
+        "Ficção Científica"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-06-30T09:55:00.000Z"
+    },
+    {
+      "id": "b2c92d64-7c74-4368-a764-7aa1b68fae0a",
+      "url": "https://www.technologyreview.com/2025/06/20/1118379/the-net-cyber-thriller-digital-isolation/",
+      "title": "How a 30-year-old techno-thriller predicted our digital isolation",
+      "description": "The Net appeared at a time when the internet was only faintly understood as the new Wild West. Before the dot-com boom and bust, before Web 2.0, before the walled gardens and the theory of a ‘dead internet.’ In that sense, it remains a fascinating time capsule of a moment when the possibilities to come felt endless, the outlook cautiously optimistic.",
+      "tags": [
+        "Cinema",
+        "Internet"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Cinema",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2025-07-01T12:47:00.000Z"
+    },
+    {
+      "id": "5358f664-8ccd-46ba-8c09-7445a7f95f29",
+      "url": "https://www.robinsloan.com/newsletters/summer-book-sale-2025/",
+      "title": "TRESPASSERS — The Summer Book Sale",
+      "description": "I do believe a great library is both a practical asset and a personal achievement. It’s a way of saying, this is who I am; this is what I value. Saying it to yourself, most of all. I’m very proud of my shelves! Browsing them, you’d quickly identify major preoccupations, glaring omissions: and those things are me. Makes you think about the power of choosing what, and what not, to read.",
+      "tags": [
+        "Livros",
+        "Leitura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Literatura"
+      ],
+      "favorite": false,
+      "createdAt": "2025-07-08T06:46:00.000Z"
+    },
+    {
+      "id": "7b6cb11e-13e8-4a0d-95ad-e26e7c0160c3",
+      "url": "https://onethingnewsletter.substack.com/p/temporal-realness-is-the-hottest",
+      "title": "Temporal realness is the hottest commodity",
+      "description": "We’re in the wider era of Live Culture, in which we desperately want to know, to be reassured, that what’s in front of us is real. This urge might be semi-subconscious, a drift toward the real-time (or the appearance of such) and a slow dismissal of the pre-made. Livestreamed video is hard to fake, and a live interview is, on some baseline level, authentic. The spoken language of a three-hour podcast episode is messy, meandering, and often internally inconsistent, but it has the tinge of realness that written text doesn’t.",
+      "tags": [
+        "Mídia",
+        "Cultura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Podcast"
+      ],
+      "favorite": false,
+      "createdAt": "2025-07-16T07:24:00.000Z"
+    },
+    {
+      "id": "62d9b996-d522-45df-8a8d-d74d2320ebb0",
+      "url": "https://www.newyorker.com/magazine/2025/07/21/ai-is-about-to-solve-loneliness-thats-a-problem",
+      "title": "A.I. Is About to Solve Loneliness. That’s a Problem",
+      "description": "sufficiently compelling chatbots will pull people away from human connections, possibly making them feel lonelier and more dependent on the synthetic companion they must pay to maintain a connection with. Solitude is the engine of independent thought—a usual precondition for real creativity. Hannah Arendt once observed that “loneliness shows itself most sharply in company with others.” When we numb ourselves to loneliness, we give up the hard work of making ourselves understood, of striving for true connection, of forging relationships built on mutual effort.",
+      "tags": [
+        "Inteligência Artificial",
+        "Solidão"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2025-07-23T12:13:00.000Z"
+    },
+    {
+      "id": "e608c3c1-8ac1-40fc-b165-3078bd923436",
+      "url": "https://archive.is/20250724121346/https://www.nybooks.com/online/2025/07/24/the-revolution-will-not-be-star-wars/#selection-308.1-503.7",
+      "title": "The Revolution Will Not Be Star Wars",
+      "description": "Franchise movies and TV shows now demand a particular kind of paranoia. Their stories and settings never quite make sense on their own terms: apparently important characters appear and disappear without explanation, obviously doomed characters somehow fail to die, objects are lingered on with unexpressed significance, stories end not so much with cliffhangers as with bulletins from another story entirely. (…) The best works of corporate storytelling are, in a sense, acts of quiet resistance, written in the blank spots of the enforced narrative.",
+      "tags": [
+        "Cinema",
+        "Cultura Pop"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Cinema"
+      ],
+      "favorite": false,
+      "createdAt": "2025-07-24T09:43:00.000Z"
+    },
+    {
+      "id": "977780fd-a367-4dd5-a330-b23f0d23a4b3",
+      "url": "https://www.newyorker.com/culture/the-lede/in-defense-of-the-traditional-review",
+      "title": "In Defense of the Traditional Review",
+      "description": "reviews (…) are the most inherently progressive mode of arts writing. (…) And what a review embodies, above all, is one viewer’s experience of it (…) The heart of the review is emotion, the stirrings of the soul, receptiveness to the life-changing power of art (even commercial art).",
+      "tags": [
+        "Crítica",
+        "Arte"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Crítica"
+      ],
+      "favorite": false,
+      "createdAt": "2025-07-25T13:04:00.000Z"
+    },
+    {
+      "id": "6757b4a7-31ab-4a1e-b47a-ddb4e4e2599d",
+      "url": "https://www.newyorker.com/culture/the-weekend-essay/always-inadequate",
+      "title": "Always Inadequate",
+      "description": "The solipsism of low self-esteem is one of the wonders of the human psyche. So inexplicable is its grip, so binding its influence, it can feel almost mythic. And why not? Myths are what we invent to accommodate the mysteries of nature: our own if not those of our surroundings. Scientists can explain daylight and darkness, gravity and rainfall, but who, after all, can explain why we are born with a need to think well of ourselves, and why, when we don’t, life becomes an exercise in humiliation?",
+      "tags": [
+        "Psicologia",
+        "Autoestima"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-08-20T07:15:00.000Z"
+    },
+    {
+      "id": "7a67b3da-92c9-4a6b-9649-cd037cd4d9e4",
+      "url": "https://archive.is/20250820095203/https://www.washingtonpost.com/wellness/2025/08/20/how-to-live-good-life/#selection-269.0-269.58",
+      "title": "There’s a path to a good life beyond happiness and meaning",
+      "description": "Happiness, Oishi said, can be thought of as a batting average — it goes up and down with good and bad experiences. Psychological richness, on the other hand, is more akin to career highlights — how many interesting stories and experiences we have over our lifetime. These can arise from travel, meeting interesting people, reading books or overcoming challenging circumstances. The last words of a person who lived a happy life might be, “It was fun!”. Someone who lived a meaningful one might say, “I made a difference!”. And for someone who lived a psychologically rich life? “What a journey!”",
+      "tags": [
+        "Bem-estar",
+        "Filosofia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-08-20T07:55:00.000Z"
+    },
+    {
+      "id": "296ecb5d-3fd4-476c-8ceb-087ec830d898",
+      "url": "https://www.vox.com/down-to-earth/459398/animals-species-unknown-dark-taxa",
+      "title": "The search for Earth’s most mysterious creatures is turning up extraordinary results",
+      "description": "The more that scientists study the planet’s biodiversity, the more they realize how little of it we know. They estimate that for every species we’ve discovered, there are likely at least another nine or so that remain undiscovered or unidentified, meaning around 90 percent of life on Earth is unknown. (…) This is the planet we live on,’ Hebert said. ’We really should understand the organisms that we share it with.’",
+      "tags": [
+        "Biologia",
+        "Ciência"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Ciência"
+      ],
+      "favorite": false,
+      "createdAt": "2025-09-04T08:42:00.000Z"
+    },
+    {
+      "id": "7f734f47-6ae0-4007-963d-e2e25e56a4b4",
+      "url": "https://www.nytimes.com/2025/09/15/books/arthur-sze-poet-laureate.html",
+      "title": "Arthur Sze Will Be the Next U.S. Poet Laureate",
+      "description": "‘When you read a poem, you don’t need to feel like you get it all at once,’ Sze said. ‘The best poems communicate through sound and rhythm and musicality. And as you read and reread, the poem emerges.’ (…) ‘Poetry communicates best through its humanity,’ he said. ‘If you make the reader experience what’s going on, they can decide for themselves,’ he continued. ‘I like to say poetry must resist all forms of coercion.’",
+      "tags": [
+        "Poesia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Poesia"
+      ],
+      "favorite": false,
+      "createdAt": "2025-09-17T08:37:00.000Z"
+    },
+    {
+      "id": "bdfa0757-8c0a-420a-8bdd-db678d0ad54c",
+      "url": "https://www.noemamag.com/the-last-days-of-social-media/",
+      "title": "The Last Days Of Social Media",
+      "description": "The timeline is no longer a source of information or social presence, but more of a mood-regulation device, endlessly replenishing itself with just enough novelty to suppress the anxiety of stopping. Scrolling has become a form of ambient dissociation, half-conscious, half-compulsive, closer to scratching an itch than seeking anything in particular. People know the feed is fake, they just don’t care.",
+      "tags": [
+        "Redes Sociais"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2025-09-17T12:51:00.000Z"
+    },
+    {
+      "id": "a454d320-a12a-45a9-b2e3-9878b6b8bb1c",
+      "url": "https://www.newyorker.com/culture/open-questions/can-you-really-live-one-day-at-a-time",
+      "title": "Can You Really Live One Day at a Time?",
+      "description": "Each day is like a wave that comes forward with its own particular character. You can dive beneath it, or struggle up its face, or try to surf it, or get pummelled by it, but then another day comes, and another. (…) our days can be more vivid when we’re open to their symbolic or existential possibilities.",
+      "tags": [
+        "Filosofia",
+        "Bem-estar"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-09-18T09:05:00.000Z"
+    },
+    {
+      "id": "eb09a6af-877d-4670-b47f-844f7dc7ce6f",
+      "url": "https://lithub.com/how-writing-poetry-can-freeze-time/",
+      "title": "How Writing Poetry Can Freeze Time",
+      "description": "The act of writing a poem stills time—freezing the action, emotion, meaning of a moment. (…) Poetry is of course much more than mere documentativo. But a daily writing practice for a poet heightens observational skills, deepens emotional tentacles and alerts all our senses.",
+      "tags": [
+        "Poesia",
+        "Escrita"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Poesia"
+      ],
+      "favorite": false,
+      "createdAt": "2025-09-18T12:31:00.000Z"
+    },
+    {
+      "id": "a1573a6d-6e91-491b-84a4-f0ef4b5b675a",
+      "url": "https://yalereview.org/article/christine-smallwood-reviewers-life",
+      "title": "The material constraints of writing criticism today",
+      "description": "criticism is an act of autobiography. The work of making an argument, coming to a judgment, or simply choosing which books or objects to give time and attention to is inevitably, helplessly, an expression of values—and an expression of self. Our tastes tell on us as much as our syntax and tone; that mysterious compound called sensibility is formed by some strange alchemy of innate tendencies, life experiences, and material circumstances.",
+      "tags": [
+        "Crítica",
+        "Escrita"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Crítica"
+      ],
+      "favorite": false,
+      "createdAt": "2025-09-22T09:44:00.000Z"
+    },
+    {
+      "id": "24834c66-3fe7-4a1e-87c0-a2784bf911b3",
+      "url": "https://buttondown.com/charliejane/archive/i-cant-stop-writing-about-violence/",
+      "title": "I Can’t Stop Writing About Violence",
+      "description": "It’s not just that we encourage people in uniform to mete out brutality on our behalf. It’s not just that we know on some level that our whole economy is built on mistreating people. It’s also that deep down, we believe that all good behavior comes from the existence of a supernatural torture chamber. This is the backdrop against which we ask ourselves if violence can be justified.",
+      "tags": [
+        "Violência",
+        "Sociedade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-09-25T07:23:00.000Z"
+    },
+    {
+      "id": "dc60cb2e-9cff-4fa8-bf2e-6ce5b0c86985",
+      "url": "https://phys.org/news/2025-10-youtube-young-people-political-site.html",
+      "title": "YouTube shapes young people’s political education, but the site simplifies complex issues",
+      "description": "When critical education is confined to elite spaces, structural thinking becomes a privilege and not a public tool. This matters because it shapes who feels entitled to analyze power and imagine alternatives—and who is left to make sense of inequality through personal experience and YouTube algorithms (…) the pipeline for developing structural literacy has broken down.",
+      "tags": [
+        "YouTube",
+        "Educação"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2025-10-07T13:14:00.000Z"
+    },
+    {
+      "id": "e7c10766-5080-42b6-beac-3beeec73d50a",
+      "url": "https://www.derekthompson.org/p/why-everything-became-television",
+      "title": "Everything Is Television",
+      "description": "digital media hasn’t become the antidote to television. Digital media, empowered by the serum of algorithmic feeds, has become super-television: more images, more videos, more isolation (…) When everything turns into television, every form of communication starts to adopt television’s values: immediacy, emotion, spectacle, brevity. When everything is urgent, nothing is truly important. Politics becomes theater. Science becomes storytelling. News becomes performance.",
+      "tags": [
+        "Televisão",
+        "Mídia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Televisão"
+      ],
+      "favorite": false,
+      "createdAt": "2025-10-17T09:31:00.000Z"
+    },
+    {
+      "id": "770ef3fc-ddad-4f34-8a6e-7ddec578f330",
+      "url": "https://x.com/ystrickler/status/1971595629815062915",
+      "title": "The revenge of elitism",
+      "description": "To be anti-elitist, however, is to stop caring about attention as a metric of quality, because those who already have it will always win. It requires caring about the people who aren’t on magazine covers and don’t have hundreds of thousands of followers. It requires engaging in smaller-scale, more private, and more coherent efforts — the community of friends and collaborators, people whose opinion you respect (as opposed to the passive hoards of onlookers and bots).",
+      "tags": [
+        "Elitismo",
+        "Cultura"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-10-21T08:36:00.000Z"
+    },
+    {
+      "id": "2c287b8c-61b4-48ce-bc37-ff2f1af8f1a1",
+      "url": "https://diplomatique.org.br/pedagogia-da-ansiedade/",
+      "title": "Pedagogia da ansiedade",
+      "description": "A escola capitalista não é um desvio reformável, mas um espelho da sociedade de classes: hierárquica, competitiva, produtivista e ansiosa. A superação dessa forma escolar implica a construção de uma nova sociedade, na qual a educação não sirva à reprodução do trabalho alienado, mas à realização omnilateral do ser humano.",
+      "tags": [
+        "Educação",
+        "Capitalismo"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-10-27T07:37:00.000Z"
+    },
+    {
+      "id": "8ab8bb6c-7187-41e6-971e-c64db36b3879",
+      "url": "https://www.lesswrong.com/posts/rGg5QieyJ6uBwDnSh/video-games-are-philosophy-s-playground",
+      "title": "Video games are philosophy’s playground",
+      "description": "For most of human history, we had one reality and we lived in it. Philosophy developed elaborate tools for thinking about that reality, but the tools were all theoretical. Thought experiments, armchair reasoning, careful argumentation about worlds we could never visit. Now we have the ability to spin up new worlds, with different rules, and actually live in them for long enough to build intuitions.",
+      "tags": [
+        "Jogos",
+        "Filosofia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2025-11-19T11:59:00.000Z"
+    },
+    {
+      "id": "609db4e7-90bc-4e07-af9d-33732c45846b",
+      "url": "https://aeon.co/essays/victorian-diary-writers-kicked-off-our-age-of-self-optimisation",
+      "title": "‘I awoke at ½ past 7’",
+      "description": "Nineteenth-century diaries show a growing middle class engaged in a constant quest for self-mastery and productivity. With the invention of printed commercial diaries came a new way of looking at life and new organisational possibilities. The future could be mapped out, goal-oriented, solution-focused. The Victorians were great innovators, but progress was Janus-faced.",
+      "tags": [
+        "História",
+        "Produtividade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-11-24T11:43:00.000Z"
+    },
+    {
+      "id": "2dfca83d-e9f4-45af-a40d-e3831e97f0d3",
+      "url": "https://www.theguardian.com/games/2025/oct/31/psychology-horror-games-and-why-we-cant-help-pushing-play",
+      "title": "Inside the secret psychology of horror games – and why we can’t help pushing play",
+      "description": "Real horror isn’t a mugger with a gun. It’s the shadow behind the door, the silence that lingers too long, the certainty that something is coming … but you don’t know when, or what. (…) Games put you inside the fear. When you decide to open a door or step into a dark room, the fear is yours. You’re responsible for what happens next (…) scary movies ask what you’d do in the dark. Video games make you find out.",
+      "tags": [
+        "Jogos",
+        "Terror"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2025-12-09T07:57:00.000Z"
+    },
+    {
+      "id": "273ce247-2c28-42de-8d17-f509cbc6e65e",
+      "url": "https://www.niemanlab.org/2025/12/the-media-will-become-terminally-addicted-to-gambling/",
+      "title": "The media will become terminally addicted to gambling",
+      "description": "The maximalist pitch, as recently made by one of Kalshi’s founders, is to ‘financialize everything and create a tradable asset out of any difference in opinion.’ You don’t want to place too much stock in self-consciously shocking claims by young founders riding up a growth curve — that’s part of the job — but for a while, at least, they really do have a lot of momentum, and political media is unusually vulnerable to prediction markets’ appeal.",
+      "tags": [
+        "Mídia",
+        "Apostas"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2025-12-11T07:23:00.000Z"
+    },
+    {
+      "id": "b3d83a38-fd62-42c9-8ca4-3ba9a2c29d52",
+      "url": "https://www1.folha.uol.com.br/equilibrio/2026/01/abracar-o-nada-a-ideia-do-filosofo-jean-paul-sartre-que-pode-ser-libertadora-para-comecar-o-ano.shtml",
+      "title": "Abraçar o ‘nada’: a ideia do filósofo Jean-Paul Sartre que pode ser libertadora para começar o ano",
+      "description": "‘Porque ser nada é ser potência’, explica Suárez, ‘é ter uma infinidade de possibilidades, de coisas para fazer’. ‘É isso que é o ser humano: o nada que, ao se projetar, escolher e decidir, fazer e agir, e ser, cria coisas no mundo’, acrescenta. Nesse contexto, não viemos para cumprir um plano preestabelecido, não temos um propósito predeterminado, não há nada que dite quem seremos e como nos comportaremos (…) ‘A única coisa da qual não somos livres é de não sermos livres’.",
+      "tags": [
+        "Filosofia",
+        "Existencialismo"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2026-01-05T06:34:00.000Z"
+    },
+    {
+      "id": "6f77e80d-e168-40ca-a1f8-c638a733375b",
+      "url": "https://kotaku.com/best-games-2025-despelote-terminator-2d-absolum-pac-man-shadow-labyrinth-blippo-2000656278",
+      "title": "Carolyn Petit’s Top 5 Games Of 2025",
+      "description": "Kojima said: ‘I’m going to be very honest, we have been testing the game with players and the results are too good. They like it too much. That means something is wrong; we have to change something…If everyone likes it, it means it’s mainstream. It means it’s conventional. It means it’s already pre-digested for people to like it’.",
+      "tags": [
+        "Jogos",
+        "Crítica"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Jogos",
+        "Crítica"
+      ],
+      "favorite": false,
+      "createdAt": "2026-01-05T06:44:00.000Z"
+    },
+    {
+      "id": "ed6eed35-22c5-447b-a1f3-ad6385d80d97",
+      "url": "https://om.co/2026/01/21/velocity-is-the-new-authority-heres-why/",
+      "title": "Velocity Is the New Authority. Here’s Why",
+      "description": "Networks have always shaped how societies are organized. Roman roads didn’t just make travel easier; they mapped the reach of the state and the limits of power. Shipping routes determined where colonial empires flourished and where they faded. In the Victorian age, the railways didn’t just shorten journeys; they rearranged British society. (…) What looks like cultural choice is often the echo of infrastructure (…) The algorithm is the culture.",
+      "tags": [
+        "Algoritmos",
+        "Sociedade"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2026-02-24T07:34:00.000Z"
+    },
+    {
+      "id": "059c256e-d5c8-4408-9dc5-43c46138ea3e",
+      "url": "https://buttondown.com/charliejane/archive/im-still-not-over-losing-my-book-review-gig/",
+      "title": "I’m Still Not Over Losing My Book Review Gig",
+      "description": "Curation is one of those things that can only be done by a human, and it’s a skill you develop over time. (…) The enemy of curation is algorithms. In many areas of our lives, we are now being force-fed content by unthinking, unreflecting mechanical systems. Pink slime machines. (…) Hollywood’s descent into endless repetition and churn of old ideas feels like a microcosm of what’s happening to culture in general as algorithms take over.",
+      "tags": [
+        "Curadoria",
+        "Algoritmos"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Crítica"
+      ],
+      "favorite": false,
+      "createdAt": "2026-02-25T06:34:00.000Z"
+    },
+    {
+      "id": "134c13ec-87fe-498a-85f8-53f9d05fd1b3",
+      "url": "https://phys.org/news/2026-03-democracy-deep-global-roots-greece.html",
+      "title": "New study shows democracy has deep global roots—not just Greece and Rome",
+      "description": "I think the use of space is very telling,’ says Feinman. ‘When you find urban areas with broad, open spaces, or when you see public buildings that have wide spaces where people can get together and exchange information, those societies tend to be more democratic.’ On the other hand, some architectural and city-planning remnants indicate a society where fewer people concentrated power.",
+      "tags": [
+        "Arquitetura",
+        "Democracia"
+      ],
+      "action": "",
+      "categories": [
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2026-03-19T07:37:00.000Z"
+    },
+    {
+      "id": "eeb5db02-9325-475f-adc0-a55a86b696cd",
+      "url": "https://aeon.co/essays/what-we-think-is-a-decline-in-literacy-is-a-design-problem",
+      "title": "What we think is a decline in literacy is a design problem",
+      "description": "Your brain now routinely performs feats that would have seemed impossible to your grandparents. You parse information simultaneously across text, image, sound and motion. (…) The library of the future isn’t a warehouse for books. It’s a gymnasium for attention. It’s where communities go to practise different modes of understanding (…) The future belongs to people who can dance between all modes without losing their balance.",
+      "tags": [
+        "Leitura",
+        "Atenção"
+      ],
+      "action": "",
+      "categories": [
+        "Quote",
+        "Internet"
+      ],
+      "favorite": false,
+      "createdAt": "2026-03-31T07:54:00.000Z"
     }
   ]
 }
