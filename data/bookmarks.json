@@ -802,6 +802,27 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-13T18:23:34.288Z"
+    },
+    {
+      "id": "f3641a3c-c120-40b9-9dda-b7e79b858f50",
+      "url": "https://human.biodigital.com/explore",
+      "title": "BioDigital Human Platform",
+      "description": "",
+      "tags": [
+        "Anatomia",
+        "Modelagem 3D",
+        "Corpo Humano",
+        "Saúde",
+        "Órgãos",
+        "Atlas"
+      ],
+      "action": "",
+      "categories": [
+        "Ciência",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-13T18:26:32.676Z"
     }
   ]
 }
