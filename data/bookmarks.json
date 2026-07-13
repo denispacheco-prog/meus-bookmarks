@@ -799,14 +799,15 @@
         "Corrida",
         "Racing",
         "Carros",
-        "Videogames"
+        "Videogames",
+        "Jogos de Browser"
       ],
       "action": "Jogar",
       "categories": [
         "Internet",
         "Jogos"
       ],
-      "favorite": true,
+      "favorite": false,
       "createdAt": "2026-07-13T18:23:34.288Z"
     },
     {
