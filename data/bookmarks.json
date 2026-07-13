@@ -3243,6 +3243,30 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-13T21:47:35.134Z"
+    },
+    {
+      "id": "ecfd3e9f-d544-4d6d-b8cd-749cb0f45bca",
+      "url": "https://reactormag.com/five-science-fiction-versions-of-the-odyssey/",
+      "title": "Five Science Fiction Versions of The Odyssey",
+      "description": "",
+      "tags": [
+        "Odisséia",
+        "Grécia",
+        "Literatura Grega",
+        "Clássicos",
+        "Sci-Fi",
+        "Livros",
+        "Ficção Científica",
+        "Fantasia",
+        "Mitolodia"
+      ],
+      "action": "",
+      "categories": [
+        "Literatura",
+        "Lista"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-13T23:27:16.088Z"
     }
   ]
 }
