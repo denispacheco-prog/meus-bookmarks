@@ -782,6 +782,26 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-12T18:06:40.824Z"
+    },
+    {
+      "id": "52a23292-acd6-499e-b477-1b5f3cfc1a45",
+      "url": "https://slowroads.io/",
+      "title": "Slow Roads",
+      "description": "Jogo de browser de corrida",
+      "tags": [
+        "Jogos Eletrônicos",
+        "Corrida",
+        "Racing",
+        "Carros",
+        "Videogames"
+      ],
+      "action": "Jogar",
+      "categories": [
+        "Internet",
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-13T18:23:34.288Z"
     }
   ]
 }
