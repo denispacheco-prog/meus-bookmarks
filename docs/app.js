@@ -451,8 +451,11 @@ function bookmarkItemMarkup(bookmark) {
 
   const favoriteHtml = `<button type="button" class="favorite-star-btn${bookmark.favorite ? " active" : ""}" data-id="${escapeHtml(bookmark.id)}" title="${bookmark.favorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}">${bookmark.favorite ? "★" : "☆"}</button>`;
 
+  const isQuote = bookmark.categories.includes("Quote");
+  const quoteStyle = isQuote ? ` style="--cat-hue:${groupColor("quotes")}"` : "";
+
   return `
-    <li class="bookmark-item" data-id="${escapeHtml(bookmark.id)}">
+    <li class="bookmark-item${isQuote ? " quote-bookmark" : ""}" data-id="${escapeHtml(bookmark.id)}"${quoteStyle}>
       <h3><a href="${escapeHtml(bookmark.url)}" target="_blank" rel="noopener noreferrer">${highlightMatches(bookmark.title)}</a></h3>
       <div class="bookmark-url">${escapeHtml(bookmark.url)}</div>
       ${bookmark.description ? `<p class="bookmark-description">${highlightMatches(bookmark.description)}</p>` : ""}

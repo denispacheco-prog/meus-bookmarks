@@ -432,6 +432,15 @@ main {
   padding: 1rem 0;
 }
 
+.bookmark-item.quote-bookmark {
+  border-left: 3px solid var(--cat-hue, var(--accent));
+  padding-left: 0.9rem;
+}
+
+.bookmark-item.quote-bookmark .bookmark-description {
+  font-style: italic;
+}
+
 .bookmark-item h3 {
   margin: 0 0 0.2rem;
   font-size: 1.05rem;
