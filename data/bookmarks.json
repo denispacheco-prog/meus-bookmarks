@@ -3407,6 +3407,25 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-14T11:44:33.440Z"
+    },
+    {
+      "id": "ac00eda2-3c47-43bf-912d-a4cc150a634f",
+      "url": "https://www.currentreader.app/",
+      "title": "Current - A River of Reading",
+      "description": "",
+      "tags": [
+        "App",
+        "RSS",
+        "Feed",
+        "Informação"
+      ],
+      "action": "",
+      "categories": [
+        "Internet",
+        "Tecnologia"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-14T11:47:35.015Z"
     }
   ]
 }
