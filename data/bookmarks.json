@@ -3369,6 +3369,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-14T11:26:43.959Z"
+    },
+    {
+      "id": "901186e6-77bf-4e0a-a158-f6ea8321fb42",
+      "url": "https://museum.parallel.ai",
+      "title": "Museum of the Human Web",
+      "description": "The Museum of the Human Web is a hybrid physical and digital museum celebrating the history of the human-built web",
+      "tags": [
+        "Museu",
+        "Internet",
+        "Tecnologia",
+        "Eletrônicos"
+      ],
+      "action": "",
+      "categories": [
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-14T11:29:20.031Z"
     }
   ]
 }
