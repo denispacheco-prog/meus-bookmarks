@@ -294,6 +294,7 @@ const GitHubApi = {
     target.action = (payload.action || "").trim();
     target.categories = cleanListField(payload.categories);
     target.favorite = !!payload.favorite;
+    target.favoriteNote = (payload.favoriteNote || "").trim();
     mergeKnownCategories(data, cleanListField(payload.newCategories), payload.newCategoryGroup);
     mergeKnownActions(data, target.action);
     await ghPutFile(data, sha, `Edita bookmark: ${title}`);

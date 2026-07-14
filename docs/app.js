@@ -424,7 +424,9 @@ function render() {
 
   const favorites = state.bookmarks.filter((b) => b.favorite);
   els.favoritesSection.classList.toggle("hidden", favorites.length === 0);
-  els.favoritesList.innerHTML = favoritesListMarkup(favorites);
+  if (!document.activeElement || !document.activeElement.classList.contains("favorite-item-note")) {
+    els.favoritesList.innerHTML = favoritesListMarkup(favorites);
+  }
 
   const tags = tagCounts();
   els.tagCloudSection.classList.toggle("hidden", tags.length === 0);
@@ -530,6 +532,7 @@ function favoriteItemMarkup(bookmark) {
       <div class="favorite-item-info">
         <a href="${escapeHtml(bookmark.url)}" target="_blank" rel="noopener noreferrer" class="favorite-item-title">${escapeHtml(bookmark.title)}</a>
         <span class="favorite-item-domain">${escapeHtml(getDomain(bookmark.url))}</span>
+        <input type="text" class="favorite-item-note" data-id="${escapeHtml(bookmark.id)}" value="${escapeHtml(bookmark.favoriteNote || "")}" placeholder="por que está aqui?" />
       </div>
     </li>
   `;
@@ -667,7 +670,7 @@ function searchScore(bookmark) {
 async function loadBookmarks() {
   const data = await Api.load();
   state.bookmarks = (data.bookmarks || []).map((b) => {
-    const bookmark = { categories: [], action: "", favorite: false, ...b };
+    const bookmark = { categories: [], action: "", favorite: false, favoriteNote: "", ...b };
     bookmark._searchFields = buildSearchFields(bookmark);
     bookmark._searchHaystack = Object.values(bookmark._searchFields).join(" ");
     return bookmark;
@@ -717,6 +720,30 @@ els.favoritesList.addEventListener("click", (e) => {
   if (favoriteBtn) {
     toggleFavorite(favoriteBtn.dataset.id);
   }
+});
+
+const favoriteNoteSaveTimers = new Map();
+
+async function saveFavoriteNote(id, text) {
+  const bookmark = state.bookmarks.find((b) => b.id === id);
+  if (!bookmark) return;
+  try {
+    await Api.update(id, { ...bookmark, favoriteNote: text });
+    bookmark.favoriteNote = text;
+  } catch (err) {
+    alert(err.message);
+  }
+}
+
+els.favoritesList.addEventListener("input", (e) => {
+  const input = e.target.closest(".favorite-item-note");
+  if (!input) return;
+  const id = input.dataset.id;
+  clearTimeout(favoriteNoteSaveTimers.get(id));
+  favoriteNoteSaveTimers.set(
+    id,
+    setTimeout(() => saveFavoriteNote(id, input.value), 800)
+  );
 });
 
 els.tagCloud.addEventListener("click", (e) => {

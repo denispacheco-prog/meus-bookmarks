@@ -487,6 +487,7 @@ class Handler(SimpleHTTPRequestHandler):
         target["action"] = action
         target["categories"] = categories
         target["favorite"] = bool(payload.get("favorite"))
+        target["favoriteNote"] = (payload.get("favoriteNote") or "").strip()
         merge_known_categories(data, clean_list_field(payload.get("newCategories")), payload.get("newCategoryGroup"))
         merge_known_actions(data, action)
         write_bookmarks(data)

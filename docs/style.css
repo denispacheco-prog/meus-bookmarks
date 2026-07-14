@@ -716,6 +716,26 @@ mark {
   color: var(--muted);
 }
 
+.favorite-item-note {
+  margin-top: 0.2rem;
+  width: 100%;
+  border: none;
+  border-bottom: 1px dashed var(--border);
+  background: none;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--muted);
+  padding: 0.1rem 0;
+  font-family: inherit;
+}
+
+.favorite-item-note:focus {
+  outline: none;
+  border-bottom-color: var(--accent);
+  color: var(--fg);
+  font-style: normal;
+}
+
 .tag-cloud-section {
   margin-bottom: 1.5rem;
 }
