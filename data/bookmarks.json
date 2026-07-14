@@ -14,7 +14,8 @@
         "Viagem",
         "Compras",
         "Televisão",
-        "Design"
+        "Design",
+        "Tecnologia"
       ]
     },
     {
@@ -3387,6 +3388,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-14T11:29:20.031Z"
+    },
+    {
+      "id": "c4e4ed3a-011c-4248-a063-be36ae7d17c5",
+      "url": "https://hypertexting.com/",
+      "title": "HyperTexting",
+      "description": "App de IOS que organiza feeds de RSS. Usar o guide para criar um próprio",
+      "tags": [
+        "App",
+        "RSS",
+        "Tecnologia"
+      ],
+      "action": "",
+      "categories": [
+        "Internet",
+        "Tecnologia"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-14T11:44:33.440Z"
     }
   ]
 }
