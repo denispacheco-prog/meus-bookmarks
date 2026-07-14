@@ -811,7 +811,8 @@
         "Jogos"
       ],
       "favorite": true,
-      "createdAt": "2026-07-13T18:23:34.288Z"
+      "createdAt": "2026-07-13T18:23:34.288Z",
+      "favoriteNote": "Joguinho de corrida"
     },
     {
       "id": "f3641a3c-c120-40b9-9dda-b7e79b858f50",
