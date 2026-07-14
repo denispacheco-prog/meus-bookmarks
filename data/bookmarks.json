@@ -3350,6 +3350,25 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-14T11:12:15.848Z"
+    },
+    {
+      "id": "20e2bc8f-2c0b-47c1-8994-2340623851f9",
+      "url": "https://wikicity.app/",
+      "title": "WikiCity",
+      "description": "",
+      "tags": [
+        "Cidades",
+        "Wikipedia",
+        "Urbanismo",
+        "Visualização 3D"
+      ],
+      "action": "",
+      "categories": [
+        "Internet",
+        "Wiki"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-14T11:26:43.959Z"
     }
   ]
 }
