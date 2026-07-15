@@ -3548,10 +3548,12 @@
       "action": "",
       "categories": [
         "Internet",
-        "Ensaios"
+        "Ensaios",
+        "Quote"
       ],
       "favorite": false,
-      "createdAt": "2026-07-15T18:17:59.913Z"
+      "createdAt": "2026-07-15T18:17:59.913Z",
+      "favoriteNote": ""
     }
   ]
 }
