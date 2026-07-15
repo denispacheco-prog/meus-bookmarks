@@ -3510,6 +3510,19 @@
       "favorite": false,
       "createdAt": "2026-07-15T11:57:43.215Z",
       "favoriteNote": ""
+    },
+    {
+      "id": "0380ac7e-742f-43eb-bc5d-c93045ac447f",
+      "url": "https://gamescriticism.org/",
+      "title": "Journal of Games Criticism",
+      "description": "",
+      "tags": [
+        "Video"
+      ],
+      "action": "",
+      "categories": [],
+      "favorite": false,
+      "createdAt": "2026-07-15T11:58:13.615Z"
     }
   ]
 }
