@@ -3517,12 +3517,18 @@
       "title": "Journal of Games Criticism",
       "description": "",
       "tags": [
-        "Video"
+        "Videogames",
+        "Jogos Eletrônicos",
+        "Crítica de jogos"
       ],
-      "action": "",
-      "categories": [],
+      "action": "Ler",
+      "categories": [
+        "Jogos",
+        "Ensaios"
+      ],
       "favorite": false,
-      "createdAt": "2026-07-15T11:58:13.615Z"
+      "createdAt": "2026-07-15T11:58:13.615Z",
+      "favoriteNote": ""
     }
   ]
 }
