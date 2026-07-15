@@ -3471,6 +3471,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-14T15:14:42.094Z"
+    },
+    {
+      "id": "1a0d3fb0-3bf7-4e38-b11a-b95cfd059042",
+      "url": "https://www.geo-fs.com/",
+      "title": "GeoFS - Free Online Flight Simulator",
+      "description": "",
+      "tags": [
+        "Jogos de Browser",
+        "Simulador de Vôo",
+        "Simulação"
+      ],
+      "action": "",
+      "categories": [
+        "Internet",
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-15T00:15:26.695Z"
     }
   ]
 }
