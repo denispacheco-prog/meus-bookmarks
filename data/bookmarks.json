@@ -3504,10 +3504,12 @@
       "action": "",
       "categories": [
         "Jogos",
-        "Reportagens"
+        "Reportagens",
+        "Quote"
       ],
       "favorite": false,
-      "createdAt": "2026-07-15T11:57:43.215Z"
+      "createdAt": "2026-07-15T11:57:43.215Z",
+      "favoriteNote": ""
     }
   ]
 }
