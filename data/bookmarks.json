@@ -3554,6 +3554,25 @@
       "favorite": false,
       "createdAt": "2026-07-15T18:17:59.913Z",
       "favoriteNote": ""
+    },
+    {
+      "id": "60d9abcd-c1c3-4508-9ef7-7ea7decc17bc",
+      "url": "https://www.livescience.com/physics-mathematics/quantum-physics/smaller-than-the-tiniest-scale-in-nature-physicists-made-a-black-hole-out-of-light-and-used-it-to-test-stephen-hawkings-elusive-radiation-theory",
+      "title": "'Smaller than the tiniest scale in nature': Physicists made a black hole out of light and used it to test Stephen Hawking's elusive radiation theory",
+      "description": "",
+      "tags": [
+        "Astronomia",
+        "Astrofísica",
+        "Buraco Negro",
+        "Física"
+      ],
+      "action": "✍🏻 Escrever",
+      "categories": [
+        "Ciência",
+        "Notícias"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-16T11:56:20.624Z"
     }
   ]
 }
