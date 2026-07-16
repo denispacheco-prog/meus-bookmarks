@@ -3608,8 +3608,9 @@
         "Internet",
         "Lista"
       ],
-      "favorite": false,
-      "createdAt": "2026-07-16T11:59:14.101Z"
+      "favorite": true,
+      "createdAt": "2026-07-16T11:59:14.101Z",
+      "favoriteNote": ""
     }
   ]
 }
