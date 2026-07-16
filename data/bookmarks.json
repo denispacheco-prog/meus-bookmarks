@@ -3611,6 +3611,27 @@
       "favorite": true,
       "createdAt": "2026-07-16T11:59:14.101Z",
       "favoriteNote": "Copiar sites legais no Bookmarks"
+    },
+    {
+      "id": "c5e67969-acd2-4f99-b9b0-596cd0ff915d",
+      "url": "https://fabiensanglard.net/jurrasic_park_computers/index.html",
+      "title": "Jurassic Park computers in excruciating detail",
+      "description": "",
+      "tags": [
+        "Jurassic Park",
+        "Filmes",
+        "Computação",
+        "Steven Spielberg",
+        "Computadores"
+      ],
+      "action": "",
+      "categories": [
+        "Cinema",
+        "Tecnologia",
+        "Ensaios"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-16T12:15:12.471Z"
     }
   ]
 }
