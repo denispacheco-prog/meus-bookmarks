@@ -62,7 +62,8 @@
         "Wiki",
         "Curso",
         "IA",
-        "Fórum"
+        "Fórum",
+        "LLM"
       ]
     },
     {
@@ -3652,6 +3653,23 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-16T18:13:42.704Z"
+    },
+    {
+      "id": "b5a48944-5a25-4b14-ae87-9e4c4c30fd09",
+      "url": "https://tinker.thinkingmachines.ai/playground",
+      "title": "Thinking Machines",
+      "description": "",
+      "tags": [
+        "LLM",
+        "Inteligência Artificial"
+      ],
+      "action": "",
+      "categories": [
+        "Tecnologia",
+        "LLM"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-19T17:41:25.097Z"
     }
   ]
 }
