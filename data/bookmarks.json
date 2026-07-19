@@ -3657,7 +3657,7 @@
     {
       "id": "b5a48944-5a25-4b14-ae87-9e4c4c30fd09",
       "url": "https://tinker.thinkingmachines.ai/playground",
-      "title": "Thinking Machines",
+      "title": "Thinker - Thinking Machines",
       "description": "",
       "tags": [
         "Inteligência Artificial",
@@ -3669,9 +3669,9 @@
         "Tecnologia",
         "LLM"
       ],
-      "favorite": true,
+      "favorite": false,
       "createdAt": "2026-07-19T17:41:25.097Z",
-      "favoriteNote": "Testar LLM"
+      "favoriteNote": ""
     }
   ]
 }
