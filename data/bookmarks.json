@@ -3672,6 +3672,25 @@
       "favorite": true,
       "createdAt": "2026-07-19T17:41:25.097Z",
       "favoriteNote": "Testar LLM"
+    },
+    {
+      "id": "fe18dc63-2ac7-4fdb-82f0-2532edaf240c",
+      "url": "https://seinfeld.visualisingdata.com",
+      "title": "The Seinfeld Chronicles",
+      "description": "",
+      "tags": [
+        "Seinfeld",
+        "Visualização",
+        "Dados",
+        "Cultura Pop",
+        "Sites Legais"
+      ],
+      "action": "",
+      "categories": [
+        "Televisão"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-20T11:15:05.277Z"
     }
   ]
 }
