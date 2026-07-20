@@ -3701,10 +3701,15 @@
         "Hardware",
         "Cyberpunk"
       ],
-      "action": "",
-      "categories": [],
+      "action": "Ler",
+      "categories": [
+        "Internet",
+        "Tecnologia",
+        "Ensaios"
+      ],
       "favorite": false,
-      "createdAt": "2026-07-20T16:59:50.381Z"
+      "createdAt": "2026-07-20T16:59:50.381Z",
+      "favoriteNote": ""
     }
   ]
 }
