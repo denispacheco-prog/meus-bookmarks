@@ -3691,6 +3691,20 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-20T11:15:05.277Z"
+    },
+    {
+      "id": "e507c809-9493-47c5-bf16-a938fb13f564",
+      "url": "https://morningfyi.substack.com/p/mrning-presents-hardware-2026",
+      "title": "MØRNING Presents: Hardware (2026)",
+      "description": "In our newest report HARDWARE (2026), we explore our cyberpunk reality where friction and personality is reshaping our relationships to technology. Resist the smooth brain agenda",
+      "tags": [
+        "Hardware",
+        "Cyberpunk"
+      ],
+      "action": "",
+      "categories": [],
+      "favorite": false,
+      "createdAt": "2026-07-20T16:59:50.381Z"
     }
   ]
 }
