@@ -3710,6 +3710,25 @@
       "favorite": false,
       "createdAt": "2026-07-20T16:59:50.381Z",
       "favoriteNote": ""
+    },
+    {
+      "id": "ad0b94cc-7013-4f75-b8b4-9bdc067b2242",
+      "url": "https://www.gamenarrativereader.org/",
+      "title": "The Game Narrative Reader",
+      "description": "",
+      "tags": [
+        "Jogos",
+        "Crítica de jogos",
+        "Jogos Eletrônicos",
+        "Videogames"
+      ],
+      "action": "Ler",
+      "categories": [
+        "Jogos",
+        "Ensaios"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-20T23:21:24.193Z"
     }
   ]
 }
