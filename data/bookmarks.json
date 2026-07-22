@@ -3747,6 +3747,26 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-22T11:12:50.373Z"
+    },
+    {
+      "id": "52a995d1-45d1-49ce-83f8-8ad1457447e7",
+      "url": "https://www.elsevier.com/pt-br/products/leapspace",
+      "title": "LeapSpace | IA voltada à pesquisa para universidades e P&D industrial",
+      "description": "",
+      "tags": [
+        "Inteligência Artificial",
+        "LLM",
+        "Pesquisa",
+        "USP"
+      ],
+      "action": "",
+      "categories": [
+        "Ciência",
+        "IA",
+        "LLM"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-22T13:49:06.362Z"
     }
   ]
 }
