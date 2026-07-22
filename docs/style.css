@@ -164,21 +164,21 @@ main {
 }
 
 #search-input {
-  width: 100%;
-  padding: 0.5rem 0.1rem;
-  font-size: 1rem;
   font-family: inherit;
+  font-size: 0.82rem;
+  color: var(--fg);
+  background: transparent;
   border: none;
   border-bottom: 1px solid var(--border);
-  border-radius: 0;
-  background: transparent;
-  color: var(--fg);
+  padding: 0.25rem 0.1rem;
   outline: none;
-  transition: border-color 150ms ease;
+  width: 6.5rem;
+  transition: width 200ms ease, border-color 150ms ease;
 }
 
 #search-input:focus {
   border-bottom-color: var(--fg);
+  width: 10rem;
 }
 
 .toolbar-secondary {
@@ -301,19 +301,19 @@ main {
 }
 
 .import-export-row button {
-  padding: 0;
-  font-size: 0.8rem;
   border: none;
   background: none;
-  color: var(--muted);
   cursor: pointer;
-  text-decoration: underline;
-  text-decoration-color: transparent;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.25rem;
+  color: var(--muted);
+  opacity: 0.7;
 }
 
 .import-export-row button:hover {
-  color: var(--accent);
-  text-decoration-color: var(--accent);
+  opacity: 1;
+  color: var(--fg);
 }
 
 .hidden {
