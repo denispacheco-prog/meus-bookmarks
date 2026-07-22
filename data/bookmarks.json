@@ -3762,11 +3762,13 @@
       "action": "",
       "categories": [
         "Ciência",
+        "Tecnologia",
         "IA",
         "LLM"
       ],
       "favorite": false,
-      "createdAt": "2026-07-22T13:49:06.362Z"
+      "createdAt": "2026-07-22T13:49:06.362Z",
+      "favoriteNote": ""
     }
   ]
 }
