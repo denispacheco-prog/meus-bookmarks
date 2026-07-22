@@ -10,7 +10,24 @@
 <body>
   <header class="app-header">
     <h1>📌 Bookmarks</h1>
-    <button id="theme-toggle-btn" type="button" class="theme-toggle-btn" title="Alternar tema"></button>
+    <div class="app-header-actions">
+      <input
+        id="search-input"
+        type="search"
+        placeholder="Buscar por título, notas, tag ou categoria..."
+        autocomplete="off"
+      />
+      <div class="import-export-row">
+        <button id="export-btn" type="button">Exportar</button>
+        <button id="import-btn" type="button">Importar</button>
+        <input id="import-file-input" type="file" accept="application/json" class="hidden" />
+        <button id="github-config-btn" type="button" class="hidden">⚙ GitHub</button>
+        <button id="category-manager-btn" type="button">⚙ Categorias</button>
+        <button id="action-manager-btn" type="button">⚙ Ações</button>
+        <button id="tag-manager-btn" type="button">⚙ Tags</button>
+      </div>
+      <button id="theme-toggle-btn" type="button" class="theme-toggle-btn" title="Alternar tema"></button>
+    </div>
   </header>
 
   <main>
@@ -32,23 +49,6 @@
 
       <div class="main-content">
         <section class="toolbar">
-          <input
-            id="search-input"
-            type="search"
-            placeholder="Buscar por título, notas, tag ou categoria..."
-            autocomplete="off"
-          />
-          <div class="toolbar-secondary">
-            <div class="import-export-row">
-              <button id="export-btn" type="button">Exportar</button>
-              <button id="import-btn" type="button">Importar</button>
-              <input id="import-file-input" type="file" accept="application/json" class="hidden" />
-              <button id="github-config-btn" type="button" class="hidden">⚙ GitHub</button>
-              <button id="category-manager-btn" type="button">⚙ Categorias</button>
-              <button id="action-manager-btn" type="button">⚙ Ações</button>
-              <button id="tag-manager-btn" type="button">⚙ Tags</button>
-            </div>
-          </div>
           <div id="active-filters" class="active-filters hidden"></div>
           <span id="import-status" class="form-status"></span>
         </section>
