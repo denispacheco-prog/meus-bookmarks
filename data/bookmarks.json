@@ -3755,7 +3755,6 @@
       "description": "IA da Elsevier voltada à pesquisa para universidades e P&D industrial",
       "tags": [
         "Inteligência Artificial",
-        "LLM",
         "Pesquisa",
         "USP"
       ],
@@ -3766,7 +3765,7 @@
         "IA",
         "LLM"
       ],
-      "favorite": true,
+      "favorite": false,
       "createdAt": "2026-07-22T13:49:06.362Z",
       "favoriteNote": ""
     }
