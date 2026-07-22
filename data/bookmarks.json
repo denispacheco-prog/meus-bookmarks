@@ -3729,6 +3729,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-20T23:21:24.193Z"
+    },
+    {
+      "id": "a5dae0a0-39fc-40c6-8dc8-f775391927b5",
+      "url": "https://www.signalhill.fm/",
+      "title": "Signal Hill",
+      "description": "",
+      "tags": [
+        "Revista",
+        "Podcast",
+        "Revista em Áudio"
+      ],
+      "action": "Ouvir",
+      "categories": [
+        "Revista",
+        "Podcast"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-22T11:12:50.373Z"
     }
   ]
 }
