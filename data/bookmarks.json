@@ -3775,12 +3775,19 @@
       "title": "liviopv.blog",
       "description": "Blog do Livio (ex-Ymsk)",
       "tags": [
-        "Música"
+        "Amigos",
+        "Albums",
+        "Discos"
       ],
       "action": "",
-      "categories": [],
+      "categories": [
+        "Música",
+        "Blog",
+        "Ensaios"
+      ],
       "favorite": false,
-      "createdAt": "2026-07-27T16:22:15.920Z"
+      "createdAt": "2026-07-27T16:22:15.920Z",
+      "favoriteNote": ""
     }
   ]
 }
