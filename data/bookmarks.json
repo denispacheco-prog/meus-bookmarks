@@ -3768,6 +3768,19 @@
       "favorite": true,
       "createdAt": "2026-07-22T13:49:06.362Z",
       "favoriteNote": "Testar LLM"
+    },
+    {
+      "id": "47b92a6d-de7f-47a6-b871-050ec361ac48",
+      "url": "https://liviopv.blog/",
+      "title": "liviopv.blog",
+      "description": "Blog do Livio (ex-Ymsk)",
+      "tags": [
+        "Música"
+      ],
+      "action": "",
+      "categories": [],
+      "favorite": false,
+      "createdAt": "2026-07-27T16:22:15.920Z"
     }
   ]
 }
