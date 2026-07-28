@@ -3827,6 +3827,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-28T11:43:04.893Z"
+    },
+    {
+      "id": "0acfe7df-ddcb-49bf-ba6f-89376374d6be",
+      "url": "https://maze.toys/",
+      "title": "Maze Toys",
+      "description": "",
+      "tags": [
+        "Jogos de Browser",
+        "Labirintos",
+        "Diversão"
+      ],
+      "action": "Jogar",
+      "categories": [
+        "Internet",
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-28T11:43:44.222Z"
     }
   ]
 }
