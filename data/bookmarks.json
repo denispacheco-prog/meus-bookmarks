@@ -3788,6 +3788,25 @@
       "favorite": false,
       "createdAt": "2026-07-27T16:22:15.920Z",
       "favoriteNote": ""
+    },
+    {
+      "id": "5a880abb-a861-43c4-96c9-dc26cec723f9",
+      "url": "https://anthropeum.com/",
+      "title": "Anthropeum",
+      "description": "Each day, ten objects. Guess where and when each was made. Then see how you ranked against everyone else who played today.",
+      "tags": [
+        "Jogos de Browser",
+        "Antropologia",
+        "História",
+        "Diversão"
+      ],
+      "action": "Jogar",
+      "categories": [
+        "Internet",
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-28T11:41:35.693Z"
     }
   ]
 }
