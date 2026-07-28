@@ -3845,6 +3845,25 @@
       ],
       "favorite": false,
       "createdAt": "2026-07-28T11:43:44.222Z"
+    },
+    {
+      "id": "0404a580-a8b2-45de-aef2-2f04949a3e86",
+      "url": "https://akademie.dw.de/hype-literacy/",
+      "title": "The Hype Literacy Toolkit for Journalists",
+      "description": "",
+      "tags": [
+        "Cursos online",
+        "Hype",
+        "Tendências",
+        "Cultura digital"
+      ],
+      "action": "",
+      "categories": [
+        "Internet",
+        "Curso"
+      ],
+      "favorite": false,
+      "createdAt": "2026-07-28T11:45:27.882Z"
     }
   ]
 }
