@@ -3882,6 +3882,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-08-02T20:09:39.787Z"
+    },
+    {
+      "id": "aa79f293-9ed7-450c-aba7-4cb2b2156959",
+      "url": "http://www.moshpit.com",
+      "title": "Moshpit",
+      "description": "",
+      "tags": [
+        "Música ao vivo",
+        "Shows",
+        "Streaming"
+      ],
+      "action": "",
+      "categories": [
+        "Música",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-08-03T11:28:39.384Z"
     }
   ]
 }
