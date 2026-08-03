@@ -3893,13 +3893,14 @@
         "Shows",
         "Streaming"
       ],
-      "action": "",
+      "action": "📺 Assistir",
       "categories": [
         "Música",
         "Acervo"
       ],
       "favorite": false,
-      "createdAt": "2026-08-03T11:28:39.384Z"
+      "createdAt": "2026-08-03T11:28:39.384Z",
+      "favoriteNote": ""
     }
   ]
 }
