@@ -3935,6 +3935,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-08-05T13:38:15.607Z"
+    },
+    {
+      "id": "aec02e88-3b34-4e09-94eb-2ab1a99226e7",
+      "url": "https://portal.fespsp.org.br/store/file_source/FESPSP/Documentos/Manuais/PPC%20Biblioteconomia%20dez2020_errata%20maio2021.pdf",
+      "title": "Curso de Biblioteconomia FESPSP - Programa",
+      "description": "",
+      "tags": [
+        "Biblioteconomia",
+        "Faculdade",
+        "Graduação",
+        "FESPSP"
+      ],
+      "action": "",
+      "categories": [
+        "Curso"
+      ],
+      "favorite": false,
+      "createdAt": "2026-08-05T13:39:04.243Z"
     }
   ]
 }
