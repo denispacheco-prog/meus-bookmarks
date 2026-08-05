@@ -3917,6 +3917,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-08-04T17:38:00.924Z"
+    },
+    {
+      "id": "13d02c0b-d98e-4f1f-96e9-bd6d2d6bf286",
+      "url": "https://ensino.fespsp.org.br/curso/pos-graduacao/arquivologia-gestao-de-documentos-fisicos-e-digitais/",
+      "title": "Arquivologia: Gestão de Documentos Físicos E Digitais",
+      "description": "",
+      "tags": [
+        "Especialização",
+        "Arquivologia",
+        "FESPSP",
+        "Pós-graduação"
+      ],
+      "action": "",
+      "categories": [
+        "Curso"
+      ],
+      "favorite": false,
+      "createdAt": "2026-08-05T21:01:22.644Z"
     }
   ]
 }
