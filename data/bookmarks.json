@@ -3937,6 +3937,25 @@
       "favorite": true,
       "createdAt": "2026-08-05T21:01:22.644Z",
       "favoriteNote": "Considerar em 2027"
+    },
+    {
+      "id": "9e3755ad-e05f-40c5-86a0-755a6809f699",
+      "url": "https://felipepepe.medium.com/my-little-game-history-anthology-4029a0d29089",
+      "title": "My Little Game History Anthology",
+      "description": "Links do Felipe Pepe",
+      "tags": [
+        "Videogames",
+        "Computação",
+        "Jogos Eletrônicos",
+        "Ensaios"
+      ],
+      "action": "",
+      "categories": [
+        "Jogos",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-08-11T10:14:26.017Z"
     }
   ]
 }
