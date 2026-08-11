@@ -3978,6 +3978,27 @@
       ],
       "favorite": false,
       "createdAt": "2026-08-11T10:21:54.325Z"
+    },
+    {
+      "id": "96dbc2e4-9d27-489e-a4b0-0c6654ff3160",
+      "url": "https://www.patreon.com/retropals",
+      "title": "Retropals - Patreon",
+      "description": "",
+      "tags": [
+        "Patreon",
+        "Cultura",
+        "Jogos Eletrônicos",
+        "Videogames",
+        "Criadores de Conteúdo",
+        "Streaming"
+      ],
+      "action": "💳 Assinar",
+      "categories": [
+        "Internet",
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2026-08-11T10:23:12.720Z"
     }
   ]
 }
