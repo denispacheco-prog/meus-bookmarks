@@ -3955,8 +3955,9 @@
         "Jogos",
         "Acervo"
       ],
-      "favorite": false,
-      "createdAt": "2026-08-11T10:14:26.017Z"
+      "favorite": true,
+      "createdAt": "2026-08-11T10:14:26.017Z",
+      "favoriteNote": ""
     },
     {
       "id": "0b5ff3a0-7db6-47a4-9340-2556a6543633",
