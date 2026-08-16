@@ -625,7 +625,7 @@
         "Música",
         "Acervo"
       ],
-      "favorite": true,
+      "favorite": false,
       "createdAt": "2026-07-08T10:47:21.690Z",
       "favoriteNote": "Ouvir no tempo livre"
     },
