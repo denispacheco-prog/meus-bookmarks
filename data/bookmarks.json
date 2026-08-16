@@ -4095,6 +4095,25 @@
       ],
       "favorite": false,
       "createdAt": "2026-08-14T22:04:26.706Z"
+    },
+    {
+      "id": "eabcfbe2-7522-4667-b48c-c79e8cc20511",
+      "url": "https://cardcatalogforlife.substack.com/p/the-atlas-of-learning",
+      "title": "The Atlas of Learning",
+      "description": "",
+      "tags": [
+        "Biblioteconomia",
+        "Arquivologia",
+        "Informação",
+        "Busca",
+        "Guias"
+      ],
+      "action": "",
+      "categories": [
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-08-16T21:15:17.730Z"
     }
   ]
 }
