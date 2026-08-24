@@ -4114,6 +4114,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-08-16T21:15:17.730Z"
+    },
+    {
+      "id": "15acb7dc-6a40-4dcb-a12b-6f40a72487ac",
+      "url": "https://readingmaps.com/maps",
+      "title": "Reading Maps - Browse all routes",
+      "description": "",
+      "tags": [
+        "Mapas",
+        "Literatura",
+        "Sites Legais"
+      ],
+      "action": "",
+      "categories": [
+        "Literatura",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-08-24T11:12:38.551Z"
     }
   ]
 }
