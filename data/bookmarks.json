@@ -4211,6 +4211,27 @@
       ],
       "favorite": false,
       "createdAt": "2026-08-31T11:10:27.806Z"
+    },
+    {
+      "id": "91da96a6-fd66-4a4b-a7f5-f8f3c9dc5ea7",
+      "url": "https://book-prize-index.vercel.app/",
+      "title": "The Book Prize Index",
+      "description": "",
+      "tags": [
+        "Livros",
+        "Prêmios",
+        "Não Ficção",
+        "Listas"
+      ],
+      "action": "",
+      "categories": [
+        "Ciência",
+        "Literatura",
+        "Lista",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-08-31T11:11:35.342Z"
     }
   ]
 }
