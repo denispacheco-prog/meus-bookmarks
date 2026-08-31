@@ -4192,6 +4192,25 @@
       ],
       "favorite": false,
       "createdAt": "2026-08-24T16:53:01.646Z"
+    },
+    {
+      "id": "8f50453b-cdf6-4d55-a3d4-fe864e485383",
+      "url": "https://www.c82.net/naturalists-library/",
+      "title": "The Naturalist’s Library",
+      "description": "",
+      "tags": [
+        "Ilustração",
+        "Natureza",
+        "Naturalistas",
+        "Acervo Digital"
+      ],
+      "action": "",
+      "categories": [
+        "Ciência",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-08-31T11:10:27.806Z"
     }
   ]
 }
