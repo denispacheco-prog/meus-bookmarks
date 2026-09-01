@@ -4236,7 +4236,7 @@
     {
       "id": "095b6cad-2297-4484-a925-0ab588124f2a",
       "url": "https://www.normaltools.com/",
-      "title": "Normal Tools — Useful online tools, no nonsense",
+      "title": "Normal Tools — Useful online tools",
       "description": "",
       "tags": [
         "Ferramentas",
@@ -4248,7 +4248,7 @@
         "Internet",
         "Ferramenta"
       ],
-      "favorite": true,
+      "favorite": false,
       "createdAt": "2026-09-01T11:37:28.789Z",
       "favoriteNote": ""
     }
