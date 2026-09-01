@@ -4239,14 +4239,18 @@
       "title": "Normal Tools — Useful online tools, no nonsense",
       "description": "",
       "tags": [
-        "Ferramentas"
+        "Ferramentas",
+        "Utilidades",
+        "Recursos"
       ],
       "action": "",
       "categories": [
-        "Internet"
+        "Internet",
+        "Ferramenta"
       ],
       "favorite": false,
-      "createdAt": "2026-09-01T11:37:28.789Z"
+      "createdAt": "2026-09-01T11:37:28.789Z",
+      "favoriteNote": ""
     }
   ]
 }
