@@ -4251,6 +4251,25 @@
       "favorite": true,
       "createdAt": "2026-09-01T11:37:28.789Z",
       "favoriteNote": ""
+    },
+    {
+      "id": "016c2aac-6176-4599-8bdf-88a50a9c9452",
+      "url": "https://www.listennotes.com/",
+      "title": "Listen Notes",
+      "description": "Busca de podcasts",
+      "tags": [
+        "Podcasts",
+        "Busca",
+        "Áudio"
+      ],
+      "action": "",
+      "categories": [
+        "Internet",
+        "Podcast",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-09-04T13:08:17.176Z"
     }
   ]
 }
