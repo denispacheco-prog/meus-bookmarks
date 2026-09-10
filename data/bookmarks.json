@@ -4311,6 +4311,22 @@
       ],
       "favorite": false,
       "createdAt": "2026-09-04T13:09:42.444Z"
+    },
+    {
+      "id": "a9cb15fc-da70-40e6-a161-5bba5f55ea16",
+      "url": "https://www.poetryfoundation.org/poems/51856/evening-56d22fe15dc07",
+      "title": "Evening",
+      "description": "\"shadow seeks shadow\" / \"sombra busca sombra\"",
+      "tags": [
+        "Poesia"
+      ],
+      "action": "",
+      "categories": [
+        "Poesia",
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2026-09-10T15:08:04.802Z"
     }
   ]
 }
