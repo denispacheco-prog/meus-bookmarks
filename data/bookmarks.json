@@ -4347,6 +4347,26 @@
       "favorite": false,
       "createdAt": "2026-09-16T11:24:04.517Z",
       "favoriteNote": ""
+    },
+    {
+      "id": "b248a79f-8f97-4a01-a527-c90c4391b2fd",
+      "url": "https://bibliotecadezines.substack.com/p/zine-e-a-preservacao-digital-da-memoria",
+      "title": "Zine e a preservação (digital) da memória",
+      "description": "Sobre Zines (e acervos)",
+      "tags": [
+        "Zines",
+        "Publicações independentes",
+        "Biblioteconomia",
+        "Acervo Digital"
+      ],
+      "action": "",
+      "categories": [
+        "Literatura",
+        "Blog",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-09-16T15:33:12.349Z"
     }
   ]
 }
