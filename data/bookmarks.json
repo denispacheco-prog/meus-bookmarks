@@ -4372,10 +4372,11 @@
       "id": "1da190ff-45b0-4a66-947e-f19b0e664444",
       "url": "https://thewh1teagle.github.io/vibe/",
       "title": "Vibe - Local Audio & Video Transcription App",
-      "description": "Ferramenta de transcrição local",
+      "description": "Ferramenta local de transcrição de áudio",
       "tags": [
         "Podcasts",
         "Transcrição",
+        "Áudio",
         "Jornalismo",
         "Entrevistas",
         "Software"
@@ -4386,7 +4387,8 @@
         "Ferramenta"
       ],
       "favorite": false,
-      "createdAt": "2026-09-16T16:50:42.293Z"
+      "createdAt": "2026-09-16T16:50:42.293Z",
+      "favoriteNote": ""
     }
   ]
 }
