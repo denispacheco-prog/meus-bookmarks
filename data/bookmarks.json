@@ -4329,6 +4329,20 @@
       "favorite": false,
       "createdAt": "2026-09-10T15:08:04.802Z",
       "favoriteNote": ""
+    },
+    {
+      "id": "2c832234-0544-46eb-9c5d-0810ad4f9d17",
+      "url": "https://fontsinuse.com/",
+      "title": "Fonts In Use",
+      "description": "",
+      "tags": [
+        "Tipografia",
+        "Fontes"
+      ],
+      "action": "",
+      "categories": [],
+      "favorite": false,
+      "createdAt": "2026-09-16T11:24:04.517Z"
     }
   ]
 }
