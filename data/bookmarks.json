@@ -4340,9 +4340,12 @@
         "Fontes"
       ],
       "action": "",
-      "categories": [],
+      "categories": [
+        "Acervo"
+      ],
       "favorite": false,
-      "createdAt": "2026-09-16T11:24:04.517Z"
+      "createdAt": "2026-09-16T11:24:04.517Z",
+      "favoriteNote": ""
     }
   ]
 }
