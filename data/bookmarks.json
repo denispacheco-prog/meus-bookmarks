@@ -4393,7 +4393,7 @@
     {
       "id": "3adeb27a-2043-49a8-ae2b-6f6085db1059",
       "url": "https://pioneerworks.org/broadcast/library-of-oceanic-feelings-jamieson-webster",
-      "title": "A psychoanalytic history of the sea.",
+      "title": "A psychoanalytic history of the sea",
       "description": "To swim is to remain in relation to a medium we only belonged to once, when we were inside our mothers. One moves through water but cannot live there. An awkward imitation of a prior condition nevertheless promises us something enigmatic ahead, something that isn’t this life on land.(...) As the oceans receded, living creatures were compelled to invent lungs. Breath is not the mark of our superiority but of our exile. We breathe because we could no longer remain immersed (...)  The oceanic is not simply regression to the mother. It is homesickness for a mode of existence before breath, announcing our dependence on the world outside ourselves with every inhale. We may leave the womb but we are still dependent, first on our caregivers and then on our societies\"",
       "tags": [
         "Psicologia",
@@ -4407,7 +4407,8 @@
         "Quote"
       ],
       "favorite": false,
-      "createdAt": "2026-09-25T17:54:47.811Z"
+      "createdAt": "2026-09-25T17:54:47.811Z",
+      "favoriteNote": ""
     }
   ]
 }
