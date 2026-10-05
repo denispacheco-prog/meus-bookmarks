@@ -4416,12 +4416,22 @@
       "title": "Design Fiction - Christopher Butler",
       "description": "",
       "tags": [
-        "Sci-Fi"
+        "Sci-Fi",
+        "Design",
+        "Fotografia",
+        "Cinema",
+        "Tecnologia"
       ],
       "action": "",
-      "categories": [],
+      "categories": [
+        "Design",
+        "Tecnologia",
+        "Fotografia",
+        "Acervo"
+      ],
       "favorite": false,
-      "createdAt": "2026-10-05T11:48:06.470Z"
+      "createdAt": "2026-10-05T11:48:06.470Z",
+      "favoriteNote": ""
     }
   ]
 }
