@@ -4446,9 +4446,12 @@
         "Simulador de Cidades"
       ],
       "action": "",
-      "categories": [],
+      "categories": [
+        "Jogos"
+      ],
       "favorite": false,
-      "createdAt": "2026-10-07T17:52:27.135Z"
+      "createdAt": "2026-10-07T17:52:27.135Z",
+      "favoriteNote": ""
     }
   ]
 }
