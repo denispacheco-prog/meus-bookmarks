@@ -4433,6 +4433,22 @@
       "favorite": false,
       "createdAt": "2026-10-05T11:48:06.470Z",
       "favoriteNote": ""
+    },
+    {
+      "id": "ba3f6419-b959-45d7-af8e-0f0e8493054b",
+      "url": "https://dator.dev/city2026/",
+      "title": "City 2026",
+      "description": "Simulador estilo \"SimCity 2000\"",
+      "tags": [
+        "Jogos Eletrônicos",
+        "Jogos de Browser",
+        "Cidades",
+        "Simulador de Cidades"
+      ],
+      "action": "",
+      "categories": [],
+      "favorite": false,
+      "createdAt": "2026-10-07T17:52:27.135Z"
     }
   ]
 }
