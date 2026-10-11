@@ -4452,6 +4452,25 @@
       "favorite": false,
       "createdAt": "2026-10-07T17:52:27.135Z",
       "favoriteNote": ""
+    },
+    {
+      "id": "c645a187-6b25-4768-a00b-e295e21ae0a3",
+      "url": "https://www.dirtylittlezine.com/",
+      "title": "Dirty Little Zine — Free 8-Page Printable Zine Maker",
+      "description": "",
+      "tags": [
+        "Zines",
+        "Recursos",
+        "DYI"
+      ],
+      "action": "",
+      "categories": [
+        "Design",
+        "Literatura",
+        "Ferramenta"
+      ],
+      "favorite": false,
+      "createdAt": "2026-10-11T17:25:28.536Z"
     }
   ]
 }
