@@ -4471,6 +4471,27 @@
       ],
       "favorite": false,
       "createdAt": "2026-10-11T17:25:28.536Z"
+    },
+    {
+      "id": "9d1d4ed2-e124-4ee4-9f9f-017b19154747",
+      "url": "https://labs.google/playground",
+      "title": "Playground",
+      "description": "",
+      "tags": [
+        "Inteligência Artificial",
+        "Videogames",
+        "Criação de Jogos",
+        "Google"
+      ],
+      "action": "",
+      "categories": [
+        "Design",
+        "Jogos",
+        "Ferramenta",
+        "IA"
+      ],
+      "favorite": false,
+      "createdAt": "2026-10-15T17:30:19.975Z"
     }
   ]
 }
