@@ -4492,6 +4492,26 @@
       ],
       "favorite": false,
       "createdAt": "2026-10-15T17:30:19.975Z"
+    },
+    {
+      "id": "9ef4dabe-0584-4ed0-85f6-836c8fdda983",
+      "url": "https://www.nytimes.com/2026/05/18/world/americas/actually-democracy-dies-in-hr.html",
+      "title": "Actually, Democracy Dies in H.R.",
+      "description": "\"It turns out that the kinds of career pressures familiar to employees everywhere — the desire to revive a stalled career or obtain a minor promotion — can be enough to incentivize lower- and midlevel officials to violate professional obligations, fundamental norms and even basic morality. The people who make those decisions, the research suggests, are neither extremists nor victims. They are often just middling workers looking for a way to get ahead.\"",
+      "tags": [
+        "Democracia",
+        "Funcionalismo Público",
+        "Hierarquias",
+        "Trabalho",
+        "Política"
+      ],
+      "action": "",
+      "categories": [
+        "Ensaios",
+        "Quote"
+      ],
+      "favorite": false,
+      "createdAt": "2026-10-16T13:41:20.587Z"
     }
   ]
 }
