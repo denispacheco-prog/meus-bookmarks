@@ -4526,10 +4526,12 @@
       ],
       "action": "",
       "categories": [
-        "Ensaios"
+        "Ensaios",
+        "Quote"
       ],
       "favorite": false,
-      "createdAt": "2026-10-19T13:10:49.003Z"
+      "createdAt": "2026-10-19T13:10:49.003Z",
+      "favoriteNote": ""
     }
   ]
 }
