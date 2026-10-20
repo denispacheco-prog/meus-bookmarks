@@ -4532,6 +4532,25 @@
       "favorite": false,
       "createdAt": "2026-10-19T13:10:49.003Z",
       "favoriteNote": ""
+    },
+    {
+      "id": "bfb9bc96-7048-4881-82e0-b5304a2a7286",
+      "url": "https://stowaway.live/",
+      "title": "Stowaway — Live 3D flight tracking from the window seat",
+      "description": "",
+      "tags": [
+        "Aviões",
+        "Vôos",
+        "Câmera",
+        "Monitoramento",
+        "Tracking"
+      ],
+      "action": "",
+      "categories": [
+        "Ferramenta"
+      ],
+      "favorite": false,
+      "createdAt": "2026-10-20T11:51:38.448Z"
     }
   ]
 }
