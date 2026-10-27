@@ -4551,6 +4551,26 @@
       ],
       "favorite": false,
       "createdAt": "2026-10-20T11:51:38.448Z"
+    },
+    {
+      "id": "f3737fc1-cb7f-4d5b-8d7f-9d38765d3e85",
+      "url": "https://tinylittleoffice.com/",
+      "title": "Tiny Little Office: the link is the document",
+      "description": "",
+      "tags": [
+        "Office",
+        "Ferramentas",
+        "Trabalho",
+        "Texto",
+        "Planilhas"
+      ],
+      "action": "",
+      "categories": [
+        "Tecnologia",
+        "Ferramenta"
+      ],
+      "favorite": false,
+      "createdAt": "2026-10-27T11:04:31.910Z"
     }
   ]
 }
