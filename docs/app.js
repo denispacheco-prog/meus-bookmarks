@@ -9,6 +9,17 @@ const ACTION_ICONS = {
 
 const THEME_STORAGE_KEY = "meusBookmarks.theme";
 
+// Ícones SVG inline (traço herda currentColor), no lugar de emoji que renderizam diferente em cada SO.
+const svgIcon = (body, fill = "none") =>
+  `<svg viewBox="0 0 24 24" width="16" height="16" fill="${fill}" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`;
+const STAR_PATH = '<path d="M12 3.5l2.6 5.3 5.9.9-4.25 4.1 1 5.85L12 16.9l-5.25 2.75 1-5.85L3.5 9.7l5.9-.9z"/>';
+const ICONS = {
+  star: svgIcon(STAR_PATH),
+  starFilled: svgIcon(STAR_PATH, "currentColor"),
+  sun: svgIcon('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'),
+  moon: svgIcon('<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>'),
+};
+
 const CATEGORY_PALETTE = [
   "#e87ba4", // magenta
   "#0891b2", // ciano
@@ -43,7 +54,7 @@ function effectiveTheme() {
 function applyTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   const themeToggleBtn = document.getElementById("theme-toggle-btn");
-  themeToggleBtn.textContent = theme === "dark" ? "☀️" : "🌙";
+  themeToggleBtn.innerHTML = theme === "dark" ? ICONS.sun : ICONS.moon;
   themeToggleBtn.title = theme === "dark" ? "Mudar para tema claro" : "Mudar para tema escuro";
 }
 
@@ -133,6 +144,15 @@ function getDomain(url) {
   } catch {
     return "";
   }
+}
+
+// Favicon do domínio com monograma (inicial) por baixo: se a imagem falhar, ela some e o monograma aparece.
+function faviconMarkup(domain) {
+  const initial = escapeHtml((domain || "?").charAt(0).toUpperCase());
+  const img = domain
+    ? `<img src="https://icons.duckduckgo.com/ip3/${encodeURIComponent(domain)}.ico" alt="" loading="lazy" onerror="this.remove()" />`
+    : "";
+  return `<span class="favicon" aria-hidden="true"><span class="favicon-initial">${initial}</span>${img}</span>`;
 }
 
 function formatDate(isoString) {
@@ -451,19 +471,26 @@ function bookmarkItemMarkup(bookmark) {
     ? `<button type="button" class="action-pill${bookmark.action === state.activeAction ? " active" : ""}" data-action="${escapeHtml(bookmark.action)}">${ACTION_ICONS[bookmark.action] ? ACTION_ICONS[bookmark.action] + " " : ""}${escapeHtml(bookmark.action)}</button>`
     : "";
 
-  const favoriteHtml = `<button type="button" class="favorite-star-btn${bookmark.favorite ? " active" : ""}" data-id="${escapeHtml(bookmark.id)}" title="${bookmark.favorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}">${bookmark.favorite ? "★" : "☆"}</button>`;
+  const favoriteHtml = `<button type="button" class="favorite-star-btn${bookmark.favorite ? " active" : ""}" data-id="${escapeHtml(bookmark.id)}" title="${bookmark.favorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}">${bookmark.favorite ? ICONS.starFilled : ICONS.star}</button>`;
+
+  const domain = getDomain(bookmark.url);
+  const sourceHtml = `
+      <div class="bookmark-source">
+        ${faviconMarkup(domain)}
+        <span class="bookmark-domain">${escapeHtml(domain || bookmark.url)}</span>
+        <span class="bookmark-date">${formatDate(bookmark.createdAt)}</span>
+        ${favoriteHtml}
+      </div>`;
 
   const isQuote = bookmark.categories.includes("Quote");
   const quoteStyle = isQuote ? ` style="--cat-hue:${groupColor("quotes")}"` : "";
 
   return `
     <li class="bookmark-item${isQuote ? " quote-bookmark" : ""}" data-id="${escapeHtml(bookmark.id)}"${quoteStyle}>
-      <h3><a href="${escapeHtml(bookmark.url)}" target="_blank" rel="noopener noreferrer">${highlightMatches(bookmark.title)}</a></h3>
-      <div class="bookmark-url">${escapeHtml(bookmark.url)}</div>
+      ${sourceHtml}
+      <h3><a href="${escapeHtml(bookmark.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(bookmark.url)}">${highlightMatches(bookmark.title)}</a></h3>
       ${bookmark.description ? `<p class="bookmark-description">${highlightMatches(bookmark.description)}</p>` : ""}
       <div class="bookmark-meta">
-        ${favoriteHtml}
-        <span class="bookmark-date">${formatDate(bookmark.createdAt)}</span>
         ${actionHtml}
         ${categoriesHtml}
         ${tagsHtml}
@@ -528,7 +555,7 @@ function editFormMarkup(bookmark) {
 function favoriteItemMarkup(bookmark) {
   return `
     <li class="favorite-item" data-id="${escapeHtml(bookmark.id)}">
-      <button type="button" class="favorite-star-btn active" data-id="${escapeHtml(bookmark.id)}" title="Remover dos favoritos">★</button>
+      <button type="button" class="favorite-star-btn active" data-id="${escapeHtml(bookmark.id)}" title="Remover dos favoritos">${ICONS.starFilled}</button>
       <div class="favorite-item-info">
         <a href="${escapeHtml(bookmark.url)}" target="_blank" rel="noopener noreferrer" class="favorite-item-title">${escapeHtml(bookmark.title)}</a>
         <span class="favorite-item-domain">${escapeHtml(getDomain(bookmark.url))}</span>
@@ -973,6 +1000,15 @@ document.addEventListener("click", (e) => {
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") hideAllTagSuggestions();
+});
+
+// Fecha o menu "⋯" do header ao escolher um item ou clicar fora dele.
+const headerMenu = document.querySelector(".header-menu");
+document.addEventListener("click", (e) => {
+  if (!headerMenu.open) return;
+  if (e.target.closest(".header-menu-list button") || !e.target.closest(".header-menu")) {
+    headerMenu.open = false;
+  }
 });
 
 els.themeToggleBtn.addEventListener("click", () => {

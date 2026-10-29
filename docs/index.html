@@ -4,30 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bookmarks</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8C</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4462b%22/><text x=%2250%22 y=%2272%22 text-anchor=%22middle%22 font-family=%22Georgia,serif%22 font-style=%22italic%22 font-size=%2272%22 fill=%22%23faf8f4%22>m</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="app-header">
-    <h1>📌 Bookmarks</h1>
+    <h1 class="wordmark">Meus Bookmarks</h1>
     <div class="app-header-actions">
-      <input
-        id="search-input"
-        type="search"
-        placeholder="Buscar por título, notas, tag ou categoria..."
-        autocomplete="off"
-      />
+      <label class="search-field">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Buscar por título, notas, tag ou categoria…"
+          autocomplete="off"
+          aria-label="Buscar"
+        />
+      </label>
       <div class="app-header-controls">
-        <div class="import-export-row">
-          <button id="export-btn" type="button">Exportar</button>
-          <button id="import-btn" type="button">Importar</button>
-          <input id="import-file-input" type="file" accept="application/json" class="hidden" />
-          <button id="github-config-btn" type="button" class="hidden">⚙ GitHub</button>
-          <button id="category-manager-btn" type="button">⚙ Categorias</button>
-          <button id="action-manager-btn" type="button">⚙ Ações</button>
-          <button id="tag-manager-btn" type="button">⚙ Tags</button>
-        </div>
-        <button id="theme-toggle-btn" type="button" class="theme-toggle-btn" title="Alternar tema"></button>
+        <button id="theme-toggle-btn" type="button" class="icon-btn theme-toggle-btn" title="Alternar tema"></button>
+        <details class="header-menu">
+          <summary class="icon-btn" title="Mais opções" aria-label="Mais opções">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg>
+          </summary>
+          <div class="header-menu-list import-export-row">
+            <button id="category-manager-btn" type="button">Categorias</button>
+            <button id="action-manager-btn" type="button">Ações</button>
+            <button id="tag-manager-btn" type="button">Tags</button>
+            <hr />
+            <button id="export-btn" type="button">Exportar</button>
+            <button id="import-btn" type="button">Importar</button>
+            <input id="import-file-input" type="file" accept="application/json" class="hidden" />
+            <button id="github-config-btn" type="button" class="hidden">Token do GitHub</button>
+          </div>
+        </details>
       </div>
     </div>
   </header>
