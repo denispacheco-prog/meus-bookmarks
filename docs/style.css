@@ -13,10 +13,6 @@
   --star: #c98a0b;
   --tag-fg: #77716a;
   --tag-fg-active: #b4462b;
-  --action-bg: #f1ebe1;
-  --action-fg: #4a433b;
-  --action-bg-active: #1c1a17;
-  --action-fg-active: #faf8f4;
   --shadow: 0 1px 2px rgba(40, 30, 20, 0.06), 0 8px 24px rgba(40, 30, 20, 0.08);
 
   --font-serif: "Newsreader", Charter, "Iowan Old Style", Palatino, Georgia, serif;
@@ -48,10 +44,6 @@
     --star: #f0c04a;
     --tag-fg: #9a9388;
     --tag-fg-active: #e58a6b;
-    --action-bg: #2a2621;
-    --action-fg: #d8d1c5;
-    --action-bg-active: #ece7de;
-    --action-fg-active: #191714;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.4);
   }
 }
@@ -69,10 +61,6 @@
   --star: #f0c04a;
   --tag-fg: #9a9388;
   --tag-fg-active: #e58a6b;
-  --action-bg: #2a2621;
-  --action-fg: #d8d1c5;
-  --action-bg-active: #ece7de;
-  --action-fg-active: #191714;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 
@@ -337,7 +325,6 @@ main {
 /* ===== Section headings (sidebars) ===== */
 
 .category-sidebar summary,
-.action-sidebar summary,
 .favorites-heading,
 .tag-cloud-heading {
   margin: 0;
@@ -351,12 +338,7 @@ main {
   user-select: none;
 }
 
-.action-sidebar summary {
-  border-bottom: none;
-}
-
-.category-sidebar summary,
-.action-sidebar summary {
+.category-sidebar summary {
   cursor: pointer;
   list-style: none;
   display: flex;
@@ -364,13 +346,11 @@ main {
   align-items: center;
 }
 
-.category-sidebar summary::-webkit-details-marker,
-.action-sidebar summary::-webkit-details-marker {
+.category-sidebar summary::-webkit-details-marker {
   display: none;
 }
 
-.category-sidebar summary::after,
-.action-sidebar summary::after {
+.category-sidebar summary::after {
   content: "";
   width: 0.4rem;
   height: 0.4rem;
@@ -380,25 +360,13 @@ main {
   transition: transform 150ms var(--ease);
 }
 
-.category-sidebar details[open] summary::after,
-.action-sidebar details[open] summary::after {
+.category-sidebar details[open] summary::after {
   transform: rotate(45deg);
 }
 
-.category-menu,
-.action-menu {
+.category-menu {
   padding-top: var(--space-3);
   font-size: 0.8rem;
-}
-
-.action-menu {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-1);
-}
-
-.category-menu {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
@@ -864,9 +832,8 @@ mark {
   margin-left: auto;
 }
 
-/* Metadata: ação (pill), categorias (versalete colorido), tags (#texto) */
+/* Metadata: categorias (versalete colorido), tags (#texto) */
 
-.action-pill,
 .category-pill,
 .tag-pill,
 .tag-cloud-item {
@@ -877,23 +844,6 @@ mark {
   line-height: 1.6;
   padding: 0;
   transition: color 150ms var(--ease), background 150ms var(--ease), opacity 150ms var(--ease);
-}
-
-.action-pill {
-  background: var(--action-bg);
-  color: var(--action-fg);
-  padding: 0.05rem 0.55rem;
-  border-radius: 999px;
-  font-weight: 500;
-}
-
-.action-pill:hover {
-  background: color-mix(in srgb, var(--action-fg) 16%, var(--action-bg));
-}
-
-.action-pill.active {
-  background: var(--action-bg-active);
-  color: var(--action-fg-active);
 }
 
 .category-pill {
@@ -997,7 +947,6 @@ mark {
 
 .bookmark-actions .delete-btn:hover,
 .manager-category-list .delete-category-btn:hover,
-.manager-category-list .delete-action-btn:hover,
 .manager-tag-list .delete-tag-btn:hover {
   border-color: var(--danger);
   color: var(--danger);
@@ -1211,12 +1160,6 @@ mark {
   gap: 0.4rem;
   align-items: center;
   margin-bottom: 0.35rem;
-}
-
-.action-manager-icon {
-  flex: 0 0 auto;
-  width: 1.2em;
-  text-align: center;
 }
 
 .manager-category-list input.rename-input,

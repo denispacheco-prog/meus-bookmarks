@@ -29,7 +29,7 @@ Depois acesse http://127.0.0.1:8000
    - Repository access: apenas este repositório (`meus-bookmarks`).
    - Permissions: **Contents → Read and write**.
    - Gere e copie o token (ele só aparece uma vez).
-3. **Configurar o token no site publicado**: abra o site no domínio do GitHub Pages, clique em "⚙ GitHub" na barra de ferramentas e cole o token. Ele fica salvo no `localStorage` do seu navegador — não é enviado a lugar nenhum além da API do próprio GitHub.
+3. **Configurar o token no site publicado**: abra o site no domínio do GitHub Pages, abra o menu "⋯" no topo, clique em "Token do GitHub" e cole o token. Ele fica salvo no `localStorage` do seu navegador — não é enviado a lugar nenhum além da API do próprio GitHub.
 4. Pronto: adicionar, editar, remover e importar bookmarks pelo site publicado agora grava direto no `data/bookmarks.json` do repositório, via commit.
 
 **Importante sobre segurança**: o token fica salvo em texto simples no `localStorage` do navegador usado para configurá-lo. Qualquer pessoa com acesso a esse navegador (ou às ferramentas de desenvolvedor dele) conseguiria lê-lo. Por isso o token é *fine-grained*, restrito só a este repositório e só com permissão de conteúdo — o pior cenário é alguém alterar seus bookmarks, não conseguir acesso a outros repositórios ou à sua conta.

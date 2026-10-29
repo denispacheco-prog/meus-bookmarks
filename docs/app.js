@@ -1,12 +1,3 @@
-const ACTION_ICONS = {
-  Ler: "📖",
-  Ouvir: "🎧",
-  Assistir: "🎬",
-  Comprar: "🛒",
-  Baixar: "⬇️",
-  Jogar: "🎮",
-};
-
 const THEME_STORAGE_KEY = "meusBookmarks.theme";
 
 // Ícones SVG inline (traço herda currentColor), no lugar de emoji que renderizam diferente em cada SO.
@@ -36,7 +27,11 @@ const CATEGORY_PALETTE = [
 // Coleções novas entram no fim automaticamente, na ordem em que aparecem nos dados.
 const GROUP_COLOR_ORDER = ["conteudo", "recurso", "midia", "editorial", "inspiracao", "quotes"];
 
+// Coleções com cor fixa fora da ordem acima (o laranja das antigas "ações").
+const GROUP_COLOR_OVERRIDES = { acoes: "#eb6834" };
+
 function groupColor(groupId) {
+  if (GROUP_COLOR_OVERRIDES[groupId]) return GROUP_COLOR_OVERRIDES[groupId];
   let index = GROUP_COLOR_ORDER.indexOf(groupId);
   if (index === -1) {
     const unknownIds = state.categoryGroups.map((g) => g.id).filter((id) => !GROUP_COLOR_ORDER.includes(id));
@@ -65,12 +60,10 @@ const BOOKMARKS_PAGE_SIZE = 50;
 const state = {
   bookmarks: [],
   categoryGroups: [],
-  actions: [],
   searchTerms: [],
   searchTermsRaw: [],
   activeTag: null,
   activeCategory: "",
-  activeAction: "",
   editingId: null,
   visibleCount: BOOKMARKS_PAGE_SIZE,
 };
@@ -78,7 +71,6 @@ const state = {
 const els = {
   searchInput: document.getElementById("search-input"),
   categoryMenu: document.getElementById("category-menu"),
-  actionMenu: document.getElementById("action-menu"),
   activeFilters: document.getElementById("active-filters"),
   list: document.getElementById("bookmark-list"),
   resultsCount: document.getElementById("results-count"),
@@ -86,7 +78,6 @@ const els = {
   form: document.getElementById("add-form"),
   urlInput: document.getElementById("url"),
   titleInput: document.getElementById("title"),
-  actionSelect: document.getElementById("action-select"),
   categoriesGroupsContainer: document.getElementById("categories-groups"),
   newCategoryGroupSelect: document.getElementById("new-category-group"),
   formStatus: document.getElementById("form-status"),
@@ -99,10 +90,6 @@ const els = {
   categoryManagerOverlay: document.getElementById("category-manager-overlay"),
   categoryManagerBody: document.getElementById("category-manager-body"),
   categoryManagerCloseBtn: document.getElementById("category-manager-close-btn"),
-  actionManagerBtn: document.getElementById("action-manager-btn"),
-  actionManagerOverlay: document.getElementById("action-manager-overlay"),
-  actionManagerBody: document.getElementById("action-manager-body"),
-  actionManagerCloseBtn: document.getElementById("action-manager-close-btn"),
   loadMoreBtn: document.getElementById("load-more-btn"),
   favoritesSection: document.getElementById("favorites-section"),
   favoritesList: document.getElementById("favorites-list"),
@@ -177,9 +164,6 @@ function matchesFilters(bookmark) {
   if (state.activeCategory && !bookmark.categories.includes(state.activeCategory)) {
     return false;
   }
-  if (state.activeAction && bookmark.action !== state.activeAction) {
-    return false;
-  }
   if (state.searchTerms.length && !state.searchTerms.every((term) => bookmark._searchHaystack.includes(term))) {
     return false;
   }
@@ -223,12 +207,6 @@ function toggleTagFilter(tag) {
 
 function toggleCategoryFilter(category) {
   state.activeCategory = state.activeCategory === category ? "" : category;
-  resetVisibleCount();
-  render();
-}
-
-function toggleActionFilter(action) {
-  state.activeAction = state.activeAction === action ? "" : action;
   resetVisibleCount();
   render();
 }
@@ -325,22 +303,10 @@ function categoryGroupsFormMarkup(selectedCategories) {
     .join("");
 }
 
-function actionMenuMarkup() {
-  return sortedAlpha(state.actions)
-    .map(
-      (action) =>
-        `<button type="button" class="action-pill${action === state.activeAction ? " active" : ""}" data-action="${escapeHtml(action)}">${ACTION_ICONS[action] ? ACTION_ICONS[action] + " " : ""}${escapeHtml(action)}</button>`
-    )
-    .join("");
-}
-
 function activeFiltersMarkup() {
   const chips = [];
   if (state.activeCategory) {
     chips.push({ type: "category", label: `Categoria: ${state.activeCategory}` });
-  }
-  if (state.activeAction) {
-    chips.push({ type: "action", label: `Ação: ${state.activeAction}` });
   }
   if (state.activeTag) {
     chips.push({ type: "tag", label: `Tag: ${state.activeTag}` });
@@ -383,22 +349,9 @@ function categoryGroupOptionsMarkup() {
     .join("");
 }
 
-function actionOptionsMarkup(selected) {
-  return (
-    `<option value="">Selecione...</option>` +
-    state.actions
-      .map(
-        (a) => `<option value="${escapeHtml(a)}"${a === selected ? " selected" : ""}>${ACTION_ICONS[a] ? ACTION_ICONS[a] + " " : ""}${escapeHtml(a)}</option>`
-      )
-      .join("")
-  );
-}
-
 function renderFilterAndFormOptions() {
   els.categoryMenu.innerHTML = categoryMenuMarkup();
-  els.actionMenu.innerHTML = actionMenuMarkup();
 
-  els.actionSelect.innerHTML = actionOptionsMarkup("");
   els.newCategoryGroupSelect.innerHTML = categoryGroupOptionsMarkup();
   els.categoriesGroupsContainer.innerHTML = categoryGroupsFormMarkup([]);
 }
@@ -416,9 +369,8 @@ function render() {
     });
 
   els.categoryMenu.innerHTML = categoryMenuMarkup();
-  els.actionMenu.innerHTML = actionMenuMarkup();
 
-  const hasActiveFilters = Boolean(state.activeCategory || state.activeAction || state.activeTag);
+  const hasActiveFilters = Boolean(state.activeCategory || state.activeTag);
   els.activeFilters.classList.toggle("hidden", !hasActiveFilters);
   els.activeFilters.innerHTML = activeFiltersMarkup();
 
@@ -467,10 +419,6 @@ function bookmarkItemMarkup(bookmark) {
     })
     .join("");
 
-  const actionHtml = bookmark.action
-    ? `<button type="button" class="action-pill${bookmark.action === state.activeAction ? " active" : ""}" data-action="${escapeHtml(bookmark.action)}">${ACTION_ICONS[bookmark.action] ? ACTION_ICONS[bookmark.action] + " " : ""}${escapeHtml(bookmark.action)}</button>`
-    : "";
-
   const favoriteHtml = `<button type="button" class="favorite-star-btn${bookmark.favorite ? " active" : ""}" data-id="${escapeHtml(bookmark.id)}" title="${bookmark.favorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}">${bookmark.favorite ? ICONS.starFilled : ICONS.star}</button>`;
 
   const domain = getDomain(bookmark.url);
@@ -491,7 +439,6 @@ function bookmarkItemMarkup(bookmark) {
       <h3><a href="${escapeHtml(bookmark.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(bookmark.url)}">${highlightMatches(bookmark.title)}</a></h3>
       ${bookmark.description ? `<p class="bookmark-description">${highlightMatches(bookmark.description)}</p>` : ""}
       <div class="bookmark-meta">
-        ${actionHtml}
         ${categoriesHtml}
         ${tagsHtml}
       </div>
@@ -525,14 +472,6 @@ function editFormMarkup(bookmark) {
             <input name="tags" type="text" value="${escapeHtml(bookmark.tags.join(", "))}" autocomplete="off" />
             <div class="tag-suggestions hidden"></div>
           </div>
-        </div>
-        <div class="form-row">
-          <label>Ação</label>
-          <select name="action">${actionOptionsMarkup(bookmark.action)}</select>
-        </div>
-        <div class="form-row">
-          <label>Nova ação (opcional)</label>
-          <input name="new-action" type="text" placeholder="ex: ✍️ Estudar" />
         </div>
         <div class="form-row">
           <label>Categorias gerais</label>
@@ -596,40 +535,6 @@ function categoryManagerMarkup() {
     .join("");
 }
 
-function splitActionIcon(action) {
-  if (ACTION_ICONS[action]) {
-    return { icon: ACTION_ICONS[action], label: action, embedded: false };
-  }
-  const match = action.match(/^(\S+)\s+(.*)$/);
-  if (match && /\p{Extended_Pictographic}/u.test(match[1])) {
-    return { icon: match[1], label: match[2], embedded: true };
-  }
-  return { icon: "", label: action, embedded: false };
-}
-
-function actionManagerMarkup() {
-  return `
-    <ul class="manager-category-list">
-      ${sortedAlpha(state.actions)
-        .map((action) => {
-          const { icon, label, embedded } = splitActionIcon(action);
-          return `
-            <li data-action="${escapeHtml(action)}" data-icon="${escapeHtml(icon)}" data-icon-embedded="${embedded}">
-              <span class="action-manager-icon">${escapeHtml(icon)}</span>
-              <input type="text" class="rename-input" value="${escapeHtml(label)}" />
-              <button type="button" class="rename-action-btn" data-action="${escapeHtml(action)}">Renomear</button>
-              <button type="button" class="delete-action-btn" data-action="${escapeHtml(action)}">Excluir</button>
-            </li>`;
-        })
-        .join("")}
-    </ul>
-    <div class="manager-add-row">
-      <input type="text" class="new-action-input" placeholder="Nova ação" />
-      <button type="button" class="add-action-btn">Adicionar</button>
-    </div>
-  `;
-}
-
 function tagManagerMarkup(filterText) {
   const filter = normalizeForMatch(filterText || "");
   const rows = tagCounts().filter(({ tag }) => !filter || normalizeForMatch(tag).includes(filter));
@@ -668,7 +573,6 @@ const SEARCH_FIELD_WEIGHTS = {
   title: 5,
   tags: 4,
   categories: 3,
-  action: 2,
   description: 1,
 };
 
@@ -676,7 +580,6 @@ function buildSearchFields(bookmark) {
   return {
     title: normalizeForMatch(bookmark.title || ""),
     description: normalizeForMatch(bookmark.description || ""),
-    action: normalizeForMatch(bookmark.action || ""),
     tags: normalizeForMatch((bookmark.tags || []).join(" ")),
     categories: normalizeForMatch((bookmark.categories || []).join(" ")),
   };
@@ -697,20 +600,16 @@ function searchScore(bookmark) {
 async function loadBookmarks() {
   const data = await Api.load();
   state.bookmarks = (data.bookmarks || []).map((b) => {
-    const bookmark = { categories: [], action: "", favorite: false, favoriteNote: "", ...b };
+    const bookmark = { categories: [], favorite: false, favoriteNote: "", ...b };
     bookmark._searchFields = buildSearchFields(bookmark);
     bookmark._searchHaystack = Object.values(bookmark._searchFields).join(" ");
     return bookmark;
   });
   state.categoryGroups = data.categoryGroups || [];
-  state.actions = data.actions || [];
   renderFilterAndFormOptions();
   render();
   if (!els.categoryManagerOverlay.classList.contains("hidden")) {
     els.categoryManagerBody.innerHTML = categoryManagerMarkup();
-  }
-  if (!els.actionManagerOverlay.classList.contains("hidden")) {
-    els.actionManagerBody.innerHTML = actionManagerMarkup();
   }
   if (!els.tagManagerOverlay.classList.contains("hidden")) {
     refreshTagManagerList();
@@ -729,12 +628,6 @@ els.categoryMenu.addEventListener("click", (e) => {
   const categoryBtn = e.target.closest(".category-pill");
   if (!categoryBtn) return;
   toggleCategoryFilter(categoryBtn.dataset.category);
-});
-
-els.actionMenu.addEventListener("click", (e) => {
-  const actionBtn = e.target.closest(".action-pill");
-  if (!actionBtn) return;
-  toggleActionFilter(actionBtn.dataset.action);
 });
 
 els.loadMoreBtn.addEventListener("click", () => {
@@ -795,11 +688,6 @@ els.list.addEventListener("click", async (e) => {
     toggleCategoryFilter(categoryBtn.dataset.category);
     return;
   }
-  const actionBtn = e.target.closest(".action-pill");
-  if (actionBtn) {
-    toggleActionFilter(actionBtn.dataset.action);
-    return;
-  }
   const editBtn = e.target.closest(".edit-btn");
   if (editBtn) {
     state.editingId = editBtn.dataset.id;
@@ -842,7 +730,6 @@ els.list.addEventListener("submit", async (e) => {
     .filter(Boolean);
   const newCategoryGroup = formData.get("new-category-group");
   const categories = Array.from(new Set([...selectedCategories, ...newCategories]));
-  const action = formData.get("new-action").trim() || formData.get("action");
 
   const payload = {
     url: formData.get("url").trim(),
@@ -853,7 +740,6 @@ els.list.addEventListener("submit", async (e) => {
       .split(",")
       .map((t) => t.trim())
       .filter(Boolean),
-    action,
     categories,
     newCategories,
     newCategoryGroup,
@@ -871,7 +757,6 @@ els.list.addEventListener("submit", async (e) => {
 els.activeFilters.addEventListener("click", (e) => {
   if (e.target.closest(".clear-all-filters-btn")) {
     state.activeCategory = "";
-    state.activeAction = "";
     state.activeTag = null;
     resetVisibleCount();
     render();
@@ -881,7 +766,6 @@ els.activeFilters.addEventListener("click", (e) => {
   if (!removeBtn) return;
   const type = removeBtn.dataset.filterType;
   if (type === "category") state.activeCategory = "";
-  if (type === "action") state.activeAction = "";
   if (type === "tag") state.activeTag = null;
   resetVisibleCount();
   render();
@@ -912,7 +796,6 @@ els.form.addEventListener("submit", async (e) => {
     .filter(Boolean);
   const newCategoryGroup = formData.get("new-category-group");
   const categories = Array.from(new Set([...selectedCategories, ...newCategories]));
-  const action = formData.get("new-action").trim() || formData.get("action");
 
   const payload = {
     url: formData.get("url").trim(),
@@ -923,7 +806,6 @@ els.form.addEventListener("submit", async (e) => {
       .split(",")
       .map((t) => t.trim())
       .filter(Boolean),
-    action,
     categories,
     newCategories,
     newCategoryGroup,
@@ -1068,67 +950,6 @@ els.categoryManagerBody.addEventListener("click", async (e) => {
     }
     try {
       await Api.deleteCategory(deleteBtn.dataset.group, deleteBtn.dataset.category);
-      await loadBookmarks();
-    } catch (err) {
-      alert(err.message);
-    }
-  }
-});
-
-els.actionManagerBtn.addEventListener("click", () => {
-  els.actionManagerBody.innerHTML = actionManagerMarkup();
-  els.actionManagerOverlay.classList.remove("hidden");
-});
-
-els.actionManagerCloseBtn.addEventListener("click", () => {
-  els.actionManagerOverlay.classList.add("hidden");
-});
-
-els.actionManagerOverlay.addEventListener("click", (e) => {
-  if (e.target === els.actionManagerOverlay) {
-    els.actionManagerOverlay.classList.add("hidden");
-  }
-});
-
-els.actionManagerBody.addEventListener("click", async (e) => {
-  const addBtn = e.target.closest(".add-action-btn");
-  if (addBtn) {
-    const input = addBtn.parentElement.querySelector(".new-action-input");
-    const name = input.value.trim();
-    if (!name) return;
-    try {
-      await Api.addAction(name);
-      await loadBookmarks();
-    } catch (err) {
-      alert(err.message);
-    }
-    return;
-  }
-
-  const renameBtn = e.target.closest(".rename-action-btn");
-  if (renameBtn) {
-    const row = renameBtn.closest("li");
-    let newName = row.querySelector(".rename-input").value.trim();
-    if (!newName) return;
-    if (row.dataset.iconEmbedded === "true" && row.dataset.icon) {
-      newName = `${row.dataset.icon} ${newName}`;
-    }
-    try {
-      await Api.renameAction(renameBtn.dataset.action, newName);
-      await loadBookmarks();
-    } catch (err) {
-      alert(err.message);
-    }
-    return;
-  }
-
-  const deleteBtn = e.target.closest(".delete-action-btn");
-  if (deleteBtn) {
-    if (!window.confirm(`Excluir a ação "${deleteBtn.dataset.action}"? Ela será removida de todos os bookmarks que a usam.`)) {
-      return;
-    }
-    try {
-      await Api.deleteAction(deleteBtn.dataset.action);
       await loadBookmarks();
     } catch (err) {
       alert(err.message);

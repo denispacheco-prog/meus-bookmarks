@@ -72,17 +72,21 @@
       "categories": [
         "Quote"
       ]
+    },
+    {
+      "id": "acoes",
+      "label": "Ações",
+      "categories": [
+        "Ler",
+        "Ouvir",
+        "Comprar",
+        "Baixar",
+        "Jogar",
+        "Escrever",
+        "Assistir",
+        "Assinar"
+      ]
     }
-  ],
-  "actions": [
-    "Ler",
-    "Ouvir",
-    "Comprar",
-    "Baixar",
-    "Jogar",
-    "✍🏻 Escrever",
-    "📺 Assistir",
-    "💳 Assinar"
   ],
   "bookmarks": [
     {
@@ -96,9 +100,9 @@
         "Taoismo",
         "Daoismo"
       ],
-      "action": "Ler",
       "categories": [
-        "Literatura"
+        "Literatura",
+        "Ler"
       ],
       "favorite": true,
       "createdAt": "2026-07-06T16:40:05.806Z",
@@ -114,7 +118,6 @@
         "Diversão",
         "Jogos de Browser"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Jogos"
@@ -133,7 +136,6 @@
         "Design",
         "Metodologia"
       ],
-      "action": "",
       "categories": [
         "Ferramenta",
         "IA"
@@ -151,7 +153,6 @@
         "Esporte",
         "Vídeo"
       ],
-      "action": "",
       "categories": [
         "Ferramenta",
         "Video"
@@ -169,7 +170,6 @@
         "Exploração",
         "Astrobiologia"
       ],
-      "action": "",
       "categories": [
         "Ciência",
         "Notícias"
@@ -187,7 +187,6 @@
         "Biologia",
         "Células"
       ],
-      "action": "",
       "categories": [
         "Ciência",
         "Notícias"
@@ -206,7 +205,6 @@
         "Oceano",
         "Ficção"
       ],
-      "action": "",
       "categories": [
         "Literatura",
         "Lista"
@@ -226,7 +224,6 @@
         "Internet",
         "Referência"
       ],
-      "action": "",
       "categories": [
         "Internet"
       ],
@@ -245,7 +242,6 @@
         "Conversores",
         "Ferramentas"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Acervo",
@@ -265,7 +261,6 @@
         "Peças",
         "Inglaterra"
       ],
-      "action": "",
       "categories": [
         "Literatura",
         "Lista",
@@ -284,7 +279,6 @@
         "Tecnologia",
         "Sites Legais"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Revista"
@@ -306,7 +300,6 @@
         "Ficção Científica",
         "Sci-Fi"
       ],
-      "action": "",
       "categories": [
         "Cinema",
         "Televisão",
@@ -329,7 +322,6 @@
         "Ficção Científica",
         "Fanfiction"
       ],
-      "action": "",
       "categories": [
         "Jogos",
         "Literatura",
@@ -349,11 +341,11 @@
         "Editora",
         "Retrogaming"
       ],
-      "action": "Comprar",
       "categories": [
         "Design",
         "Jogos",
-        "Literatura"
+        "Literatura",
+        "Comprar"
       ],
       "favorite": false,
       "createdAt": "2026-07-07T21:47:10.263Z"
@@ -369,7 +361,6 @@
         "Cursos online",
         "Ferramentas"
       ],
-      "action": "",
       "categories": [
         "Música",
         "Acervo",
@@ -389,7 +380,6 @@
         "Cidades",
         "Arquitetos"
       ],
-      "action": "",
       "categories": [
         "Design",
         "Wiki"
@@ -409,9 +399,9 @@
         "Documentação",
         "Livro"
       ],
-      "action": "Ler",
       "categories": [
-        "Internet"
+        "Internet",
+        "Ler"
       ],
       "favorite": false,
       "createdAt": "2026-07-07T21:51:28.716Z"
@@ -427,9 +417,9 @@
         "Aventura",
         "Ficção"
       ],
-      "action": "Comprar",
       "categories": [
-        "Jogos"
+        "Jogos",
+        "Comprar"
       ],
       "favorite": false,
       "createdAt": "2026-07-07T21:52:44.691Z"
@@ -447,7 +437,6 @@
         "Repositório",
         "Links"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Wiki"
@@ -470,7 +459,6 @@
         "Editoração",
         "Design Gráfico"
       ],
-      "action": "",
       "categories": [
         "Ciência",
         "Design"
@@ -488,7 +476,6 @@
         "Cultura Pop",
         "Rankings"
       ],
-      "action": "",
       "categories": [
         "Cinema",
         "Internet",
@@ -513,7 +500,6 @@
         "Passeios",
         "Livros"
       ],
-      "action": "",
       "categories": [
         "Viagem"
       ],
@@ -533,7 +519,6 @@
         "Terror",
         "Japão"
       ],
-      "action": "",
       "categories": [
         "Cinema",
         "Lista",
@@ -554,7 +539,6 @@
         "Histórias em Quadrinhos",
         "Autores Independentes"
       ],
-      "action": "",
       "categories": [
         "Design",
         "HQs",
@@ -576,10 +560,10 @@
         "Sci-fi",
         "Ficção Científica"
       ],
-      "action": "📺 Assistir",
       "categories": [
         "Televisão",
-        "Acervo"
+        "Acervo",
+        "Assistir"
       ],
       "favorite": false,
       "createdAt": "2026-07-08T00:38:58.967Z"
@@ -596,10 +580,10 @@
         "Sci-Fi",
         "Ficção Científica"
       ],
-      "action": "📺 Assistir",
       "categories": [
         "Televisão",
-        "Acervo"
+        "Acervo",
+        "Assistir"
       ],
       "favorite": false,
       "createdAt": "2026-07-08T00:40:49.039Z"
@@ -620,10 +604,10 @@
         "Sonic Youth",
         "Gravações"
       ],
-      "action": "Ouvir",
       "categories": [
         "Música",
-        "Acervo"
+        "Acervo",
+        "Ouvir"
       ],
       "favorite": false,
       "createdAt": "2026-07-08T10:47:21.690Z",
@@ -640,11 +624,11 @@
         "Cultura digital",
         "Cultura"
       ],
-      "action": "Ler",
       "categories": [
         "Internet",
         "Literatura",
-        "Revista"
+        "Revista",
+        "Ler"
       ],
       "favorite": false,
       "createdAt": "2026-07-08T11:23:05.554Z"
@@ -661,11 +645,11 @@
         "Crítica literária",
         "Crítica de jogos"
       ],
-      "action": "Ler",
       "categories": [
         "Internet",
         "Jogos",
-        "Revista"
+        "Revista",
+        "Ler"
       ],
       "favorite": false,
       "createdAt": "2026-07-08T11:28:40.322Z"
@@ -683,7 +667,6 @@
         "Artigos acadêmicos",
         "Periódicos"
       ],
-      "action": "",
       "categories": [
         "Jogos",
         "Revista"
@@ -706,7 +689,6 @@
         "Espaço",
         "Química"
       ],
-      "action": "",
       "categories": [
         "Ciência",
         "Notícias"
@@ -724,7 +706,6 @@
         "Ensaio",
         "Cultura digital"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Jogos",
@@ -747,9 +728,9 @@
         "Sci-fi",
         "Japão"
       ],
-      "action": "📺 Assistir",
       "categories": [
-        "Cinema"
+        "Cinema",
+        "Assistir"
       ],
       "favorite": false,
       "createdAt": "2026-07-08T17:35:30.862Z"
@@ -766,7 +747,6 @@
         "Geografia",
         "História"
       ],
-      "action": "",
       "categories": [
         "Ciência",
         "Acervo"
@@ -786,7 +766,6 @@
         "Geologia",
         "Geociências"
       ],
-      "action": "",
       "categories": [
         "Ciência",
         "Notícias"
@@ -807,10 +786,10 @@
         "Videogames",
         "Jogos de Browser"
       ],
-      "action": "Jogar",
       "categories": [
         "Internet",
-        "Jogos"
+        "Jogos",
+        "Jogar"
       ],
       "favorite": false,
       "createdAt": "2026-07-13T18:23:34.288Z",
@@ -829,7 +808,6 @@
         "Órgãos",
         "Atlas"
       ],
-      "action": "",
       "categories": [
         "Ciência",
         "Acervo"
@@ -850,7 +828,6 @@
         "Guias",
         "Reparos"
       ],
-      "action": "",
       "categories": [
         "Tecnologia",
         "Wiki"
@@ -868,7 +845,6 @@
         "Bem-estar",
         "Autoconhecimento"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -885,7 +861,6 @@
         "Cultura Online",
         "Millennials"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -902,7 +877,6 @@
         "Hábitos",
         "Produtividade"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -918,7 +892,6 @@
         "Linguagem",
         "Entrevista"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Entrevistas"
@@ -936,7 +909,6 @@
         "Capitalismo",
         "Ficção Científica"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "IA",
@@ -954,7 +926,6 @@
         "Ansiedade",
         "Psicologia"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -970,7 +941,6 @@
         "Gatos",
         "Sociedade"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -986,7 +956,6 @@
         "Viagem",
         "Filosofia"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Viagem"
@@ -1004,7 +973,6 @@
         "Cinema",
         "Futuro"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Cinema"
@@ -1021,7 +989,6 @@
         "Jogos",
         "Vida Adulta"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Jogos"
@@ -1038,7 +1005,6 @@
         "Relacionamentos",
         "Psicologia"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1054,7 +1020,6 @@
         "Internet",
         "Cultura Independente"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -1072,7 +1037,6 @@
         "Algoritmos",
         "Inteligência Artificial"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -1090,7 +1054,6 @@
         "Redes Sociais",
         "Bem-estar"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1106,7 +1069,6 @@
         "Arquitetura",
         "Psicologia"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1122,7 +1084,6 @@
         "Redes Sociais",
         "Geração Z"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -1140,7 +1101,6 @@
         "História",
         "Bem-estar"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1156,7 +1116,6 @@
         "Arquivo",
         "Memória"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Acervo"
@@ -1173,7 +1132,6 @@
         "Descanso",
         "Bem-estar"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1189,7 +1147,6 @@
         "Internet",
         "Cultura Independente"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -1205,7 +1162,6 @@
       "tags": [
         "Música"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Música"
@@ -1222,7 +1178,6 @@
         "Crítica",
         "Jogos"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Crítica",
@@ -1240,7 +1195,6 @@
         "Cultura",
         "Inteligência Artificial"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "IA"
@@ -1257,7 +1211,6 @@
         "Futuro",
         "Cultura"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1273,7 +1226,6 @@
         "Arte",
         "Inteligência Artificial"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "IA"
@@ -1290,7 +1242,6 @@
         "Inteligência Artificial",
         "Informação"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "IA"
@@ -1308,7 +1259,6 @@
         "Cinema",
         "Trabalho"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Cinema"
@@ -1325,7 +1275,6 @@
         "Corpo",
         "Filosofia"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1341,7 +1290,6 @@
         "Cultura Pop",
         "Sociedade"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1358,7 +1306,6 @@
         "Arquivo",
         "Preservação"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet",
@@ -1376,7 +1323,6 @@
         "Internet",
         "Algoritmos"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -1393,7 +1339,6 @@
         "Ciência",
         "Biologia"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Ciência"
@@ -1411,7 +1356,6 @@
         "Ficção",
         "Leitura"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Literatura"
@@ -1428,7 +1372,6 @@
         "História",
         "Espionagem"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1443,7 +1386,6 @@
       "tags": [
         "Cultura"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1459,7 +1401,6 @@
         "Tecnologia",
         "Cultura"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1476,7 +1417,6 @@
         "Trabalho",
         "Filosofia"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Jogos"
@@ -1493,7 +1433,6 @@
         "História",
         "Ciência"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Ciência"
@@ -1510,7 +1449,6 @@
         "Linguagem",
         "Ciência"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1526,7 +1464,6 @@
         "Bem-estar",
         "Sociedade"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1542,7 +1479,6 @@
         "Anarquismo",
         "Política"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1558,7 +1494,6 @@
         "Internet",
         "Preservação"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet",
@@ -1576,7 +1511,6 @@
         "Jogos",
         "Tecnologia"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Jogos"
@@ -1593,7 +1527,6 @@
         "Fantasia",
         "Jogos"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Jogos",
@@ -1611,7 +1544,6 @@
         "Gênero",
         "Feminismo"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -1628,7 +1560,6 @@
         "Jornalismo",
         "Ciência"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Ciência",
@@ -1646,7 +1577,6 @@
         "Tédio",
         "Bem-estar"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1662,7 +1592,6 @@
         "Internet",
         "Cultura"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -1679,7 +1608,6 @@
         "Futuro",
         "Sociedade"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1695,7 +1623,6 @@
         "Astronomia",
         "Ciência"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Ciência"
@@ -1713,7 +1640,6 @@
         "Crítica",
         "Ficção Científica"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Televisão",
@@ -1731,7 +1657,6 @@
         "Cidades",
         "Urbanismo"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1747,7 +1672,6 @@
         "Escrita",
         "Sexualidade"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Literatura"
@@ -1764,7 +1688,6 @@
         "Internet",
         "Linguagem"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -1781,7 +1704,6 @@
         "Neurociência",
         "Cérebro"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Cinema",
@@ -1799,7 +1721,6 @@
         "Ansiedade",
         "Criatividade"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1815,7 +1736,6 @@
         "Gênero",
         "Masculinidade"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Entrevistas"
@@ -1832,7 +1752,6 @@
         "Ironia",
         "Cultura"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1849,7 +1768,6 @@
         "Internet",
         "Ativismo"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -1866,7 +1784,6 @@
         "Televisão",
         "Narrativa"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Televisão"
@@ -1884,7 +1801,6 @@
         "Ciência",
         "Curiosidade"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Wiki",
@@ -1902,7 +1818,6 @@
         "Quadrinhos",
         "Cultura Pop"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "HQs"
@@ -1920,7 +1835,6 @@
         "Cidades",
         "Criatividade"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1936,7 +1850,6 @@
         "Internet",
         "Tecnologia"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -1953,7 +1866,6 @@
         "Inteligência Artificial",
         "Tecnologia"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "IA"
@@ -1970,7 +1882,6 @@
         "Mapas",
         "Política"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -1986,7 +1897,6 @@
         "Mídia",
         "Discurso"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2002,7 +1912,6 @@
         "Google",
         "Busca"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -2019,7 +1928,6 @@
         "Jogos",
         "Ficção Científica"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Jogos",
@@ -2037,7 +1945,6 @@
         "Produtividade",
         "Bem-estar"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2053,7 +1960,6 @@
         "Literatura",
         "Ficção"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Literatura"
@@ -2070,7 +1976,6 @@
         "Literatura",
         "Edição"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Entrevistas",
@@ -2088,7 +1993,6 @@
         "Atenção",
         "Internet"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -2105,7 +2009,6 @@
         "Tecnologia",
         "Capitalismo"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2121,7 +2024,6 @@
         "Atenção",
         "Redes Sociais"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -2138,7 +2040,6 @@
         "Inteligência Artificial",
         "Ética"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "IA"
@@ -2155,7 +2056,6 @@
         "Sucesso",
         "Sociedade"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2171,7 +2071,6 @@
         "Redes Sociais",
         "Descanso"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -2188,7 +2087,6 @@
         "Tecnologia",
         "Futuro"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "IA"
@@ -2205,7 +2103,6 @@
         "Jogos",
         "Política"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Jogos"
@@ -2222,7 +2119,6 @@
         "Conversa",
         "Cultura"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2238,7 +2134,6 @@
         "Arte",
         "Cultura"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Música"
@@ -2255,7 +2150,6 @@
         "Ciência",
         "Som"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Ciência"
@@ -2272,7 +2166,6 @@
         "Inteligência Artificial",
         "Solidão"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "IA"
@@ -2289,7 +2182,6 @@
         "Trabalho",
         "Design"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Design"
@@ -2306,7 +2198,6 @@
         "Amor",
         "Trabalho"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Entrevistas"
@@ -2323,7 +2214,6 @@
         "Neurociência",
         "Memória"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Ciência"
@@ -2340,7 +2230,6 @@
         "Inteligência Artificial",
         "Cultura"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "IA"
@@ -2357,7 +2246,6 @@
         "Ócio",
         "Política"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2373,7 +2261,6 @@
         "Inteligência Artificial",
         "Internet"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "IA"
@@ -2390,7 +2277,6 @@
         "Curiosidade",
         "Psicologia"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2406,7 +2292,6 @@
         "Leitura",
         "Literatura"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Literatura"
@@ -2423,7 +2308,6 @@
         "Magia",
         "Sociedade"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2439,7 +2323,6 @@
         "Tecnologia",
         "Gênero"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "IA"
@@ -2456,7 +2339,6 @@
         "História",
         "Desigualdade"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Ciência"
@@ -2473,7 +2355,6 @@
         "Conhecimento",
         "Filosofia"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2489,7 +2370,6 @@
         "Física",
         "Ciência"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Ciência"
@@ -2506,7 +2386,6 @@
         "Espaço",
         "Tecnologia"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Ciência"
@@ -2523,7 +2402,6 @@
         "Internet",
         "Psicologia"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -2540,7 +2418,6 @@
         "Ciência",
         "Apocalipse"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Ciência"
@@ -2557,7 +2434,6 @@
         "Oceano",
         "Ciência"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Ciência"
@@ -2574,7 +2450,6 @@
         "Biologia",
         "Animais"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Ciência"
@@ -2591,7 +2466,6 @@
         "Cultura",
         "Crítica"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Crítica"
@@ -2608,7 +2482,6 @@
         "Mídia",
         "Inteligência Artificial"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "IA"
@@ -2625,7 +2498,6 @@
         "Poesia",
         "Literatura"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Poesia",
@@ -2643,7 +2515,6 @@
         "Urbanismo",
         "Cidades"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2659,7 +2530,6 @@
         "Stress",
         "Sociedade"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2675,7 +2545,6 @@
         "Humanidades",
         "Cultura"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Crítica"
@@ -2692,7 +2561,6 @@
         "Espaço",
         "Tecnologia"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2708,7 +2576,6 @@
         "Autoconhecimento",
         "Psicologia"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2724,7 +2591,6 @@
         "Música",
         "Crítica"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Música",
@@ -2742,7 +2608,6 @@
         "Solarpunk",
         "Ficção Científica"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2758,7 +2623,6 @@
         "Cinema",
         "Internet"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Cinema",
@@ -2776,7 +2640,6 @@
         "Livros",
         "Leitura"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Literatura"
@@ -2793,7 +2656,6 @@
         "Mídia",
         "Cultura"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Podcast"
@@ -2810,7 +2672,6 @@
         "Inteligência Artificial",
         "Solidão"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "IA"
@@ -2827,7 +2688,6 @@
         "Cinema",
         "Cultura Pop"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Cinema"
@@ -2844,7 +2704,6 @@
         "Crítica",
         "Arte"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Crítica"
@@ -2861,7 +2720,6 @@
         "Psicologia",
         "Autoestima"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2877,7 +2735,6 @@
         "Bem-estar",
         "Filosofia"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2893,7 +2750,6 @@
         "Biologia",
         "Ciência"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Ciência"
@@ -2909,7 +2765,6 @@
       "tags": [
         "Poesia"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Poesia"
@@ -2925,7 +2780,6 @@
       "tags": [
         "Redes Sociais"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -2942,7 +2796,6 @@
         "Filosofia",
         "Bem-estar"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -2958,7 +2811,6 @@
         "Poesia",
         "Escrita"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Poesia"
@@ -2975,7 +2827,6 @@
         "Crítica",
         "Escrita"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Crítica"
@@ -2992,7 +2843,6 @@
         "Violência",
         "Sociedade"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -3008,7 +2858,6 @@
         "YouTube",
         "Educação"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -3025,7 +2874,6 @@
         "Televisão",
         "Mídia"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Televisão"
@@ -3042,7 +2890,6 @@
         "Elitismo",
         "Cultura"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -3058,7 +2905,6 @@
         "Educação",
         "Capitalismo"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -3074,7 +2920,6 @@
         "Jogos",
         "Filosofia"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Jogos"
@@ -3091,7 +2936,6 @@
         "História",
         "Produtividade"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -3107,7 +2951,6 @@
         "Jogos",
         "Terror"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Jogos"
@@ -3124,7 +2967,6 @@
         "Mídia",
         "Apostas"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -3140,7 +2982,6 @@
         "Filosofia",
         "Existencialismo"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -3156,7 +2997,6 @@
         "Jogos",
         "Crítica"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Jogos",
@@ -3174,7 +3014,6 @@
         "Algoritmos",
         "Sociedade"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -3191,7 +3030,6 @@
         "Curadoria",
         "Algoritmos"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Crítica"
@@ -3208,7 +3046,6 @@
         "Arquitetura",
         "Democracia"
       ],
-      "action": "",
       "categories": [
         "Quote"
       ],
@@ -3224,7 +3061,6 @@
         "Leitura",
         "Atenção"
       ],
-      "action": "",
       "categories": [
         "Quote",
         "Internet"
@@ -3244,7 +3080,6 @@
         "Arte",
         "Produtividade"
       ],
-      "action": "",
       "categories": [
         "Ensaios",
         "Quote"
@@ -3268,7 +3103,6 @@
         "Fantasia",
         "Mitolodia"
       ],
-      "action": "",
       "categories": [
         "Cinema",
         "HQs",
@@ -3291,9 +3125,9 @@
         "Jogos Eletrônicos",
         "Jogos de Browser"
       ],
-      "action": "Jogar",
       "categories": [
-        "Jogos"
+        "Jogos",
+        "Jogar"
       ],
       "favorite": false,
       "createdAt": "2026-07-13T23:30:13.213Z",
@@ -3311,10 +3145,10 @@
         "Série",
         "Evolução"
       ],
-      "action": "📺 Assistir",
       "categories": [
         "Ciência",
-        "Televisão"
+        "Televisão",
+        "Assistir"
       ],
       "favorite": false,
       "createdAt": "2026-07-14T10:25:08.845Z"
@@ -3332,10 +3166,10 @@
         "Videogames",
         "Inteligência Artificial"
       ],
-      "action": "Jogar",
       "categories": [
         "Internet",
-        "Jogos"
+        "Jogos",
+        "Jogar"
       ],
       "favorite": false,
       "createdAt": "2026-07-14T11:07:25.092Z"
@@ -3351,7 +3185,6 @@
         "Correntes Marítimas",
         "Química"
       ],
-      "action": "",
       "categories": [
         "Ciência",
         "Notícias"
@@ -3370,7 +3203,6 @@
         "Urbanismo",
         "Visualização 3D"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Wiki"
@@ -3389,7 +3221,6 @@
         "Tecnologia",
         "Eletrônicos"
       ],
-      "action": "",
       "categories": [
         "Tecnologia",
         "Acervo"
@@ -3406,7 +3237,6 @@
         "App",
         "RSS"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Tecnologia"
@@ -3426,7 +3256,6 @@
         "Feed",
         "Informação"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Tecnologia"
@@ -3447,7 +3276,6 @@
         "NASA",
         "Astronomia"
       ],
-      "action": "",
       "categories": [
         "Ciência",
         "Notícias"
@@ -3466,7 +3294,6 @@
         "Gênero",
         "Corpo Linguagem"
       ],
-      "action": "",
       "categories": [
         "Poesia",
         "Quote"
@@ -3484,7 +3311,6 @@
         "Simulador de Vôo",
         "Simulação"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Jogos"
@@ -3503,7 +3329,6 @@
         "Jogos Eletrônicos",
         "Crítica de jogos"
       ],
-      "action": "",
       "categories": [
         "Jogos",
         "Reportagens",
@@ -3523,10 +3348,10 @@
         "Jogos Eletrônicos",
         "Crítica de jogos"
       ],
-      "action": "Ler",
       "categories": [
         "Jogos",
-        "Ensaios"
+        "Ensaios",
+        "Ler"
       ],
       "favorite": false,
       "createdAt": "2026-07-15T11:58:13.615Z",
@@ -3547,7 +3372,6 @@
         "Comportamento",
         "Neurociência"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Ensaios",
@@ -3568,10 +3392,10 @@
         "Buraco Negro",
         "Física"
       ],
-      "action": "✍🏻 Escrever",
       "categories": [
         "Ciência",
-        "Notícias"
+        "Notícias",
+        "Escrever"
       ],
       "favorite": false,
       "createdAt": "2026-07-16T11:56:20.624Z"
@@ -3588,9 +3412,9 @@
         "História",
         "Astrofísica"
       ],
-      "action": "✍🏻 Escrever",
       "categories": [
-        "Ciência"
+        "Ciência",
+        "Escrever"
       ],
       "favorite": false,
       "createdAt": "2026-07-16T11:58:04.492Z"
@@ -3605,7 +3429,6 @@
         "Sites Legais",
         "Vídeo"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Lista"
@@ -3626,7 +3449,6 @@
         "Steven Spielberg",
         "Computadores"
       ],
-      "action": "",
       "categories": [
         "Cinema",
         "Tecnologia",
@@ -3645,7 +3467,6 @@
         "Inteligência Artificial",
         "Sumários"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Tecnologia",
@@ -3665,7 +3486,6 @@
         "Modelo de Linguagem",
         "Open-Source"
       ],
-      "action": "",
       "categories": [
         "Tecnologia",
         "LLM"
@@ -3686,7 +3506,6 @@
         "Cultura Pop",
         "Sites Legais"
       ],
-      "action": "",
       "categories": [
         "Televisão"
       ],
@@ -3702,11 +3521,11 @@
         "Hardware",
         "Cyberpunk"
       ],
-      "action": "Ler",
       "categories": [
         "Internet",
         "Tecnologia",
-        "Ensaios"
+        "Ensaios",
+        "Ler"
       ],
       "favorite": false,
       "createdAt": "2026-07-20T16:59:50.381Z",
@@ -3723,10 +3542,10 @@
         "Jogos Eletrônicos",
         "Videogames"
       ],
-      "action": "Ler",
       "categories": [
         "Jogos",
-        "Ensaios"
+        "Ensaios",
+        "Ler"
       ],
       "favorite": false,
       "createdAt": "2026-07-20T23:21:24.193Z"
@@ -3741,10 +3560,10 @@
         "Podcast",
         "Revista em Áudio"
       ],
-      "action": "Ouvir",
       "categories": [
         "Revista",
-        "Podcast"
+        "Podcast",
+        "Ouvir"
       ],
       "favorite": false,
       "createdAt": "2026-07-22T11:12:50.373Z"
@@ -3759,7 +3578,6 @@
         "Pesquisa",
         "USP"
       ],
-      "action": "",
       "categories": [
         "Ciência",
         "Tecnologia",
@@ -3780,7 +3598,6 @@
         "Albums",
         "Discos"
       ],
-      "action": "",
       "categories": [
         "Música",
         "Blog",
@@ -3801,10 +3618,10 @@
         "História",
         "Diversão"
       ],
-      "action": "Jogar",
       "categories": [
         "Internet",
-        "Jogos"
+        "Jogos",
+        "Jogar"
       ],
       "favorite": false,
       "createdAt": "2026-07-28T11:41:35.693Z"
@@ -3821,10 +3638,10 @@
         "Mapas",
         "Geografia"
       ],
-      "action": "Jogar",
       "categories": [
         "Internet",
-        "Jogos"
+        "Jogos",
+        "Jogar"
       ],
       "favorite": false,
       "createdAt": "2026-07-28T11:43:04.893Z"
@@ -3839,10 +3656,10 @@
         "Labirintos",
         "Diversão"
       ],
-      "action": "Jogar",
       "categories": [
         "Internet",
-        "Jogos"
+        "Jogos",
+        "Jogar"
       ],
       "favorite": false,
       "createdAt": "2026-07-28T11:43:44.222Z"
@@ -3858,7 +3675,6 @@
         "Tendências",
         "Cultura digital"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Curso"
@@ -3877,9 +3693,9 @@
         "Big O",
         "Mecha"
       ],
-      "action": "Comprar",
       "categories": [
-        "Televisão"
+        "Televisão",
+        "Comprar"
       ],
       "favorite": false,
       "createdAt": "2026-08-02T20:09:39.787Z"
@@ -3894,10 +3710,10 @@
         "Shows",
         "Streaming"
       ],
-      "action": "📺 Assistir",
       "categories": [
         "Música",
-        "Acervo"
+        "Acervo",
+        "Assistir"
       ],
       "favorite": false,
       "createdAt": "2026-08-03T11:28:39.384Z",
@@ -3912,7 +3728,6 @@
         "Japonês",
         "Curso de idiomas"
       ],
-      "action": "",
       "categories": [
         "Curso"
       ],
@@ -3931,7 +3746,6 @@
         "FESPSP",
         "Pós-graduação"
       ],
-      "action": "",
       "categories": [
         "Curso"
       ],
@@ -3950,7 +3764,6 @@
         "Jogos Eletrônicos",
         "Ensaios"
       ],
-      "action": "",
       "categories": [
         "Jogos",
         "Acervo"
@@ -3972,10 +3785,10 @@
         "Streaming",
         "Cultura"
       ],
-      "action": "💳 Assinar",
       "categories": [
         "Internet",
-        "Jogos"
+        "Jogos",
+        "Assinar"
       ],
       "favorite": false,
       "createdAt": "2026-08-11T10:21:54.325Z"
@@ -3993,10 +3806,10 @@
         "Criadores de Conteúdo",
         "Streaming"
       ],
-      "action": "💳 Assinar",
       "categories": [
         "Internet",
-        "Jogos"
+        "Jogos",
+        "Assinar"
       ],
       "favorite": false,
       "createdAt": "2026-08-11T10:23:12.720Z"
@@ -4011,11 +3824,11 @@
         "Cultura digital",
         "Sites Legais"
       ],
-      "action": "Ler",
       "categories": [
         "Internet",
         "Ensaios",
-        "Revista"
+        "Revista",
+        "Ler"
       ],
       "favorite": false,
       "createdAt": "2026-08-11T11:14:54.888Z"
@@ -4032,12 +3845,12 @@
         "Sci-Fi",
         "Fantasia"
       ],
-      "action": "💳 Assinar",
       "categories": [
         "Cinema",
         "Internet",
         "Literatura",
-        "Televisão"
+        "Televisão",
+        "Assinar"
       ],
       "favorite": false,
       "createdAt": "2026-08-11T15:10:11.608Z"
@@ -4052,10 +3865,10 @@
         "Videogames",
         "Jogos Eletrônicos"
       ],
-      "action": "💳 Assinar",
       "categories": [
         "Internet",
-        "Jogos"
+        "Jogos",
+        "Assinar"
       ],
       "favorite": false,
       "createdAt": "2026-08-12T17:11:07.606Z"
@@ -4072,10 +3885,10 @@
         "Simulação",
         "Cidades"
       ],
-      "action": "📺 Assistir",
       "categories": [
         "Jogos",
-        "Video"
+        "Video",
+        "Assistir"
       ],
       "favorite": false,
       "createdAt": "2026-08-12T17:21:25.305Z"
@@ -4089,9 +3902,9 @@
         "Sites Legais",
         "Futurismo"
       ],
-      "action": "Ler",
       "categories": [
-        "Internet"
+        "Internet",
+        "Ler"
       ],
       "favorite": false,
       "createdAt": "2026-08-14T22:04:26.706Z"
@@ -4108,7 +3921,6 @@
         "Busca",
         "Guias"
       ],
-      "action": "",
       "categories": [
         "Acervo"
       ],
@@ -4125,7 +3937,6 @@
         "Literatura",
         "Sites Legais"
       ],
-      "action": "",
       "categories": [
         "Literatura",
         "Acervo"
@@ -4145,7 +3956,6 @@
         "Internet",
         "Anos 1990"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Quote"
@@ -4165,7 +3975,6 @@
         "Ficção",
         "Livros"
       ],
-      "action": "",
       "categories": [
         "Literatura",
         "Quote"
@@ -4183,7 +3992,6 @@
         "Poesia",
         "Literatura"
       ],
-      "action": "",
       "categories": [
         "Literatura",
         "Reportagens",
@@ -4204,7 +4012,6 @@
         "Naturalistas",
         "Acervo Digital"
       ],
-      "action": "",
       "categories": [
         "Ciência",
         "Acervo"
@@ -4223,7 +4030,6 @@
         "Não Ficção",
         "Listas"
       ],
-      "action": "",
       "categories": [
         "Ciência",
         "Literatura",
@@ -4243,7 +4049,6 @@
         "Utilidades",
         "Recursos"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Ferramenta"
@@ -4262,7 +4067,6 @@
         "Busca",
         "Áudio"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Podcast",
@@ -4283,7 +4087,6 @@
         "Podcasts",
         "Áudio"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Podcast",
@@ -4304,7 +4107,6 @@
         "Áudio",
         "Base de Dados"
       ],
-      "action": "",
       "categories": [
         "Internet",
         "Podcast",
@@ -4322,7 +4124,6 @@
         "Literatura",
         "Verso"
       ],
-      "action": "",
       "categories": [
         "Poesia",
         "Quote"
@@ -4340,7 +4141,6 @@
         "Tipografia",
         "Fontes"
       ],
-      "action": "",
       "categories": [
         "Design",
         "Acervo"
@@ -4360,7 +4160,6 @@
         "Biblioteconomia",
         "Acervo Digital"
       ],
-      "action": "",
       "categories": [
         "Literatura",
         "Blog",
@@ -4382,7 +4181,6 @@
         "Entrevistas",
         "Software"
       ],
-      "action": "",
       "categories": [
         "Podcast",
         "Ferramenta"
@@ -4402,7 +4200,6 @@
         "Oceano",
         "Comportamento"
       ],
-      "action": "",
       "categories": [
         "Ciência",
         "Quote"
@@ -4423,7 +4220,6 @@
         "Cinema",
         "Tecnologia"
       ],
-      "action": "",
       "categories": [
         "Design",
         "Tecnologia",
@@ -4445,7 +4241,6 @@
         "Cidades",
         "Simulador de Cidades"
       ],
-      "action": "",
       "categories": [
         "Jogos"
       ],
@@ -4463,7 +4258,6 @@
         "Recursos",
         "DYI"
       ],
-      "action": "",
       "categories": [
         "Design",
         "Literatura",
@@ -4483,7 +4277,6 @@
         "Criação de Jogos",
         "Google"
       ],
-      "action": "",
       "categories": [
         "Design",
         "Jogos",
@@ -4505,7 +4298,6 @@
         "Trabalho",
         "Política"
       ],
-      "action": "",
       "categories": [
         "Ensaios",
         "Quote"
@@ -4524,7 +4316,6 @@
         "Sociedade",
         "Comportamento"
       ],
-      "action": "",
       "categories": [
         "Ensaios",
         "Quote"
@@ -4545,7 +4336,6 @@
         "Monitoramento",
         "Tracking"
       ],
-      "action": "",
       "categories": [
         "Ferramenta"
       ],
@@ -4564,7 +4354,6 @@
         "Texto",
         "Planilhas"
       ],
-      "action": "",
       "categories": [
         "Tecnologia",
         "Ferramenta"
@@ -4582,7 +4371,6 @@
         "Amizades",
         "Vida Adulta"
       ],
-      "action": "",
       "categories": [
         "Ensaios",
         "Quote"

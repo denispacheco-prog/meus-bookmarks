@@ -52,12 +52,6 @@ function mergeKnownCategories(data, newCategoryNames, groupId) {
   }
 }
 
-function mergeKnownActions(data, action) {
-  if (!action) return;
-  if (!data.actions) data.actions = [];
-  if (!data.actions.includes(action)) data.actions.push(action);
-}
-
 function allCategoryNames(groups) {
   return new Set(groups.flatMap((g) => g.categories || []));
 }
@@ -105,39 +99,6 @@ function deleteCategoryEverywhere(data, groupId, name) {
   }
 }
 
-function addActionLocal(data, name) {
-  name = (name || "").trim();
-  if (!name) throw new Error("nome da ação é obrigatório");
-  const actions = data.actions || (data.actions = []);
-  if (actions.includes(name)) throw new Error("já existe uma ação com esse nome");
-  actions.push(name);
-}
-
-function renameActionEverywhere(data, oldName, newName) {
-  newName = (newName || "").trim();
-  if (!newName) throw new Error("nome da ação é obrigatório");
-  const actions = data.actions || (data.actions = []);
-  if (!actions.includes(oldName)) throw new Error("ação não encontrada");
-  if (newName !== oldName && actions.includes(newName)) {
-    throw new Error("já existe uma ação com esse nome");
-  }
-
-  data.actions = actions.map((a) => (a === oldName ? newName : a));
-  for (const bookmark of data.bookmarks || []) {
-    if (bookmark.action === oldName) bookmark.action = newName;
-  }
-}
-
-function deleteActionEverywhere(data, name) {
-  const actions = data.actions || (data.actions = []);
-  if (!actions.includes(name)) throw new Error("ação não encontrada");
-
-  data.actions = actions.filter((a) => a !== name);
-  for (const bookmark of data.bookmarks || []) {
-    if (bookmark.action === name) bookmark.action = "";
-  }
-}
-
 function allTagNames(bookmarks) {
   return new Set(bookmarks.flatMap((b) => b.tags || []));
 }
@@ -182,7 +143,6 @@ function buildBookmark(raw, extraTags = []) {
     title,
     description: (raw.description || "").trim(),
     tags,
-    action: (raw.action || "").trim(),
     categories: cleanListField(raw.categories),
     favorite: false,
     createdAt: new Date().toISOString(),
@@ -191,21 +151,20 @@ function buildBookmark(raw, extraTags = []) {
 
 async function ghGetFile() {
   const token = getToken();
-  if (!token) throw new Error('Configure seu token do GitHub primeiro (botão "⚙ GitHub").');
+  if (!token) throw new Error('Configure seu token do GitHub primeiro (menu "⋯" → "Token do GitHub").');
 
   const res = await fetch(
     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}?ref=${GITHUB_BRANCH}`,
     { headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" } }
   );
   if (!res.ok) {
-    if (res.status === 401) throw new Error("Token do GitHub inválido ou sem permissão. Reconfigure em \"⚙ GitHub\".");
+    if (res.status === 401) throw new Error("Token do GitHub inválido ou sem permissão. Reconfigure em \"Token do GitHub\", no menu \"⋯\".");
     throw new Error(`Falha ao ler dados do GitHub (status ${res.status})`);
   }
   const json = await res.json();
   const data = JSON.parse(base64ToUtf8(json.content));
   data.bookmarks = data.bookmarks || [];
   data.categoryGroups = data.categoryGroups || [];
-  data.actions = data.actions || [];
   return { data, sha: json.sha };
 }
 
@@ -275,7 +234,6 @@ const GitHubApi = {
     if (!bookmark) throw new Error("url e title são obrigatórios");
     data.bookmarks.push(bookmark);
     mergeKnownCategories(data, cleanListField(payload.newCategories), payload.newCategoryGroup);
-    mergeKnownActions(data, bookmark.action);
     await ghPutFile(data, sha, `Adiciona bookmark: ${bookmark.title}`);
     return bookmark;
   },
@@ -291,12 +249,10 @@ const GitHubApi = {
     target.title = title;
     target.description = (payload.description || "").trim();
     target.tags = cleanListField(payload.tags);
-    target.action = (payload.action || "").trim();
     target.categories = cleanListField(payload.categories);
     target.favorite = !!payload.favorite;
     target.favoriteNote = (payload.favoriteNote || "").trim();
     mergeKnownCategories(data, cleanListField(payload.newCategories), payload.newCategoryGroup);
-    mergeKnownActions(data, target.action);
     await ghPutFile(data, sha, `Edita bookmark: ${title}`);
     return target;
   },
@@ -337,7 +293,6 @@ const GitHubApi = {
       }
       existingUrls.add(bookmark.url);
       imported.push(bookmark);
-      mergeKnownActions(data, bookmark.action);
     }
 
     data.bookmarks.push(...imported);
@@ -366,27 +321,6 @@ const GitHubApi = {
     const { data, sha } = await ghGetFile();
     deleteCategoryEverywhere(data, groupId, name);
     await ghPutFile(data, sha, `Remove categoria: ${name}`);
-    return data;
-  },
-
-  async addAction(name) {
-    const { data, sha } = await ghGetFile();
-    addActionLocal(data, name);
-    await ghPutFile(data, sha, `Adiciona ação: ${name}`);
-    return data;
-  },
-
-  async renameAction(oldName, newName) {
-    const { data, sha } = await ghGetFile();
-    renameActionEverywhere(data, oldName, newName);
-    await ghPutFile(data, sha, `Renomeia ação: ${oldName} → ${newName}`);
-    return data;
-  },
-
-  async deleteAction(name) {
-    const { data, sha } = await ghGetFile();
-    deleteActionEverywhere(data, name);
-    await ghPutFile(data, sha, `Remove ação: ${name}`);
     return data;
   },
 
@@ -511,41 +445,6 @@ const LocalApi = {
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
       throw new Error(err.error || "Erro ao excluir categoria");
-    }
-    return res.json();
-  },
-
-  async addAction(name) {
-    const res = await fetch("/api/actions", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name }),
-    });
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err.error || "Erro ao adicionar ação");
-    }
-    return res.json();
-  },
-
-  async renameAction(oldName, newName) {
-    const res = await fetch(`/api/actions/${encodeURIComponent(oldName)}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name: newName }),
-    });
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err.error || "Erro ao renomear ação");
-    }
-    return res.json();
-  },
-
-  async deleteAction(name) {
-    const res = await fetch(`/api/actions/${encodeURIComponent(name)}`, { method: "DELETE" });
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err.error || "Erro ao excluir ação");
     }
     return res.json();
   },

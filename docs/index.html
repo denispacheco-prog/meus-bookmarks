@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bookmarks</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23b4462b%22/><text x=%2250%22 y=%2272%22 text-anchor=%22middle%22 font-family=%22Georgia,serif%22 font-size=%2272%22 fill=%22%23faf8f4%22>m</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23faf8f4%22/><text x=%2250%22 y=%2272%22 text-anchor=%22middle%22 font-family=%22Georgia,serif%22 font-size=%2272%22 fill=%22%231c1a17%22>m</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap" />
@@ -32,7 +32,6 @@
           </summary>
           <div class="header-menu-list import-export-row">
             <button id="category-manager-btn" type="button">Categorias</button>
-            <button id="action-manager-btn" type="button">Ações</button>
             <button id="tag-manager-btn" type="button">Tags</button>
             <hr />
             <button id="export-btn" type="button">Exportar</button>
@@ -52,12 +51,6 @@
           <details open>
             <summary>Categorias</summary>
             <nav id="category-menu" class="category-menu"></nav>
-          </details>
-        </div>
-        <div class="action-sidebar">
-          <details open>
-            <summary>Ações</summary>
-            <nav id="action-menu" class="action-menu"></nav>
           </details>
         </div>
       </aside>
@@ -90,14 +83,6 @@
                   <input id="tags" name="tags" type="text" placeholder="separadas por vírgula" autocomplete="off" />
                   <div class="tag-suggestions hidden"></div>
                 </div>
-              </div>
-              <div class="form-row">
-                <label for="action-select">Ação</label>
-                <select id="action-select" name="action"></select>
-              </div>
-              <div class="form-row">
-                <label for="new-action">Nova ação (opcional)</label>
-                <input id="new-action" name="new-action" type="text" placeholder="ex: ✍️ Estudar" />
               </div>
               <div class="form-row">
                 <label>Categorias gerais</label>
@@ -145,16 +130,6 @@
         <button id="category-manager-close-btn" type="button" class="modal-close-btn">✕</button>
       </div>
       <div id="category-manager-body" class="modal-body"></div>
-    </div>
-  </div>
-
-  <div id="action-manager-overlay" class="modal-overlay hidden">
-    <div class="modal" role="dialog" aria-modal="true" aria-label="Gerenciar ações">
-      <div class="modal-header">
-        <h2>Gerenciar ações</h2>
-        <button id="action-manager-close-btn" type="button" class="modal-close-btn">✕</button>
-      </div>
-      <div id="action-manager-body" class="modal-body"></div>
     </div>
   </div>
 

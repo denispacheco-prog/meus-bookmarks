@@ -83,14 +83,6 @@ def merge_known_categories(data, new_category_names, group_id):
             known.add(name)
 
 
-def merge_known_actions(data, action):
-    if not action:
-        return
-    known = data.setdefault("actions", [])
-    if action not in known:
-        known.append(action)
-
-
 def _all_category_names(groups):
     return {c for g in groups for c in g.get("categories", [])}
 
@@ -140,43 +132,6 @@ def delete_category(data, group_id, name):
             bookmark["categories"] = [c for c in bookmark["categories"] if c != name]
 
 
-def add_action(data, name):
-    name = (name or "").strip()
-    if not name:
-        raise ValueError("nome da ação é obrigatório")
-    actions = data.setdefault("actions", [])
-    if name in actions:
-        raise ValueError("já existe uma ação com esse nome")
-    actions.append(name)
-
-
-def rename_action(data, old_name, new_name):
-    new_name = (new_name or "").strip()
-    if not new_name:
-        raise ValueError("nome da ação é obrigatório")
-    actions = data.setdefault("actions", [])
-    if old_name not in actions:
-        raise ValueError("ação não encontrada")
-    if new_name != old_name and new_name in actions:
-        raise ValueError("já existe uma ação com esse nome")
-
-    data["actions"] = [new_name if a == old_name else a for a in actions]
-    for bookmark in data.get("bookmarks", []):
-        if bookmark.get("action") == old_name:
-            bookmark["action"] = new_name
-
-
-def delete_action(data, name):
-    actions = data.setdefault("actions", [])
-    if name not in actions:
-        raise ValueError("ação não encontrada")
-
-    data["actions"] = [a for a in actions if a != name]
-    for bookmark in data.get("bookmarks", []):
-        if bookmark.get("action") == name:
-            bookmark["action"] = ""
-
-
 def _all_tag_names(bookmarks):
     return {t for b in bookmarks for t in b.get("tags", [])}
 
@@ -224,7 +179,6 @@ def build_bookmark(raw_item, extra_tags=None):
         "title": title,
         "description": (raw_item.get("description") or "").strip(),
         "tags": tags,
-        "action": (raw_item.get("action") or "").strip(),
         "categories": clean_list_field(raw_item.get("categories")),
         "favorite": False,
         "createdAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z",
@@ -281,8 +235,6 @@ class Handler(SimpleHTTPRequestHandler):
         elif self.path.startswith("/api/category-groups/") and self.path.endswith("/categories"):
             group_id, _ = self._extract_category_path()
             self._handle_add_category(group_id)
-        elif self.path == "/api/actions":
-            self._handle_add_action()
         else:
             self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
 
@@ -293,13 +245,6 @@ class Handler(SimpleHTTPRequestHandler):
                 self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
                 return
             self._handle_rename_category(group_id, name)
-            return
-        if self.path.startswith("/api/actions/"):
-            name = self._extract_action_name()
-            if name is None:
-                self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
-                return
-            self._handle_rename_action(name)
             return
         if self.path.startswith("/api/tags/"):
             name = self._extract_tag_path()
@@ -321,13 +266,6 @@ class Handler(SimpleHTTPRequestHandler):
                 self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
                 return
             self._handle_delete_category(group_id, name)
-            return
-        if self.path.startswith("/api/actions/"):
-            name = self._extract_action_name()
-            if name is None:
-                self._send_json(HTTPStatus.NOT_FOUND, {"error": "not found"})
-                return
-            self._handle_delete_action(name)
             return
         if self.path.startswith("/api/tags/"):
             name = self._extract_tag_path()
@@ -361,13 +299,6 @@ class Handler(SimpleHTTPRequestHandler):
         name = urllib.parse.unquote(rest[1:]) if rest.startswith("/") and len(rest) > 1 else None
         return group_id, name
 
-    def _extract_action_name(self):
-        prefix = "/api/actions/"
-        if not self.path.startswith(prefix):
-            return None
-        name = self.path[len(prefix):]
-        return urllib.parse.unquote(name) if name else None
-
     def _extract_tag_path(self):
         prefix = "/api/tags/"
         if not self.path.startswith(prefix):
@@ -400,7 +331,6 @@ class Handler(SimpleHTTPRequestHandler):
 
         data.setdefault("bookmarks", []).append(new_bookmark)
         merge_known_categories(data, clean_list_field(payload.get("newCategories")), payload.get("newCategoryGroup"))
-        merge_known_actions(data, new_bookmark["action"])
         write_bookmarks(data)
 
         self._send_json(HTTPStatus.CREATED, new_bookmark)
@@ -441,7 +371,6 @@ class Handler(SimpleHTTPRequestHandler):
                 continue
             existing_urls.add(bookmark["url"])
             imported.append(bookmark)
-            merge_known_actions(data, bookmark["action"])
 
         data["bookmarks"].extend(imported)
         write_bookmarks(data)
@@ -479,17 +408,14 @@ class Handler(SimpleHTTPRequestHandler):
             return
 
         categories = clean_list_field(payload.get("categories"))
-        action = (payload.get("action") or "").strip()
         target["url"] = url
         target["title"] = title
         target["description"] = (payload.get("description") or "").strip()
         target["tags"] = clean_list_field(payload.get("tags"))
-        target["action"] = action
         target["categories"] = categories
         target["favorite"] = bool(payload.get("favorite"))
         target["favoriteNote"] = (payload.get("favoriteNote") or "").strip()
         merge_known_categories(data, clean_list_field(payload.get("newCategories")), payload.get("newCategoryGroup"))
-        merge_known_actions(data, action)
         write_bookmarks(data)
 
         self._send_json(HTTPStatus.OK, target)
@@ -564,66 +490,6 @@ class Handler(SimpleHTTPRequestHandler):
 
         try:
             delete_category(data, group_id, name)
-        except ValueError as exc:
-            self._send_json(HTTPStatus.CONFLICT, {"error": str(exc)})
-            return
-
-        write_bookmarks(data)
-        self._send_json(HTTPStatus.OK, data)
-
-    def _handle_add_action(self):
-        try:
-            payload = self._read_json_body()
-        except json.JSONDecodeError:
-            self._send_json(HTTPStatus.BAD_REQUEST, {"error": "JSON inválido"})
-            return
-
-        try:
-            data = read_bookmarks()
-        except (OSError, json.JSONDecodeError) as exc:
-            self._send_json(HTTPStatus.INTERNAL_SERVER_ERROR, {"error": str(exc)})
-            return
-
-        try:
-            add_action(data, payload.get("name"))
-        except ValueError as exc:
-            self._send_json(HTTPStatus.CONFLICT, {"error": str(exc)})
-            return
-
-        write_bookmarks(data)
-        self._send_json(HTTPStatus.OK, data)
-
-    def _handle_rename_action(self, old_name):
-        try:
-            payload = self._read_json_body()
-        except json.JSONDecodeError:
-            self._send_json(HTTPStatus.BAD_REQUEST, {"error": "JSON inválido"})
-            return
-
-        try:
-            data = read_bookmarks()
-        except (OSError, json.JSONDecodeError) as exc:
-            self._send_json(HTTPStatus.INTERNAL_SERVER_ERROR, {"error": str(exc)})
-            return
-
-        try:
-            rename_action(data, old_name, payload.get("name"))
-        except ValueError as exc:
-            self._send_json(HTTPStatus.CONFLICT, {"error": str(exc)})
-            return
-
-        write_bookmarks(data)
-        self._send_json(HTTPStatus.OK, data)
-
-    def _handle_delete_action(self, name):
-        try:
-            data = read_bookmarks()
-        except (OSError, json.JSONDecodeError) as exc:
-            self._send_json(HTTPStatus.INTERNAL_SERVER_ERROR, {"error": str(exc)})
-            return
-
-        try:
-            delete_action(data, name)
         except ValueError as exc:
             self._send_json(HTTPStatus.CONFLICT, {"error": str(exc)})
             return
