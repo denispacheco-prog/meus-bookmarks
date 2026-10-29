@@ -4386,13 +4386,15 @@
       "tags": [
         "Jogos de Browser",
         "Mortal Kombat",
-        "Emulação"
+        "Emulação",
+        "Videogame"
       ],
       "categories": [
         "Jogos"
       ],
       "favorite": false,
-      "createdAt": "2026-10-29T17:04:58.767Z"
+      "createdAt": "2026-10-29T17:04:58.767Z",
+      "favoriteNote": ""
     }
   ]
 }
