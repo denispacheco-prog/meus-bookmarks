@@ -11,6 +11,7 @@
   --accent-fg: #ffffff;
   --danger: #b3261e;
   --star: #c98a0b;
+  --icon: #7ea6dc;
   --tag-fg: #77716a;
   --tag-fg-active: #b4462b;
   --shadow: 0 1px 2px rgba(40, 30, 20, 0.06), 0 8px 24px rgba(40, 30, 20, 0.08);
@@ -42,6 +43,7 @@
     --accent-fg: #191714;
     --danger: #f2867d;
     --star: #f0c04a;
+    --icon: #9dbde8;
     --tag-fg: #9a9388;
     --tag-fg-active: #e58a6b;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.4);
@@ -59,6 +61,7 @@
   --accent-fg: #191714;
   --danger: #f2867d;
   --star: #f0c04a;
+  --icon: #9dbde8;
   --tag-fg: #9a9388;
   --tag-fg-active: #e58a6b;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.4);
@@ -103,8 +106,9 @@ textarea {
 
 /* ===== Header ===== */
 
+/* O padding fica dentro do header (e fora do .layout), então soma-se a ele para as colunas alinharem. */
 .app-header {
-  max-width: 1200px;
+  max-width: calc(1200px + 2 * var(--space-5));
   margin: 0 auto;
   padding: var(--space-6) var(--space-5) var(--space-5);
   display: grid;
@@ -121,6 +125,16 @@ textarea {
   letter-spacing: -0.015em;
   color: var(--fg);
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.wordmark-icon {
+  flex: none;
+  width: 1.05em;
+  height: 1.1em;
+  color: var(--icon);
 }
 
 .app-header-actions {
