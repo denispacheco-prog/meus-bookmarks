@@ -277,8 +277,15 @@ main {
   position: sticky;
   top: var(--space-4);
   max-height: calc(100vh - 2rem);
+  overflow-x: hidden;
   overflow-y: auto;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+}
+
+/* Rola com a roda do mouse, mas sem mostrar barra. */
+.left-sidebar::-webkit-scrollbar,
+.favorites-sidebar::-webkit-scrollbar {
+  display: none;
 }
 
 .left-sidebar {
