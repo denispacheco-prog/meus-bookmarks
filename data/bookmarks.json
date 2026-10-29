@@ -67,13 +67,6 @@
       ]
     },
     {
-      "id": "quotes",
-      "label": "@ Quotes",
-      "categories": [
-        "Quote"
-      ]
-    },
-    {
       "id": "acoes",
       "label": "Ações",
       "categories": [
@@ -85,6 +78,13 @@
         "Escrever",
         "Assistir",
         "Assinar"
+      ]
+    },
+    {
+      "id": "quotes",
+      "label": "@ Quotes",
+      "categories": [
+        "Quote"
       ]
     }
   ],
