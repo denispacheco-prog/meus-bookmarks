@@ -2,12 +2,12 @@
 
 :root {
   color-scheme: light;
-  --bg: #e9edf1;
-  --surface: #ffffff;
+  /* fundo = cor das colunas do Reader; superfícies = o hover dos cards dele */
+  --bg: #ffffff;
+  --surface: #f5f7f9;
   --fg: #0f1419;
   --muted: #536471;
-  /* um tom acima do #e1e6ea do Reader: aqui as linhas ficam sobre o fundo cinza, não sobre colunas brancas */
-  --border: #d3dae1;
+  --border: #e1e6ea;
   --accent: #1d7af2;
   --accent-fg: #ffffff;
   --danger: #d7263d;
@@ -34,8 +34,8 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #0b0f14;
-    --surface: #151b23;
+    --bg: #151b23;
+    --surface: #1b232d;
     --fg: #e6edf3;
     --muted: #8b98a5;
     --border: #232c37;
@@ -52,8 +52,8 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0b0f14;
-  --surface: #151b23;
+  --bg: #151b23;
+  --surface: #1b232d;
   --fg: #e6edf3;
   --muted: #8b98a5;
   --border: #232c37;
