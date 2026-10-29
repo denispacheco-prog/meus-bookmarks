@@ -2,22 +2,22 @@
 
 :root {
   color-scheme: light;
-  --bg: #faf8f4;
+  --bg: #e9edf1;
   --surface: #ffffff;
-  --fg: #1c1a17;
-  --muted: #77716a;
-  --border: #e7e2d9;
-  --accent: #b4462b;
+  --fg: #0f1419;
+  --muted: #536471;
+  /* um tom acima do #e1e6ea do Reader: aqui as linhas ficam sobre o fundo cinza, não sobre colunas brancas */
+  --border: #d3dae1;
+  --accent: #1d7af2;
   --accent-fg: #ffffff;
-  --danger: #b3261e;
-  --star: #c98a0b;
+  --danger: #d7263d;
+  --star: #d99a00;
   --icon: #7ea6dc;
-  --tag-fg: #77716a;
-  --tag-fg-active: #b4462b;
-  --shadow: 0 1px 2px rgba(40, 30, 20, 0.06), 0 8px 24px rgba(40, 30, 20, 0.08);
+  --tag-fg: #536471;
+  --tag-fg-active: #1d7af2;
+  --shadow: 0 10px 30px rgba(15, 20, 25, 0.15);
 
-  --font-serif: "Newsreader", Charter, "Iowan Old Style", Palatino, Georgia, serif;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -34,37 +34,37 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #191714;
-    --surface: #221f1b;
-    --fg: #ece7de;
-    --muted: #9a9388;
-    --border: #2e2a25;
-    --accent: #e58a6b;
-    --accent-fg: #191714;
-    --danger: #f2867d;
-    --star: #f0c04a;
+    --bg: #0b0f14;
+    --surface: #151b23;
+    --fg: #e6edf3;
+    --muted: #8b98a5;
+    --border: #232c37;
+    --accent: #3b93ff;
+    --accent-fg: #ffffff;
+    --danger: #f4626e;
+    --star: #f5b301;
     --icon: #9dbde8;
-    --tag-fg: #9a9388;
-    --tag-fg-active: #e58a6b;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.4);
+    --tag-fg: #8b98a5;
+    --tag-fg-active: #3b93ff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #191714;
-  --surface: #221f1b;
-  --fg: #ece7de;
-  --muted: #9a9388;
-  --border: #2e2a25;
-  --accent: #e58a6b;
-  --accent-fg: #191714;
-  --danger: #f2867d;
-  --star: #f0c04a;
+  --bg: #0b0f14;
+  --surface: #151b23;
+  --fg: #e6edf3;
+  --muted: #8b98a5;
+  --border: #232c37;
+  --accent: #3b93ff;
+  --accent-fg: #ffffff;
+  --danger: #f4626e;
+  --star: #f5b301;
   --icon: #9dbde8;
-  --tag-fg: #9a9388;
-  --tag-fg-active: #e58a6b;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.4);
+  --tag-fg: #8b98a5;
+  --tag-fg-active: #3b93ff;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
 /* ===== Base ===== */
@@ -79,7 +79,7 @@ body {
   font-size: 15px;
   background: var(--bg);
   color: var(--fg);
-  line-height: 1.5;
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -119,10 +119,9 @@ textarea {
 
 .wordmark {
   margin: 0;
-  font-family: var(--font-serif);
-  font-weight: 500;
-  font-size: 1.4rem;
-  letter-spacing: -0.015em;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
   color: var(--fg);
   white-space: nowrap;
   display: flex;
@@ -351,10 +350,10 @@ main {
   margin: 0;
   padding: 0 0 var(--space-2);
   border-bottom: 1px solid var(--border);
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   color: var(--muted);
   user-select: none;
 }
@@ -710,9 +709,8 @@ main {
 }
 
 .bookmark-item.quote-bookmark .bookmark-description {
-  font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: var(--fg);
 }
 
@@ -755,6 +753,8 @@ main {
 }
 
 .bookmark-domain {
+  font-weight: 700;
+  color: var(--fg);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -772,11 +772,10 @@ main {
 
 .bookmark-item h3 {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
   line-height: 1.3;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
 }
 
 .bookmark-item h3 a {
@@ -975,9 +974,7 @@ mark {
 
 .empty-state {
   color: var(--muted);
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   text-align: center;
   padding: 3rem 0;
 }
@@ -1035,8 +1032,8 @@ mark {
 .favorite-item-title {
   color: var(--fg);
   text-decoration: none;
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1133,9 +1130,8 @@ mark {
 
 .modal-header h2 {
   margin: 0;
-  font-family: var(--font-serif);
-  font-weight: 500;
-  font-size: 1.3rem;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .modal-close-btn {
