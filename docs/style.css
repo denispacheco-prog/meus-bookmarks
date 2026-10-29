@@ -128,10 +128,9 @@ textarea {
 .wordmark {
   margin: 0;
   font-family: var(--font-serif);
-  font-style: italic;
   font-weight: 500;
-  font-size: 1.45rem;
-  letter-spacing: -0.01em;
+  font-size: 1.4rem;
+  letter-spacing: -0.015em;
   color: var(--fg);
   white-space: nowrap;
 }
@@ -350,6 +349,10 @@ main {
   letter-spacing: 0.1em;
   color: var(--muted);
   user-select: none;
+}
+
+.action-sidebar summary {
+  border-bottom: none;
 }
 
 .category-sidebar summary,
@@ -701,7 +704,7 @@ main {
 .bookmark-item {
   position: relative;
   border-bottom: 1px solid var(--border);
-  padding: var(--space-4) 0 1.1rem;
+  padding: 1.6rem 0 1.7rem;
   animation: bookmark-item-enter 400ms var(--ease) both;
 }
 
@@ -728,7 +731,7 @@ main {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.45rem;
   font-size: 0.75rem;
   color: var(--muted);
   min-width: 0;
@@ -820,7 +823,7 @@ mark {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.3rem 0.6rem;
-  margin-top: 0.6rem;
+  margin-top: 0.8rem;
 }
 
 .bookmark-meta:empty {
@@ -941,7 +944,7 @@ mark {
   display: flex;
   gap: var(--space-1);
   position: absolute;
-  top: var(--space-3);
+  top: 1.35rem;
   right: 0;
   opacity: 0;
   transition: opacity 150ms var(--ease);
