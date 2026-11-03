@@ -4395,6 +4395,23 @@
       "favorite": false,
       "createdAt": "2026-10-29T17:04:58.767Z",
       "favoriteNote": ""
+    },
+    {
+      "id": "516a5898-3990-43c1-9a72-49d8f9e613ab",
+      "url": "https://project-dr-vu.netlify.app/",
+      "title": "SimCity Mobile Classics",
+      "description": "",
+      "tags": [
+        "SimCity",
+        "Jogos Eletrônicos",
+        "Jogos de Browser",
+        "Videogames"
+      ],
+      "categories": [
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2026-11-03T18:25:01.222Z"
     }
   ]
 }
