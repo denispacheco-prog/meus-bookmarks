@@ -4430,6 +4430,25 @@
       ],
       "favorite": false,
       "createdAt": "2026-11-05T15:52:02.139Z"
+    },
+    {
+      "id": "d4be2715-bfa0-4827-94d1-f25a9c67ba3d",
+      "url": "https://hubcapes.netlify.app/",
+      "title": "Recomendador de Teses e Dissertações · CAPES",
+      "description": "",
+      "tags": [
+        "Teses",
+        "Dissertações",
+        "Pesquisa",
+        "Busca",
+        "Trabalhos acadêmicos"
+      ],
+      "categories": [
+        "Ciência",
+        "Ferramenta"
+      ],
+      "favorite": false,
+      "createdAt": "2026-11-05T15:53:38.871Z"
     }
   ]
 }
