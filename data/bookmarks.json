@@ -4457,14 +4457,17 @@
       "description": "",
       "tags": [
         "Música",
-        "Recomendações"
+        "Recomendações",
+        "Discos",
+        "Artistas"
       ],
       "categories": [
         "Música",
         "Acervo"
       ],
       "favorite": false,
-      "createdAt": "2026-11-05T15:54:11.110Z"
+      "createdAt": "2026-11-05T15:54:11.110Z",
+      "favoriteNote": ""
     },
     {
       "id": "fd7259e4-956d-406f-b05b-699867c3173e",
