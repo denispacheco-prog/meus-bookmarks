@@ -4505,10 +4505,13 @@
         "Televisão",
         "Streaming",
         "Video",
-        "Acervo"
+        "Acervo",
+        "Assinar",
+        "Assistir"
       ],
       "favorite": false,
-      "createdAt": "2026-11-05T15:56:07.633Z"
+      "createdAt": "2026-11-05T15:56:07.633Z",
+      "favoriteNote": ""
     }
   ]
 }
