@@ -4465,6 +4465,28 @@
       ],
       "favorite": false,
       "createdAt": "2026-11-05T15:54:11.110Z"
+    },
+    {
+      "id": "fd7259e4-956d-406f-b05b-699867c3173e",
+      "url": "https://hackerbooks.org/",
+      "title": "HackerBooks: Books mentioned in Hacker News comments",
+      "description": "",
+      "tags": [
+        "Livros",
+        "Recomendações",
+        "Hacker News",
+        "Listas"
+      ],
+      "categories": [
+        "Ciência",
+        "Internet",
+        "Literatura",
+        "Tecnologia",
+        "Lista",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-11-05T15:54:58.296Z"
     }
   ]
 }
