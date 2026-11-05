@@ -4412,6 +4412,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-11-03T18:25:01.222Z"
+    },
+    {
+      "id": "44f9921a-2eef-4aa8-b207-e63e21bb8333",
+      "url": "https://sheets.works/data-viz/what-every-country-read",
+      "title": "What the world read on Wikipedia yesterday",
+      "description": "",
+      "tags": [
+        "Wikipedia",
+        "Curiosidade",
+        "Informação",
+        "Mundo"
+      ],
+      "categories": [
+        "Internet",
+        "Acervo"
+      ],
+      "favorite": false,
+      "createdAt": "2026-11-05T15:52:02.139Z"
     }
   ]
 }
