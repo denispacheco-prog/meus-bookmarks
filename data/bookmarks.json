@@ -4428,8 +4428,9 @@
         "Internet",
         "Acervo"
       ],
-      "favorite": false,
-      "createdAt": "2026-11-05T15:52:02.139Z"
+      "favorite": true,
+      "createdAt": "2026-11-05T15:52:02.139Z",
+      "favoriteNote": ""
     },
     {
       "id": "d4be2715-bfa0-4827-94d1-f25a9c67ba3d",
