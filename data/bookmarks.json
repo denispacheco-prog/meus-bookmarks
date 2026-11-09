@@ -4516,6 +4516,24 @@
       "favorite": false,
       "createdAt": "2026-11-05T15:56:07.633Z",
       "favoriteNote": ""
+    },
+    {
+      "id": "48458c96-c7b8-4f5d-9267-421254f98428",
+      "url": "https://remade.wiki",
+      "title": "Remade.wiki: Everything can be remade",
+      "description": "",
+      "tags": [
+        "Software",
+        "Desenvolvimento"
+      ],
+      "categories": [
+        "Tecnologia",
+        "Acervo",
+        "Ferramenta",
+        "Software"
+      ],
+      "favorite": false,
+      "createdAt": "2026-11-09T10:38:17.684Z"
     }
   ]
 }
