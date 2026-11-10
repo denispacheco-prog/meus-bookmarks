@@ -4534,6 +4534,23 @@
       ],
       "favorite": false,
       "createdAt": "2026-11-09T10:38:17.684Z"
+    },
+    {
+      "id": "632d5d3a-c639-41d2-bf95-a1208ca5e1bf",
+      "url": "https://edjefferson.com/localpedia/",
+      "title": "Localpedia: The Encyclopedia For Local People",
+      "description": "",
+      "tags": [
+        "Wikipedia",
+        "Local",
+        "Curiosidade"
+      ],
+      "categories": [
+        "Ferramenta",
+        "Wiki"
+      ],
+      "favorite": false,
+      "createdAt": "2026-11-10T11:37:29.622Z"
     }
   ]
 }
