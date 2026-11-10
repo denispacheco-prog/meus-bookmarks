@@ -4551,6 +4551,25 @@
       ],
       "favorite": false,
       "createdAt": "2026-11-10T11:37:29.622Z"
+    },
+    {
+      "id": "db3eb106-6aeb-45f9-a74e-39c2197e46a1",
+      "url": "https://en.wikipedia.org/wiki/List_of_lost_films",
+      "title": "List of lost films",
+      "description": "",
+      "tags": [
+        "Cinema",
+        "Filmes Perdidos",
+        "Lost Media"
+      ],
+      "categories": [
+        "Cinema",
+        "Internet",
+        "Wiki",
+        "Ler"
+      ],
+      "favorite": false,
+      "createdAt": "2026-11-10T16:31:52.988Z"
     }
   ]
 }
