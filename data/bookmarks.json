@@ -4664,6 +4664,22 @@
       ],
       "favorite": false,
       "createdAt": "2026-11-13T20:47:58.996Z"
+    },
+    {
+      "id": "1e9ecc2c-a92a-49dd-a137-984bf2d78790",
+      "url": "https://unwall.app/",
+      "title": "UnWall | Read Full Articles Without Paywalls",
+      "description": "",
+      "tags": [
+        "Paywall",
+        "Leitura"
+      ],
+      "categories": [
+        "Internet",
+        "Ferramenta"
+      ],
+      "favorite": false,
+      "createdAt": "2026-11-18T11:49:09.667Z"
     }
   ]
 }
