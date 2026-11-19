@@ -38,8 +38,7 @@
         "Poesia",
         "Conto",
         "Roteiro",
-        "Pauta",
-        "Crítica"
+        "Pauta"
       ]
     },
     {
@@ -1169,7 +1168,6 @@
       ],
       "categories": [
         "Quote",
-        "Crítica",
         "Jogos"
       ],
       "favorite": false,
@@ -1518,8 +1516,7 @@
       ],
       "categories": [
         "Quote",
-        "Jogos",
-        "Crítica"
+        "Jogos"
       ],
       "favorite": false,
       "createdAt": "2024-11-27T08:45:00.000Z"
@@ -1631,8 +1628,7 @@
       ],
       "categories": [
         "Quote",
-        "Televisão",
-        "Crítica"
+        "Televisão"
       ],
       "favorite": false,
       "createdAt": "2025-01-13T06:07:00.000Z"
@@ -1919,8 +1915,7 @@
       ],
       "categories": [
         "Quote",
-        "Jogos",
-        "Crítica"
+        "Jogos"
       ],
       "favorite": false,
       "createdAt": "2025-02-20T07:27:00.000Z"
@@ -2456,8 +2451,7 @@
         "Crítica"
       ],
       "categories": [
-        "Quote",
-        "Crítica"
+        "Quote"
       ],
       "favorite": false,
       "createdAt": "2025-05-13T07:30:00.000Z"
@@ -2535,8 +2529,7 @@
         "Cultura"
       ],
       "categories": [
-        "Quote",
-        "Crítica"
+        "Quote"
       ],
       "favorite": false,
       "createdAt": "2025-06-05T08:46:00.000Z"
@@ -2582,8 +2575,7 @@
       ],
       "categories": [
         "Quote",
-        "Música",
-        "Crítica"
+        "Música"
       ],
       "favorite": false,
       "createdAt": "2025-06-17T08:53:00.000Z"
@@ -2694,8 +2686,7 @@
         "Arte"
       ],
       "categories": [
-        "Quote",
-        "Crítica"
+        "Quote"
       ],
       "favorite": false,
       "createdAt": "2025-07-25T13:04:00.000Z"
@@ -2817,8 +2808,7 @@
         "Escrita"
       ],
       "categories": [
-        "Quote",
-        "Crítica"
+        "Quote"
       ],
       "favorite": false,
       "createdAt": "2025-09-22T09:44:00.000Z"
@@ -2988,8 +2978,7 @@
       ],
       "categories": [
         "Quote",
-        "Jogos",
-        "Crítica"
+        "Jogos"
       ],
       "favorite": false,
       "createdAt": "2026-01-05T06:44:00.000Z"
@@ -3020,8 +3009,7 @@
         "Algoritmos"
       ],
       "categories": [
-        "Quote",
-        "Crítica"
+        "Quote"
       ],
       "favorite": false,
       "createdAt": "2026-02-25T06:34:00.000Z"
@@ -4708,8 +4696,7 @@
       "categories": [
         "Jogos",
         "Tecnologia",
-        "Quote",
-        "Crítica"
+        "Quote"
       ],
       "favorite": false,
       "createdAt": "2026-11-19T16:39:32.284Z",
