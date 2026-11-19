@@ -4706,12 +4706,14 @@
         "Crítica de jogos"
       ],
       "categories": [
-        "Quote",
         "Jogos",
-        "Tecnologia"
+        "Tecnologia",
+        "Quote",
+        "Crítica"
       ],
       "favorite": false,
-      "createdAt": "2026-11-19T16:39:32.284Z"
+      "createdAt": "2026-11-19T16:39:32.284Z",
+      "favoriteNote": ""
     }
   ]
 }
