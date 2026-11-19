@@ -4698,6 +4698,24 @@
       ],
       "favorite": false,
       "createdAt": "2026-11-18T20:08:00.324Z"
+    },
+    {
+      "id": "2084fa78-129c-4473-8e62-945b8e6315a7",
+      "url": "https://www.atticus.io/",
+      "title": "Atticus - Write and Format Stunning Books",
+      "description": "",
+      "tags": [
+        "Ebooks",
+        "Editoração",
+        "Auto-publicação",
+        "Livros"
+      ],
+      "categories": [
+        "Internet",
+        "Ferramenta"
+      ],
+      "favorite": false,
+      "createdAt": "2026-11-19T12:38:23.604Z"
     }
   ]
 }
