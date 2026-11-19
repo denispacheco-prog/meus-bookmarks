@@ -236,11 +236,10 @@
       "title": "delphitools — privacy-first browser tools",
       "description": "Ferramentas para atividades aleatórias online",
       "tags": [
-        "Tools",
+        "Ferramentas",
         "Tipografia",
         "Calculadoras",
-        "Conversores",
-        "Ferramentas"
+        "Conversores"
       ],
       "categories": [
         "Internet",
@@ -293,12 +292,10 @@
       "description": "",
       "tags": [
         "Star Trek",
-        "Jornada nas Estrelas",
         "Projetos",
         "Esquemas",
         "Naves Espaciais",
-        "Ficção Científica",
-        "Sci-Fi"
+        "Ficção Científica"
       ],
       "categories": [
         "Cinema",
@@ -318,7 +315,6 @@
         "Warhammer",
         "Warhammer 40000",
         "Ebooks",
-        "Sci-Fi",
         "Ficção Científica",
         "Fanfiction"
       ],
@@ -336,7 +332,7 @@
       "title": "Boss Fight Books",
       "description": "Selo de livros e publicações sobre jogos clássicos",
       "tags": [
-        "Videogame",
+        "Videogames",
         "Jogos",
         "Editora",
         "Retrogaming"
@@ -393,11 +389,11 @@
       "title": "Vanishing Culture: A Report on Our Fragile Cultural Record (2026)",
       "description": "",
       "tags": [
-        "Ebook",
+        "Ebooks",
         "Internet Archive",
         "Arquivos",
         "Documentação",
-        "Livro"
+        "Livros"
       ],
       "categories": [
         "Internet",
@@ -413,7 +409,7 @@
       "description": "A Land Once Magic is a conversational post-fantasy worldbuilding TTRPG",
       "tags": [
         "Tabletop",
-        "Ebook",
+        "Ebooks",
         "Aventura",
         "Ficção"
       ],
@@ -536,7 +532,6 @@
         "Zines",
         "Brasil",
         "Quadrinhos",
-        "Histórias em Quadrinhos",
         "Autores Independentes"
       ],
       "categories": [
@@ -557,7 +552,6 @@
         "Série de TV",
         "Inglaterra",
         "Cyberpunk",
-        "Sci-fi",
         "Ficção Científica"
       ],
       "categories": [
@@ -577,7 +571,6 @@
         "VR5",
         "Série de TV",
         "Cyberpunk",
-        "Sci-Fi",
         "Ficção Científica"
       ],
       "categories": [
@@ -639,9 +632,8 @@
       "title": "Game Poems Magazine",
       "description": "Revista com artigos interativos sobre jogos eletrônicos",
       "tags": [
-        "Videogame",
+        "Videogames",
         "Jogos",
-        "Jogos Eletrônicos",
         "Crítica literária",
         "Crítica de jogos"
       ],
@@ -662,7 +654,6 @@
       "tags": [
         "Journal",
         "Videogames",
-        "Jogos Eletrônicos",
         "Pesquisa acadêmica",
         "Artigos acadêmicos",
         "Periódicos"
@@ -702,8 +693,8 @@
       "title": "Lock-On",
       "description": "Lock-On é um períodico/journal da \"Lost in Cult\" sobre videogame",
       "tags": [
-        "Videogame",
-        "Ensaio",
+        "Videogames",
+        "Ensaios",
         "Cultura digital"
       ],
       "categories": [
@@ -721,11 +712,10 @@
       "description": "",
       "tags": [
         "Ultraman",
-        "Documentário",
+        "Documentários",
         "Cinema japonês",
-        "Ficção científica",
+        "Ficção Científica",
         "Tokusatsu",
-        "Sci-fi",
         "Japão"
       ],
       "categories": [
@@ -779,11 +769,10 @@
       "title": "Slow Roads",
       "description": "Jogo de browser de corrida",
       "tags": [
-        "Jogos Eletrônicos",
+        "Videogames",
         "Corrida",
         "Racing",
         "Carros",
-        "Videogames",
         "Jogos de Browser"
       ],
       "categories": [
@@ -890,7 +879,7 @@
       "description": "“Comemierda” is an epithet that I heard a lot growing up, usually when my mom was driving. Literally it means “shit-eater” (derogatory), but like most such words there’s a lot of connotation and shades of meaning (…) it’s a very useful word, but there’s another reason that I employ it so much: it’s pretty hard to find a personal epithet that doesn’t rely on insulting a particular gender, sexual orientation, someone’s parents or parentage, entirely blameless animal, or part of the body.",
       "tags": [
         "Linguagem",
-        "Entrevista"
+        "Entrevistas"
       ],
       "categories": [
         "Quote",
@@ -1113,7 +1102,7 @@
       "title": "We Should All Be Archivists",
       "description": "When people ask me for advice about queer archiving, I usually say that the most important thing is to recognize your importance. You need to see yourself as a repository of history — as a repository of memories, both internal and external, and in the things you care about. Our archives are reflections of our interests, our obsessions, our private concerns. No two people collect alike, and the shape of your brain is memorialized in many ways by the things that you collect.",
       "tags": [
-        "Arquivo",
+        "Arquivos",
         "Memória"
       ],
       "categories": [
@@ -1303,7 +1292,7 @@
       "description": "The Enlightenment of the 18th century saw the birth of an international library movement as governments and philanthropists took on the need to preserve and distribute books for the public. But that sense of civic responsibility hasn’t extended to the internet. That may be due to the complicated business interests of the digital world, or just the immense technical challenge. Or, perhaps, it’s because it doesn’t feel like the web needs saving to casual observers. A book is a more obviously finite resource; it can be lost or damaged. But the internet feels so accessible. Anyone with an internet connection can pull up a web browser and dial in a URL. It’s all right there – until it isn’t",
       "tags": [
         "Internet",
-        "Arquivo",
+        "Arquivos",
         "Preservação"
       ],
       "categories": [
@@ -3093,15 +3082,14 @@
       "title": "Five Science Fiction Versions of The Odyssey",
       "description": "",
       "tags": [
-        "Odisséia",
+        "Odisseia",
         "Grécia",
         "Literatura Grega",
         "Clássicos",
-        "Sci-Fi",
-        "Livros",
         "Ficção Científica",
+        "Livros",
         "Fantasia",
-        "Mitolodia"
+        "Mitologia"
       ],
       "categories": [
         "Cinema",
@@ -3122,7 +3110,6 @@
         "Videogames",
         "Cidades",
         "Jogos",
-        "Jogos Eletrônicos",
         "Jogos de Browser"
       ],
       "categories": [
@@ -3140,9 +3127,9 @@
       "description": "",
       "tags": [
         "Biologia",
-        "Documentário",
+        "Documentários",
         "BBC",
-        "Série",
+        "Série de TV",
         "Evolução"
       ],
       "categories": [
@@ -3308,7 +3295,7 @@
       "description": "",
       "tags": [
         "Jogos de Browser",
-        "Simulador de Vôo",
+        "Simulador de Voo",
         "Simulação"
       ],
       "categories": [
@@ -3326,7 +3313,6 @@
       "tags": [
         "Videogames",
         "Terror",
-        "Jogos Eletrônicos",
         "Crítica de jogos"
       ],
       "categories": [
@@ -3345,7 +3331,6 @@
       "description": "",
       "tags": [
         "Videogames",
-        "Jogos Eletrônicos",
         "Crítica de jogos"
       ],
       "categories": [
@@ -3539,7 +3524,6 @@
       "tags": [
         "Jogos",
         "Crítica de jogos",
-        "Jogos Eletrônicos",
         "Videogames"
       ],
       "categories": [
@@ -3557,7 +3541,7 @@
       "description": "",
       "tags": [
         "Revista",
-        "Podcast",
+        "Podcasts",
         "Revista em Áudio"
       ],
       "categories": [
@@ -3594,7 +3578,7 @@
       "title": "liviopv.blog",
       "description": "Blog do Livio (ex-Ymsk)",
       "tags": [
-        "Amigos",
+        "Amizades",
         "Albums",
         "Discos"
       ],
@@ -3634,7 +3618,7 @@
       "tags": [
         "Cidades",
         "Mundo",
-        "Jogo de Browser",
+        "Jogos de Browser",
         "Mapas",
         "Geografia"
       ],
@@ -3761,7 +3745,6 @@
       "tags": [
         "Videogames",
         "Computação",
-        "Jogos Eletrônicos",
         "Ensaios"
       ],
       "categories": [
@@ -3801,7 +3784,6 @@
       "tags": [
         "Patreon",
         "Cultura",
-        "Jogos Eletrônicos",
         "Videogames",
         "Criadores de Conteúdo",
         "Streaming"
@@ -3841,8 +3823,8 @@
       "tags": [
         "Patreon",
         "Crítica",
-        "Podcast",
-        "Sci-Fi",
+        "Podcasts",
+        "Ficção Científica",
         "Fantasia"
       ],
       "categories": [
@@ -3862,8 +3844,7 @@
       "description": "",
       "tags": [
         "Patreon",
-        "Videogames",
-        "Jogos Eletrônicos"
+        "Videogames"
       ],
       "categories": [
         "Internet",
@@ -3880,7 +3861,6 @@
       "description": "",
       "tags": [
         "SimCity",
-        "Jogos Eletrônicos",
         "Videogames",
         "Simulação",
         "Cidades"
@@ -4102,7 +4082,7 @@
       "description": "",
       "tags": [
         "Buscadores",
-        "Podcast",
+        "Podcasts",
         "Busca",
         "Áudio",
         "Base de Dados"
@@ -4214,7 +4194,7 @@
       "title": "Design Fiction - Christopher Butler",
       "description": "",
       "tags": [
-        "Sci-Fi",
+        "Ficção Científica",
         "Design",
         "Fotografia",
         "Cinema",
@@ -4236,7 +4216,7 @@
       "title": "City 2026",
       "description": "Simulador estilo \"SimCity 2000\"",
       "tags": [
-        "Jogos Eletrônicos",
+        "Videogames",
         "Jogos de Browser",
         "Cidades",
         "Simulador de Cidades"
@@ -4256,7 +4236,7 @@
       "tags": [
         "Zines",
         "Recursos",
-        "DYI"
+        "DIY"
       ],
       "categories": [
         "Design",
@@ -4331,7 +4311,7 @@
       "description": "",
       "tags": [
         "Aviões",
-        "Vôos",
+        "Voos",
         "Câmera",
         "Monitoramento",
         "Tracking"
@@ -4387,7 +4367,7 @@
         "Jogos de Browser",
         "Mortal Kombat",
         "Emulação",
-        "Videogame"
+        "Videogames"
       ],
       "categories": [
         "Jogos"
@@ -4403,9 +4383,8 @@
       "description": "",
       "tags": [
         "SimCity",
-        "Jogos Eletrônicos",
-        "Jogos de Browser",
-        "Videogames"
+        "Videogames",
+        "Jogos de Browser"
       ],
       "categories": [
         "Jogos"
@@ -4632,7 +4611,7 @@
       "description": "“...he feared that their forward march, if it became too rapid and careless, might trample down that terrain of the spirit out of which grew imagination and respect, reflection and tradition. Would art and culture be able to follow science and technology along their path, to teach them harmony and consistency? He wasn’t sure, and thus he hoped that his library might become a tool, however minimal, in the service of this cause.” (...) “The annihilation of the sense of disgrace threatens to plunge the planet into chaos. The shrinking of space and time through modern means of communication has gone grave damage to the human mind: nevertheless, myths and symbols, by re-establishing an area for reflection, a pause for contemplation, will restore the individual to his proper place in the history of civilization and will continue to stand as the restraints of conscience of which man is still greatly needed.”",
       "tags": [
         "Arte",
-        "Aby Warbug",
+        "Aby Warburg",
         "Cultura",
         "Sociedade"
       ],
@@ -4652,7 +4631,7 @@
       "tags": [
         "Editora",
         "MIT Press",
-        "Livros academicos",
+        "Livros Acadêmicos",
         "Pesquisa acadêmica",
         "Pesquisa",
         "Livros"
