@@ -4718,6 +4718,21 @@
       ],
       "favorite": false,
       "createdAt": "2026-11-20T19:26:18.847Z"
+    },
+    {
+      "id": "4406d755-87c9-4be2-a1af-dc8d35f96129",
+      "url": "https://hexagonal.earth/isometric/",
+      "title": "Hexagonal Earth",
+      "description": "",
+      "tags": [
+        "Mapas"
+      ],
+      "categories": [
+        "Jogos",
+        "Ferramenta"
+      ],
+      "favorite": false,
+      "createdAt": "2026-11-20T19:38:50.090Z"
     }
   ]
 }
