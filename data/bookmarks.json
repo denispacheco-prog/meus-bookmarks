@@ -4703,6 +4703,21 @@
       "favorite": false,
       "createdAt": "2026-11-19T16:39:32.284Z",
       "favoriteNote": ""
+    },
+    {
+      "id": "837be323-711d-4c2a-b16e-97e21fa9faf8",
+      "url": "https://urbograph.com/",
+      "title": "Urbograph — make city maps the old way",
+      "description": "",
+      "tags": [
+        "Mapas"
+      ],
+      "categories": [
+        "Design",
+        "Ferramenta"
+      ],
+      "favorite": false,
+      "createdAt": "2026-11-20T19:26:18.847Z"
     }
   ]
 }
