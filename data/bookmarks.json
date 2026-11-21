@@ -4733,6 +4733,22 @@
       ],
       "favorite": false,
       "createdAt": "2026-11-20T19:38:50.090Z"
+    },
+    {
+      "id": "867c1d76-b8ab-4393-9ada-52c00546e0f7",
+      "url": "https://globalcity.evertpot.com/",
+      "title": "GlobalCity",
+      "description": "",
+      "tags": [
+        "Jogos de Browser",
+        "Cidades",
+        "Simulador de Cidades"
+      ],
+      "categories": [
+        "Jogos"
+      ],
+      "favorite": false,
+      "createdAt": "2026-11-21T19:16:59.804Z"
     }
   ]
 }
