@@ -908,14 +908,14 @@ mark {
   font-weight: 600;
 }
 
-/* Edit / remove: aparecem no hover (sempre visíveis em telas touch) */
+/* Editar / remover: ícones discretos ao lado da estrela, que aparecem no
+   hover (sempre visíveis em telas touch), como no Artigos. */
 
 .bookmark-actions {
-  display: flex;
-  gap: var(--space-1);
-  position: absolute;
-  top: 1.35rem;
-  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: auto;
   opacity: 0;
   transition: opacity 150ms var(--ease);
 }
@@ -925,22 +925,44 @@ mark {
   opacity: 1;
 }
 
-/* Reserva espaço na linha de origem para os botões, que ficam sobre ela no canto direito. */
-@media (hover: hover) {
-  .bookmark-item .bookmark-source {
-    padding-right: 9rem;
-  }
-}
-
 @media (hover: none) {
   .bookmark-actions {
-    position: static;
     opacity: 1;
-    margin-top: var(--space-2);
   }
 }
 
-.bookmark-actions button,
+.bookmark-source .bookmark-actions + .favorite-star-btn {
+  margin-left: 0;
+}
+
+.bookmark-actions button {
+  display: inline-grid;
+  place-items: center;
+  padding: 0.1rem;
+  border: none;
+  background: none;
+  color: var(--muted);
+  opacity: 0.6;
+  cursor: pointer;
+  transition: color 150ms var(--ease), opacity 150ms var(--ease);
+}
+
+.bookmark-actions svg {
+  width: 14px;
+  height: 14px;
+}
+
+.bookmark-actions button:hover,
+.bookmark-actions button:focus-visible {
+  color: var(--fg);
+  opacity: 1;
+}
+
+/* remover: só fica vermelho no hover, para não chamar atenção */
+.bookmark-actions .delete-btn:hover {
+  color: var(--danger);
+}
+
 .load-more-btn,
 .manager-category-list button,
 .manager-add-row button,
@@ -956,7 +978,6 @@ mark {
   transition: border-color 150ms var(--ease), color 150ms var(--ease);
 }
 
-.bookmark-actions button:hover,
 .load-more-btn:hover,
 .manager-category-list button:hover,
 .manager-add-row button:hover,
@@ -965,7 +986,6 @@ mark {
   color: var(--accent);
 }
 
-.bookmark-actions .delete-btn:hover,
 .manager-category-list .delete-category-btn:hover,
 .manager-tag-list .delete-tag-btn:hover {
   border-color: var(--danger);

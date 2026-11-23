@@ -8,6 +8,9 @@ const ICONS = {
   star: svgIcon(STAR_PATH),
   starFilled: svgIcon(STAR_PATH, "currentColor"),
   sun: svgIcon('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'),
+  // lápis e lixeira: mesmos traços do Artigos
+  pencil: svgIcon('<path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/>'),
+  trash: svgIcon('<path d="M4 7h16"/><path d="M10 11v6M14 11v6"/><path d="M6 7l1 12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1l1-12"/><path d="M9 7V4h6v3"/>'),
   moon: svgIcon('<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>'),
 };
 
@@ -427,6 +430,10 @@ function bookmarkItemMarkup(bookmark) {
         ${faviconMarkup(domain)}
         <span class="bookmark-domain">${escapeHtml(domain || bookmark.url)}</span>
         <span class="bookmark-date">${formatDate(bookmark.createdAt)}</span>
+        <span class="bookmark-actions">
+          <button type="button" class="edit-btn" data-id="${escapeHtml(bookmark.id)}" title="Editar" aria-label="Editar">${ICONS.pencil}</button>
+          <button type="button" class="delete-btn" data-id="${escapeHtml(bookmark.id)}" title="Remover" aria-label="Remover">${ICONS.trash}</button>
+        </span>
         ${favoriteHtml}
       </div>`;
 
@@ -441,10 +448,6 @@ function bookmarkItemMarkup(bookmark) {
       <div class="bookmark-meta">
         ${categoriesHtml}
         ${tagsHtml}
-      </div>
-      <div class="bookmark-actions">
-        <button type="button" class="edit-btn" data-id="${escapeHtml(bookmark.id)}">Editar</button>
-        <button type="button" class="delete-btn" data-id="${escapeHtml(bookmark.id)}">Remover</button>
       </div>
     </li>
   `;
