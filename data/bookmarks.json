@@ -4799,6 +4799,23 @@
       ],
       "favorite": false,
       "createdAt": "2026-11-23T12:45:28.210Z"
+    },
+    {
+      "id": "a59b6372-c166-46da-98b2-eb7c3b36479a",
+      "url": "https://www.sciencedirect.com/leapspace",
+      "title": "Leapspace",
+      "description": "",
+      "tags": [
+        "Busca",
+        "Inteligência Artificial",
+        "Elsevier"
+      ],
+      "categories": [
+        "Tecnologia",
+        "LLM"
+      ],
+      "favorite": false,
+      "createdAt": "2026-11-26T17:52:33.896Z"
     }
   ]
 }
